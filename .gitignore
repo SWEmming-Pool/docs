@@ -6,3 +6,6 @@
 *.out
 *.synctex.gz
 *.toc
+
+# Cartella file compilati
+out/
