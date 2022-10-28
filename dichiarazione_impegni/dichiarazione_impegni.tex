@@ -1,0 +1,34 @@
+\input{../componenti_comuni/src/commands}
+\input{../componenti_comuni/src/packages}
+
+\begin{document}
+    	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Analisi dei capitolati}
+
+	\renewcommand{\documentApprovers}{nome \smallskip}
+	\renewcommand{\documentEditors}{nome \smallskip}
+	\renewcommand{\documentVerifiers}{nome \smallskip}
+	\renewcommand{\documentAddressee}{\Vardanega \\ & \Cardin}
+	
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentSummary}{summ}
+
+    	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+
+    % Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Contenuto
+	% =========================================================================
+    % \input{src/nomefile}
+	% =========================================================================
+\end{document}
