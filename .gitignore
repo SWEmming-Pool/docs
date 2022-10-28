@@ -9,3 +9,4 @@
 
 # Cartella file compilati
 out/
+*.pdf
