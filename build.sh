@@ -20,7 +20,7 @@ cd ..
 
 # Dichirazione di impegni
 cd dichiarazione_impegni/
-echo "Dichirazione impegni"
+echo "Dichiarazione impegni"
 pdflatex dichiarazione_impegni.tex 1>/dev/null
 pdflatex dichiarazione_impegni.tex 1>/dev/null # Seconda per avere indice 
 mv dichiarazione_impegni.pdf ../out
