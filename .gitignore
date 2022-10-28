@@ -6,6 +6,3 @@
 *.out
 *.synctex.gz
 *.toc
-
-# PDF, dovranno essere gestiti
-*.pdf
