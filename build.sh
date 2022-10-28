@@ -18,6 +18,15 @@ mv analisi_capitolati.pdf ../out
 cleanup 2>/dev/null
 cd ..
 
+# Dichirazione di impegni
+cd dichiarazione_impegni/
+echo "Dichirazione impegni"
+pdflatex dichiarazione_impegni.tex 1>/dev/null
+pdflatex dichiarazione_impegni.tex 1>/dev/null # Seconda per avere indice 
+mv dichiarazione_impegni.pdf ../out
+cleanup 2>/dev/null
+cd ..
+
 # Lettera
 cd lettera_candidatura/
 echo "Lettera di candidatura"
