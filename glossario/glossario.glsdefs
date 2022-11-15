@@ -1,0 +1,112 @@
+\glsdefs@newdocentry{angular}%
+{%
+name={Angular},%
+sort={Angular},%
+type={main},%
+first={Angular},%
+firstplural={Angulars},%
+text={Angular},%
+plural={Angulars},%
+description={Framework open-source per lo sviluppo di applicazioni web},%
+descriptionplural={Framework open-source per lo sviluppo di applicazioni web},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{apirest}%
+{%
+name={API REST},%
+sort={API REST},%
+type={main},%
+first={API REST},%
+firstplural={API RESTs},%
+text={API REST},%
+plural={API RESTs},%
+description={Interfaccia di programmazione delle applicazioni conforme ai vincoli dello stile architetturale REST (REpresentational State Transfer)},%
+descriptionplural={Interfaccia di programmazione delle applicazioni conforme ai vincoli dello stile architetturale REST (REpresentational State Transfer)},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{blockchain}%
+{%
+name={Blockchain},%
+sort={Blockchain},%
+type={main},%
+first={Blockchain},%
+firstplural={Blockchains},%
+text={Blockchain},%
+plural={Blockchains},%
+description={Insieme di tecnologie in cui il registro è strutturato come una catena di blocchi contenenti le transazioni e il consenso è distribuito su tutti i nodi della rete. Tutti i nodi possono partecipare al processo di validazione delle transazioni da includere nel registro},%
+descriptionplural={Insieme di tecnologie in cui il registro è strutturato come una catena di blocchi contenenti le transazioni e il consenso è distribuito su tutti i nodi della rete. Tutti i nodi possono partecipare al processo di validazione delle transazioni da includere nel registro},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{browser}%
+{%
+name={Browser},%
+sort={Browser},%
+type={main},%
+first={Browser},%
+firstplural={Browsers},%
+text={Browser},%
+plural={Browsers},%
+description={Programma per navigare in internet che inoltra la richiesta di un documento alla rete e ne consente la visualizzazione},%
+descriptionplural={Programma per navigare in internet che inoltra la richiesta di un documento alla rete e ne consente la visualizzazione},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
