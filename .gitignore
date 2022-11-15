@@ -7,5 +7,6 @@
 *.synctex.gz
 *.toc
 
-# PDF, dovranno essere gestiti
+# Cartella file compilati
+out/
 *.pdf
