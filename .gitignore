@@ -7,9 +7,6 @@
 *.synctex.gz
 *.toc
 
-<<<<<<< Updated upstream
-# PDF, dovranno essere gestiti
-=======
 ## Latex glossary
 *.glg
 *.glo
@@ -19,5 +16,5 @@
 
 # Cartella file compilati
 out/
->>>>>>> Stashed changes
 *.pdf
+*.dvi
