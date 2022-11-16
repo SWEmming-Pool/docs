@@ -10,3 +10,4 @@
 # Cartella file compilati
 out/
 *.pdf
+*.dvi
