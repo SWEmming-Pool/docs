@@ -7,5 +7,14 @@
 *.synctex.gz
 *.toc
 
-# PDF, dovranno essere gestiti
+## Latex glossary
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+
+# Cartella file compilati
+out/
 *.pdf
+*.dvi

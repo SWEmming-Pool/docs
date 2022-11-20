@@ -1,0 +1,37 @@
+\input{../../componenti_comuni/src/packages}
+\input{../../componenti_comuni/src/commands}
+
+\begin{document}
+	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Verbale Interno del \documentDate}
+	\renewcommand{\documentDate}{2022-10-28}
+	
+	\renewcommand{\documentApprovers}{Ennio Italiano \smallskip}
+	\renewcommand{\documentEditors}{Elia Pasquali \smallskip}
+	\renewcommand{\documentVerifiers}{Enrico Bacci Bonivento\smallskip}
+	\renewcommand{\documentAddressee}{Gruppo \groupName}
+	
+	\renewcommand{\documentUsage}{Interno}
+	\renewcommand{\documentSummary}{Ultimo incontro ufficiale prima della candidatura.}
+	
+	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+	
+	% Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Sezioni del verbale
+	% =========================================================================
+	\input{src/ordine}
+    \pagebreak
+    \input{src/resoconto}
+	% =========================================================================
+\end{document}

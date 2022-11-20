@@ -1,0 +1,37 @@
+\input{../componenti_comuni/src/commands}
+\input{../componenti_comuni/src/packages}
+
+\begin{document}
+    	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Dichiarazione impegni}
+
+	\renewcommand{\documentApprovers}{Sebastiano Sanson \smallskip}
+	\renewcommand{\documentEditors}{Elia Pasquali \smallskip}
+	\renewcommand{\documentVerifiers}{Nicolò Trinca\smallskip}
+	\renewcommand{\documentAddressee}{\Vardanega \\ & \Cardin}
+	
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentSummary}{Il documento raccoglie la dichiarazione di impegni del gruppo}
+
+    	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+
+    % Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Contenuto
+	% =========================================================================
+	\input{src/introduzione}
+	\input{src/impegni_individuali}
+	\input{src/preventivo_costi}
+	\input{src/consegna_prevista}
+	% =========================================================================
+\end{document}

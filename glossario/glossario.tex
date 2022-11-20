@@ -1,0 +1,33 @@
+\input{../componenti_comuni/src/packages}
+\input{../componenti_comuni/src/commands}
+
+\usepackage[utf8]{inputenc}
+\usepackage{glossaries}
+
+\makeglossaries
+
+\begin{document}
+% Ridefinizione comandi variabili
+% =========================================================================
+\renewcommand{\documentName}{Glossario}
+\renewcommand{\documentDate}{yyyy-mm-dd}
+
+\renewcommand{\documentApprovers}{Nome Cognome \smallskip}
+\renewcommand{\documentEditors}{Nome Cognome \\ & Nome Cognome \smallskip}
+\renewcommand{\documentVerifiers}{Nome Cognome \\ & Nome Cognome \smallskip}
+\renewcommand{\documentAddressee}{Gruppo \groupName}
+
+\renewcommand{\documentUsage}{Interno/Esterno}
+\renewcommand{\documentSummary}{Descrizione glossario}
+
+\include{firstpage.tex}
+
+\clearpage
+
+\include{entries.tex}
+
+\glsaddall
+\setglossarystyle{altlisthypergroup}
+\printglossary[nonumberlist]
+
+\end{document}
