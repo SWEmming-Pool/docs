@@ -1,0 +1,24 @@
+\fancypagestyle{stylePage}{
+	\thispagestyle{empty}
+	\thispagestyle{fancy}
+	\pagestyle{fancy}
+	%Header	
+	\setlength{\topmargin}{-40pt}
+	\setlength{\headsep}{60pt}
+	\fancyhf{}
+	\lhead{SWEmming Pool \raisebox{-1\height}}
+	\setlength{\headheight}{15pt}
+	\rhead{\includegraphics[width=1cm]{../componenti_comuni/img/logo_swemming.pdf}}
+	
+	%Footer
+	\fancyfoot{}
+	\fancyfoot[L]{\documentName}
+	\fancyfoot[R]{Pagina \thepage~di~\pageref{LastPage}}
+	\futurelet\TMPfootrule\def\footrule{\TMPfootrule}
+	\setcounter{page}{0}
+	\pagenumbering{arabic}
+	\renewcommand{\footrulewidth}{0.3pt}
+}
+
+\setcounter{tocdepth}{5} %aggiunge paragrafi e sottoparagrafi ad indice
+\setcounter{secnumdepth}{5} %aggiunge numero indicizazzione a paragrafi e sottoparagrafi
