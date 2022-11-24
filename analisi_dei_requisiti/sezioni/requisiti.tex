@@ -15,16 +15,60 @@
         \\                                                             
 
 ?& Obbligatorio &    	La recensione potrà essere pubblicata solo a pagamento confermato        & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &       La recensione deve essere collegata ad una transazione economica                   & \Shortunderstack{Capitolato}                        \\
+?& Obbligatorio &       Esiste un'unica recensione per una transazione economica                   & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio & 	L'utente deve eseguire un'ulteriore transazione per poter lasciare una recensione             & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &    	Recensione e transazione sono caricati su una blockchain pubblica             & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &    	Sviluppo di una webapp per il pagamento e il rilascio di recensioni             & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &    	La webapp deve visualizzare le recensioni organizzate per attività commerciale           & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &    	Lo smart contract deve memorizzare una lista con tutte le interazione pagamento-recensione        & \Shortunderstack{Capitolato}                        \\
+?& Obbligatorio &    	La blockchain memorizzara una lista con tutte le interazioni pagamento-recensione        & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &    	Sviluppo di una API REST per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito & \Shortunderstack{Capitolato}                        \\
+
 	\end{tabular}
 \end{table}
 
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors[]{1}{gray!55}{white}
+        \begin{tabular}{c | c | p{6cm} | c }
+            \rowcolor[HTML]{a52a2a}
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
+            \\                                                             
+    
+    ?& Obbligatorio &    	Lo smart contract accede alla blockchain per ottenere la lista delle recensioni        & \Shortunderstack{Capitolato}                        \\
+    ?& Desiderabile &    	L'utente viene informato sull esito della transazione        & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	Lo smart contract invia i fondi all'e-commerce     & \Shortunderstack{Capitolato}                        \\ 
+    ?& Obbligatorio &    	La webapp deve poter richiede la lista delle recensioni tramite RPC allo smart contract       & \Shortunderstack{Capitolato}                        \\ 
+    ?& Obbligatorio &       Il server API deve poter richiedere la lista recensioni tramite RPC allo smart contract           & \Shortunderstack{Capitolato}                        \\      
+    \end{tabular}
+    \end{table}
+\subsection{Requisiti di qualità}
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors[]{1}{gray!55}{white}
+        \begin{tabular}{c | c | p{6cm} | c }
+            \rowcolor[HTML]{a52a2a}
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
+            \\                                                             
+    
+    ?& Obbligatorio &   Documentazione del server API REST relativa agli endpoint    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Copertura di test end-to-end >= 80\% correlata di report    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Documentazione su scelte implementative e progettuali effettuate e relative motivazioni    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Documentazione su problemi aperti e eventuali soluzioni proposte da esplorare    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Continuous integration e condice open surce tramite Git-Hub    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Stesura manuale utente & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Stesura manuale per la manutenzione e l'estensione dell applicazione & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Si devono seguire le norme di progetto & \Shortunderstack{Capitolato}\\
+\end{tabular}
+    \end{table}
 \subsection{Requisiti di vincolo}
 
 \begin{table}[H]
@@ -41,12 +85,11 @@
 
 ?& Obbligatorio &       Il pagamento e la recensione devono essere gestiti tramite smart contract                    & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &       Utilizzo di Solidity per lo sviluppo di smart contract                & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &      Utilizzo di Java Spring per lo sviluppo di API REST                 & \Shortunderstack{Capitolato}                        \\
+?& Obbligatorio &       Utilizzo di Java Spring per lo sviluppo di API REST                 & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &       Utilizzo di Angular per lo sviluppo della webapp                 & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &       La webapp utilizza la libreria web3js per l'interazione con lo smart contract                 & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &       Il server utilizza la libreria web3j per l'interazione con lo smart contract                 & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &       Utilizzo di Metamask come wallet per l'interazione con lo smart contract             & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &       Utilizzo di un fornitore terzo per RPC a nodo           & \Shortunderstack{Capitolato}                        \\
-
 	\end{tabular}
 \end{table}
