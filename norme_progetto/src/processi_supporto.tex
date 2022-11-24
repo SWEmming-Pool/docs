@@ -1,5 +1,5 @@
 \section{Processi di Supporto}
-\paragraph{Scopo} In questa sezione vengono descritte le procedure per le seguenti fasi del progetto:
+\subsection{Scopo} In questa sezione vengono descritte le procedure per le seguenti fasi del progetto:
 \begin{itemize}
     \item {Documentazione}
     \item {Configurazione}
@@ -10,36 +10,134 @@
     \item {Risoluzione dei problemi}
 \end{itemize}
 \subsection{Gestione della documentazione}
-Vengono documentate tutte le informazioni riguardanti il ciclo di vita di ciascun processo o attività.
-Queste attività si dividono in:
-\subsubsection{Implementazione} 
-Per tutti i documenti redatti viene stabilito il titolo, lo scopo, il destinatario, le procedure di tutti i ruoli e le scadenze per le revisioni intermedie e finali.
-\subsubsection{Design} 
-È stato creato un template per uniformare lo stile di tutti i documenti prodotti e agevolarne la produzione.\\
-Nello specifico sono presenti:
-\begin{itemize}
-    \item \textbf{Prima pagina} contenente:
-    \begin {itemize} 
-        \item logo
-        \item indirizzo email del gruppo
-        \item titolo del documento
-        \item responsabile, redattori e verificatori
-        \item uso (interno o esterno)
-        \item destinatari
-        \item sommario
+    Vengono documentate tutte le informazioni riguardanti il ciclo di vita di ciascun processo o attività.
+    Queste attività si dividono in:
+    \subsubsection{Implementazione} 
+    Per tutti i documenti redatti viene stabilito il titolo, lo scopo, il destinatario, le procedure di tutti i ruoli e le scadenze per le revisioni intermedie e finali.
+    \subsubsection{Design e sviluppo} 
+        \paragraph{Documentazione} ~
+
+        È stato creato un template per uniformare lo stile di tutti i documenti prodotti e agevolarne la produzione.\\
+        Nello specifico sono presenti:
+        \begin{itemize}
+            \item \textbf{Prima pagina} contenente:
+            \begin {itemize} 
+                \item logo
+                \item indirizzo email del gruppo
+                \item titolo del documento
+                \item responsabile, redattori e verificatori
+                \item uso (interno o esterno)
+                \item destinatari
+                \item sommario
+            \end{itemize}
+            \item \textbf{Registro delle modifiche}: in ogni documento viene inserita una tabella contenente il registro delle modifiche che riporta: 
+            \begin{itemize}
+                \item versione
+                \item data
+                \item autore
+                \item breve descrizione della modifica
+            \end{itemize}
+            \item \textbf{Indice}: ha lo scopo di fornire una visione gerarchica dei contenuti del documento e di facilitare la ricerca di informazioni specifiche.
+            \item \textbf{Contenuto principale}: % DA DEFINIRE
+        \end{itemize}
+
+        \paragraph{Verbali} ~
+
+        È stato creato un template per uniformare lo stile di tutti i verbali prodotti e agevolarne la produzione.\\
+        Nello specifico sono presenti:
+        \begin{itemize}
+            \item \textbf{Prima pagina} contenente:
+            \begin {itemize} 
+                \item logo
+                \item indirizzo email del gruppo
+                \item titolo del documento
+                \item responsabile, redattori e verificatori
+                \item uso (interno o esterno)
+                \item destinatari
+                \item sommario
+            \end{itemize}
+            \item \textbf{Indice}
+            \item \textbf{Ordine} contenente:
+            \begin {itemize} 
+                \item ora di inizio/termine
+                \item luogo
+                \item partecipanti interni e esterni
+                \item ordine del giorno
+            \end{itemize}
+            \item \textbf{Resoconto}: contiene una descrizione dettagliata degli argomenti trattati e delle decisioni prese.
+        \end{itemize}
+
+        \paragraph{Norme tipografiche} ~
+
+        \paragraph{Convenzioni nomenclatura file} ~
+
+        Escludendo l'estensione, le regole di nomenclatura dei file sono le seguenti:
+            \begin{itemize}
+                \item i nomi dei file devono essere completamente in minuscolo
+                \item viene utilizzato il carattere underscore \texttt{\_} per separare le parole
+                \item omissione delle preposizioni (DA VALUTARE)
+            \end{itemize}
+
+        \paragraph{Formato data} ~
+
+         Viene utilizzato il formato \texttt{YYYY-MM-DD} per le date.
+            \begin{itemize}
+                \item \texttt{YYYY} rappresenta l'anno (4 cifre)
+                \item \texttt{MM} rappresenta il mese (2 cifre)
+                \item \texttt{DD} rappresenta il giorno (2 cifre)
+            \end{itemize}
+
+        \paragraph{Elenchi} ~
+
+        \begin{itemize}
+            \item \textbf{Elenco puntato}: viene utilizzato per elencare elementi in cui non ha importanza l'ordine.
+            \item \textbf{Elenco numerato}: viene utilizzato per elencare elementi in cui ha importanza l'ordine o la priorità.
+        \end{itemize}
+
+        \paragraph{Glossario} ~
+
+         Le convenzioni adottate per fare riferimento a termini specifici presenti nel glossario sono le seguenti:
+            \begin{itemize}
+                \item un termine presente nel glossario viene indicato con il comando \glo
+                \item in ogni documento un termine viene marcato solo alla sua prima occorrenza
+            \end{itemize}
+
+        \paragraph{Stile del testo} ~
+
+        \paragraph{Sigle} ~
+
+    \subsubsection{Produzione documenti}
+    Per agevolare la produzione dei documenti è stato creato un template che contiene tutte le informazioni necessarie per la redazione di un documento.\\
+    Precisamente è stata definita una cartella \texttt{componenti\_comuni} che contiene:
+    \begin{itemize}
+        \item \texttt{src}: contiene i file \texttt{command.tex} e \texttt{packages.tex} che contengono i comandi e i pacchetti necessari per la produzione e compilazione del documento
+        \item \texttt{img}: contiene tutte le immagini utilizzate nel template
     \end{itemize}
-    \item \textbf{Registro delle modifiche}
-    \item \textbf{Indice}
-    \item \textbf{Contenuto principale}
 
-\end{itemize}
+    \subsubsection{Elementi grafici}
+        \paragraph{Tabelle} ~
 
+        \paragraph{Immagini} ~
 
+        \paragraph{Diagrammi UML} ~
 
-\subsection{Gestione della configurazione}
-\subsection{Gestione del controllo qualità}
-\subsection{Gestione di verifica}
-\subsection{Gestione di validazione}
-\subsection{Gestione del controllo dei costi}
-\subsection{Gestione della risoluzione dei problemi}
+    \subsubsection{Strumenti}
+        Per la redazione dei documenti vengono utilizzati i seguenti strumenti:
+        \begin{itemize}
+            \item \textbf{LaTeX}: per la redazione dei documenti;
+            \item \textbf{VSCode}: per la gestione del codice sorgente e della documentazione;
+            \item \textbf{StarUML}: per la creazione dei diagrammi UML;
+        \end{itemize}
+
+    \subsection{Gestione della configurazione}
+
+        \subsubsection{Utilizzo di Git}
+        Per la gestione della configurazione del progetto viene utilizzato il sistema di versionamento Git.\\
+        Il gruppo ha adottato il modello di branching \textbf{GitFlow} DA CONTINUARE
+
+    \subsection{Gestione del controllo qualità}
+    \subsection{Gestione di verifica}
+    \subsection{Gestione di validazione}
+    \subsection{Gestione del controllo dei costi}
+    \subsection{Gestione della risoluzione dei problemi}
 
