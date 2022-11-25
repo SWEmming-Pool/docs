@@ -1,0 +1,37 @@
+\input{../../componenti_comuni/src/packages}
+\input{../../componenti_comuni/src/commands}
+
+\begin{document}
+	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Verbale Esterno del \documentDate\ - Imola Informatica}
+	\renewcommand{\documentDate}{2022-10-25}
+	
+	\renewcommand{\documentApprovers}{Ennio Italiano \smallskip}
+	\renewcommand{\documentEditors}{Sebastiano Sanson \smallskip}
+	\renewcommand{\documentVerifiers}{Elia Pasquali \smallskip}
+	\renewcommand{\documentAddressee}{Gruppo \groupName}
+	
+	\renewcommand{\documentUsage}{Interno}
+	\renewcommand{\documentSummary}{Incontro esplorativo con l'azienda Imola Informatica per discutere del capitolato proposto (C2)}
+	
+	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+	
+	% Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Sezioni del verbale
+	% =========================================================================
+	\input{src/ordine}
+    \pagebreak
+    \input{src/resoconto}
+	% =========================================================================
+\end{document}

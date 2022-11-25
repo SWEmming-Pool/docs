@@ -1,0 +1,39 @@
+\input{../componenti_comuni/src/commands}
+\input{../componenti_comuni/src/packages}
+
+\begin{document}
+	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Analisi dei capitolati}
+
+	\renewcommand{\documentApprovers}{Elia Pasquali \smallskip}
+	\renewcommand{\documentEditors}{Ennio Italiano \\ & Fabio Pantaleo \\ & Sebastiano Sanson \smallskip}
+	\renewcommand{\documentVerifiers}{Elia Pasquali \smallskip}
+	\renewcommand{\documentAddressee}{\Vardanega \\ & \Cardin}
+	
+	\renewcommand{\documentUsage}{Interno}
+	\renewcommand{\documentSummary}{Il documento riporta i risultati delle discussioni sui capitolati proposti}
+	
+	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+	
+	% Changelog
+	% =========================================================================
+	% \input{src/changelog}
+    % \pagebreak
+
+	% Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Contenuto
+	% =========================================================================
+    \input{src/sezioni}
+	% =========================================================================
+\end{document}

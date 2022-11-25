@@ -1,0 +1,37 @@
+\input{../../componenti_comuni/src/packages}
+\input{../../componenti_comuni/src/commands}
+
+\begin{document}
+	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Verbale Esterno del \documentDate\ - zero12}
+	\renewcommand{\documentDate}{2022-10-26}
+
+	\renewcommand{\documentApprovers}{Ennio Italiano \smallskip}
+	\renewcommand{\documentEditors}{Elia Pasquali \smallskip}
+	\renewcommand{\documentVerifiers}{Fabio Pantaleo \smallskip}
+	\renewcommand{\documentAddressee}{Gruppo \groupName}
+	
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentSummary}{Incontro esplorativo con l'azienda zero12 per discutere del capitolato proposto (C4)}
+	
+	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+	
+	% Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Sezioni del verbale
+	% =========================================================================
+	\input{src/ordine}
+    \pagebreak
+    \input{src/resoconto}
+	% =========================================================================
+\end{document}
