@@ -75,36 +75,69 @@
             \begin{itemize}
                 \item i nomi dei file devono essere completamente in minuscolo
                 \item viene utilizzato il carattere underscore \texttt{\_} per separare le parole
-                \item omissione delle preposizioni (DA VALUTARE)
+                \item omissione delle preposizioni 
             \end{itemize}
 
         \paragraph{Formato data} ~
 
-         Viene utilizzato il formato \texttt{YYYY-MM-DD} per le date.
+         Viene utilizzato il formato \textbf{YYYY-MM-DD} per le date.
             \begin{itemize}
-                \item \texttt{YYYY} rappresenta l'anno (4 cifre)
-                \item \texttt{MM} rappresenta il mese (2 cifre)
-                \item \texttt{DD} rappresenta il giorno (2 cifre)
+                \item \textbf{YYYY} rappresenta l'anno (4 cifre)
+                \item \textbf{MM} rappresenta il mese (2 cifre)
+                \item \textbf{DD} rappresenta il giorno (2 cifre)
             \end{itemize}
 
         \paragraph{Elenchi} ~
 
         \begin{itemize}
             \item \textbf{Elenco puntato}: viene utilizzato per elencare elementi in cui non ha importanza l'ordine.
-            \item \textbf{Elenco numerato}: viene utilizzato per elencare elementi in cui ha importanza l'ordine o la priorità.
+            \item \textbf{Elenco ordinato}: viene utilizzato per elencare elementi in cui ha importanza l'ordine o la priorità.
         \end{itemize}
 
         \paragraph{Glossario} ~
 
          Le convenzioni adottate per fare riferimento a termini specifici presenti nel glossario sono le seguenti:
             \begin{itemize}
-                \item un termine presente nel glossario viene indicato con il comando \glo
+                \item un termine presente nel glossario viene marcato con \glo
                 \item in ogni documento un termine viene marcato solo alla sua prima occorrenza
             \end{itemize}
 
         \paragraph{Stile del testo} ~
 
+        \begin{itemize}
+            \item \texttt{Monospaced}: viene utilizzato per i comandi, snippet e i nomi di file
+            \item \textit{Italic}: viene utilizzato per i termini di dominio
+            \item \textbf{Bold}: viene utilizzato per i termini da enfatizzare, da definire e per citare il nome di un altro documento o standard
+        \end{itemize}
+
         \paragraph{Sigle} ~
+
+        Nella stesura della documentazione vengono utilizzate alcune sigle per termini ricorrenti. \\
+        Vengono scritte in maiuscolo le iniziali dei sostantivi e in minuscolo le iniziali delle eventuali preposizioni. \\
+        Le sigle adottate sono le seguenti:
+        \begin{itemize}
+            \item \textbf{AdR}: Analisi dei Requisiti
+            \item \textbf{MU}: Manuale Utente
+            \item \textbf{MS}: Manuale Sviluppatore
+            \item \textbf{PdP}: Piano di Progetto
+            \item \textbf{PdQ}: Piano di Qualifica
+            \item \textbf{NdP}: Norme di Progetto
+            \item \textbf{SdF}: Studio di Fattibilità
+            \item \textbf{RTB}: Requirements and Technology Baseline
+            \item \textbf{PB}: Product Baseline
+            \item \textbf{CA}: Customer Acceptance
+            \item \textbf{PoC}: Proof of Concept
+        \end{itemize}
+
+        Per definire le sigle dei ruoli si è deciso di aggiungere la seconda lettere in minuscolo per evitare omonimia:
+        \begin{itemize}
+            \item \textbf{Am}: Amministratore
+            \item \textbf{An}: Analista
+            \item \textbf{Pr}: Programmatore
+            \item \textbf{Pt}: Progettista
+            \item \textbf{Re}: Responsabile di progetto
+            \item \textbf{Ve}: Verificatore
+        \end{itemize}
 
     \subsubsection{Produzione documenti}
     Per agevolare la produzione dei documenti è stato creato un template che contiene tutte le informazioni necessarie per la redazione di un documento.\\
@@ -124,15 +157,15 @@
     \subsubsection{Strumenti}
         Per la redazione dei documenti vengono utilizzati i seguenti strumenti:
         \begin{itemize}
-            \item \textbf{LaTeX}: per la redazione dei documenti;
-            \item \textbf{VSCode}: per la gestione del codice sorgente e della documentazione;
-            \item \textbf{StarUML}: per la creazione dei diagrammi UML;
+            \item \textit{LaTeX}: per la redazione dei documenti;
+            \item \textit{VSCode}: per la gestione del codice sorgente e della documentazione;
+            \item \textit{StarUML}: per la creazione dei diagrammi \textit{UML};
         \end{itemize}
 
     \subsection{Gestione della configurazione}
 
         \subsubsection{Utilizzo di Git}
-        Per la gestione della configurazione del progetto viene utilizzato il sistema di versionamento Git.\\
+        Per la gestione della configurazione del progetto viene utilizzato il sistema di versionamento \textbf{Git}.\\
         Il gruppo ha adottato il modello di branching \textbf{GitFlow} DA CONTINUARE
 
     \subsection{Gestione del controllo qualità}
