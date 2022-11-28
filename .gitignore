@@ -18,4 +18,6 @@
 out/
 *.pdf
 *.dvi
+
+# MacOS file
 .DS_Store
