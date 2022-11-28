@@ -18,3 +18,4 @@
 out/
 *.pdf
 *.dvi
+.DS_Store
