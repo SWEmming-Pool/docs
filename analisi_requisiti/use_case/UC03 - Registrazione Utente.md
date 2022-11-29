@@ -19,4 +19,4 @@ L'utente possiede un account
 1. L'utente inserisce un username già presente
     - L'utente non viene registrato
     - Viene mostrato un errore esplicativo
-    - Vien efornita all'utente la possibilità di scegliere un nuovo username
+    - Viene fornita all'utente la possibilità di scegliere un nuovo username
