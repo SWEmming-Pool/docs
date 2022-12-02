@@ -31,6 +31,14 @@ mv main.pdf ../out/lettera_candidatura.pdf
 latexmk -c 1>/dev/null
 cd ..
 
+# Analisi requisiti
+cd analisi_requisiti/
+echo "Analisi requisiti"
+latexmk -pdf main.tex 1>/dev/null
+mv main.pdf ../out/analisi_requisiti.pdf
+latexmk -c 1>/dev/null
+cd ..
+
 # Glossario
 cd glossario/
 echo "Glossario"
