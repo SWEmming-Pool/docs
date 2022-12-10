@@ -1,7 +1,7 @@
 # UC03 - Registrazione
 
 ## Attore primario
-Utente
+Utente Non Registrato
 
 ## Pre condizioni
 L'utente non possiede un account
@@ -19,4 +19,4 @@ L'utente possiede un account
 1. L'utente inserisce un username già presente
     - L'utente non viene registrato
     - Viene mostrato un errore esplicativo
-    - Viene fornita all'utente la possibilità di scegliere un nuovo username
+    - Vien efornita all'utente la possibilità di scegliere un nuovo username
