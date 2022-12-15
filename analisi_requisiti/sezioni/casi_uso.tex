@@ -1,5 +1,71 @@
 \section{Casi d'uso}
 
+\subsection{UC01 - Autenticazione}
+\textbf{Attore primario} Utente Non Autenticato \\
+\textbf{Attore secondario} MetaMask \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item Utente non è autenticato.
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item Utente è autenticato.
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item L'utente accede a MetaMask
+\end{enumerate}
+\textbf{Estensioni}
+\begin{enumerate}
+    \item L'accesso a MetaMask non va a buon fine:
+    \begin{itemize}
+        \item viene segnalato un errore esplicativo;
+        \item l'utente è invitato a riprovare;
+    \end{itemize}
+\end{enumerate}
+
+\subsection{UC01.1 - Errore Autenticazione}
+\textbf{Attore primario} Utente Non Autenticato \\
+\textbf{Attore secondario} MetaMask \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente sta tentando di autenticarsi.
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item L'operazione fallisce.
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item Si verificano problemi con l'accesso a MetaMask.
+    \item Viene mostrato un errore che informa l'utente del fallimento dell'operazione.
+    \item Vengono mostrati dei consigli sulla risoluione del problema e si invita l'utente a riprovare
+\end{enumerate}
+\textbf{Estensioni} Nessuna
+
+\subsection{UC02 - visualizza Recensioni}
+\textbf{Attore primario} Utente Non Autenticato \\
+\textbf{Attore secondario} MetaMask \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente non è autenticato.
+    \item L'utente conosce l'indirizzo di cui vuole visualizzare le recensioni.
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item L'utente visualizza le recensioni associate a quell'indirizzo.
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item L'utente richiede la lista delle recensioni di un determinato indirizzo.
+    \item Viene visualizzata la lista delle recensioni trovate.
+\end{enumerate}
+\textbf{Estensioni}
+\begin{enumerate}
+    \item L'utente inserisce un indirizzo inesistente e viene visualizzato un errore.
+    \item L'indirizzo cercato non presenta recensioni collegate e l'utente viene informato di questo.
+\end{enumerate}
+
 \subsection{UC03 - Pagamento}
 \textbf{Attore primario} Utente Autenticato \\
 \textbf{Attore secondario} MetaMask \\
@@ -23,3 +89,72 @@
         \item viene visualizzato un errore;
     \end{itemize}
 \end{enumerate}
+
+\subsection{UC03.1 - Errore Pagamento}
+\textbf{Attore primario} Utente Autenticato \\
+\textbf{Attore secondario} MetaMask \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item Utente sta tentando di effettuare un pagamento.
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item Il pagamento fallisce.
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item L'utente tenta di effettuare un pagamento che non va a buon fine .
+    \item Viene mostrato un errore che informa l'utente sul motivo del fallimento dell'operazione.
+    \item L'operazione viene annullata
+\end{enumerate}
+\textbf{Estensioni} Nessuna.
+
+\subsection{UC04 - Recensione}
+\textbf{Attore primario} Utente Autenticato \\
+\textbf{Attore secondario} MetaMask \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente è autenticato.
+    \item L'utente ha effettuato almeno un acquisto.
+    \item L'utente ha acquisti non recensiti.
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item L'utente ha effettuato una recensione sull'acquisto.
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item L'utente seleziona un pagamento da associare alla recensione.
+    \item L'utente insersice la recensione.
+\end{enumerate}
+\textbf{Estensioni}
+\begin{enumerate}
+    \item L'utente seleziona una pagamento già recensito.
+    \begin{itemize}
+        \item viene bloccata la creazione di una nuova recensione;
+        \item viene mostrato un errore esplicativo;
+    \end{itemize}
+\end{enumerate}
+
+\subsection{UC04.1 - Errore Recensione}
+\textbf{Attore primario} Utente Autenticato \\
+\textbf{Attore secondario} MetaMask \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item Utente vuole rilasciare una recensione.
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item L'operazione fallisce.
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item L'utente inserisce una recensione che non può rilasciare ad esempio nei casi in cui:
+    \begin{itemize}
+        \item non ha un acquisto vlaido legato all'oggetto che vuole recensire;
+        \item la recensione non rispetta un formato valido.
+    \end{itemize}
+    \item Viene mostrato un errore che informa l'utente sul perchè la recensione non può essere rilasciata.
+    \item Vengono mostrati dei consigli sulla risoluzione del problema e si blocca l'attuale operazione.
+\end{enumerate}
+\textbf{Estensioni} Nessuna
