@@ -3,16 +3,24 @@
 \subsection{Risultati ottenuti}
 
 \begin{enumerate}
-    \item Tipologie di attori: le differenze tra utente non registrato, utente registrato e utente business che erano stati trovati in precedenza. Ogni utente è identificato tramite il suo wallet e per il nostro sistema non esiste un profilo aggiuntivo e necessità di registrazione e login.
-    \begin{itemize}
-        \item Non vi è distinzione tra utente business e normale. Uno stesso utente può inviare e ricevere recensioni.
-        \item Va differenziata la casistica di utente connesso tramite metamask e non connesso.
-        \item Un utente non collegato è limitato alle sole operazioni di lettura.
-    \end{itemize}
-    \item Dubbio su contratto come attore esterno: dopo il dubbio sollevato dal \cardin sulla necessità di inserire lo smart contract come attore esterno nei casi d'uso e la spiegazione del proponente si è arrivati alla conclusione che forse il vero attore esterno da inserire è un RPC che va effettivamente a collegarsi. Rimane da confermare la cosa insieme al professore.
-    \item Consigli futuri sull'ottimizzazione dell'ottenimento delle recensioni dalla blockchain.
-    \item Dopo una piccola discussione sul sistema di API che dovranno essere fornite si è deciso di andare a creare un nuovo sistema all'interno del diagramma dei casi d'uso.  
+    \item Sono state riviste le differenze precedentemente individuate tra utente non
+          registrato, utente registrato e utente business. Ogni utente è identificato
+          tramite il suo wallet e per il nostro sistema non esiste un profilo aggiuntivo
+          e necessità di registrazione e login. In particolare:
+          \begin{itemize}
+              \item non vi è distinzione tra utente business e normale; infatti, un qualsiasi
+                    utente deve poter inviare e ricevere recensioni;
+              \item c'è differenza tra utente autenticato e non autenticato con Metamask;
+              \item un utente non autenticato è limitato alle sole operazioni di lettura (es.
+                    visualizzazione recensioni).
+          \end{itemize}
+    \item Il servizio di API REST è totalmente scollegato dalla web app; è quindi
+          necessario analizzare i relativi casi d'uso separatamente.
+    \item Lo Smart Contract non va inserito nel diagramma dei casi d'uso come attore
+          esterno; un RPC è probabilmente più sensato come attore esterno. Il proponente
+          ha inoltre dato consigli sull'ottimizzazione dell'ottenimento delle recensioni
+          dalla blockchain.
 \end{enumerate}
 
 \subsection{Decisioni prese}
-È necessario rivedere i casi d'uso per uniformarli alle nuove analisi e successivamente rivedere i vari documenti prodotti.
+È necessario rivedere i casi d'uso per uniformarli alle nuove analisi e successivamente rivedere i vari documenti prodotti. In particolare, vanno rimosse alcune tipologie di utenti e i relativi casi, e si è deciso di creare un nuovo sistema relativo alle API REST all'interno del diagramma dei casi d'uso.
