@@ -3,16 +3,19 @@
 ## Attore primario
 Utente Autenticato
 
-## Pre condizioni
-- Utente non ha ancora pagato
+## Attore secondario
+MetaMask
 
-## Post condizioni
-- Utente ha completato il pagamento
+## Pre-condizioni
+- L'utente non ha ancora pagato
 
-## Scenario Principale
-1. Utente conferma pagamento
+## Post-condizioni
+- L'utente ha completato il pagamento
+
+## Scenario principale
+1. L'utente conferma pagamento
 
 ## Estensioni
-1. Utente non ha fondi
+1. L'utente non ha fondi nel wallet
     - Il pagamento fallisce
     - Viene visualizzato un errore

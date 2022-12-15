@@ -2,10 +2,12 @@
 
 ## Attore primario
 
-## Pre condizioni
+## Attore secondario
 
-## Post condizioni
+## Pre-condizioni
 
-## Scenario Principale
+## Post-condizioni
+
+## Scenario principale
 
 ## Estensioni

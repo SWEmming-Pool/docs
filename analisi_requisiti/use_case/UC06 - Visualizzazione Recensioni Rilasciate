@@ -1,0 +1,15 @@
+# UC06 - Visualizzazione Recensioni Rilasciate
+
+## Attore primario
+Utente Autenticato
+
+## Pre condizioni
+
+## Post condizioni
+- L'utente visualizza le recensioni che ha rilasciato
+
+## Scenario Principale
+- Vengono mostrate le recensioni rilasciate dall'utente
+
+## Estensioni
+Nessuna

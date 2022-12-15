@@ -1,4 +1,4 @@
-# UC01 - Autenticazione
+# UC01 - Autenticazione Utente
 
 ## Attore primario
 Utente Non Autenticato
@@ -6,14 +6,14 @@ Utente Non Autenticato
 ## Attore secondario
 MetaMask
 
-## Pre condizioni
+## Pre-condizioni
 - L'utente non è autenticato
 
-## Post condizioni
+## Post-condizioni
 - L'utente è autenticato
 
-## Scenario Principale
-1. L'utente accede a MetaMask
+## Scenario principale
+1. L'utente accede tramite MetaMask
 
 ## Estensioni
 1. L'accesso a MetaMask non va a buon fine:

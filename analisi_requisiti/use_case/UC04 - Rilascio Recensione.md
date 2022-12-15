@@ -1,7 +1,10 @@
-# UC04 - Recensione
+# UC04 - Rilascio Recensione
 
 ## Attore primario
 Utente Autenticato
+
+## Attore secondario
+MetaMask
 
 ## Pre condizioni
 - L'utente è autenticato
