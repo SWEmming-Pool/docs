@@ -1,10 +1,10 @@
 # UC11 - Errore Recensione
 
 ## Attore primario
-Utente Registrato
+Utente Autenticato
 
 ## Pre condizioni
--  L'utente sta tentando di rilasciare una recensione
+-  L'utente vuole rilasciare una recensione
 
 ## Post condizioni
 - L'operazione fallisce

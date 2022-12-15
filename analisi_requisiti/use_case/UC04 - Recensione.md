@@ -1,7 +1,7 @@
 # UC04 - Recensione
 
 ## Attore primario
-Utente Registrato
+Utente Autenticato
 
 ## Pre condizioni
 - L'utente è autenticato

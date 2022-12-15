@@ -1,7 +1,25 @@
 \section{Casi d'uso}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{use_case/UML_casi.png} 
-\end{figure}
-
+\subsection{UC03 - Pagamento}
+\textbf{Attore primario} Utente Autenticato \\
+\textbf{Attore secondario} MetaMask \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item Utente non ha ancora pagato.
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item Utente ha completato il pagamento.
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item Utente conferma pagamento.
+\end{enumerate}
+\textbf{Estensioni}
+\begin{enumerate}
+    \item Utente non ha fondi nel wallet:
+    \begin{itemize}
+        \item il pagamento fallisce;
+        \item viene visualizzato un errore;
+    \end{itemize}
+\end{enumerate}

@@ -1,7 +1,10 @@
 # UC11 - Errore Pagamento
 
 ## Attore primario
-Utente Registrato
+Utente Autenticato
+
+## Attore secondario
+MetaMask
 
 ## Pre condizioni
 - L'utente sta tentando di effettuare un pagamento
@@ -10,7 +13,7 @@ Utente Registrato
 - Il pagamento fallisce
 
 ## Scenario Principale
-1. L'utente tenta di effettuare un pagamento che non può permettersi
+1. L'utente tenta di effettuare un pagamento che non va a buon fine
 2. Viene mostrato un errore che informa l'utente sul motivo del fallimento dell'operazione
 3. L'operazione viene annullata
 
