@@ -14,16 +14,15 @@
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
         \\                                                             
 
-?& Obbligatorio &    	La recensione potrà essere pubblicata solo a pagamento confermato        & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &       Esiste un'unica recensione per una transazione economica                   & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio & 	    L'utente deve eseguire un'ulteriore transazione per poter lasciare una recensione             & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &    	Recensione e transazione sono caricati su una blockchain pubblica             & \Shortunderstack{Capitolato}                        \\
 ?& Obbligatorio &    	Sviluppo di una webapp per il pagamento e il rilascio di recensioni             & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &    	La webapp deve visualizzare le recensioni organizzate per attività commerciale           & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &    	La blockchain memorizza una lista con tutte le interazioni pagamento-recensione        & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &    	Sviluppo di una API REST per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito & \Shortunderstack{Capitolato}                        \\
-
-
+UC01& Obbligatorio &    	La webapp fornisce all'utente la possibilità di registrarsi attraverso MetaMask & \Shortunderstack{Capitolato}                        \\
+UC01.1& Obbligatorio &    	La webapp visualizza un errore in caso di registrazione fallita& \Shortunderstack{Capitolato}                        \\
+UC01& Obbligatorio &    	L'utente può accedere alla webapp tramite login con MetaMask& \Shortunderstack{Capitolato}                        \\
+UC02& Obbligatorio &    	L'utente (anche non loggato) può richiede la lista delle recensioni di un indirizzo tramite RPC allo smart contract       & \Shortunderstack{Capitolato}   \\
+UC02& Obbligatorio &    	La webapp visualizza un errore in caso di richiesta di visualizzazione di recensioni verso un indirizzo inesistente& \Shortunderstack{Capitolato} \\
+UC02& Obbligatorio &    	La webapp visualizza un avviso se l'indirizzo cercato non presenta recensioni collegate& \Shortunderstack{Capitolato} \\
+UC03& Obbligatorio &    	L'utente autenticato può eseguire un pagamento & \Shortunderstack{Capitolato}   \\
+UC03.1& Obbligatorio &    	Il pagamento fallisce e la webapp visualizza un errore& \Shortunderstack{Capitolato}   \\
 	\end{tabular}
 \end{table}
 
@@ -37,16 +36,43 @@
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
-            \\                                                             
-    
-    ?& Obbligatorio &    	Lo smart contract accede alla blockchain per ottenere la lista delle recensioni        & \Shortunderstack{Capitolato}                        \\
-    ?& Obbligatorio &    	La webapp deve fornire il login per l'utente & \Shortunderstack{Capitolato}                        \\
-    ?& Obbligatorio &    	L'utente viene informato sull esito della transazione        & \Shortunderstack{Capitolato}                        \\
-    ?& Obbligatorio &    	Lo smart contract invia i fondi all'e-commerce     & \Shortunderstack{Capitolato}                        \\ 
-    ?& Obbligatorio &    	La webapp deve poter richiede la lista delle recensioni di un utente tramite RPC allo smart contract       & \Shortunderstack{Capitolato}                        \\ 
-    ?& Obbligatorio &       Il server API deve poter richiedere la lista recensioni di un e-commerce tramite RPC allo smart contract           & \Shortunderstack{Capitolato}                        \\      
-    \end{tabular}
+            \\       
+
+    UC04& Obbligatorio &       Esiste un'unica recensione per una transazione economica                   & \Shortunderstack{Capitolato}                        \\
+    UC04& Obbligatorio & 	    L'utente deve eseguire un'ulteriore transazione per poter lasciare una recensione             & \Shortunderstack{Capitolato}                        \\
+    UC04& Obbligatorio &    	L'utente può scegliere il pagamento da associare alla recensione& \Shortunderstack{Capitolato}                        \\
+    UC04& Obbligatorio &    	La recensione potrà essere pubblicata solo a pagamento confermato        & \Shortunderstack{Capitolato}   \\
+    UC04.1& Obbligatorio &    	La recensione deve avere un formato valido     & \Shortunderstack{Capitolato}   \\
+    UC04.1& Obbligatorio &    	La webapp visualizza un errore se l'utente seleziona un pagamento a cui è collegata già un recensione& \Shortunderstack{Capitolato}                        \\
+    UC04.1& Obbligatorio &    	Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento   & \Shortunderstack{Capitolato}   \\
+    UC05& Obbligatorio &    	La webapp fornisce all'utente la possibilità di visualizzare le recensioni ricevute& \Shortunderstack{Capitolato} \\
+    UC06& Obbligatorio &    	La webapp fornisce all'utente la possibilità di visualizzare le recensioni rilasciate& \Shortunderstack{Capitolato} \\    
+        \end{tabular}
     \end{table}
+
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors[]{1}{gray!55}{white}
+        \begin{tabular}{c | c | p{6cm} | c }
+            \rowcolor[HTML]{a52a2a}
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
+            \\       
+    ?& Obbligatorio &    	Recensione e transazione sono caricati su una blockchain pubblica             & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	La webapp deve visualizzare le recensioni organizzate per attività commerciale           & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	La blockchain memorizza una lista con tutte le interazioni pagamento-recensione        & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	Sviluppo di una API REST per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	Lo smart contract accede alla blockchain per ottenere la lista delle recensioni        & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	Lo smart contract invia i fondi all'e-commerce     & \Shortunderstack{Capitolato}                        \\            
+    ?& Obbligatorio &       Il server API deve poter richiedere la lista recensioni di un e-commerce tramite RPC allo smart contract           & \Shortunderstack{Capitolato} \\          
+\end{tabular}
+    \end{table}
+
+
 \subsection{Requisiti di qualità}
 
 \begin{table}[H]
