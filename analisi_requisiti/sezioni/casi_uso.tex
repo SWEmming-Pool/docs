@@ -1,6 +1,6 @@
 \section{Casi d'uso}
 
-\subsection{UC01 - Autenticazione Utente}
+\subsection{UC01 - Autenticazione}
 \textbf{Attore primario} Utente Non Autenticato \\
 \textbf{Attore secondario} MetaMask \\
 \textbf{Pre-condizioni}
@@ -18,38 +18,29 @@
 \textbf{Estensioni}
 \begin{enumerate}
     \item L'accesso a MetaMask non va a buon fine
-          \begin{itemize}
-              \item Viene segnalato un errore esplicativo
-              \item L'utente è invitato a riprovare
-          \end{itemize}
+    \item Si verifica \hyperref[UC10]{UC10}
 \end{enumerate}
 
-\subsection{UC01.1 - Errore Autenticazione Utente}
-\textbf{Attore primario} Utente Non Autenticato \\
-\textbf{Attore secondario} MetaMask \\
+\subsection{UC02 - Logout}
+\textbf{Attore primario} Utente Autenticato \\
 \textbf{Pre-condizioni}
 \begin{itemize}
-    \item L'utente sta tentando di autenticarsi
+    \item L'utente è autenticato
 \end{itemize}
 \textbf{Post-condizioni}
 \begin{itemize}
-    \item L'operazione fallisce
+    \item L'utente non è più autenticato
 \end{itemize}
 \textbf{Scenario principale}
 \begin{enumerate}
-    \item Si verificano problemi con l'accesso a MetaMask
-    \item Viene mostrato un errore che informa l'utente del fallimento dell'operazione
-    \item Vengono mostrati dei consigli sulla risoluzione del problema e si invita
-          l'utente a riprovare
+    \item L'utente effettua il logout
 \end{enumerate}
-\textbf{Estensioni} Nessuna
 
-\subsection{UC02 - Visualizzazione Recensioni}
-\textbf{Attore primario} Utente Non Autenticato \\
-\textbf{Attore secondario} RPC(?) \\
+\subsection{UC03 - Ricerca Recensioni}
+\textbf{Attore primario} Utente Generico \\
+\textbf{Attore secondario} Infura \\
 \textbf{Pre-condizioni}
 \begin{itemize}
-    \item L'utente non è autenticato
     \item L'utente conosce l'indirizzo di cui vuole visualizzare le recensioni
 \end{itemize}
 \textbf{Post-condizioni}
@@ -59,60 +50,120 @@
 \textbf{Scenario principale}
 \begin{enumerate}
     \item L'utente richiede la lista delle recensioni di un determinato indirizzo.
+\end{enumerate}
+\textbf{Estensioni}
+\begin{enumerate}
+    \item L'utente inserisce un indirizzo inesistente
+    \item Si verifica \hyperref[UC11]{UC11}
+\end{enumerate}
+
+\subsection{UC04 - Visualizzazione Recensioni}
+\textbf{Attore primario} Utente Generico \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente ha effettuato una ricerca per indirizzo
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item L'utente visualizza le recensioni associate a quell'indirizzo
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
     \item Viene visualizzata una lista di recensioni corrispondenti
 \end{enumerate}
 \textbf{Estensioni}
 \begin{enumerate}
-    \item L'utente inserisce un indirizzo inesistente e viene visualizzato un errore
-    \item L'indirizzo cercato non presenta recensioni collegate e l'utente viene
-          informato di questo
+    \item L'utente inserisce un indirizzo inesistente
+    \item Si verifica \hyperref[UC12]{UC12}
 \end{enumerate}
 
-\subsection{UC03 - Pagamento}
+\subsection{UC05 - Visualizzazione Recensioni Ricevute}
 \textbf{Attore primario} Utente Autenticato \\
 \textbf{Attore secondario} MetaMask \\
-\textbf{Pre-condizioni}
-\begin{itemize}
-    \item L'utente non ha ancora pagato
-\end{itemize}
+\textbf{Pre-condizioni} Nessuna \\
 \textbf{Post-condizioni}
 \begin{itemize}
-    \item L'utente ha completato il pagamento
+    \item L'utente visualizza le recensioni che ha ricevuto
 \end{itemize}
 \textbf{Scenario principale}
 \begin{enumerate}
-    \item L'utente conferma pagamento.
-\end{enumerate}
-\textbf{Estensioni}
-\begin{enumerate}
-    \item L'utente non ha fondi nel wallet
-          \begin{itemize}
-              \item Il pagamento fallisce
-              \item Viene visualizzato un errore
-          \end{itemize}
+    \item Viene mostrata la lista di recensioni ricevute dall'utente
 \end{enumerate}
 
-\subsection{UC03.1 - Errore Pagamento}
+\subsection{UC06 - Visualizzazione Recensioni Rilasciate}
 \textbf{Attore primario} Utente Autenticato \\
 \textbf{Attore secondario} MetaMask \\
-\textbf{Pre-condizioni}
-\begin{itemize}
-    \item L'utente sta tentando di effettuare un pagamento
-\end{itemize}
+\textbf{Pre-condizioni} Nessuna \\
 \textbf{Post-condizioni}
 \begin{itemize}
-    \item Il pagamento fallisce
+    \item L'utente visualizza le recensioni che ha rilasciato
 \end{itemize}
 \textbf{Scenario principale}
 \begin{enumerate}
-    \item L'utente tenta di effettuare un pagamento che non va a buon fine
-    \item Viene mostrato un errore che informa l'utente sul motivo del fallimento
-          dell'operazione
-    \item L'operazione viene annullata
+    \item Viene mostrata la lista di recensioni rilasciate dall'utente
 \end{enumerate}
-\textbf{Estensioni} Nessuna
 
-\subsection{UC04 - Rilascio Recensione}
+\subsection{UC07 - Visualizzazione Singola Recensione}
+\textbf{Attore primario} Utente Generico \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item Si sta visualizzando una lista di recensioni
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item Viene visualizzata una singola recensione della lista
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item Viene visualizzata una recensione appartenente alla lista richiesta dall'utente
+\end{enumerate}
+
+\subsection{UC07.1 - Visualizzazione Autore Recensione}
+\textbf{Attore primario} Utente Generico \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item Viene visualizzata una recensione
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item Viene visualizzato l'autore della recensione
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item Viene visualizzato l'autore all'interno della recensione corrispondente
+\end{enumerate}
+
+\subsection{UC07.2 - Visualizzazione Testo Recensione}
+\textbf{Attore primario} Utente Generico \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item Viene visualizzata una recensione
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item Viene visualizzato il testo della recensione
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item Viene visualizzato il testo all'interno della recensione corrispondente
+\end{enumerate}
+
+\subsection{UC07.3 - Visualizzazione Voto Recensione}
+\textbf{Attore primario} Utente Generico \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item Viene visualizzata una recensione
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item Viene visualizzato il voto della recensione
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item Viene visualizzato il voto all'interno della recensione corrispondente
+\end{enumerate}
+
+\subsection{UC08 - Rilascio Recensione}
 \textbf{Attore primario} Utente Autenticato \\
 \textbf{Attore secondario} MetaMask \\
 \textbf{Pre-condizioni}
@@ -133,13 +184,87 @@
 \textbf{Estensioni}
 \begin{enumerate}
     \item L'utente seleziona una pagamento già recensito
-          \begin{itemize}
-              \item Viene bloccata la creazione di una nuova recensione
-              \item Viene mostrato un errore esplicativo
-          \end{itemize}
+    \item Si verifica \hyperref[UC13]{UC13}
 \end{enumerate}
 
-\subsection{UC04.1 - Errore Recensione}
+\subsection{UC09 - Pagamento}
+\textbf{Attore primario} Utente Autenticato \\
+\textbf{Attore secondario} MetaMask \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente non ha ancora pagato
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item L'utente ha completato il pagamento
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item L'utente effettua il pagamento
+\end{enumerate}
+\textbf{Estensioni}
+\begin{enumerate}
+    \item L'utente non ha fondi nel wallet
+    \item Si verifica \hyperref[UC14]{UC14}
+\end{enumerate}
+
+\subsection{UC10 - Visualizzazione Errore Autenticazione}
+\label{UC10}
+\textbf{Attore primario} Utente Non Autenticato \\
+\textbf{Attore secondario} MetaMask \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente sta tentando di autenticarsi
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item L'operazione fallisce
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item Si verificano problemi con l'accesso a MetaMask
+    \item Viene mostrato un errore che informa l'utente del fallimento dell'operazione
+    \item Vengono mostrati dei consigli sulla risoluzione del problema e si invita
+          l'utente a riprovare
+\end{enumerate}
+
+\subsection{UC11 - Errore Ricerca Recensioni}
+\label{UC11}
+\textbf{Attore primario} Utente Generico, Utente Autenticato \\
+\textbf{Attore secondario} Infura \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente richiede le recensioni collegate ad un indirizzo
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item La ricerca fallisce
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item L'utente inserisce un indirizzo inesistente e viene visualizzato un errore
+\end{enumerate}
+
+\subsection{UC12 - Errore Visualizzazione Recensioni}
+\label{UC12}
+\textbf{Attore primario} Utente Generico, Utente Autenticato \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente ha effettuato una ricerca per indirizzo
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item  L'utente non visualizza nessuna recensione
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item L'utente richiede la lista delle recensioni di un determinato indirizzo
+    \item L'indirizzo cercato non presenta recensioni collegate e l'utente viene
+          informato di questo
+\end{enumerate}
+
+\subsection{UC013 - Errore Recensione}
+\label{UC13}
 \textbf{Attore primario} Utente Autenticato \\
 \textbf{Attore secondario} MetaMask \\
 \textbf{Pre-condizioni}
@@ -162,34 +287,66 @@
     \item Vengono mostrati dei consigli sulla risoluzione del problema e si blocca
           l'attuale operazione
 \end{enumerate}
-\textbf{Estensioni} Nessuna
 
-\subsection{UC05 - Visualizzazione Recensioni Ricevute}
+\subsection{UC014 - Errore Pagamento}
+\label{UC14}
 \textbf{Attore primario} Utente Autenticato \\
 \textbf{Attore secondario} MetaMask \\
-\textbf{Pre-condizioni} Nessuna \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente sta tentando di effettuare un pagamento
+\end{itemize}
 \textbf{Post-condizioni}
 \begin{itemize}
-    \item L'utente visualizza le recensioni che ha ricevuto
+    \item Il pagamento fallisce
 \end{itemize}
 \textbf{Scenario principale}
 \begin{enumerate}
-    \item Viene mostrata la lista di recensioni ricevute dall'utente
+    \item L'utente tenta di effettuare un pagamento che non va a buon fine
+    \item Viene mostrato un errore che informa l'utente sul motivo del fallimento
+          dell'operazione
+    \item L'operazione viene annullata
 \end{enumerate}
-\textbf{Estensioni}
-Nessuna
 
-\subsection{UC06 - Visualizzazione Recensioni Rilasciate}
-\textbf{Attore primario} Utente Autenticato \\
-\textbf{Attore secondario} MetaMask \\
-\textbf{Pre-condizioni} Nessuna \\
+\subsection{UC15 - Richiesta Lista Recensioni}
+\textbf{Attore primario} Utilizzatore API \\
+\textbf{Attore secondario} Infura \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente conosce l'indirizzo di cui vuole visualizzare le recensioni
+\end{itemize}
 \textbf{Post-condizioni}
 \begin{itemize}
-    \item L'utente visualizza le recensioni che ha rilasciato
+    \item L'utente ottiene un file contenente una lista di recensioni
 \end{itemize}
 \textbf{Scenario principale}
 \begin{enumerate}
-    \item Viene mostrata la lista di recensioni rilasciate dall'utente
+    \item L'utente fa una richiesta al server API specificando l'indirizzo di cui
+          ottenere le recensioni
+    \item Il server recupera le recensioni legate all'utente richiesto
+    \item Viene restituito una lista di recensioni
 \end{enumerate}
 \textbf{Estensioni}
-Nessuna
+\begin{enumerate}
+    \item La richiesta fallisce
+    \item Si verifica \hyperref[UC16]{UC16}
+\end{enumerate}
+
+\subsection{UC16 - Errore Ottenimento Recensioni}
+\label{UC16}
+\textbf{Attore primario} Utilizzatore API \\
+\textbf{Attore secondario} Infura \\
+\textbf{Pre-condizioni}
+\begin{itemize}
+    \item L'utente sta tentando di ottenere la lista recensioni
+\end{itemize}
+\textbf{Post-condizioni}
+\begin{itemize}
+    \item L'operazione fallisce
+\end{itemize}
+\textbf{Scenario principale}
+\begin{enumerate}
+    \item L'utente tenta di ottenere la lista di recensioni
+    \item Viene mostrato un errore che informa l'utente sul motivo del fallimento
+          dell'operazione
+\end{enumerate}
