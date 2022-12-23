@@ -9,7 +9,7 @@
         \subsubsection{Backend}
         \begin{itemize}
             \item \textbf{Smart Contract}: gestisce la logica dei pagamenti e delle recensioni
-            \item \textbf{API REST}: permette di ottenere le informazioni da parte degli e-commerce che vogliono usufruire del servizio 
+            \item \textbf{API REST}: permette di ottenere le informazioni da parte dell'utente che vuole usufruire del servizio, precisamente recuperare le recensioni a lui associate 
         \end{itemize}
 
         \subsubsection{Frontend}
@@ -22,8 +22,8 @@
     \subsubsection{Caratteristiche degli utenti}
     Gli utenti utilizzatori del prodotto possono essere di tre tipologie:
     \begin{itemize}
-        \item \textbf{Utente non registrato}: sono gli utenti che non hanno un account, possono dunque solo registrarsi al servizio
-        \item \textbf{Utente finale}: sono gli utenti che effettuano pagamenti e rilasciano recensioni
-        \item \textbf{Utente Business}: sono gli utenti che utilizzano il servizio per integrarlo nel proprio sito
+        \item \textbf{Utente generico}: utente che non possiede un account metamask e ha dunque possibilità di usufruire del servizio solo in lettura
+        \item \textbf{Utente non autenticato}: utente che possiede un account metamask ma non è autenticato, dunque può usufruire del servizio solo in lettura o autenticarsi per poter effettuare pagamenti e rilasciare recensioni
+        \item \textbf{Utente autenticato}: utente che possiede un account metamask e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni
     \end{itemize}
 

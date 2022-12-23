@@ -15,14 +15,14 @@
         \\                                                             
 
 ?& Obbligatorio &    	Sviluppo di una webapp per il pagamento e il rilascio di recensioni             & \Shortunderstack{Capitolato}                        \\
-UC01& Obbligatorio &    	La webapp fornisce all'utente la possibilità di registrarsi attraverso MetaMask & \Shortunderstack{Capitolato}                        \\
-UC01.1& Obbligatorio &    	La webapp visualizza un errore in caso di registrazione fallita& \Shortunderstack{Capitolato}                        \\
-UC01& Obbligatorio &    	L'utente può accedere alla webapp tramite login con MetaMask& \Shortunderstack{Capitolato}                        \\
-UC02& Obbligatorio &    	L'utente (anche non loggato) può richiede la lista delle recensioni di un indirizzo tramite RPC allo smart contract       & \Shortunderstack{Capitolato}   \\
-UC02& Obbligatorio &    	La webapp visualizza un errore in caso di richiesta di visualizzazione di recensioni verso un indirizzo inesistente& \Shortunderstack{Capitolato} \\
-UC02& Obbligatorio &    	La webapp visualizza un avviso se l'indirizzo cercato non presenta recensioni collegate& \Shortunderstack{Capitolato} \\
-UC03& Obbligatorio &    	L'utente autenticato può eseguire un pagamento & \Shortunderstack{Capitolato}   \\
-UC03.1& Obbligatorio &    	Il pagamento fallisce e la webapp visualizza un errore& \Shortunderstack{Capitolato}   \\
+?& Obbligatorio &    	La webapp fornisce all'utente la possibilità di autenticarsi attraverso MetaMask & \Shortunderstack{\ref{UC01}}                        \\
+UC10& Obbligatorio &    	La webapp visualizza un errore in caso di autenticazione fallita& \Shortunderstack{\ref{UC10}}                        \\
+UC01& Obbligatorio &    	L'utente può accedere alla webapp tramite login con MetaMask& \Shortunderstack{\ref{UC01}}                        \\
+UC03& Obbligatorio &    	L'utente generico può ricercare delle recensioni di un determinato indirizzo tramite RPC allo smart contract       & \Shortunderstack{\ref{UC03}}   \\
+UC11& Obbligatorio &    	La webapp visualizza un errore di ricerca di recensioni verso un indirizzo inesistente& \Shortunderstack{\ref{UC11}} \\
+UC12& Obbligatorio &    	La webapp visualizza un avviso se l'indirizzo cercato non presenta recensioni collegate& \Shortunderstack{\ref{UC12}} \\
+UC03& Obbligatorio &    	L'utente autenticato può eseguire un pagamento & \Shortunderstack{\ref{UC03}}   \\
+UC14& Obbligatorio &    	Il pagamento fallisce e la webapp visualizza un errore& \Shortunderstack{\ref{UC14}}   \\
 	\end{tabular}
 \end{table}
 
@@ -38,15 +38,14 @@ UC03.1& Obbligatorio &    	Il pagamento fallisce e la webapp visualizza un error
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
             \\       
 
-    UC04& Obbligatorio &       Esiste un'unica recensione per una transazione economica                   & \Shortunderstack{Capitolato}                        \\
-    UC04& Obbligatorio & 	    L'utente deve eseguire un'ulteriore transazione per poter lasciare una recensione             & \Shortunderstack{Capitolato}                        \\
-    UC04& Obbligatorio &    	L'utente può scegliere il pagamento da associare alla recensione& \Shortunderstack{Capitolato}                        \\
-    UC04& Obbligatorio &    	La recensione potrà essere pubblicata solo a pagamento confermato        & \Shortunderstack{Capitolato}   \\
-    UC04.1& Obbligatorio &    	La recensione deve avere un formato valido     & \Shortunderstack{Capitolato}   \\
-    UC04.1& Obbligatorio &    	La webapp visualizza un errore se l'utente seleziona un pagamento a cui è collegata già un recensione& \Shortunderstack{Capitolato}                        \\
-    UC04.1& Obbligatorio &    	Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento   & \Shortunderstack{Capitolato}   \\
-    UC05& Obbligatorio &    	La webapp fornisce all'utente la possibilità di visualizzare le recensioni ricevute& \Shortunderstack{Capitolato} \\
-    UC06& Obbligatorio &    	La webapp fornisce all'utente la possibilità di visualizzare le recensioni rilasciate& \Shortunderstack{Capitolato} \\    
+    UC08& Obbligatorio &       Esiste un'unica recensione per ogni transazione economica effettuata                  & \Shortunderstack{\ref{UC08}}                        \\
+    UC08& Obbligatorio &    	L'utente può scegliere il pagamento da associare alla recensione& \Shortunderstack{\ref{UC08}}                        \\
+    UC08& Obbligatorio &    	La recensione potrà essere pubblicata solo a pagamento confermato        & \Shortunderstack{\ref{UC08}}   \\
+    UC13& Obbligatorio &    	La recensione deve avere un formato valido     & \Shortunderstack{\ref{UC13}}   \\
+    UC13& Obbligatorio &    	La webapp visualizza un errore se l'utente seleziona un pagamento a cui è collegata già un recensione& \Shortunderstack{\ref{UC13}}                        \\
+    UC13& Obbligatorio &    	Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento   & \Shortunderstack{\ref{UC13}}   \\
+    UC06& Obbligatorio &    	La webapp fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute& \Shortunderstack{\ref{UC06}} \\
+    UC05& Obbligatorio &    	La webapp fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate& \Shortunderstack{\ref{UC05}} \\    
         \end{tabular}
     \end{table}
 
@@ -63,7 +62,6 @@ UC03.1& Obbligatorio &    	Il pagamento fallisce e la webapp visualizza un error
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
             \\       
     ?& Obbligatorio &    	Recensione e transazione sono caricati su una blockchain pubblica             & \Shortunderstack{Capitolato}                        \\
-    ?& Obbligatorio &    	La webapp deve visualizzare le recensioni organizzate per attività commerciale           & \Shortunderstack{Capitolato}                        \\
     ?& Obbligatorio &    	La blockchain memorizza una lista con tutte le interazioni pagamento-recensione        & \Shortunderstack{Capitolato}                        \\
     ?& Obbligatorio &    	Sviluppo di una API REST per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito & \Shortunderstack{Capitolato}                        \\
     ?& Obbligatorio &    	Lo smart contract accede alla blockchain per ottenere la lista delle recensioni        & \Shortunderstack{Capitolato}                        \\
