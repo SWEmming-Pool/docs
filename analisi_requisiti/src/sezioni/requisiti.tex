@@ -1,0 +1,122 @@
+\section{Requisiti}
+
+\subsection{Requisiti funzionali}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.8}
+\rowcolors[]{1}{gray!55}{white}
+	\begin{tabular}{c | c | p{6cm} | c }
+		\rowcolor[HTML]{a52a2a}
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
+        \\                                                             
+
+?& Obbligatorio &    	Sviluppo di una webapp per il pagamento e il rilascio di recensioni             & \Shortunderstack{Capitolato}                        \\
+?& Obbligatorio &    	La webapp fornisce all'utente la possibilità di autenticarsi attraverso MetaMask & \Shortunderstack{\ref{UC01}}                        \\
+UC10& Obbligatorio &    	La webapp visualizza un errore in caso di autenticazione fallita& \Shortunderstack{\ref{UC10}}                        \\
+UC01& Obbligatorio &    	L'utente può accedere alla webapp tramite login con MetaMask& \Shortunderstack{\ref{UC01}}                        \\
+UC03& Obbligatorio &    	L'utente generico può ricercare delle recensioni di un determinato indirizzo tramite RPC allo smart contract       & \Shortunderstack{\ref{UC03}}   \\
+UC11& Obbligatorio &    	La webapp visualizza un errore di ricerca di recensioni verso un indirizzo inesistente& \Shortunderstack{\ref{UC11}} \\
+UC12& Obbligatorio &    	La webapp visualizza un avviso se l'indirizzo cercato non presenta recensioni collegate& \Shortunderstack{\ref{UC12}} \\
+UC03& Obbligatorio &    	L'utente autenticato può eseguire un pagamento & \Shortunderstack{\ref{UC03}}   \\
+UC14& Obbligatorio &    	Il pagamento fallisce e la webapp visualizza un errore& \Shortunderstack{\ref{UC14}}   \\
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors[]{1}{gray!55}{white}
+        \begin{tabular}{c | c | p{6cm} | c }
+            \rowcolor[HTML]{a52a2a}
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
+            \\       
+
+    UC08& Obbligatorio &       Esiste un'unica recensione per ogni transazione economica effettuata                  & \Shortunderstack{\ref{UC08}}                        \\
+    UC08& Obbligatorio &    	L'utente può scegliere il pagamento da associare alla recensione& \Shortunderstack{\ref{UC08}}                        \\
+    UC08& Obbligatorio &    	La recensione potrà essere pubblicata solo a pagamento confermato        & \Shortunderstack{\ref{UC08}}   \\
+    UC13& Obbligatorio &    	La recensione deve avere un formato valido     & \Shortunderstack{\ref{UC13}}   \\
+    UC13& Obbligatorio &    	La webapp visualizza un errore se l'utente seleziona un pagamento a cui è collegata già un recensione& \Shortunderstack{\ref{UC13}}                        \\
+    UC13& Obbligatorio &    	Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento   & \Shortunderstack{\ref{UC13}}   \\
+    UC06& Obbligatorio &    	La webapp fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute& \Shortunderstack{\ref{UC06}} \\
+    UC05& Obbligatorio &    	La webapp fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate& \Shortunderstack{\ref{UC05}} \\    
+        \end{tabular}
+    \end{table}
+
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors[]{1}{gray!55}{white}
+        \begin{tabular}{c | c | p{6cm} | c }
+            \rowcolor[HTML]{a52a2a}
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
+            \\       
+    ?& Obbligatorio &    	Recensione e transazione sono caricati su una blockchain pubblica             & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	La blockchain memorizza una lista con tutte le interazioni pagamento-recensione        & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	Sviluppo di una API REST per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	Lo smart contract accede alla blockchain per ottenere la lista delle recensioni        & \Shortunderstack{Capitolato}                        \\
+    ?& Obbligatorio &    	Lo smart contract invia i fondi all'e-commerce     & \Shortunderstack{Capitolato}                        \\            
+    ?& Obbligatorio &       Il server API deve poter richiedere la lista recensioni di un e-commerce tramite RPC allo smart contract           & \Shortunderstack{Capitolato} \\          
+\end{tabular}
+    \end{table}
+
+
+\subsection{Requisiti di qualità}
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors[]{1}{gray!55}{white}
+        \begin{tabular}{c | c | p{6cm} | c }
+            \rowcolor[HTML]{a52a2a}
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
+            \\                                                             
+    
+    ?& Obbligatorio &   Documentazione del server API REST relativa agli endpoint    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Copertura di test end-to-end >= 80\% correlata di report    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Documentazione su scelte implementative e progettuali effettuate e relative motivazioni    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Documentazione su problemi aperti e eventuali soluzioni proposte da esplorare    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Continuous integration e condice open surce tramite Git-Hub    & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Stesura manuale utente & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Stesura manuale per la manutenzione e l'estensione dell applicazione & \Shortunderstack{Capitolato}\\
+    ?& Obbligatorio &   Si devono seguire le norme di progetto & \Shortunderstack{Capitolato}\\
+\end{tabular}
+    \end{table}
+\subsection{Requisiti di vincolo}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.8}
+\rowcolors[]{1}{gray!55}{white}
+	\begin{tabular}{c | c | p{6cm} | c }
+		\rowcolor[HTML]{a52a2a}
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
+        \\                                                             
+
+?& Obbligatorio &       Il pagamento e la recensione devono essere gestiti tramite smart contract                    & \Shortunderstack{Capitolato}                        \\
+?& Desiderabile &       Sviluppo nodo RPC tramite Infura              & \Shortunderstack{Capitolato}                        \\
+?& Desiderabile &       Utilizzo di Solidity per lo sviluppo di smart contract                & \Shortunderstack{Capitolato}                        \\
+?& Desiderabile &       Utilizzo di Java Spring per lo sviluppo di API REST                 & \Shortunderstack{Capitolato}                        \\
+?& Desiderabile &       Utilizzo di Angular per lo sviluppo della webapp                 & \Shortunderstack{Capitolato}                        \\
+?& Desiderabile &       La webapp utilizza la libreria web3js per l'interazione con lo smart contract                 & \Shortunderstack{Capitolato}                        \\
+?& Desiderabile &       Il server utilizza la libreria web3j per l'interazione con lo smart contract                 & \Shortunderstack{Capitolato}                        \\
+?& Obbligatorio &       Utilizzo di Metamask come wallet per l'interazione con lo smart contract             & \Shortunderstack{Capitolato}                        \\
+?& Obbligatorio &       Utilizzo di un fornitore terzo per RPC a nodo           & \Shortunderstack{Capitolato}                        \\
+	\end{tabular}
+\end{table}
