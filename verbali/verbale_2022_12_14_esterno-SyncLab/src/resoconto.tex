@@ -1,0 +1,26 @@
+\section{Resoconto}
+
+\subsection{Risultati ottenuti}
+
+\begin{enumerate}
+    \item Sono state riviste le differenze precedentemente individuate tra utente non
+          registrato, utente registrato e utente business. Ogni utente è identificato
+          tramite il suo wallet e per il nostro sistema non esiste un profilo aggiuntivo
+          e necessità di registrazione e login. In particolare:
+          \begin{itemize}
+              \item non vi è distinzione tra utente business e normale; infatti, un qualsiasi
+                    utente deve poter inviare e ricevere recensioni;
+              \item c'è differenza tra utente autenticato e non autenticato con Metamask;
+              \item un utente non autenticato è limitato alle sole operazioni di lettura (es.
+                    visualizzazione recensioni).
+          \end{itemize}
+    \item Il servizio di API REST è totalmente scollegato dalla web app; è quindi
+          necessario analizzare i relativi casi d'uso separatamente.
+    \item Lo Smart Contract non va inserito nel diagramma dei casi d'uso come attore
+          esterno; un RPC è probabilmente più sensato come attore esterno. Il proponente
+          ha inoltre dato consigli sull'ottimizzazione dell'ottenimento delle recensioni
+          dalla blockchain.
+\end{enumerate}
+
+\subsection{Decisioni prese}
+È necessario rivedere i casi d'uso per uniformarli alle nuove analisi e successivamente rivedere i vari documenti prodotti. In particolare, vanno rimosse alcune tipologie di utenti e i relativi casi, e si è deciso di creare un nuovo sistema relativo alle API REST all'interno del diagramma dei casi d'uso.

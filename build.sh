@@ -48,6 +48,14 @@ latexmk -c 1>/dev/null
 rm main.gl* main.ist
 cd ..
 
+# Norme di progetto
+cd norme_progetto/
+echo "Norme progetto"
+latexmk -pdf main.tex 2>/dev/null 1>/dev/null
+mv main.pdf ../out/norme_progetto.pdf
+latexmk -c 1>/dev/null
+cd ..
+
 # Verbali
 cd verbali/
 echo "Verbali"
