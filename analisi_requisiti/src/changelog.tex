@@ -1,17 +1,72 @@
-\thispagestyle{empty}
-\section*{Changelog}
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.8}
-\rowcolors[]{1}{gray}{blue}
-	\begin{longtable}[c]{c | c | c | c | p{5cm}}
-		\rowcolor[HTML]{a52a2a}
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Versione}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Data}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Autore}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Ruolo}}     &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}                                                                                                                                                                   
-        \\
+\section*{Diario delle modifiche}
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari_change}{dispari_change}
+	\begin{longtable}{
+			>{\centering}p{0.09\textwidth}
+			>{\centering}p{0.13\textwidth}
+			>{\centering}p{0.2\textwidth}
+			>{\centering}p{0.16\textwidth}
+			>{}p{0.2775\textwidth} }
+
+		\rowcolorhead
+		\textbf{\color{white}Versione} &
+		\textbf{\color{white}Data} &
+		\textbf{\color{white}Nominativo} &
+		\textbf{\color{white}Ruolo} &
+		\centering \textbf{\color{white}Descrizione}
+		\tabularnewline
+		\endfirsthead
+		\rowcolorhead
+		\textbf{\color{white}Versione} &
+		\textbf{\color{white}Data} &
+		\textbf{\color{white}Nominativo} &
+		\textbf{\color{white}Ruolo} &
+		\centering \textbf{\color{white}Descrizione}
+		\tabularnewline
+		\endhead
+
+		0.1.1 & 2022-01-08 & Ennio Italiano &
+		 &
+		Aggiunti riferimenti informativi e normativi, vincoli generali e descrizione attori. Casi d'uso in forma tabellare.
+		\tabularnewline
+
+        0.1.0 & 2022-11-25 & Sebastiano Sanson &
+		 &
+		Revisione casi d'uso e requisiti.
+		\tabularnewline
+
+        0.0.6 & 2022-11-24 & Ennio Italiano, Elia Pasquali &
+		 &
+		Stesura iniziale casi d'uso.
+		\tabularnewline
+
+        0.0.5 & 2022-11-23 & Fabio Pantaleo, Nicolò Trinca &
+		 &
+		Stesura requisiti di vincolo.
+		\tabularnewline
+
+        0.0.4 & 2022-11-22 & Fabio Pantaleo, Nicolò Trinca &
+		 &
+		Stesura requisiti di qualità.
+		\tabularnewline
+
+        0.0.3 & 2022-11-21 & Fabio Pantaleo, Nicolò Trinca &
+		 &
+		Stesura requisiti funzionali.
+		\tabularnewline
+
+		0.0.2 & 2022-11-20 & Fabio Pantaleo, Nicolò Trinca &
+		 &
+		Stesura introduzione.
+		\tabularnewline
+
+		0.0.1 & 2022-11-18 & Fabio Pantaleo, Nicolò Trinca &
+		 &
+		Creata struttura del documento in \LaTeX{}.
+		\tabularnewline
+
+
+		%\end{tabularx}
+
 	\end{longtable}
-	
-\end{table}
+\renewcommand{\arraystretch}{1}
