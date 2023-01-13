@@ -22,7 +22,7 @@ JavaScript
 linguaggio di programmazione per la realizzazione di pagine web interattive
 Java Spring
 framework open source per lo sviluppo di applicazioni su piattaforma java
-Metamask
+MetaMask
 portafoglio per custodire criptovalute, il quale permette all'utente di interagire con applicazioni decentralizzate basate su Ethereum. 
 Nodo
 Qualsiasi dispositivo hardware del sistema in grado di comunicare con gli altri dispositivi che fanno parte della rete
