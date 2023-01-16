@@ -1,4 +1,45 @@
 \section{Requisiti}
+I requisiti vengono classificati nel seguente modo:
+\begin{itemize}
+	\item \textbf{codice identificativo}: ogni codice identificativo è univoco e conforme alla codifica \textbf{R[Importanza][Tipologia][Codice]}, il significato delle cui voci è:
+	\begin{itemize}
+		\item \textbf{Importanza}:
+		\begin{center}
+            \rowcolors[]{1}{pari}{dispari}
+            \renewcommand{\arraystretch}{1.5}
+            \begin{tabular}{ | m{2em} | m{25em} | }
+                \hline
+                \textbf{1} & Requisito obbligatorio: irrinunciabile per qualcuno degli stakeholder. \\
+                \hline
+                \textbf{2} & Requisito desiderabile: non strettamente necessario ma  a valore aggiunto riconoscibile. \\
+                \hline
+                \textbf{3} &  Requisito opzionale: relativamente utile oppure contrattabile più avanti nel progetto. \\
+                \hline
+               \end{tabular}
+            \end{center}
+
+		\item \textbf{Tipologia}:
+		\begin{center}
+            \rowcolors[]{1}{pari}{dispari}
+            \renewcommand{\arraystretch}{1.5}
+            \begin{tabular}{ | m{2em} | m{10em} | }
+                \hline
+                \textbf{F} & Funzionale \\
+                \hline
+                \textbf{P} & Prestazionale \\
+                \hline
+                \textbf{Q} & Qualitativo \\
+                \hline
+                \textbf{V} &  Vincolo \\
+                \hline
+               \end{tabular}
+            \end{center}
+		\item \textbf{Codice}: identificatore univoco del requisito in forma gerarchica.
+	\end{itemize}
+	\item \textbf{classificazione}: viene riportata l'importanza del requisito per facilitare la lettura;
+	\item \textbf{descrizione};
+	\item \textbf{fonte}: origine del requisito.
+\end{itemize}
 
 \subsection{Requisiti funzionali}
 
@@ -14,15 +55,14 @@
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}
         \\
 
-?& Obbligatorio &    	Sviluppo di una \textit{web app} per il pagamento e il rilascio di recensioni.             & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &    	La \textit{web app} fornisce all'utente la possibilità di autenticarsi attraverso \textit{MetaMask}. & \Shortunderstack{\hyperref[UC01]{UC01}}                        \\
-?& Obbligatorio &    	La \textit{web app} visualizza un errore in caso di autenticazione fallita.& \Shortunderstack{\hyperref[UC10]{UC10}}                        \\
-?& Obbligatorio &    	L'utente può accedere alla \textit{web app} tramite login con \textit{MetaMask}.& \Shortunderstack{\hyperref[UC01]{UC01}}                        \\
-?& Obbligatorio &    	L'utente generico può ricercare delle recensioni di un determinato indirizzo tramite \textit{RPC}\glo\: allo \textit{smart contract}.       & \Shortunderstack{\hyperref[UC03]{UC03}}   \\
-?& Obbligatorio &    	La \textit{web app} visualizza un errore di ricerca di recensioni verso un indirizzo inesistente.& \Shortunderstack{\hyperref[UC11]{UC11}} \\
-?& Obbligatorio &    	La \textit{web app} visualizza un avviso se l'indirizzo cercato non presenta recensioni collegate.& \Shortunderstack{\hyperref[UC12]{UC12}} \\
-?& Obbligatorio &    	L'utente autenticato può eseguire un pagamento. & \Shortunderstack{\hyperref[UC03]{UC03}}   \\
-?& Obbligatorio &    	Il pagamento fallisce e la \textit{web app} visualizza un errore.& \Shortunderstack{\hyperref[UC14]{UC14}}   \\
+R1F1 & Obbligatorio &    	Sviluppo di una \textit{web app} per il pagamento e il rilascio di recensioni.             & \Shortunderstack{Capitolato}                        \\
+R1F2 & Obbligatorio &    	L'utente può accedere alla \textit{web app} tramite login con \textit{MetaMask}. & \Shortunderstack{\hyperref[UC01]{UC01}}                        \\
+R1F2.1 & Obbligatorio &    	La \textit{web app} visualizza un errore in caso di autenticazione fallita.& \Shortunderstack{\hyperref[UC10]{UC10}}                        \\
+R1F3& Obbligatorio &    	L'utente generico può ricercare delle recensioni di un determinato indirizzo tramite \textit{RPC}\glo\: allo \textit{smart contract}.       & \Shortunderstack{\hyperref[UC03]{UC03}}   \\
+R1F3.1& Obbligatorio &    	La \textit{web app} visualizza un errore di ricerca di recensioni verso un indirizzo inesistente.& \Shortunderstack{\hyperref[UC11]{UC11}} \\
+R1F3.2& Obbligatorio &    	La \textit{web app} visualizza un avviso se l'indirizzo cercato non presenta recensioni collegate.& \Shortunderstack{\hyperref[UC12]{UC12}} \\
+R1F4& Obbligatorio &    	L'utente autenticato può eseguire un pagamento. & \Shortunderstack{\hyperref[UC03]{UC03}}   \\
+R1F4.1& Obbligatorio &    	Il pagamento fallisce e la \textit{web app} visualizza un errore.& \Shortunderstack{\hyperref[UC14]{UC14}}   \\
 	\end{tabular}
 \end{table}
 
@@ -35,17 +75,17 @@
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}          &
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Tipo}} &
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
-            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
+            \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}
             \\       
 
-    ?& Obbligatorio &       Esiste un'unica recensione per ogni transazione economica effettuata.                  & \Shortunderstack{\hyperref[UC08]{UC08}}                        \\
-    ?& Obbligatorio &    	L'utente può scegliere il pagamento da associare alla recensione.& \Shortunderstack{\hyperref[UC08]{UC08}}                        \\
-    ?& Obbligatorio &    	La recensione potrà essere pubblicata solo a pagamento confermato.       & \Shortunderstack{\hyperref[UC08]{UC08}}   \\
-    ?& Obbligatorio &    	La recensione deve avere un formato valido.     & \Shortunderstack{\hyperref[UC13]{UC13}}   \\
-    ?& Obbligatorio &    	La \textit{web app} visualizza un errore se l'utente seleziona un pagamento a cui è collegata già un recensione.& \Shortunderstack{\hyperref[UC13]{UC13}}                        \\
-    ?& Obbligatorio &    	Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento.   & \Shortunderstack{\hyperref[UC13]{UC13}}   \\
-    ?& Obbligatorio &    	La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.& \Shortunderstack{\hyperref[UC06]{UC06}} \\
-    ?& Obbligatorio &    	La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.& \Shortunderstack{\hyperref[UC05]{UC05}} \\
+    R1F5 & Obbligatorio &       Esiste un'unica recensione per ogni transazione economica effettuata.                  & \Shortunderstack{\hyperref[UC08]{UC08}}                        \\
+    R1F5.1 & Obbligatorio &    	L'utente può scegliere il pagamento da associare alla recensione.& \Shortunderstack{\hyperref[UC08]{UC08}}                        \\
+    R1F6.1 & Obbligatorio &    	La recensione potrà essere pubblicata solo a pagamento confermato.       & \Shortunderstack{\hyperref[UC08]{UC08}}   \\
+    R1F6.2 & Obbligatorio &    	La recensione deve avere un formato valido.     & \Shortunderstack{\hyperref[UC13]{UC13}}   \\
+    R1F5.1.1 & Obbligatorio &    	La \textit{web app} visualizza un errore se l'utente seleziona un pagamento a cui è collegata già un recensione.& \Shortunderstack{\hyperref[UC13]{UC13}}                        \\
+    R1F6.2 & Obbligatorio &    	Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento.   & \Shortunderstack{\hyperref[UC13]{UC13}}   \\
+    R1F7 & Obbligatorio &    	La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.& \Shortunderstack{\hyperref[UC06]{UC06}} \\
+    R1F8 & Obbligatorio &    	La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.& \Shortunderstack{\hyperref[UC05]{UC05}} \\
         \end{tabular}
     \end{table}
 
@@ -61,12 +101,12 @@
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}     &
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
             \\       
-    ?& Obbligatorio &    	Recensione e transazione sono caricati su una \textit{blockchain} pubblica.             & \Shortunderstack{Capitolato}                        \\
-    ?& Obbligatorio &    	La \textit{blockchain} memorizza una lista con tutte le interazioni pagamento-recensione.        & \Shortunderstack{Capitolato}                        \\
-    ?& Obbligatorio &    	Sviluppo di un servizio di \textit{API REST} per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito. & \Shortunderstack{Capitolato}                        \\
-    ?& Obbligatorio &    	Lo \textit{smart contract} accede alla \textit{blockchain} per ottenere la lista delle recensioni.        & \Shortunderstack{Capitolato}                        \\
-    ?& Obbligatorio &    	Lo \textit{smart contract} invia i fondi all'e-commerce.     & \Shortunderstack{Capitolato}                        \\
-    ?& Obbligatorio &       Il \textit{server API REST} deve poter richiedere la lista recensioni di un e-commerce tramite \textit{RPC} allo \textit{smart contract}.           & \Shortunderstack{Capitolato} \\
+    R1F9 & Obbligatorio &    	Recensione e transazione sono caricati su una \textit{blockchain} pubblica.             & \Shortunderstack{Capitolato}                        \\
+    R1F9.1 & Obbligatorio &    	La \textit{blockchain} memorizza una lista con tutte le interazioni pagamento-recensione.        & \Shortunderstack{Capitolato}                        \\
+    R1F10 & Obbligatorio &    	Sviluppo di un servizio di \textit{API REST} per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito. & \Shortunderstack{Capitolato}                        \\
+    R1F11 & Obbligatorio &    	Lo \textit{smart contract} accede alla \textit{blockchain} per ottenere la lista delle recensioni.        & \Shortunderstack{Capitolato}                        \\
+    R1F12 & Obbligatorio &    	Lo \textit{smart contract} invia i fondi all'e-commerce.     & \Shortunderstack{Capitolato}                        \\
+    R1F13& Obbligatorio &       Il \textit{server API REST} deve poter richiedere la lista recensioni di un e-commerce tramite \textit{RPC} allo \textit{smart contract}.           & \Shortunderstack{Capitolato} \\
 \end{tabular}
     \end{table}
 
@@ -85,14 +125,14 @@
             \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
             \\                                                             
     
-    ?& Obbligatorio &   Documentazione relativa agli \textit{endpoint}\glo\: del \textit{server API REST}.    & \Shortunderstack{Capitolato}\\
-    ?& Obbligatorio &   Copertura di \textit{test end-to-end}\glo\: $\geq$ 80\% correlata di report.    & \Shortunderstack{Capitolato}\\
-    ?& Obbligatorio &   Documentazione su scelte implementative e progettuali effettuate e relative motivazioni.    & \Shortunderstack{Capitolato}\\
-    ?& Obbligatorio &   Documentazione su problemi aperti e eventuali soluzioni proposte da esplorare.    & \Shortunderstack{Capitolato}\\
-    ?& Obbligatorio &   \textit{Continuous integration}\glo\: e codice open source tramite \textit{GitHub}\glo\:.    & \Shortunderstack{Capitolato}\\
-    ?& Obbligatorio &   Stesura manuale utente. & \Shortunderstack{Capitolato}\\
-    ?& Obbligatorio &   Stesura manuale per la manutenzione e l'estensione dell applicazione. & \Shortunderstack{Capitolato}\\
-    ?& Obbligatorio &   Si devono seguire le norme di progetto. & \Shortunderstack{Capitolato}\\
+    R1F14 & Obbligatorio &   Documentazione relativa agli \textit{endpoint}\glo\: del \textit{server API REST}.    & \Shortunderstack{Capitolato}\\
+    R1F15 & Obbligatorio &   Copertura di \textit{test end-to-end}\glo\: $\geq$ 80\% correlata di report.    & \Shortunderstack{Capitolato}\\
+    R1F16 & Obbligatorio &   Documentazione su scelte implementative e progettuali effettuate e relative motivazioni.    & \Shortunderstack{Capitolato}\\
+    R1F17& Obbligatorio &   Documentazione su problemi aperti e eventuali soluzioni proposte da esplorare.    & \Shortunderstack{Capitolato}\\
+    R1F18& Obbligatorio &   \textit{Continuous integration}\glo\: e codice open source tramite \textit{GitHub}\glo\:.    & \Shortunderstack{Capitolato}\\
+    R1F19 & Obbligatorio &   Stesura manuale utente. & \Shortunderstack{Capitolato}\\
+    R1F20& Obbligatorio &   Stesura manuale per la manutenzione e l'estensione dell applicazione. & \Shortunderstack{Capitolato}\\
+    R1F21& Obbligatorio &   Si devono seguire le norme di progetto. & \Shortunderstack{Capitolato}\\
 \end{tabular}
     \end{table}
 \subsection{Requisiti di vincolo}
@@ -109,15 +149,15 @@
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Fonti}}                                                                                                                                                                   
         \\
 
-?& Obbligatorio &       Il pagamento e la recensione devono essere gestiti tramite \textit{smart contract}.                    & \Shortunderstack{Capitolato}                        \\
-?& Desiderabile &       Sviluppo nodo \textit{RPC} tramite \textit{Infura}.              & \Shortunderstack{Capitolato}                        \\
-?& Desiderabile &       Utilizzo di \textit{Solidity} per lo sviluppo di \textit{smart contract}.                & \Shortunderstack{Capitolato}                        \\
-?& Desiderabile &       Utilizzo di \textit{Java Spring}\glo\: per lo sviluppo di \textit{API REST}.                 & \Shortunderstack{Capitolato}                        \\
-?& Desiderabile &       Utilizzo di \textit{Angular} per lo sviluppo della \textit{web app}.                 & \Shortunderstack{Capitolato}                        \\
-?& Desiderabile &       La \textit{web app} utilizza la libreria \textit{web3js}\glo\: per l'interazione con lo \textit{smart contract}.                 & \Shortunderstack{Capitolato}                        \\
-?& Desiderabile &       Il \textit{server API REST} utilizza la libreria \textit{web3j}\glo\: per l'interazione con lo \textit{smart contract}.                 & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &       Utilizzo di \textit{MetaMask} come \textit{wallet} per l'interazione con lo \textit{smart contract}.             & \Shortunderstack{Capitolato}                        \\
-?& Obbligatorio &       Utilizzo di un fornitore terzo per \textit{RPC} a nodo.           & \Shortunderstack{Capitolato}                        \\
+R1F22 & Obbligatorio &       Pagamento e recensione devono essere gestiti tramite \textit{smart contract}.                    & \Shortunderstack{Capitolato}                        \\
+R2F23 & Desiderabile &       Sviluppo nodo \textit{RPC} tramite \textit{Infura}.              & \Shortunderstack{Capitolato}                        \\
+R2F24 & Desiderabile &       Utilizzo di \textit{Solidity} per lo sviluppo di \textit{smart contract}.                & \Shortunderstack{Capitolato}                        \\
+R2F25 & Desiderabile &       Utilizzo di \textit{Java Spring}\glo\: per lo sviluppo di \textit{API REST}.                 & \Shortunderstack{Capitolato}                        \\
+R2F26 & Desiderabile &       Utilizzo di \textit{Angular} per lo sviluppo della \textit{web app}.                 & \Shortunderstack{Capitolato}                        \\
+R2F27 & Desiderabile &       La \textit{web app} utilizza la libreria \textit{web3js}\glo\: per l'interazione con lo \textit{smart contract}.                 & \Shortunderstack{Capitolato}                        \\
+R2F28 & Desiderabile &       Il \textit{server API REST} utilizza la libreria \textit{web3j}\glo\: per l'interazione con lo \textit{smart contract}.                 & \Shortunderstack{Capitolato}                        \\
+R1F29 & Obbligatorio &       Utilizzo di \textit{MetaMask} come \textit{wallet} per l'interazione con lo \textit{smart contract}.             & \Shortunderstack{Capitolato}                        \\
+R1F30 & Obbligatorio &       Utilizzo di un fornitore terzo per \textit{RPC} a nodo.           & \Shortunderstack{Capitolato}                        \\
 	\end{tabular}
 \end{table}
 
