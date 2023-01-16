@@ -10,12 +10,12 @@
   \end{figure}
 
 
-\paragraph*{Utente generico:} utente che non possiede un account MetaMask e ha dunque possibilità di usufruire del servizio solo in lettura.
-\paragraph*{Utente non autenticato:} utente che possiede un account MetaMask ma non è autenticato, dunque può usufruire del servizio solo in lettura o autenticarsi per poter effettuare pagamenti e rilasciare recensioni.
-\paragraph*{Utente autenticato:} utente che possiede un account MetaMask e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni.
+\paragraph*{Utente generico:} utente che non possiede un account \textit{MetaMask} e ha dunque possibilità di usufruire del servizio solo in lettura.
+\paragraph*{Utente non autenticato:} utente che possiede un account \textit{MetaMask} ma non è autenticato, dunque può usufruire del servizio solo in lettura o autenticarsi per poter effettuare pagamenti e rilasciare recensioni.
+\paragraph*{Utente autenticato:} utente che possiede un account \textit{MetaMask} e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni.
 \subsubsection{Attori secondari}
-\paragraph*{MetaMask:} wallet di criptovalute usato per interagire con la blockchain Ethereum. Permette di accedere al proprio wallet attraverso applicazione mobile o, come nel nostro caso, estensione per browser.
-\paragraph*{Infura:} backend Web3 che offre servizi e strumenti per sviluppatori blockchain; nel nostro caso sarà ciò che metterà in comunicazione web-app e API REST con nodi sulla blockchain.
+\paragraph*{\textit{MetaMask}:} \textit{wallet}\glo\: di criptovalute usato per interagire con la \textit{blockchain} \textit{Ethereum}. Permette di accedere al proprio \textit{wallet} attraverso applicazione mobile o, come nel nostro caso, estensione per browser.
+\paragraph*{\textit{Infura}\glo:} backend \textit{Web3}\glo\: che offre servizi e strumenti per sviluppatori \textit{blockchain}; nel nostro caso sarà ciò che metterà in comunicazione \textit{web app} e \textit{API REST} con nodi\glo\: sulla \textit{blockchain}.
 
 \subsection{Elenco}
 
@@ -35,15 +35,15 @@
     \hline
     \textbf{Attore primario} & Utente non autenticato \\
     \hline
-    \textbf{Attore secondario} & MetaMask \\
+    \textbf{Attore secondario} & \textit{MetaMask} \\
     \hline
     \textbf{Precondizioni} & L'utente non è autenticato. \\
     \hline
     \textbf{Postcondizioni} & L'utente è autenticato. \\
     \hline
-    \textbf{Scenario principale} & L'utente accede a MetaMask. \\
+    \textbf{Scenario principale} & L'utente accede a \textit{MetaMask}. \\
     \hline
-    \textbf{Estensioni} & Se l'accesso a MetaMask non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
+    \textbf{Estensioni} & Se l'accesso a \textit{MetaMask} non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
     \hline
    \end{tabular}
 \end{center}
@@ -95,7 +95,7 @@
     \hline
     \textbf{Postcondizioni} & L'utente visualizza le recensioni associate a quell'indirizzo. \\
     \hline
-    \textbf{Scenario principale} & L'utente richiede la lista delle recensioni di un determinato indirizzo.. \\
+    \textbf{Scenario principale} & L'utente richiede la lista delle recensioni di un determinato indirizzo. \\
     \hline
     \textbf{Estensioni} & Se l'utente inserisce un indirizzo inesistente, si verifica \hyperref[UC11]{UC11}. \\
     \hline
@@ -144,7 +144,7 @@
     \hline
     \textbf{Attore primario} & Utente autenticato \\
     \hline
-    \textbf{Attore secondario} & MetaMask \\
+    \textbf{Attore secondario} & \textit{MetaMask} \\
     \hline
     \textbf{Precondizioni} & Nessuna. \\
     \hline
@@ -171,7 +171,7 @@
     \hline
     \textbf{Attore primario} & Utente autenticato \\
     \hline
-    \textbf{Attore secondario} & MetaMask \\
+    \textbf{Attore secondario} & \textit{MetaMask} \\
     \hline
     \textbf{Precondizioni} & Nessuna. \\
     \hline
@@ -277,7 +277,7 @@
     \hline
     \textbf{Attore primario} & Utente autenticato \\
     \hline
-    \textbf{Attore secondario} & MetaMask \\
+    \textbf{Attore secondario} & \textit{MetaMask} \\
     \hline
     \textbf{Precondizioni} & \begin{itemize}
         \item L'utente è autenticato;
@@ -313,7 +313,7 @@
     \hline
     \textbf{Attore primario} & Utente autenticato \\
     \hline
-    \textbf{Attore secondario} & MetaMask \\
+    \textbf{Attore secondario} & \textit{MetaMask} \\
     \hline
     \textbf{Precondizioni} & L'utente non ha ancora pagato. \\
     \hline
@@ -321,7 +321,7 @@
     \hline
     \textbf{Scenario principale} & L'utente effettua il pagamento. \\
     \hline
-    \textbf{Estensioni} & Se l'utente non ha fondi sufficienti nel wallet, si verifica \hyperref[UC14]{UC14}.\\
+    \textbf{Estensioni} & Se l'utente non ha fondi sufficienti nel \textit{wallet}, si verifica \hyperref[UC14]{UC14}.\\
     \hline
    \end{tabular}
 \end{center}
@@ -335,14 +335,14 @@
     \hline
     \textbf{Attore primario} & Utente non autenticato \\
     \hline
-    \textbf{Attore secondario} & MetaMask \\
+    \textbf{Attore secondario} & \textit{MetaMask} \\
     \hline
     \textbf{Precondizioni} & L'utente sta tentando di autenticarsi. \\
     \hline
     \textbf{Postcondizioni} & L'operazione fallisce. \\
     \hline
     \textbf{Scenario principale} & \begin{enumerate}
-        \item Si verificano problemi con l'accesso a MetaMask;
+        \item Si verificano problemi con l'accesso a \textit{MetaMask};
         \item viene mostrato un errore che informa l'utente del fallimento dell'operazione;
         \item vengono mostrati dei consigli sulla risoluzione del problema e si invita
               l'utente a riprovare.
@@ -360,7 +360,7 @@
     \hline
     \textbf{Attori primari} & Utente generico, utente autenticato. \\
     \hline
-    \textbf{Attore secondario} & Infura \\
+    \textbf{Attore secondario} & \textit{Infura} \\
     \hline
     \textbf{Precondizioni} & L'utente richiede le recensioni collegate ad un indirizzo. \\
     \hline
@@ -402,7 +402,7 @@
     \hline
     \textbf{Attore primario} & Utente autenticato \\
     \hline
-    \textbf{Attore secondario} & MetaMask \\
+    \textbf{Attore secondario} & \textit{MetaMask} \\
     \hline
     \textbf{Precondizioni} & L'utente vuole rilasciare una recensione. \\
     \hline
@@ -432,7 +432,7 @@
     \hline
     \textbf{Attore primario} & Utente autenticato \\
     \hline
-    \textbf{Attore secondario} & MetaMask \\
+    \textbf{Attore secondario} & \textit{MetaMask} \\
     \hline
     \textbf{Precondizioni} & L'utente sta tentando di effettuare un pagamento. \\
     \hline
@@ -462,16 +462,16 @@
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{ | m{10em} | m{20em} | }
     \hline
-    \textbf{Attore primario} & Utilizzatore API \\
+    \textbf{Attore primario} & Utilizzatore \textit{API} \\
     \hline
-    \textbf{Attore secondario} & Infura \\
+    \textbf{Attore secondario} & \textit{Infura} \\
     \hline
     \textbf{Precondizioni} & L'utente conosce l'indirizzo di cui vuole visualizzare le recensioni. \\
     \hline
     \textbf{Postcondizioni} & L'utente ottiene un file contenente una lista di recensioni. \\
     \hline
     \textbf{Scenario principale} & \begin{enumerate}
-        \item L'utente fa una richiesta al server API specificando l'indirizzo di cui
+        \item L'utente fa una richiesta al \textit{server API REST}\glo\: specificando l'indirizzo di cui
               ottenere le recensioni;
         \item il server recupera le recensioni legate all'utente richiesto;
         \item viene restituita una lista di recensioni;
@@ -489,9 +489,9 @@
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{ | m{10em} | m{20em} | }
     \hline
-    \textbf{Attore primario} & Utilizzatore API \\
+    \textbf{Attore primario} & Utilizzatore \textit{API} \\
     \hline
-    \textbf{Attore secondario} & Infura \\
+    \textbf{Attore secondario} & \textit{Infura} \\
     \hline
     \textbf{Precondizioni} & L'utente sta tentando di ottenere la lista recensioni. \\
     \hline
