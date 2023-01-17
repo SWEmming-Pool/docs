@@ -1,508 +1,530 @@
 \section{Casi d'uso}
 
-\subsection{Attori}
-\subsubsection{Attori primari}
+    \subsection{Attori}
 
-\begin{figure}[htbp]
-    \centering
-    \includesvg[scale=0.9]{src/img/attoriPrimari.drawio.svg}
-    \caption{Gerarchia degli attori primari}
-  \end{figure}
+        \subsubsection{Attori primari}
+            \begin{figure}[H]
+                \centering
+                \includesvg[scale=0.9]{src/img/attoriPrimari.drawio.svg}
+                \caption{Gerarchia degli attori primari}
+            \end{figure}
 
+            \paragraph*{Utente generico:} utente che non possiede un account \textit{MetaMask} e ha dunque possibilità di usufruire del servizio solo in lettura.
 
-\paragraph*{Utente generico:} utente che non possiede un account \textit{MetaMask} e ha dunque possibilità di usufruire del servizio solo in lettura.
-\paragraph*{Utente non autenticato:} utente che possiede un account \textit{MetaMask} ma non è autenticato, dunque può usufruire del servizio solo in lettura o autenticarsi per poter effettuare pagamenti e rilasciare recensioni.
-\paragraph*{Utente autenticato:} utente che possiede un account \textit{MetaMask} e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni.
-\subsubsection{Attori secondari}
-\paragraph*{\textit{MetaMask}:} \textit{wallet}\glo\: di criptovalute usato per interagire con la \textit{blockchain} \textit{Ethereum}. Permette di accedere al proprio \textit{wallet} attraverso applicazione mobile o, come nel nostro caso, estensione per browser.
-\paragraph*{\textit{Infura}\glo:} backend \textit{Web3}\glo\: che offre servizi e strumenti per sviluppatori \textit{blockchain}; nel nostro caso sarà ciò che metterà in comunicazione \textit{web app} e \textit{API REST} con nodi\glo\: sulla \textit{blockchain}.
+            \paragraph*{Utente non autenticato:} utente che possiede un account \textit{MetaMask} ma non è autenticato, dunque può usufruire del servizio solo in lettura o autenticarsi per poter effettuare pagamenti e rilasciare recensioni.
 
-\subsection{Elenco}
+            \paragraph*{Utente autenticato:} utente che possiede un account \textit{MetaMask} e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni.
 
-\subsubsection{UC01 - Autenticazione}
-\label{UC01}
+        \subsubsection{Attori secondari}
+            \paragraph*{\textit{MetaMask}:} \textit{wallet}\glo\: di criptovalute usato per interagire con la \textit{blockchain} \textit{Ethereum}. Permette di accedere al proprio \textit{wallet} attraverso applicazione mobile o, come nel nostro caso, estensione per browser.
 
-\begin{figure}[H]
-    \centering
-    \includesvg[width=1\textwidth]{src/img/UC01.drawio.svg}
-    \caption{UC01}
- \end{figure}
+            \paragraph*{\textit{Infura}\glo:} backend \textit{Web3}\glo\: che offre servizi e strumenti per sviluppatori \textit{blockchain}; nel nostro caso sarà ciò che metterà in comunicazione \textit{web app} e \textit{API REST} con nodi\glo\: sulla \textit{blockchain}.
 
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente non autenticato \\
-    \hline
-    \textbf{Attore secondario} & \textit{MetaMask} \\
-    \hline
-    \textbf{Precondizioni} & L'utente non è autenticato. \\
-    \hline
-    \textbf{Postcondizioni} & L'utente è autenticato. \\
-    \hline
-    \textbf{Scenario principale} & L'utente accede a \textit{MetaMask}. \\
-    \hline
-    \textbf{Estensioni} & Se l'accesso a \textit{MetaMask} non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
-    \hline
-   \end{tabular}
-\end{center}
+    \subsection{Elenco}
 
-\subsubsection{UC02 - Logout}
-\label{UC02}
+        \subsubsection{UC01 - Autenticazione}
+        \label{UC01}
 
-\begin{figure}[H]
-    \centering
-    \includesvg[scale=0.9]{src/img/UC02.drawio.svg}
-    \caption{UC02}
- \end{figure}
+            \begin{figure}[H]
+                \centering
+                \includesvg[width=1\textwidth]{src/img/UC01.drawio.svg}
+                \caption{UC01}
+            \end{figure}
 
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente autenticato \\
-    \hline
-    \textbf{Precondizioni} & L'utente è autenticato. \\
-    \hline
-    \textbf{Postcondizioni} & L'utente non è più autenticato. \\
-    \hline
-    \textbf{Scenario principale} & L'utente effettua il logout. \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente non autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente non è autenticato. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente è autenticato. \\
+                    \hline
+                    \textbf{Scenario principale} & L'utente accede a \textit{MetaMask}. \\
+                    \hline
+                    \textbf{Estensioni} & Se l'accesso a \textit{MetaMask} non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\subsubsection{UC03 - Ricerca Recensioni}
-\label{UC03}
+        \subsubsection{UC02 - Logout}
+        \label{UC02}
 
-\begin{figure}[H]
-    \centering
-    \includesvg[scale=0.9]{src/img/UC03.drawio.svg}
-    \caption{UC03}
- \end{figure}
+            \begin{figure}[H]
+                \centering
+                \includesvg[scale=0.9]{src/img/UC02.drawio.svg}
+                \caption{UC02}
+            \end{figure}
 
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente generico \\
-    \hline
-    \textbf{Attore secondario} & Infura \\
-    \hline
-    \textbf{Precondizioni} & L'utente conosce l'indirizzo di cui vuole visualizzare le recensioni. \\
-    \hline
-    \textbf{Postcondizioni} & L'utente visualizza le recensioni associate a quell'indirizzo. \\
-    \hline
-    \textbf{Scenario principale} & L'utente richiede la lista delle recensioni di un determinato indirizzo. \\
-    \hline
-    \textbf{Estensioni} & Se l'utente inserisce un indirizzo inesistente, si verifica \hyperref[UC11]{UC11}. \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente è autenticato. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente non è più autenticato. \\
+                    \hline
+                    \textbf{Scenario principale} & L'utente effettua il logout. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\subsubsection{UC04 - Visualizzazione Recensioni}
-\label{UC04}
+        \subsubsection{UC03 - Ricerca Recensioni}
+        \label{UC03}
 
-\begin{figure}[H]
-    \centering
-    \includesvg[width=1\textwidth]{src/img/UC04.drawio.svg}
-    \caption{UC04}
- \end{figure}
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente generico \\
-    \hline
-    \textbf{Precondizioni} & L'utente ha effettuato una ricerca per indirizzo. \\
-    \hline
-    \textbf{Postcondizioni} & L'utente visualizza le recensioni associate a quell'indirizzo. \\
-    \hline
-    \textbf{Scenario principale} & Viene visualizzata una lista di recensioni corrispondenti. \\
-    \hline
-    \textbf{Estensioni} & Se l'utente inserisce un indirizzo inesistente, si verifica \hyperref[UC12]{UC12}. \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{figure}[H]
+                \centering
+                \includesvg[scale=0.9]{src/img/UC03.drawio.svg}
+                \caption{UC03}
+            \end{figure}
 
-\subsubsection{UC05 - Visualizzazione Recensioni Rilasciate}
-\label{UC05}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente generico \\
+                    \hline
+                    \textbf{Attore secondario} & Infura \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente conosce l'indirizzo di cui vuole visualizzare le recensioni. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente visualizza le recensioni associate a quell'indirizzo. \\
+                    \hline
+                    \textbf{Scenario principale} & L'utente richiede la lista delle recensioni di un determinato indirizzo. \\
+                    \hline
+                    \textbf{Estensioni} & Se l'utente inserisce un indirizzo inesistente, si verifica \hyperref[UC11]{UC11}. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\begin{figure}[H]
-    \centering
-    \includesvg[width=1\textwidth]{src/img/UC05.drawio.svg}
-    \caption{UC05}
- \end{figure}
+        \subsubsection{UC04 - Visualizzazione Recensioni}
+        \label{UC04}
 
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente autenticato \\
-    \hline
-    \textbf{Attore secondario} & \textit{MetaMask} \\
-    \hline
-    \textbf{Precondizioni} & Nessuna. \\
-    \hline
-    \textbf{Postcondizioni} & L'utente visualizza le recensioni che ha rilasciato. \\
-    \hline
-    \textbf{Scenario principale} & Viene mostrata la lista di recensioni rilasciate dall'utente. \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{figure}[H]
+                \centering
+                \includesvg[width=1\textwidth]{src/img/UC04.drawio.svg}
+                \caption{UC04}
+            \end{figure}
 
-\subsubsection{UC06 - Visualizzazione Recensioni Ricevute}
-\label{UC06}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente generico \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente ha effettuato una ricerca per indirizzo. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente visualizza le recensioni associate a quell'indirizzo. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene visualizzata una lista di recensioni corrispondenti. \\
+                    \hline
+                    \textbf{Estensioni} & Se l'utente inserisce un indirizzo inesistente, si verifica \hyperref[UC12]{UC12}. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\begin{figure}[H]
-    \centering
-    \includesvg[width=1\textwidth]{src/img/UC06.drawio.svg}
-    \caption{UC06}
- \end{figure}
+        \subsubsection{UC05 - Visualizzazione Recensioni Rilasciate}
+        \label{UC05}
 
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente autenticato \\
-    \hline
-    \textbf{Attore secondario} & \textit{MetaMask} \\
-    \hline
-    \textbf{Precondizioni} & Nessuna. \\
-    \hline
-    \textbf{Postcondizioni} & L'utente visualizza le recensioni che ha ricevuto. \\
-    \hline
-    \textbf{Scenario principale} & Viene mostrata la lista di recensioni ricevute dall'utente. \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{figure}[H]
+                \centering
+                \includesvg[width=1\textwidth]{src/img/UC05.drawio.svg}
+                \caption{UC05}
+            \end{figure}
 
-\subsubsection{UC07 - Visualizzazione Singola Recensione}
-\label{UC07}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \hline
+                    \textbf{Precondizioni} & Nessuna. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente visualizza le recensioni che ha rilasciato. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene mostrata la lista di recensioni rilasciate dall'utente. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\begin{figure}[H]
-    \centering
-    \includesvg[width=1\textwidth]{src/img/UC07.drawio.svg}
-    \caption{UC07}
- \end{figure}
+        \subsubsection{UC06 - Visualizzazione Recensioni Ricevute}
+        \label{UC06}
 
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente generico \\
-    \hline
-    \textbf{Precondizioni} & Si sta visualizzando una lista di recensioni. \\
-    \hline
-    \textbf{Postcondizioni} & Viene visualizzata una singola recensione della lista. \\
-    \hline
-    \textbf{Scenario principale} & Viene visualizzata una recensione appartenente alla lista richiesta dall'utente. \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{figure}[H]
+                \centering
+                \includesvg[width=1\textwidth]{src/img/UC06.drawio.svg}
+                \caption{UC06}
+            \end{figure}
 
-\subsubsection{UC07.1 - Visualizzazione Autore Recensione}
-\label{UC07.1}
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente generico \\
-    \hline
-    \textbf{Precondizioni} & Viene visualizzata una recensione. \\
-    \hline
-    \textbf{Postcondizioni} & Viene visualizzato l'autore della recensione. \\
-    \hline
-    \textbf{Scenario principale} & Viene visualizzato l'autore all'interno della recensione corrispondente. \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \hline
+                    \textbf{Precondizioni} & Nessuna. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente visualizza le recensioni che ha ricevuto. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene mostrata la lista di recensioni ricevute dall'utente. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\subsubsection{UC07.2 - Visualizzazione Testo Recensione}
-\label{UC07.2}
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente generico \\
-    \hline
-    \textbf{Precondizioni} & Viene visualizzata una recensione. \\
-    \hline
-    \textbf{Postcondizioni} & Viene visualizzato il testo della recensione. \\
-    \hline
-    \textbf{Scenario principale} & Viene visualizzato il testo all'interno della recensione corrispondente. \\
-    \hline
-   \end{tabular}
-\end{center}
+        \subsubsection{UC07 - Visualizzazione Singola Recensione}
+        \label{UC07}
 
-\subsubsection{UC07.3 - Visualizzazione Voto Recensione}
-\label{UC07.3}
-\begin{center}
-    \rowcolors[]{1}{pari}{dispari}
-    \renewcommand{\arraystretch}{1.5}
-    \begin{tabular}{ | m{10em} | m{20em} | }
-        \hline
-        \textbf{Attore primario} & Utente generico \\
-        \hline
-        \textbf{Precondizioni} & Viene visualizzata una recensione. \\
-        \hline
-        \textbf{Postcondizioni} & Viene visualizzato il voto della recensione. \\
-        \hline
-        \textbf{Scenario principale} & Viene visualizzato il voto all'interno della recensione corrispondente. \\
-        \hline
-       \end{tabular}
-    \end{center}
+            \begin{figure}[H]
+                \centering
+                \includesvg[width=1\textwidth]{src/img/UC07.drawio.svg}
+                \caption{UC07}
+            \end{figure}
 
-\subsubsection{UC08 - Rilascio Recensione}
-\label{UC08}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente generico \\
+                    \hline
+                    \textbf{Precondizioni} & Si sta visualizzando una lista di recensioni. \\
+                    \hline
+                    \textbf{Postcondizioni} & Viene visualizzata una singola recensione della lista. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene visualizzata una recensione appartenente alla lista richiesta dall'utente. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\begin{figure}[H]
-    \centering
-    \includesvg[scale=0.9]{src/img/UC08.drawio.svg}
-    \caption{UC08}
- \end{figure}
+        \subsubsection{UC07.1 - Visualizzazione Autore Recensione}
+        \label{UC07.1}
 
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente autenticato \\
-    \hline
-    \textbf{Attore secondario} & \textit{MetaMask} \\
-    \hline
-    \textbf{Precondizioni} & \begin{itemize}
-        \item L'utente è autenticato;
-        \item l'utente ha effettuato almeno un acquisto;
-        \item l'utente ha acquisti non recensiti.
-    \end{itemize} \\
-    \hline
-    \textbf{Postcondizioni} & L'utente ha effettuato una recensione sull'acquisto. \\
-    \hline
-    \textbf{Scenario principale} & \begin{enumerate}
-        \item L'utente seleziona un pagamento da associare alla recensione;
-        \item l'utente inserisce la recensione.
-    \end{enumerate} \\
-    \hline
-    \textbf{Estensioni} & Se l'utente seleziona una pagamento già recensito, si verifica \hyperref[UC13]{UC13}. \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente generico \\
+                    \hline
+                    \textbf{Precondizioni} & Viene visualizzata una recensione. \\
+                    \hline
+                    \textbf{Postcondizioni} & Viene visualizzato l'autore della recensione. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene visualizzato l'autore all'interno della recensione corrispondente. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\subsubsection{UC09 - Pagamento}
-\label{UC09}
+        \subsubsection{UC07.2 - Visualizzazione Testo Recensione}
+        \label{UC07.2}
 
-\begin{figure}[H]
-    \centering
-    \includesvg[scale=0.9]{src/img/UC09.drawio.svg}
-    \caption{UC09}
- \end{figure}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente generico \\
+                    \hline
+                    \textbf{Precondizioni} & Viene visualizzata una recensione. \\
+                    \hline
+                    \textbf{Postcondizioni} & Viene visualizzato il testo della recensione. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene visualizzato il testo all'interno della recensione corrispondente. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente autenticato \\
-    \hline
-    \textbf{Attore secondario} & \textit{MetaMask} \\
-    \hline
-    \textbf{Precondizioni} & L'utente non ha ancora pagato. \\
-    \hline
-    \textbf{Postcondizioni} & L'utente ha completato il pagamento. \\
-    \hline
-    \textbf{Scenario principale} & L'utente effettua il pagamento. \\
-    \hline
-    \textbf{Estensioni} & Se l'utente non ha fondi sufficienti nel \textit{wallet}, si verifica \hyperref[UC14]{UC14}.\\
-    \hline
-   \end{tabular}
-\end{center}
+        \subsubsection{UC07.3 - Visualizzazione Voto Recensione}
+        \label{UC07.3}
 
-\subsubsection{UC10 - Visualizzazione Errore Autenticazione}
-\label{UC10}
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente non autenticato \\
-    \hline
-    \textbf{Attore secondario} & \textit{MetaMask} \\
-    \hline
-    \textbf{Precondizioni} & L'utente sta tentando di autenticarsi. \\
-    \hline
-    \textbf{Postcondizioni} & L'operazione fallisce. \\
-    \hline
-    \textbf{Scenario principale} & \begin{enumerate}
-        \item Si verificano problemi con l'accesso a \textit{MetaMask};
-        \item viene mostrato un errore che informa l'utente del fallimento dell'operazione;
-        \item vengono mostrati dei consigli sulla risoluzione del problema e si invita
-              l'utente a riprovare.
-    \end{enumerate} \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente generico \\
+                    \hline
+                    \textbf{Precondizioni} & Viene visualizzata una recensione. \\
+                    \hline
+                    \textbf{Postcondizioni} & Viene visualizzato il voto della recensione. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene visualizzato il voto all'interno della recensione corrispondente. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\subsubsection{UC11 - Errore Ricerca Recensioni}
-\label{UC11}
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attori primari} & Utente generico, utente autenticato. \\
-    \hline
-    \textbf{Attore secondario} & \textit{Infura} \\
-    \hline
-    \textbf{Precondizioni} & L'utente richiede le recensioni collegate ad un indirizzo. \\
-    \hline
-    \textbf{Postcondizioni} & La ricerca fallisce. \\
-    \hline
-    \textbf{Scenario principale} & L'utente inserisce un indirizzo inesistente e viene visualizzato un errore. \\
-    \hline
-   \end{tabular}
-\end{center}
+        \subsubsection{UC08 - Rilascio Recensione}
+        \label{UC08}
 
-\subsubsection{UC12 - Errore Visualizzazione Recensioni}
-\label{UC12}
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attori primari} & Utente generico, utente autenticato. \\
-    \hline
-    \textbf{Precondizioni} & L'utente ha effettuato una ricerca per indirizzo. \\
-    \hline
-    \textbf{Postcondizioni} & L'utente non visualizza nessuna recensione. \\
-    \hline
-    \textbf{Scenario principale} & \begin{enumerate}
-        \item L'utente richiede la lista delle recensioni di un determinato indirizzo;
-    \item l'indirizzo cercato non presenta recensioni collegate e l'utente viene
-          informato di questo.
-    \end{enumerate} \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{figure}[H]
+                \centering
+                \includesvg[scale=0.9]{src/img/UC08.drawio.svg}
+                \caption{UC08}
+            \end{figure}
 
-\subsubsection{UC13 - Errore Rilascio Recensione}
-\label{UC13}
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente autenticato \\
-    \hline
-    \textbf{Attore secondario} & \textit{MetaMask} \\
-    \hline
-    \textbf{Precondizioni} & L'utente vuole rilasciare una recensione. \\
-    \hline
-    \textbf{Postcondizioni} & L'operazione fallisce. \\
-    \hline
-    \textbf{Scenario principale} & \begin{enumerate}
-        \item L'utente inserisce una recensione che non può rilasciare:
-              \begin{itemize}
-                  \item non ha un acquisto valido legato all'oggetto che vuole recensire;
-                  \item la recensione non rispetta un formato valido.
-              \end{itemize}
-        \item Viene mostrato un errore che informa l'utente sul perché la recensione non può
-              essere rilasciata;
-        \item vengono mostrati dei consigli sulla risoluzione del problema e si blocca
-              l'attuale operazione.
-    \end{enumerate} \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \hline
+                    \textbf{Precondizioni} &
+                        \begin{itemize}
+                            \item L'utente è autenticato;
+                            \item l'utente ha effettuato almeno un acquisto;
+                            \item l'utente ha acquisti non recensiti.
+                        \end{itemize} \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente ha effettuato una recensione sull'acquisto. \\
+                    \hline
+                    \textbf{Scenario principale} &
+                        \begin{enumerate}
+                            \item L'utente seleziona un pagamento da associare alla recensione;
+                            \item l'utente inserisce la recensione.
+                        \end{enumerate} \\
+                    \hline
+                    \textbf{Estensioni} & Se l'utente seleziona una pagamento già recensito, si verifica \hyperref[UC13]{UC13}. \\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\subsubsection{UC14 - Errore Pagamento}
-\label{UC14}
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utente autenticato \\
-    \hline
-    \textbf{Attore secondario} & \textit{MetaMask} \\
-    \hline
-    \textbf{Precondizioni} & L'utente sta tentando di effettuare un pagamento. \\
-    \hline
-    \textbf{Postcondizioni} & Il pagamento fallisce. \\
-    \hline
-    \textbf{Scenario principale} & \begin{enumerate}
-        \item L'utente tenta di effettuare un pagamento che non va a buon fine;
-        \item viene mostrato un errore che informa l'utente sul motivo del fallimento
-              dell'operazione;
-        \item l'operazione viene annullata.
-    \end{enumerate} \\
-    \hline
-   \end{tabular}
-\end{center}
+        \subsubsection{UC09 - Pagamento}
+        \label{UC09}
 
-\subsubsection{UC15 - Richiesta Lista Recensioni}
-\label{UC15}
+            \begin{figure}[H]
+                \centering
+                \includesvg[scale=0.9]{src/img/UC09.drawio.svg}
+                \caption{UC09}
+            \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includesvg[width=1\textwidth]{src/img/UC15.drawio.svg}
-    \caption{UC15}
- \end{figure}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente non ha ancora pagato. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente ha completato il pagamento. \\
+                    \hline
+                    \textbf{Scenario principale} & L'utente effettua il pagamento. \\
+                    \hline
+                    \textbf{Estensioni} & Se l'utente non ha fondi sufficienti nel \textit{wallet}, si verifica \hyperref[UC14]{UC14}.\\
+                    \hline
+                \end{tabular}
+            \end{center}
 
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utilizzatore \textit{API} \\
-    \hline
-    \textbf{Attore secondario} & \textit{Infura} \\
-    \hline
-    \textbf{Precondizioni} & L'utente conosce l'indirizzo di cui vuole visualizzare le recensioni. \\
-    \hline
-    \textbf{Postcondizioni} & L'utente ottiene un file contenente una lista di recensioni. \\
-    \hline
-    \textbf{Scenario principale} & \begin{enumerate}
-        \item L'utente fa una richiesta al \textit{server API REST}\glo\: specificando l'indirizzo di cui
-              ottenere le recensioni;
-        \item il server recupera le recensioni legate all'utente richiesto;
-        \item viene restituita una lista di recensioni;
-    \end{enumerate} \\
-    \hline
-    \textbf{Estensioni} & Se la richiesta fallisce, si verifica \hyperref[UC16]{UC16}. \\
-    \hline
-   \end{tabular}
-\end{center}
+        \subsubsection{UC10 - Visualizzazione Errore Autenticazione}
+        \label{UC10}
 
-\subsubsection{UC16 - Errore Ottenimento Recensioni}
-\label{UC16}
-\begin{center}
-\rowcolors[]{1}{pari}{dispari}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{ | m{10em} | m{20em} | }
-    \hline
-    \textbf{Attore primario} & Utilizzatore \textit{API} \\
-    \hline
-    \textbf{Attore secondario} & \textit{Infura} \\
-    \hline
-    \textbf{Precondizioni} & L'utente sta tentando di ottenere la lista recensioni. \\
-    \hline
-    \textbf{Postcondizioni} & L'operazione fallisce. \\
-    \hline
-    \textbf{Scenario principale} & \begin{enumerate}
-        \item L'utente tenta di ottenere la lista di recensioni;
-        \item viene mostrato un errore che informa l'utente sul motivo del fallimento
-              dell'operazione.
-    \end{enumerate} \\
-    \hline
-   \end{tabular}
-\end{center}
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente non autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente sta tentando di autenticarsi. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'operazione fallisce. \\
+                    \hline
+                    \textbf{Scenario principale} &
+                        \begin{enumerate}
+                            \item Si verificano problemi con l'accesso a \textit{MetaMask};
+                            \item viene mostrato un errore che informa l'utente del fallimento dell'operazione;
+                            \item vengono mostrati dei consigli sulla risoluzione del problema e si invita
+                            l'utente a riprovare.
+                        \end{enumerate} \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+        \subsubsection{UC11 - Errore Ricerca Recensioni}
+        \label{UC11}
+
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attori primari} & Utente generico, utente autenticato. \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{Infura} \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente richiede le recensioni collegate ad un indirizzo. \\
+                    \hline
+                    \textbf{Postcondizioni} & La ricerca fallisce. \\
+                    \hline
+                    \textbf{Scenario principale} & L'utente inserisce un indirizzo inesistente e viene visualizzato un errore. \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+        \subsubsection{UC12 - Errore Visualizzazione Recensioni}
+        \label{UC12}
+
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attori primari} & Utente generico, utente autenticato. \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente ha effettuato una ricerca per indirizzo. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente non visualizza nessuna recensione. \\
+                    \hline
+                    \textbf{Scenario principale} &
+                        \begin{enumerate}
+                            \item L'utente richiede la lista delle recensioni di un determinato indirizzo;
+                            \item l'indirizzo cercato non presenta recensioni collegate e l'utente viene
+                            informato di questo.
+                        \end{enumerate} \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+        \subsubsection{UC13 - Errore Rilascio Recensione}
+        \label{UC13}
+
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente vuole rilasciare una recensione. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'operazione fallisce. \\
+                    \hline
+                    \textbf{Scenario principale} &
+                        \begin{enumerate}
+                            \item L'utente inserisce una recensione che non può rilasciare:
+                            \begin{itemize}
+                            \item non ha un acquisto valido legato all'oggetto che vuole recensire;
+                            \item la recensione non rispetta un formato valido.
+                            \end{itemize}
+                            \item Viene mostrato un errore che informa l'utente sul perché la recensione non può
+                            essere rilasciata;
+                            \item vengono mostrati dei consigli sulla risoluzione del problema e si blocca
+                            l'attuale operazione.
+                        \end{enumerate} \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+        \subsubsection{UC14 - Errore Pagamento}
+        \label{UC14}
+
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente sta tentando di effettuare un pagamento. \\
+                    \hline
+                    \textbf{Postcondizioni} & Il pagamento fallisce. \\
+                    \hline
+                    \textbf{Scenario principale} &
+                    \begin{enumerate}
+                        \item L'utente tenta di effettuare un pagamento che non va a buon fine;
+                        \item viene mostrato un errore che informa l'utente sul motivo del fallimento
+                        dell'operazione;
+                        \item l'operazione viene annullata.
+                    \end{enumerate} \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
+        \subsubsection{UC15 - Richiesta Lista Recensioni}
+        \label{UC15}
+
+            \begin{figure}[H]
+                \centering
+                \includesvg[width=1\textwidth]{src/img/UC15.drawio.svg}
+                \caption{UC15}
+            \end{figure}
+
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                \hline
+                \textbf{Attore primario} & Utilizzatore \textit{API} \\
+                \hline
+                \textbf{Attore secondario} & \textit{Infura} \\
+                \hline
+                \textbf{Precondizioni} & L'utente conosce l'indirizzo di cui vuole visualizzare le recensioni. \\
+                \hline
+                \textbf{Postcondizioni} & L'utente ottiene un file contenente una lista di recensioni. \\
+                \hline
+                \textbf{Scenario principale} &
+                    \begin{enumerate}
+                        \item L'utente fa una richiesta al \textit{server API REST}\glo\: specificando l'indirizzo di cui
+                        ottenere le recensioni;
+                        \item il server recupera le recensioni legate all'utente richiesto;
+                        \item viene restituita una lista di recensioni;
+                    \end{enumerate} \\
+                \hline
+                \textbf{Estensioni} & Se la richiesta fallisce, si verifica \hyperref[UC16]{UC16}. \\
+                \hline
+                \end{tabular}
+            \end{center}
+
+        \subsubsection{UC16 - Errore Ottenimento Recensioni}
+        \label{UC16}
+
+            \begin{center}
+                \rowcolors{1}{pari_change}{dispari_change}
+                \renewcommand{\arraystretch}{1.5}
+                \begin{tabular}{m{10em} m{20em}}
+                    \hline
+                    \textbf{Attore primario} & Utilizzatore \textit{API} \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{Infura} \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente sta tentando di ottenere la lista recensioni. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'operazione fallisce. \\
+                    \hline
+                    \textbf{Scenario principale} &
+                        \begin{enumerate}
+                            \item L'utente tenta di ottenere la lista di recensioni;
+                            \item viene mostrato un errore che informa l'utente sul motivo del fallimento
+                            dell'operazione.
+                        \end{enumerate} \\
+                    \hline
+                \end{tabular}
+            \end{center}
+
 \pagebreak
