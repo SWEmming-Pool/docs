@@ -47,7 +47,12 @@
 
         \rowcolors{2}{pari_change}{dispari_change}
         \renewcommand{\arraystretch}{1.8}
-        \begin{longtable}{c c p{6cm} c}
+        \begin{xltabular}{\textwidth} {
+            >{\hsize=0.5\hsize\linewidth=\hsize}X
+            >{\hsize=0.8\hsize\linewidth=\hsize}X
+            >{\hsize=2.05\hsize\linewidth=\hsize}X
+            >{\hsize=0.65\hsize\linewidth=\hsize}X
+            }
             \rowcolorhead
             \textbf{\color{white}Codice} &
             \textbf{\color{white}Tipo} &
@@ -201,13 +206,18 @@
             Capitolato \\
             \hline
 
-        \end{longtable}
+        \end{xltabular}
 
     \subsection{Requisiti di qualità}
 
         \rowcolors{2}{pari_change}{dispari_change}
         \renewcommand{\arraystretch}{1.8}
-        \begin{longtable}{c c p{6cm} c}
+        \begin{xltabular}{\textwidth} {
+            >{\hsize=0.5\hsize\linewidth=\hsize}X
+            >{\hsize=0.8\hsize\linewidth=\hsize}X
+            >{\hsize=2.05\hsize\linewidth=\hsize}X
+            >{\hsize=0.65\hsize\linewidth=\hsize}X
+            }
             \rowcolorhead
             \textbf{\color{white}Codice} &
             \textbf{\color{white}Tipo} &
@@ -274,32 +284,37 @@
             Capitolato \\
             \hline
 
-        \end{longtable}
+        \end{xltabular}
 
     \subsection{Requisiti di vincolo}
 
         \rowcolors{2}{pari_change}{dispari_change}
         \renewcommand{\arraystretch}{1.8}
-        \begin{longtable}{c c p{6cm} c}
-        \rowcolorhead
-        \textbf{\color{white}Codice} &
-        \textbf{\color{white}Tipo} &
-        \textbf{\color{white}Descrizione} &
-        \textbf{\color{white}Fonti} \\
-        \hline
-        \endfirsthead
+        \begin{xltabular}{\textwidth} {
+            >{\hsize=0.5\hsize\linewidth=\hsize}X
+            >{\hsize=0.8\hsize\linewidth=\hsize}X
+            >{\hsize=2.05\hsize\linewidth=\hsize}X
+            >{\hsize=0.65\hsize\linewidth=\hsize}X
+        }
+            \rowcolorhead
+            \textbf{\color{white}Codice} &
+            \textbf{\color{white}Tipo} &
+            \textbf{\color{white}Descrizione} &
+            \textbf{\color{white}Fonti} \\
+            \hline
+            \endfirsthead
 
-        \hline
-        \rowcolorhead
-        \textbf{\color{white}Codice} &
-        \textbf{\color{white}Tipo} &
-        \textbf{\color{white}Descrizione} &
-        \textbf{\color{white}Fonti} \\
-        \hline
-        \endhead
+            \hline
+            \rowcolorhead
+            \textbf{\color{white}Codice} &
+            \textbf{\color{white}Tipo} &
+            \textbf{\color{white}Descrizione} &
+            \textbf{\color{white}Fonti} \\
+            \hline
+            \endhead
 
-        \endfoot
-        \endlastfoot
+            \endfoot
+            \endlastfoot
 
             R1V1 &
             Obbligatorio &
@@ -354,13 +369,16 @@
             Utilizzo di un fornitore terzo per \textit{RPC} a nodo. &
             Capitolato \\
             \hline
-        \end{longtable}
+        \end{xltabular}
 
     \subsection{Tracciamento fonte-requisiti}
 
         \rowcolors{2}{pari_change}{dispari_change}
         \renewcommand{\arraystretch}{1.8}
-        \begin{longtable}{c p{6cm}}
+        \begin{xltabular}{0.9\textwidth} {
+            >{\hsize=0.4\hsize\linewidth=\hsize}X
+            >{\hsize=1.6\hsize\linewidth=\hsize}X
+            }
             \rowcolorhead
             \textbf{\color{white}Fonte} &
             \textbf{\color{white}Requisiti} \\
@@ -424,14 +442,20 @@
             \hyperref[UC05]{UC05} &
             R1F8 \\
             \hline
-        \end{longtable}
+        \end{xltabular}
 
     \subsection{Riepilogo}
         \rowcolors{2}{pari_change}{dispari_change}
         \renewcommand{\arraystretch}{1.8}
 
         \begin{center}
-            \begin{tabular}{c c c c c}
+            \begin{tabularx}{\textwidth} {
+                >{\centering\arraybackslash}X
+                >{\centering\arraybackslash}X
+                >{\centering\arraybackslash}X
+                >{\centering\arraybackslash}X
+                >{\centering\arraybackslash}X
+                }
                 \rowcolorhead
                 \textbf{\color{white}Tipologia} &
                 \textbf{\color{white}Obbligatorio} &
@@ -439,7 +463,6 @@
                 \textbf{\color{white}Opzionale} &
                 \textbf{\color{white}Totale} \\
                 \hline
-
 
                 Funzionale & 22 & - & - & 22 \\
                 \hline
@@ -452,5 +475,5 @@
 
                 Prestazionale & - & - & - & - \\
                 \hline
-            \end{tabular}
+            \end{tabularx}
         \end{center}

@@ -2,7 +2,13 @@
 
 	\rowcolors{2}{pari_change}{dispari_change}
 	\renewcommand{\arraystretch}{1.5}
-	\begin{longtable}{ c  c  c  c  p{10em}}
+	\begin{xltabular}{\textwidth} {
+		>{\hsize=0.75\hsize\linewidth=\hsize}X
+        >{\hsize=0.9\hsize\linewidth=\hsize}X
+        >{\hsize=1.25\hsize\linewidth=\hsize}X
+        >{\hsize=0.9\hsize\linewidth=\hsize}X
+        >{\hsize=1.2\hsize\linewidth=\hsize}X
+		}
 		\rowcolorhead
 		\textbf{\color{white}Versione} &
 		\textbf{\color{white}Data} &
@@ -102,5 +108,5 @@
 		Creata struttura del documento in \LaTeX{}. \\
 		\hline
 
-	\end{longtable}
+	\end{xltabular}
 \renewcommand{\arraystretch}{1}
