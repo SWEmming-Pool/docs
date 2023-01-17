@@ -7,8 +7,12 @@
             \item \textbf{Importanza}:
             \begin{center}
                 \rowcolors[]{1}{pari}{dispari}
-                \renewcommand{\arraystretch}{1.5}
-                \begin{tabular}{m{2em} m{25em}}
+                \renewcommand{\arraystretch}{1.8}
+                \renewcommand\tabularxcolumn[1]{m{#1}}
+                \begin{tabularx}{0.85\textwidth} {
+                    >{\hsize=0.1\hsize\linewidth=\hsize}X
+                    >{\hsize=1.9\hsize\linewidth=\hsize}X
+                }
                     \hline
                     \textbf{1} & Requisito obbligatorio: irrinunciabile per qualcuno degli stakeholder. \\
                     \hline
@@ -16,7 +20,7 @@
                     \hline
                     \textbf{3} &  Requisito opzionale: relativamente utile oppure contrattabile più avanti nel progetto. \\
                     \hline
-                \end{tabular}
+                \end{tabularx}
             \end{center}
 
             \item \textbf{Tipologia}:
@@ -47,6 +51,7 @@
 
         \rowcolors{2}{pari_change}{dispari_change}
         \renewcommand{\arraystretch}{1.8}
+
         \begin{xltabular}{\textwidth} {
             >{\hsize=0.5\hsize\linewidth=\hsize}X
             >{\hsize=0.8\hsize\linewidth=\hsize}X
@@ -130,73 +135,73 @@
 
             R1F5.1 &
             Obbligatorio &
-        	L'utente può scegliere il pagamento da associare alla recensione.&
+            L'utente può scegliere il pagamento da associare alla recensione.&
             \hyperref[UC08]{UC08} \\
             \hline
 
             R1F6.1 &
             Obbligatorio &
-        	La recensione potrà essere pubblicata solo a pagamento confermato. &
+            La recensione potrà essere pubblicata solo a pagamento confermato. &
             \hyperref[UC08]{UC08} \\
             \hline
 
             R1F6.2 &
             Obbligatorio &
-        	La recensione deve avere un formato valido. &
+            La recensione deve avere un formato valido. &
             \hyperref[UC13]{UC13} \\
             \hline
 
             R1F5.1.1 &
             Obbligatorio &
-        	La \textit{web app} visualizza un errore se l'utente seleziona un pagamento a cui è collegata già un recensione.&
+            La \textit{web app} visualizza un errore se l'utente seleziona un pagamento a cui è collegata già un recensione.&
             \hyperref[UC13]{UC13} \\
             \hline
 
             R1F6.3 &
             Obbligatorio &
-        	Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento. &
+            Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento. &
             \hyperref[UC13]{UC13} \\
             \hline
 
             R1F7 &
             Obbligatorio &
-        	La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.&
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.&
             \hyperref[UC06]{UC06} \\
             \hline
 
             R1F8 &
             Obbligatorio &
-        	La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.&
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.&
             \hyperref[UC05]{UC05} \\
             \hline
 
             R1F9 &
             Obbligatorio &
-        	Recensione e transazione sono caricati su una \textit{blockchain} pubblica. &
+            Recensione e transazione sono caricati su una \textit{blockchain} pubblica. &
             Capitolato \\
             \hline
 
             R1F9.1 &
             Obbligatorio &
-        	La \textit{blockchain} memorizza una lista con tutte le interazioni pagamento-recensione. &
+            La \textit{blockchain} memorizza una lista con tutte le interazioni pagamento-recensione. &
             Capitolato \\
             \hline
 
             R1F10 &
             Obbligatorio &
-        	Sviluppo di un servizio di \textit{API REST} per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito. &
+            Sviluppo di un servizio di \textit{API REST} per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito. &
             Capitolato \\
             \hline
 
             R1F11 &
             Obbligatorio &
-        	Lo \textit{smart contract} accede alla \textit{blockchain} per ottenere la lista delle recensioni. &
+            Lo \textit{smart contract} accede alla \textit{blockchain} per ottenere la lista delle recensioni. &
             Capitolato \\
             \hline
 
             R1F12 &
             Obbligatorio &
-        	Lo \textit{smart contract} invia i fondi all'e-commerce. &
+            Lo \textit{smart contract} invia i fondi all'e-commerce. &
             Capitolato \\
             \hline
 
@@ -206,6 +211,8 @@
             Capitolato \\
             \hline
 
+            \rowcolor{white}
+            \caption{Requisiti funzionali}
         \end{xltabular}
 
     \subsection{Requisiti di qualità}
@@ -284,6 +291,8 @@
             Capitolato \\
             \hline
 
+            \rowcolor{white}
+            \caption{Requisiti di qualità}
         \end{xltabular}
 
     \subsection{Requisiti di vincolo}
@@ -369,6 +378,9 @@
             Utilizzo di un fornitore terzo per \textit{RPC} a nodo. &
             Capitolato \\
             \hline
+
+            \rowcolor{white}
+            \caption{Requisiti di vincolo}
         \end{xltabular}
 
     \subsection{Tracciamento fonte-requisiti}
@@ -442,14 +454,18 @@
             \hyperref[UC05]{UC05} &
             R1F8 \\
             \hline
+
+            \rowcolor{white}
+            \caption{Tracciamento fonte-requisiti}
         \end{xltabular}
 
     \subsection{Riepilogo}
         \rowcolors{2}{pari_change}{dispari_change}
         \renewcommand{\arraystretch}{1.8}
 
-        \begin{center}
-            \begin{tabularx}{\textwidth} {
+        \begin{table}[H]
+            \centering
+            \begin{tabularx}{0.9\textwidth} {
                 >{\centering\arraybackslash}X
                 >{\centering\arraybackslash}X
                 >{\centering\arraybackslash}X
@@ -476,4 +492,5 @@
                 Prestazionale & - & - & - & - \\
                 \hline
             \end{tabularx}
-        \end{center}
+            \caption{Riepilogo}
+        \end{table}
