@@ -34,7 +34,7 @@ cd ..
 # Analisi requisiti
 cd analisi_requisiti/
 echo "Analisi requisiti"
-latexmk -pdf main.tex 1>/dev/null
+latexmk -pdf -pdflatex="pdflatex -shell-escape" main.tex 1>/dev/null
 mv main.pdf ../out/analisi_requisiti.pdf
 latexmk -c 1>/dev/null
 cd ..
