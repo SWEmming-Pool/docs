@@ -7,6 +7,10 @@
 *.synctex.gz
 *.toc
 
+## Inkscape svg
+svg-inkspace/*
+*.pdf_tex
+
 ## Latex glossary
 *.glg
 *.glo
@@ -21,3 +25,6 @@ out/
 
 # MacOS file
 .DS_Store
+
+# VSCode
+.vscode
