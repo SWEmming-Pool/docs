@@ -10,6 +10,8 @@
 ## Inkscape svg
 svg-inkspace/*
 *.pdf_tex
+*.lof
+*.lot
 
 ## Latex glossary
 *.glg
