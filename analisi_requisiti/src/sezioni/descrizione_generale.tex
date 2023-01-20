@@ -1,29 +1,22 @@
 \section{Descrizione generale}
-    \subsection{Obiettivi del prodotto}
-    Lo scopo del prodotto è quello di fornire un servizio di pagamento che includa la possibilità di rilasciare una recensione univoca da parte dell'utente pagante. \\
-    Per natura dello \textit{Smart Contract}, che verrà utilizzato per la gestione del pagamento, non è possibile modificare o censurare la recensione una volta che questa è stata rilasciata. 
 
-    \subsection{Caratteristiche del prodotto}
-    Il prodotto atteso dovrà essere composto da:
+    \subsection{Obiettivi del prodotto}
+    Lo scopo del prodotto è quello di fornire un servizio di pagamento che includa la possibilità di rilasciare una recensione univoca da parte dell'utente pagante.
+
+    Per natura dello \textit{smart contract} \glo\:, che verrà utilizzato per la gestione del pagamento, non è possibile modificare o censurare la recensione una volta che questa è stata rilasciata.
+
+    \subsection{Backend e Frontend}
+    Il prodotto atteso dovrà essere costituito da una parte di backend e una di frontend, composte a loro volta come spiegato di seguito.
 
         \subsubsection{Backend}
         \begin{itemize}
-            \item \textbf{Smart Contract}: gestisce la logica dei pagamenti e delle recensioni
-            \item \textbf{API REST}: permette di ottenere le informazioni da parte dell'utente che vuole usufruire del servizio, precisamente recuperare le recensioni a lui associate 
+            \item \textit{\textbf{Smart contract}}: gestisce la logica di pagamenti e recensioni.
+            \item \textit{\textbf{API REST}}\glo: permette di ottenere le recensioni associate ad un utente in formato \textit{JSON}\glo, senza passare per la \textit{web app}.
         \end{itemize}
 
         \subsubsection{Frontend}
         \begin{itemize}
-            \item \textbf{Web App}: permette agli utenti di interagire con il servizio, ovvero effettuare pagamenti e rilasciare o leggere le recensioni
+            \item \textit{\textbf{Web app}}: permette agli utenti di interagire con il servizio attraverso un interfaccia grafica, per effettuare pagamenti e rilasciare o leggere le recensioni.
         \end{itemize}
-
-        VALUTARE ULTERIORI APPROFONDIMENTI
-
-    \subsubsection{Caratteristiche degli utenti}
-    Gli utenti utilizzatori del prodotto possono essere di tre tipologie:
-    \begin{itemize}
-        \item \textbf{Utente generico}: utente che non possiede un account metamask e ha dunque possibilità di usufruire del servizio solo in lettura
-        \item \textbf{Utente non autenticato}: utente che possiede un account metamask ma non è autenticato, dunque può usufruire del servizio solo in lettura o autenticarsi per poter effettuare pagamenti e rilasciare recensioni
-        \item \textbf{Utente autenticato}: utente che possiede un account metamask e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni
-    \end{itemize}
-
+    \subsection{Vincoli generali}
+    Per usufruire del servizio, l'utente deve disporre di una connessione ad Internet e di un browser con installata l'estensione \textit{MetaMask}\glo.
