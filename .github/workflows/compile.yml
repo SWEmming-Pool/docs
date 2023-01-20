@@ -1,0 +1,37 @@
+name: Compiler
+
+on:
+  push:
+    branches: [ main, dev]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: danteev/texlive:latest
+    steps:
+      - name: Checkout repository contents
+        uses: actions/checkout@v3
+      
+      - name: Build LaTeX
+        run: |
+         bash build.sh
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Documenti
+          path: documenti_compilati/
+
+      - name: Push files
+        run : |
+          git config --local user.email "wwemming.bot@pool.org"
+          git config --local user.name "SwemmingBot"
+          git add -f documenti_compilati/
+          git commit -m "SwemmingBot - PDF compilati"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
