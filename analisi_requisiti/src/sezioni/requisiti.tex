@@ -55,8 +55,8 @@
         \begin{xltabular}{\textwidth} {
             >{\hsize=0.5\hsize\linewidth=\hsize}X
             >{\hsize=0.8\hsize\linewidth=\hsize}X
-            >{\hsize=2.05\hsize\linewidth=\hsize}X
-            >{\hsize=0.65\hsize\linewidth=\hsize}X
+            >{\hsize=2.10\hsize\linewidth=\hsize}X
+            >{\hsize=0.60\hsize\linewidth=\hsize}X
             }
             \rowcolorhead
             \textbf{\color{white}Codice} &
@@ -79,19 +79,18 @@
 
             \endlastfoot
 
-            R1F1 &
-            Obbligatorio &
-            Sviluppo di una \textit{web app} per il pagamento e il rilascio di recensioni. &
-            Capitolato \\
-            \hline
-
             R1F2 &
             Obbligatorio &
-            L'utente può accedere alla \textit{web app} tramite login con \textit{MetaMask}. &
+            L'utente può effettuare il login. &
             \hyperref[UC01]{UC01} \\
             \hline
 
             R1F2.1 &
+            L'utente deve effettuare il login tramite \textit{MetaMask}. &
+            \hyperref[UC01]{UC01} \\
+            \hline
+
+            R1F2.2 &
             Obbligatorio &
             La \textit{web app} visualizza un errore in caso di autenticazione fallita. &
             \hyperref[UC10]{UC10} \\
@@ -99,7 +98,7 @@
 
             R1F3 &
             Obbligatorio &
-            L'utente generico può ricercare delle recensioni di un determinato indirizzo tramite \textit{RPC}\glo\: allo \textit{smart contract}. &
+            L'utente generico può ricercare recensioni di un determinato utente tramite il suo indirizzo del wallet &
             \hyperref[UC03]{UC03} \\
             \hline
 
@@ -117,98 +116,92 @@
 
             R1F4 &
             Obbligatorio &
-            L'utente autenticato può eseguire un pagamento. &
+            L'utente autenticato deve poter eseguire un pagamento tramite \textit{MetaMask}. &
             \hyperref[UC09]{UC09} \\
             \hline
 
             R1F4.1 &
             Obbligatorio &
-            Il pagamento fallisce e la \textit{web app} visualizza un errore. &
+            Se il pagamento fallisce, la \textit{web app} visualizza un errore con la causa. &
             \hyperref[UC14]{UC14} \\
+            \hline
+
+            R1F4.2 &
+            Obbligatorio &
+            L'utente autenticato deve poter visualizzare un errore nel caso in cui la blockchain selezionata non sia corretta.
+            \hyperref[UC04]{UC04} \\
             \hline
 
             R1F5 &
             Obbligatorio &
-            Esiste un'unica recensione per ogni transazione economica effettuata. &
+            L'utente autenticato deve poter rilasciare una recensione. &
             \hyperref[UC08]{UC08} \\
             \hline
 
             R1F5.1 &
             Obbligatorio &
-            L'utente può scegliere il pagamento da associare alla recensione.&
+            Per ogni recensione deve esistere un'effettiva transazione economica &
             \hyperref[UC08]{UC08} \\
             \hline
 
-            R1F6.1 &
+            R1F5.2 &
             Obbligatorio &
-            La recensione potrà essere pubblicata solo a pagamento confermato. &
+            L'utente deve scegliere il pagamento da associare alla recensione.&
             \hyperref[UC08]{UC08} \\
             \hline
 
-            R1F6.2 &
+            R1F5.2.1 &
             Obbligatorio &
-            La recensione deve avere un formato valido. &
-            \hyperref[UC13]{UC13} \\
+            La recensione potrà essere pubblicata solo se il pagamento associato è stato confermato. &
+            \hyperref[UC08]{UC08} \\
             \hline
 
-            R1F5.1.1 &
-            Obbligatorio &
-            La \textit{web app} visualizza un errore se l'utente seleziona un pagamento a cui è collegata già un recensione.&
-            \hyperref[UC13]{UC13} \\
-            \hline
-
-            R1F6.3 &
+            R1F5.3 &
             Obbligatorio &
             Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento. &
             \hyperref[UC13]{UC13} \\
             \hline
-
-            R1F7 &
+            
+            R1F5.3.1 &
+            Obbligatorio &
+            La \textit{web app} visualizza un errore se l'utente seleziona un pagamento a cui è collegata già una recensione.&
+            \hyperref[UC13]{UC13} \\
+            \hline
+            
+            R1F6 &
             Obbligatorio &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.&
             \hyperref[UC06]{UC06} \\
             \hline
 
-            R1F8 &
+            R1F7 &
             Obbligatorio &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.&
             \hyperref[UC05]{UC05} \\
             \hline
 
-            R1F9 &
+            R1F8 &
             Obbligatorio &
-            Recensione e transazione sono caricati su una \textit{blockchain} pubblica. &
+            I contenuti delle recensioni sono salvati su una \textit{blockchain} pubblica Ethereum compatibile. &
             Capitolato \\
             \hline
 
-            R1F9.1 &
+            R1F9 &
             Obbligatorio &
-            La \textit{blockchain} memorizza una lista con tutte le interazioni pagamento-recensione. &
+            Sviluppo di un servizio di \textit{API REST} per il recupero delle recensioni da parte di utenti esterni. &
             Capitolato \\
             \hline
 
             R1F10 &
             Obbligatorio &
-            Sviluppo di un servizio di \textit{API REST} per la visualizzazione delle recensioni da parte degli e-commerce sul proprio sito. &
-            Capitolato \\
+            L'utente autenticato può visualizzare una lista di tutti i pagamenti effettuati tra cui scegliere quale recensire. &
+            \hyperref[UC07]{UC07} \\
             \hline
 
             R1F11 &
             Obbligatorio &
-            Lo \textit{smart contract} accede alla \textit{blockchain} per ottenere la lista delle recensioni. &
-            Capitolato \\
-            \hline
-
-            R1F12 &
-            Obbligatorio &
-            Lo \textit{smart contract} invia i fondi all'e-commerce. &
-            Capitolato \\
-            \hline
-
-            R1F13&
-            Obbligatorio &
-            Il \textit{server API REST} deve poter richiedere la lista recensioni di un e-commerce tramite \textit{RPC} allo \textit{smart contract}. &
-            Capitolato \\
+            L'utente non autenticato deve visualizzare un messaggio di errore in caso di assenza di \textit{MetaMask} installato. &
+            \hyperref[UC02]{UC02} \\
             \hline
 
             \rowcolor{white}
@@ -222,8 +215,8 @@
         \begin{xltabular}{\textwidth} {
             >{\hsize=0.5\hsize\linewidth=\hsize}X
             >{\hsize=0.8\hsize\linewidth=\hsize}X
-            >{\hsize=2.05\hsize\linewidth=\hsize}X
-            >{\hsize=0.65\hsize\linewidth=\hsize}X
+            >{\hsize=2.10\hsize\linewidth=\hsize}X
+            >{\hsize=0.60\hsize\linewidth=\hsize}X
             }
             \rowcolorhead
             \textbf{\color{white}Codice} &
@@ -247,19 +240,19 @@
 
             R1Q1 &
             Obbligatorio &
-            Documentazione relativa agli \textit{endpoint}\glo\: del \textit{server API REST}. &
+            Documentazione relativa alle scelte implementative e alle rispettive motivazioni; problemi aperti e soluzioni proposte. &
             Capitolato \\
             \hline
 
             R1Q2 &
             Obbligatorio &
-            Copertura di \textit{test end-to-end}\glo\: $\geq$ 80\% correlata di report. &
+            Copertura di \textit{test}\glo $\geq$ 80\% correlata di report. &
             Capitolato \\
             \hline
 
             R1Q3 &
             Obbligatorio &
-            Documentazione su scelte implementative e progettuali effettuate e relative motivazioni. &
+            Documentazione su \textit{endpoint}\glo del server \textit{API REST}. &
             Capitolato \\
             \hline
 
@@ -268,27 +261,32 @@
             Capitolato \\
             \hline
 
-            R1Q5& Obbligatorio &
-            \textit{Continuous integration}\glo\: e codice open source tramite \textit{GitHub}\glo\:. &
-            Capitolato \\
+            R2Q5 & Desiderabile &
+            Tutto il codice prodotto disponibile sulla piattaforma \textit{GitHub}\glo:. &
+            Scelta interna \\
+            \hline
+
+            R2Q6 & Desiderabile &
+            Sistema di \textit{Continuous Integration}\glo per la gestione degli artefatti. &
+            Scelta interna \\
             \hline
 
             R1Q6 &
             Obbligatorio &
-            Stesura manuale utente. &
+            Produzione di un manuale utente. &
             Capitolato \\
             \hline
 
             R1Q7 &
             Obbligatorio &
-            Stesura manuale per la manutenzione e l'estensione dell applicazione. &
+            Produzione di un manuale tecnico per manutenzione ed estensione. &
             Capitolato \\
             \hline
 
             R1Q8 &
             Obbligatorio &
-            Si devono seguire le norme di progetto. &
-            Capitolato \\
+            Il prodotto deve essere sviluppato seguendo quanto stabilito nelle Norme di progetto. &
+            Scelta interna \\
             \hline
 
             \rowcolor{white}
@@ -302,8 +300,8 @@
         \begin{xltabular}{\textwidth} {
             >{\hsize=0.5\hsize\linewidth=\hsize}X
             >{\hsize=0.8\hsize\linewidth=\hsize}X
-            >{\hsize=2.05\hsize\linewidth=\hsize}X
-            >{\hsize=0.65\hsize\linewidth=\hsize}X
+            >{\hsize=2.10\hsize\linewidth=\hsize}X
+            >{\hsize=0.60\hsize\linewidth=\hsize}X
         }
             \rowcolorhead
             \textbf{\color{white}Codice} &
@@ -345,7 +343,7 @@
 
             R2V4 &
             Desiderabile &
-            Utilizzo di \textit{Java Spring}\glo\: per lo sviluppo di \textit{API REST}. &
+            Utilizzo di \textit{Java} e \textit{Spring Boot}\glo per lo sviluppo di \textit{API REST}. &
             Capitolato \\
             \hline
 
@@ -357,13 +355,13 @@
 
             R2V6 &
             Desiderabile &
-            La \textit{web app} utilizza la libreria \textit{web3js}\glo\: per l'interazione con lo \textit{smart contract}. &
+            La \textit{web app} utilizza la libreria \textit{web3js}\glo per l'interazione con lo \textit{smart contract}. &
             Capitolato \\
             \hline
 
             R2V7 &
             Desiderabile &
-            Il \textit{server API REST} utilizza la libreria \textit{web3j}\glo\: per l'interazione con lo \textit{smart contract}. &
+            Il \textit{server API REST} utilizza la libreria \textit{web3j}\glo per l'interazione con lo \textit{smart contract}. &
             Capitolato \\
             \hline
 
