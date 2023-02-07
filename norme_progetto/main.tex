@@ -2,47 +2,48 @@
 \input{../componenti_comuni/src/packages}
 
 \begin{document}
-    % Ridefinizione comandi variabili
-    % =========================================================================
-    \renewcommand{\documentName}{Norme di Progetto}
-    \renewcommand{\documentVersion}{v0.0.1}
+% Ridefinizione comandi variabili
+% =========================================================================
+\renewcommand{\documentName}{Norme di Progetto}
+\renewcommand{\documentVersion}{v0.0.1}
 
-    \renewcommand{\documentEditors}{Sebastiano Sanson, Enrico Bacci Bonivento \smallskip}
-    \renewcommand{\documentVerifiers}{DA DEFINIRE \smallskip}
-    \renewcommand{\documentApprovers}{DA DEFINIRE \smallskip}
-    \renewcommand{\documentAddressee}{\companyName \\ &\Vardanega \\ & \Cardin \\ & Gruppo \groupName \smallskip}
-    % da utilizzare
-    \renewcommand{\documentUsage}{Interno}
+\renewcommand{\documentEditors}{Sebastiano Sanson, Enrico Bacci Bonivento \smallskip}
+\renewcommand{\documentVerifiers}{DA DEFINIRE \smallskip}
+\renewcommand{\documentApprovers}{DA DEFINIRE \smallskip}
+\renewcommand{\documentAddressee}{\companyName \\ &\Vardanega \\ & \Cardin \\ & Gruppo \groupName \smallskip}
+% da utilizzare
+\renewcommand{\documentUsage}{Interno}
 
-    \renewcommand{\documentSummary}{Questo documento descrive gli strumenti, le regole e le convenzioni che il gruppo deve rispettare durante lo svolgimento del progetto.}
+\renewcommand{\documentSummary}{Questo documento descrive gli strumenti, le regole e le convenzioni che il gruppo deve rispettare durante lo svolgimento del progetto.}
 
-    \renewcommand{\docWowVersion}{v0.0.1}
+\renewcommand{\docWowVersion}{v0.0.1}
 
-    % Prima pagina
-	% =========================================================================
-    \input{src/firstpage}
-	\pagebreak
+% Prima pagina
+% =========================================================================
+\input{src/firstpage}
+\pagebreak
 
-    % =========================================================================
-    % Registro modifiche
-	% =========================================================================
+% =========================================================================
+% Registro modifiche
+% =========================================================================
 
-    % TO DO: inserire il registro modifiche
+% TO DO: inserire il registro modifiche
 
-	% =========================================================================
-    % Indice
-	% =========================================================================
-	\renewcommand{\contentsname}{Contenuti}
-	\tableofcontents
-	\pagebreak
-	% =========================================================================
-	
-	% Contenuto
-	% =========================================================================
-    \input{src/introduzione}
-    \input{src/processi_primari}
-    \input{src/processi_supporto}
-    \input{src/processi_organizzativi}
-	% =========================================================================
+% =========================================================================
+% Indice
+% =========================================================================
+\renewcommand{\contentsname}{Contenuti}
+\tableofcontents
+\pagebreak
+% =========================================================================
+
+% Contenuto
+% =========================================================================
+\input{src/introduzione}
+\input{src/processi_primari}
+\input{src/processi_supporto}
+\input{src/processi_organizzativi}
+\input{src/metriche_qualità}
+% =========================================================================
 
 \end{document}
