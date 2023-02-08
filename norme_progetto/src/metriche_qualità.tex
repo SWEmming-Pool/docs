@@ -1,4 +1,46 @@
 \section{Metriche della qualità}
-\subsection{Metriche di processo}
-\subsubsection{Processi primari}
-\subsubsection{Processi di supporto}
+\subsection{Qualità di processo}
+\subsubsection{Parametri}\mbox{}\\
+Parametri:
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors[]{1}{gray!55}{white}
+    \begin{tabular}{| c | p{4.2cm} | p{5cm} |c |  c  }
+        \rowcolor[HTML]{a52a2a}
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}                                                                      \\
+        BC                                                             & Budget at completion           & Costo totale del progetto        \\
+        NC                                                             & Number of requirements changed & Numero requisiti con cambiamenti \\
+        ND                                                             & Number of requirements deleted & Numero requisiti eliminati       \\
+        NA                                                             & Number of requirements added   & Numero requisiti aggiunti        \\
+        NT                                                             & Total number of requirements   & Numero requisiti totali          \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsubsection{Metriche}\mbox{}\\
+Metriche:
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors[]{1}{gray!55}{white}
+    \begin{tabular}{| c | p{4.2cm} | p{5cm} |c |  c  }
+        \rowcolor[HTML]{a52a2a}
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}                                                                                                                                                                                                                                      \\
+
+        MPC-EV                                                         & Earned value                & Guadagni ottentui fino ad una data specifica                                                                                                                                                        \\
+        MPC-PV                                                         & Planned value               & Lavoro pianificato fino ad una data specifica                                                                                                                                                       \\
+        MPC-AC                                                         & Actual cost                 & Costi sostenuti fino ad una data specifica                                                                                                                                                          \\
+        MPC-SV                                                         & Schedule variance           & Allineamento con la tabella di marcia prevista. Se il valore è negativo significa ritardo                                                                                                           \\
+        MPC-CV                                                         & Cost variance               & Differenza tra il budget disponibile e quello già speso. Se il valore è negativo si è in perdita al momento del calcolo. \begin{equation}CV = \left(\frac{EV}{AC} -1\right)\cdot100 \end{equation}. \\
+        MPC-ETC                                                        & Estimated to completion     & Valore stimato alla relazizzazione delle attività.\begin{equation} ETC = BC + EV \end{equation}                                                                                                     \\
+        MPC-EAC                                                        & Estimated at completion     & Stima costo totale per il completamento al momento. \begin{equation} EAC = AC + ETC \end{equation}                                                                                                  \\
+        MPC-RSI                                                        & Requiements stability index & Indica quanto i requisiti variano nel tempo. \begin{equation}RSI = 1- \left( \frac{(NC + ND + NA)}{NT} \right) \times 100\end{equation}                                                                \\
+
+        \hline
+    \end{tabular}
+\end{table}
