@@ -213,7 +213,7 @@
                             \item viene mostrato un errore che informa l'utente sul motivo del fallimento dell'operazione:
                             \begin{itemize}
                                 \item l'utente pagante non ha abbastanza fondi;
-                                \item indirizzo dell'utente ricevente inesistente;
+                                \item indirizzo dell'utente ricevente non valido;
                             \end{itemize}
                             \item l'operazione viene annullata.
                         \end{enumerate} \\
@@ -223,7 +223,7 @@
                 \end{table}
 
         \subsubsection{UC07 - Rilascio Recensione}
-        \label{UC08}
+        \label{UC07}
 
             \begin{figure}[H]
                 \centering
@@ -287,10 +287,11 @@
                     \hline
                     \textbf{Scenario principale} &
                         \begin{enumerate}
-                            \item L'utente inserisce una recensione che non può rilasciare:
+                            \item L'utente rilascia una recensione ad una transazione che è già stata recensita o che non rispetta un formato valido, ovvero non rispetta i seguenti vincoli:
                             \begin{itemize}
-                            \item non ha un acquisto valido legato al prodotto o servizio che vuole recensire;
-                            \item la recensione non rispetta un formato valido.
+                                \item titolo, non vuoto e non superiore a 50 caratteri;
+                                \item voto, non vuoto e compreso tra 1 e 5;
+                                \item testo, non vuoto e non superiore a 500 caratteri;
                             \end{itemize}
                             \item Viene mostrato un errore che informa l'utente sulla motivazione;
                             \item vengono mostrati dei consigli sulla risoluzione del problema e si blocca

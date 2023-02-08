@@ -79,94 +79,136 @@
 
             \endlastfoot
 
+            R1F1 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente non autenticato la possibilità effettuare il login tramite \textit{MetaMask}. &
+            \hyperref[UC01]{UC01} \\
+            \hline
+
+            R1F1.2 &
+            Obbligatorio &
+            La \textit{web app} visualizza un errore in caso di autenticazione fallita. &
+            \hyperref[UC02]{UC02} \\
+            \hline
+
             R1F2 &
             Obbligatorio &
-            L'utente può effettuare il login. &
-            \hyperref[UC01]{UC01} \\
+            L'utente autenticato può effettuare il logout da \textit{MetaMask}. &
+            \hyperref[UC03]{UC03} \\
             \hline
 
             R1F2.1 &
             Obbligatorio &
-            L'utente deve effettuare il login tramite \textit{MetaMask}. &
-            \hyperref[UC01]{UC01} \\
-            \hline
-
-            R1F2.2 &
-            Obbligatorio &
-            La \textit{web app} visualizza un errore in caso di autenticazione fallita. &
-            \hyperref[UC10]{UC10} \\
+            La \textit{web app} visualizza un errore in caso di logout fallito. &
+            \hyperref[UC04]{UC04} \\
             \hline
 
             R1F3 &
             Obbligatorio &
-            L'utente generico può ricercare recensioni di un determinato utente tramite il suo indirizzo del wallet &
-            \hyperref[UC03]{UC03} \\
+            L'utente autenticato deve poter eseguire un pagamento tramite \textit{MetaMask}. &
+            \hyperref[UC05]{UC05} \\
             \hline
 
             R1F3.1 &
             Obbligatorio &
-            La \textit{web app} visualizza un errore di ricerca di recensioni verso un indirizzo inesistente. &
-            \hyperref[UC11]{UC11} \\
+            Il pagamento fallisce a causa di fondi insufficienti. &
+            \hyperref[UC06]{UC06} \\
             \hline
 
             R1F3.2 &
             Obbligatorio &
-            La \textit{web app} visualizza un avviso se l'indirizzo cercato non presenta recensioni collegate. &
-            \hyperref[UC12]{UC12} \\
-            \hline
-
-            R1F4 &
-            Obbligatorio &
-            L'utente autenticato deve poter eseguire un pagamento tramite \textit{MetaMask}. &
-            \hyperref[UC09]{UC09} \\
-            \hline
-
-            R1F4.1 &
-            Obbligatorio &
-            Se il pagamento fallisce, la \textit{web app} visualizza un errore con la causa. &
-            \hyperref[UC14]{UC14} \\
-            \hline
-
-            R1F4.2 &
-            Obbligatorio &
-            L'utente autenticato deve poter visualizzare un errore nel caso in cui la blockchain selezionata non sia corretta. &
-            \hyperref[UC04]{UC04} \\
+            Il pagamento fallisce a causa di non validità dell'indirizzo dell'utente ricevente. &
+            \hyperref[UC06]{UC06} \\
             \hline
 
             R1F5 &
             Obbligatorio &
-            L'utente autenticato deve poter rilasciare una recensione. &
-            \hyperref[UC08]{UC08} \\
+            L'utente autenticato ha la possibilità di rilasciare una recensione nel caso abbia acquisti non ancora recensiti. &
+            \hyperref[UC07]{UC07} \\
             \hline
 
             R1F5.1 &
             Obbligatorio &
-            Per ogni recensione deve esistere un'effettiva transazione economica &
-            \hyperref[UC08]{UC08} \\
+            Per ogni transazione effettuata può esistere al massimo una recensione ad esso collegata &
+            \hyperref[UC07]{UC07} \\
             \hline
 
             R1F5.2 &
             Obbligatorio &
-            L'utente deve scegliere il pagamento da associare alla recensione.&
-            \hyperref[UC08]{UC08} \\
-            \hline
-
-            R1F5.2.1 &
-            Obbligatorio &
-            La recensione potrà essere pubblicata solo se il pagamento associato è stato confermato. &
-            \hyperref[UC08]{UC08} \\
-            \hline
-
-            R1F5.3 &
-            Obbligatorio &
-            Se il rilascio della recensione non va a buon fine viene visualizzato un errore con  i dettagli sul motivo del fallimento. &
-            \hyperref[UC13]{UC13} \\
+            L'utente deve scegliere la trasanzione, effettuata, da associare alla recensione.&
+            \hyperref[UC07]{UC07} \\
             \hline
             
-            R1F5.3.1 &
+            R1F5.3 &
             Obbligatorio &
             La \textit{web app} visualizza un errore se l'utente seleziona un pagamento a cui è collegata già una recensione.&
-            \hyperref[UC13]{UC13} \\
+            \hyperref[UC08]{UC08} \\
+            \hline
+        
+            R1F5.4 &
+            Obbligatorio &
+            La \textit{web app} visualizza un errore se l'utente non rispetta la validità del formato di una recensione.&
+            \hyperref[UC08]{UC08} \\
+            \hline
+
+            R1F5.4.1 &
+            Obbligatorio &
+            La recensione deve avere un titolo, non superiore ai 50 caratteri.&
+            \hyperref[UC08]{UC08} \\
+            \hline
+
+            R1F5.4.2 &
+            Obbligatorio &
+            La recensione deve esprimere un voto, compreso tra 1(minimo) e 5 (massimo).&
+            \hyperref[UC08]{UC08} \\
+            \hline
+
+            R1F5.4.3 &
+            Obbligatorio &
+            La recensione deve avere un testo, di al massimo 500 caratteri.&
+            \hyperref[UC08]{UC08} \\
+            \hline
+
+            R1F6 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni  &
+            \hyperref[UC09]{UC09} \\
+            \hline
+
+            R1F6.1 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni per indirizzo wallet. &
+            \hyperref[UC09.1]{UC09.1} \\
+            \hline
+
+            R1F6.1.1 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni per indirizzo wallet appartenente all'autore. &
+            \hyperref[UC09.2]{UC09.2} \\
+            \hline
+
+            R1F6.1.2 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni per indirizzo wallet appartenente al destinatario. &
+            \hyperref[UC09.3]{UC09.3} \\
+            \hline
+
+            R1F6.2 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni per voto. &
+            \hyperref[UC09.4]{UC09.4} \\
+            \hline
+
+            R1F6.3 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni per titolo. &
+            \hyperref[UC09.5]{UC09.5} \\
+            \hline
+
+            R1F6.4 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni per data. &
+            \hyperref[UC09.6]{UC09.6} \\
             \hline
             
             R1F6 &
@@ -373,6 +415,12 @@
             \hline
 
             R1V9 &
+            Obbligatorio &
+            \textit{MetaMask} è compatibile solo con i browser \textit{Chrome} e \textit{Firefox}. &
+            Capitolato \\
+            \hline
+
+            R1V10 &
             Obbligatorio &
             Utilizzo di un fornitore terzo per \textit{RPC} a nodo. &
             Capitolato \\
