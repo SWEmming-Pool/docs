@@ -1,27 +1,72 @@
 \section{Metriche della qualità}
 \subsection{Qualità di processo}
 \subsubsection{Parametri}\mbox{}\\
-Parametri:
+Parametri utilizzati nel calcolo delle metriche seguenti:
+\begin{itemize}
+
+    \item MPC-ETC:
+          \begin{itemize}
+              \item BC(Budget completion): Costo totale del progetto.
+          \end{itemize}
+    \item MPC-RSI:
+          \begin{itemize}
+              \item RC(Requirements changed): Numero requisiti con cambiamenti
+              \item RD(Requirements deleted): Numero requisiti eliminati
+              \item RA(Requirements added): Numero requisiti aggiunti
+              \item RT(Total requirements): Numero requisiti totali
+          \end{itemize}
+\end{itemize}
+\subsubsection{Metriche}\mbox{}\\
+Metriche di qualità di processo selezionate per il progetto:
 \begin{table}[H]
     \centering
     \renewcommand{\arraystretch}{1.8}
     \rowcolors[]{1}{gray!55}{white}
-    \begin{tabular}{| c | p{4.2cm} | p{5cm} |c |  c  }
+    \begin{tabular}{| c | p{4.2cm} | p{5cm} |c  }
         \rowcolor[HTML]{a52a2a}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}                                                                      \\
-        BC                                                             & Budget at completion           & Costo totale del progetto        \\
-        NC                                                             & Number of requirements changed & Numero requisiti con cambiamenti \\
-        ND                                                             & Number of requirements deleted & Numero requisiti eliminati       \\
-        NA                                                             & Number of requirements added   & Numero requisiti aggiunti        \\
-        NT                                                             & Total number of requirements   & Numero requisiti totali          \\
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                                                                                                                                             \\
+        MPC-SV                                                         & SV Schedule variance            & Allineamento con la tabella di marcia prevista. Se il valore è negativo significa ritardo & SV=((EV / PV) - 1) ·100                                                                \\
+        MPC-EAC                                                        & EAC Estimated at completion     & Stima costo totale per il completamento al momento.                                       & EAC = AC + ETC                                                                         \\
+        MPC-EV                                                         & EV Earned value                 & Guadagni ottentui fino ad una data specifica                                              & EV = \% completamento * EAC                                                            \\
+        MPC-PV                                                         & PV Planned value                & Lavoro pianificato fino ad una data specifica                                             & PV=\% lavoro pianificato ·BAC                                                          \\                                                                                                                                                   & \\
+        MPC-AC                                                         & AC Actual cost                  & Costi sostenuti fino ad una data specifica                                                & Intero                                                                                 \\
+        MPC-ETC                                                        & ETC Estimated to completion     & Valore stimato alla relazizzazione delle attività.                                        & ETC = BC + EV                                                                          \\
+        MPC-RSI                                                        & RSI Requiements stability index & Indica quanto i requisiti variano nel tempo.                                              & \begin{equation}RSI = 1- \left( \frac{(NC + ND + NA)}{NT} \right) \times 100\end{equation} \\
         \hline
     \end{tabular}
 \end{table}
+\subsection{Qualità di prodotto}
+\subsubsection{Parametri}
+Parametri utilizzati nel calcolo delle metriche seguenti:
+\begin{itemize}
 
+    \item MPC-MRC:
+          \begin{itemize}
+              \item NMR(Number mandatory requirements):  Numero requisiti obbligatori soddisfatti in una certa data.
+              \item TMR(Total mandatory requirements):  Numero requisiti obbligatori totali.
+          \end{itemize}
+    \item MPC-DRC:
+          \begin{itemize}
+              \item NDR(Number desirable requirements): Numero requisiti desiderabili soddisfatti in una certa data.
+              \item TDR(Total desirable requirements): Numero requisiti desiderabili totali.
+          \end{itemize}
+    \item MPC-ORC:
+          \begin{itemize}
+              \item NOR(Number optional requirements): Numero requisiti opzionali soddisfatti in una certa data.
+              \item TOR(Total optional requirements): Numero requisiti opzionali totali.
+          \end{itemize}
+
+    \item MPC-CC:
+          \begin{itemize}
+              \item NCL(Number of covered lines): Numero di linee di codice coperte da test
+              \item TL(Total lines): Numero di linee di codice totali
+          \end{itemize}
+\end{itemize}
 \subsubsection{Metriche}\mbox{}\\
-Metriche:
+Metriche di qualità di prodotto selezionate per il progetto:
 \begin{table}[H]
     \centering
     \renewcommand{\arraystretch}{1.8}
@@ -30,16 +75,12 @@ Metriche:
         \rowcolor[HTML]{a52a2a}
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}                                                                                                                                                                                                                                      \\
-
-        MPC-EV                                                         & Earned value                & Guadagni ottentui fino ad una data specifica                                                                                                                                                        \\
-        MPC-PV                                                         & Planned value               & Lavoro pianificato fino ad una data specifica                                                                                                                                                       \\
-        MPC-AC                                                         & Actual cost                 & Costi sostenuti fino ad una data specifica                                                                                                                                                          \\
-        MPC-SV                                                         & Schedule variance           & Allineamento con la tabella di marcia prevista. Se il valore è negativo significa ritardo                                                                                                           \\
-        MPC-CV                                                         & Cost variance               & Differenza tra il budget disponibile e quello già speso. Se il valore è negativo si è in perdita al momento del calcolo. \begin{equation}CV = \left(\frac{EV}{AC} -1\right)\cdot100 \end{equation}. \\
-        MPC-ETC                                                        & Estimated to completion     & Valore stimato alla relazizzazione delle attività.\begin{equation} ETC = BC + EV \end{equation}                                                                                                     \\
-        MPC-EAC                                                        & Estimated at completion     & Stima costo totale per il completamento al momento. \begin{equation} EAC = AC + ETC \end{equation}                                                                                                  \\
-        MPC-RSI                                                        & Requiements stability index & Indica quanto i requisiti variano nel tempo. \begin{equation}RSI = 1- \left( \frac{(NC + ND + NA)}{NT} \right) \times 100\end{equation}                                                                \\
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Valore ottimo}}                                                                                                                                                                                                                                      \\
+        MPC-MRC                                                        & MRC Mandatory requirements coverage & Indica in percentuale i requisiti obbligatori soddisfatti fino al presente. \begin{equation} CMR=\frac{NMR}{TMR}*100 \end{equation} & 100\%                                                   \\
+        MPC-DRC                                                        & DRC Desirable requirement coverage  & Indica in percentuale i requisiti desiderabili soddisfatti fino al presente.\begin{equation} CDR=\frac{NDR}{TDR}*100 \end{equation} & 100\%                                                   \\
+        MPC-ORC                                                        & ORC Optional requirement coverage   & Indica in percentuale i requisiti desiderabili soddisfatti fino al presente.\begin{equation} CDR=\frac{NOR}{TOR}*100 \end{equation} & 100\%                                                   \\
+        MPC-CC                                                         & CC Code coverage                    & Indica quanto il codice è coperto da test.                                                                                          & \begin{equation}CC = \frac{NCL}{TL} * 100\end{equation} \\
 
         \hline
     \end{tabular}
