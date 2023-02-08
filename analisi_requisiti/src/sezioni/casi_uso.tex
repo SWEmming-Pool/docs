@@ -15,7 +15,7 @@
 
             \paragraph*{Utente autenticato:} utente che possiede un account \textit{MetaMask} e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni.
 
-            \paragraph*{Utilizzatore API:} utente autenticato che utilizza l'API REST per ottenere le recensioni associate ad un utente in formato \textit{JSON}\glo, senza passare per la \textit{web app}.
+            \paragraph*{Utilizzatore API:} utente autenticato che utilizza l'API REST per ottenere le recensioni associate a se stesso in formato \textit{JSON}\glo, senza passare per la \textit{web app}.
 
         \subsubsection{Attori secondari}
             \paragraph*{\textit{MetaMask}:} \textit{wallet}\glo\: di criptovalute usato per interagire con la \textit{blockchain} \textit{Ethereum}. Permette di accedere al proprio \textit{wallet} attraverso applicazione mobile o, come nel nostro caso, estensione per browser.
@@ -259,7 +259,7 @@
                             \item l'utente inserisce la recensione.
                         \end{enumerate} \\
                     \hline
-                    \textbf{Estensioni} & Se l'utente seleziona una pagamento già recensito, si verifica \hyperref[UC08]{UC08}. \\
+                    \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC08]{UC08}. \\
                     \hline
                 \end{tabularx}
                 \caption{UC07}
@@ -527,6 +527,74 @@
                 \caption{UC09.6}
             \end{table}
 
+        \subsubsection{UC10 - Ricerca Recensioni Rilasciate}
+        \label{UC10}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{src/img/UC10.png}
+                \caption{UC10}
+            \end{figure}
+
+            \begin{table}[H]
+                \centering
+                \rowcolors{1}{pari_alt}{dispari_alt}
+                \renewcommand{\arraystretch}{1.8}
+                \renewcommand\tabularxcolumn[1]{m{#1}}
+                \begin{tabularx}{0.9\textwidth} {
+                    >{\hsize=.8\hsize\linewidth=\hsize}X
+                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & Infura \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente vuole ricercare le recensioni che ha rilasciato. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente ha ricercato le recensioni che ha rilasciato. \\
+                    \hline
+                    \textbf{Scenario principale} & L'utente ricerca delle recensioni che ha rilasciato.\\
+                    \hline
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \hline
+                \end{tabularx}
+                \caption{UC10}
+            \end{table}
+
+        \subsubsection{UC11 - Ricerca Recensioni Ricevute}
+        \label{UC11}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{src/img/UC11.png}
+                \caption{UC11}
+            \end{figure}
+
+            \begin{table}[H]
+                \centering
+                \rowcolors{1}{pari_alt}{dispari_alt}
+                \renewcommand{\arraystretch}{1.8}
+                \renewcommand\tabularxcolumn[1]{m{#1}}
+                \begin{tabularx}{0.9\textwidth} {
+                    >{\hsize=.8\hsize\linewidth=\hsize}X
+                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & Infura \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente vuole ricercare le recensioni che ha ricevuto. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente ha ricercato le recensioni che ha ricevuto. \\
+                    \hline
+                    \textbf{Scenario principale} & L'utente ricerca delle recensioni che ha ricevuto.\\
+                    \hline
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \hline
+                \end{tabularx}
+                \caption{UC10}
+            \end{table}
+
         \subsubsection{UC12 - Errore Ricerca Recensioni}
         \label{UC12}
 
@@ -553,13 +621,13 @@
                 \caption{UC12}
             \end{table}
 
-        \subsubsection{UC0Y - Visualizzazione Recensioni}
-        \label{UC0Y}
+        \subsubsection{UC13 - Visualizzazione Lista Recensioni}
+        \label{UC13}
 
             \begin{figure}[H]
                 \centering
-                \includesvg[width=1\textwidth]{src/img/UC04.drawio.svg}
-                \caption{UC04}
+                \includegraphics[scale=0.6]{src/img/UC13.png}
+                \caption{UC13}
             \end{figure}
 
             \begin{table}[H]
@@ -573,89 +641,25 @@
                     \hline
                     \textbf{Attore primario} & Utente generico \\
                     \hline
-                    \textbf{Precondizioni} & L'utente ha effettuato una ricerca per indirizzo. \\
+                    \textbf{Precondizioni} & L'utente ha effettuato una ricerca delle recensioni. \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente visualizza le recensioni associate a quell'indirizzo. \\
+                    \textbf{Postcondizioni} & L'utente visualizza le recensioni associate ad una ricerca. \\
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata una lista di recensioni corrispondenti. \\
                     \hline
-                    \textbf{Estensioni} & Se l'utente inserisce un indirizzo inesistente, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC04}
+                \caption{UC13}
             \end{table}
 
-        \subsubsection{UC05 - Visualizzazione Recensioni Rilasciate}
-        \label{UC05}
+        \subsubsection{UC13.1 - Visualizzazione Singola Recensione}
+        \label{UC13.1}
 
             \begin{figure}[H]
                 \centering
-                \includesvg[width=1\textwidth]{src/img/UC05.drawio.svg}
-                \caption{UC05}
-            \end{figure}
-
-            \begin{table}[H]
-                \centering
-                \rowcolors{1}{pari_alt}{dispari_alt}
-                \renewcommand{\arraystretch}{1.8}
-                \renewcommand\tabularxcolumn[1]{m{#1}}
-                \begin{tabularx}{0.9\textwidth} {
-                    >{\hsize=.8\hsize\linewidth=\hsize}X
-                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
-                    \hline
-                    \textbf{Attore primario} & Utente autenticato \\
-                    \hline
-                    \textbf{Attore secondario} & \textit{MetaMask} \\
-                    \hline
-                    \textbf{Precondizioni} & Nessuna. \\
-                    \hline
-                    \textbf{Postcondizioni} & L'utente visualizza le recensioni che ha rilasciato. \\
-                    \hline
-                    \textbf{Scenario principale} & Viene mostrata la lista di recensioni rilasciate dall'utente. \\
-                    \hline
-                \end{tabularx}
-                \caption{UC05}
-            \end{table}
-
-        \subsubsection{UC06 - Visualizzazione Recensioni Ricevute}
-        \label{UC06}
-
-            \begin{figure}[H]
-                \centering
-                \includesvg[width=1\textwidth]{src/img/UC06.drawio.svg}
-                \caption{UC06}
-            \end{figure}
-
-            \begin{table}[H]
-                \centering
-                \rowcolors{1}{pari_alt}{dispari_alt}
-                \renewcommand{\arraystretch}{1.8}
-                \renewcommand\tabularxcolumn[1]{m{#1}}
-                \begin{tabularx}{0.9\textwidth} {
-                    >{\hsize=.8\hsize\linewidth=\hsize}X
-                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
-                    \hline
-                    \textbf{Attore primario} & Utente autenticato \\
-                    \hline
-                    \textbf{Attore secondario} & \textit{MetaMask} \\
-                    \hline
-                    \textbf{Precondizioni} & Nessuna. \\
-                    \hline
-                    \textbf{Postcondizioni} & L'utente visualizza le recensioni che ha ricevuto. \\
-                    \hline
-                    \textbf{Scenario principale} & Viene mostrata la lista di recensioni ricevute dall'utente. \\
-                    \hline
-                \end{tabularx}
-                \caption{UC06}
-            \end{table}
-
-        \subsubsection{UC07 - Visualizzazione Singola Recensione}
-        \label{UC07}
-
-            \begin{figure}[H]
-                \centering
-                \includesvg[width=1\textwidth]{src/img/UC07.drawio.svg}
-                \caption{UC07}
+                \includegraphics[scale=0.6]{src/img/UC13.1.png}
+                \caption{UC13.1}
             \end{figure}
 
             \begin{table}[H]
@@ -676,11 +680,17 @@
                     \textbf{Scenario principale} & Viene visualizzata una recensione appartenente alla lista richiesta dall'utente. \\
                     \hline
                 \end{tabularx}
-                \caption{UC07}
+                \caption{UC13.1}
             \end{table}
 
-        \subsubsection{UC07.1 - Visualizzazione Autore Recensione}
-        \label{UC07.1}
+        \subsubsection{UC13.1.1 - Visualizzazione Autore Recensione}
+        \label{UC13.1.1}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{src/img/UC13.1.1.png}
+                \caption{UC13.1.1}
+            \end{figure}
 
             \begin{table}[H]
                 \centering
@@ -700,11 +710,17 @@
                     \textbf{Scenario principale} & Viene visualizzato l'autore all'interno della recensione corrispondente. \\
                     \hline
                 \end{tabularx}
-                \caption{UC07.1}
+                \caption{UC13.1.1}
             \end{table}
 
-        \subsubsection{UC07.2 - Visualizzazione Testo Recensione}
-        \label{UC07.2}
+        \subsubsection{UC13.1.2 - Visualizzazione Destinatario Recensione}
+        \label{UC13.1.2}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{src/img/UC13.1.2.png}
+                \caption{UC13.1.2}
+            \end{figure}
 
             \begin{table}[H]
                 \centering
@@ -719,16 +735,82 @@
                     \hline
                     \textbf{Precondizioni} & Viene visualizzata una recensione. \\
                     \hline
-                    \textbf{Postcondizioni} & Viene visualizzato il testo della recensione. \\
+                    \textbf{Postcondizioni} & Viene visualizzato il destinatario della recensione. \\
                     \hline
-                    \textbf{Scenario principale} & Viene visualizzato il testo all'interno della recensione corrispondente. \\
+                    \textbf{Scenario principale} & Viene visualizzato il destinatario all'interno della recensione corrispondente. \\
                     \hline
                 \end{tabularx}
-                \caption{UC7.2}
+                \caption{UC13.1.2}
             \end{table}
 
-        \subsubsection{UC07.3 - Visualizzazione Voto Recensione}
-        \label{UC07.3}
+        \subsubsection{UC13.1.3 - Visualizzazione Titolo Recensione}
+        \label{UC13.1.3}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{src/img/UC13.1.3.png}
+                \caption{UC13.1.3}
+            \end{figure}
+
+            \begin{table}[H]
+                \centering
+                \rowcolors{1}{pari_alt}{dispari_alt}
+                \renewcommand{\arraystretch}{1.8}
+                \renewcommand\tabularxcolumn[1]{m{#1}}
+                \begin{tabularx}{0.9\textwidth} {
+                    >{\hsize=.8\hsize\linewidth=\hsize}X
+                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                    \hline
+                    \textbf{Attore primario} & Utente generico \\
+                    \hline
+                    \textbf{Precondizioni} & Viene visualizzata una recensione. \\
+                    \hline
+                    \textbf{Postcondizioni} & Viene visualizzato il titolo della recensione. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene visualizzato il titolo all'interno della recensione corrispondente. \\
+                    \hline
+                \end{tabularx}
+                \caption{UC13.1.3}
+            \end{table}
+
+        \subsubsection{UC13.1.4 - Visualizzazione Data Recensione}
+        \label{UC13.1.4}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{src/img/UC13.1.4.png}
+                \caption{UC13.1.4}
+            \end{figure}
+
+            \begin{table}[H]
+                \centering
+                \rowcolors{1}{pari_alt}{dispari_alt}
+                \renewcommand{\arraystretch}{1.8}
+                \renewcommand\tabularxcolumn[1]{m{#1}}
+                \begin{tabularx}{0.9\textwidth} {
+                    >{\hsize=.8\hsize\linewidth=\hsize}X
+                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                    \hline
+                    \textbf{Attore primario} & Utente generico \\
+                    \hline
+                    \textbf{Precondizioni} & Viene visualizzata una recensione. \\
+                    \hline
+                    \textbf{Postcondizioni} & Viene visualizzato la data della recensione. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene visualizzato la data all'interno della recensione corrispondente. \\
+                    \hline
+                \end{tabularx}
+                \caption{UC13.1.4}
+            \end{table}
+
+        \subsubsection{UC13.1.5 - Visualizzazione Voto Recensione}
+        \label{UC13.1.5}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{src/img/UC13.1.5.png}
+                \caption{UC13.1.5}
+            \end{figure}
 
             \begin{table}[H]
                 \centering
@@ -748,17 +830,46 @@
                     \textbf{Scenario principale} & Viene visualizzato il voto all'interno della recensione corrispondente. \\
                     \hline
                 \end{tabularx}
-                \caption{UC7.3}
+                \caption{UC13.1.5}
             \end{table}
 
-
-        \subsubsection{UC09 - Pagamento}
-        \label{UC09}
+        \subsubsection{UC13.1.6 - Visualizzazione Testo Recensione}
+        \label{UC13.1.6}
 
             \begin{figure}[H]
                 \centering
-                \includesvg[scale=0.9]{src/img/UC09.drawio.svg}
-                \caption{UC09}
+                \includegraphics[scale=0.6]{src/img/UC13.1.6.png}
+                \caption{UC13.1.6}
+            \end{figure}
+
+            \begin{table}[H]
+                \centering
+                \rowcolors{1}{pari_alt}{dispari_alt}
+                \renewcommand{\arraystretch}{1.8}
+                \renewcommand\tabularxcolumn[1]{m{#1}}
+                \begin{tabularx}{0.9\textwidth} {
+                    >{\hsize=.8\hsize\linewidth=\hsize}X
+                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                    \hline
+                    \textbf{Attore primario} & Utente generico \\
+                    \hline
+                    \textbf{Precondizioni} & Viene visualizzata una recensione. \\
+                    \hline
+                    \textbf{Postcondizioni} & Viene visualizzato il testo della recensione. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene visualizzato il testo all'interno della recensione corrispondente. \\
+                    \hline
+                \end{tabularx}
+                \caption{UC13.1.6}
+            \end{table}
+
+        \subsubsection{UC14 - Visualizzazione Recensioni Rilasciate}
+        \label{UC14}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{src/img/UC14.png}
+                \caption{UC14}
             \end{figure}
 
             \begin{table}[H]
@@ -772,22 +883,26 @@
                     \hline
                     \textbf{Attore primario} & Utente autenticato \\
                     \hline
-                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \textbf{Precondizioni} & L'utente ha effettuato una ricerca delle recensioni rilasciate. \\
                     \hline
-                    \textbf{Precondizioni} & L'utente non ha ancora pagato. \\
+                    \textbf{Postcondizioni} & L'utente visualizza le recensioni che ha rilasciato. \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha completato il pagamento. \\
+                    \textbf{Scenario principale} & Viene mostrata la lista di recensioni rilasciate dall'utente. \\
                     \hline
-                    \textbf{Scenario principale} & L'utente effettua il pagamento. \\
-                    \hline
-                    \textbf{Estensioni} & Se l'utente non ha fondi sufficienti nel \textit{wallet}, si verifica \hyperref[UC14]{UC14}.\\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC09}
+                \caption{UC14}
             \end{table}
 
-        \subsubsection{UC10 - Errore Autenticazione}
-        \label{UC10}
+        \subsubsection{UC15 - Visualizzazione Recensioni Ricevute}
+        \label{UC15}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.6]{src/img/UC15.png}
+                \caption{UC15}
+            \end{figure}
 
             \begin{table}[H]
                 \centering
@@ -798,28 +913,22 @@
                     >{\hsize=.8\hsize\linewidth=\hsize}X
                     >{\hsize=1.2\hsize\linewidth=\hsize}X}
                     \hline
-                    \textbf{Attore primario} & Utente non autenticato \\
+                    \textbf{Attore primario} & Utente autenticato \\
                     \hline
-                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \textbf{Precondizioni} & L'utente ha effettuato una ricerca delle recensioni ricevute. \\
                     \hline
-                    \textbf{Precondizioni} & L'utente sta tentando di autenticarsi. \\
+                    \textbf{Postcondizioni} & L'utente visualizza le recensioni che ha ricevuto. \\
                     \hline
-                    \textbf{Postcondizioni} & L'operazione fallisce. \\
+                    \textbf{Scenario principale} & Viene mostrata la lista di recensioni ricevute dall'utente. \\
                     \hline
-                    \textbf{Scenario principale} &
-                        \begin{enumerate}
-                            \item Si verificano problemi con l'accesso a \textit{MetaMask};
-                            \item Viene mostrato un errore che informa l'utente del fallimento dell'operazione;
-                            \item Vengono mostrati dei consigli sulla risoluzione del problema e si invita
-                            l'utente a riprovare.
-                        \end{enumerate} \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC10}
+                \caption{UC15}
             \end{table}
 
-        \subsubsection{UC12 - Errore Visualizzazione Recensioni}
-        \label{UC12}
+        \subsubsection{UC16 - Errore Visualizzazione}
+        \label{UC16}
 
             \begin{table}[H]
                 \centering
@@ -844,50 +953,16 @@
                         \end{enumerate} \\
                     \hline
                 \end{tabularx}
-                \caption{UC12}
+                \caption{UC16}
             \end{table}
 
-        
-
-        \subsubsection{UC14 - Errore Pagamento}
-        \label{UC14}
-
-            \begin{table}[H]
-                \centering
-                \rowcolors{1}{pari_alt}{dispari_alt}
-                \renewcommand{\arraystretch}{1.8}
-                \renewcommand\tabularxcolumn[1]{m{#1}}
-                \begin{tabularx}{0.9\textwidth} {
-                    >{\hsize=.8\hsize\linewidth=\hsize}X
-                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
-                    \hline
-                    \textbf{Attore primario} & Utente autenticato \\
-                    \hline
-                    \textbf{Attore secondario} & \textit{MetaMask} \\
-                    \hline
-                    \textbf{Precondizioni} & L'utente sta tentando di effettuare un pagamento. \\
-                    \hline
-                    \textbf{Postcondizioni} & Il pagamento fallisce. \\
-                    \hline
-                    \textbf{Scenario principale} &
-                    \begin{enumerate}
-                        \item L'utente tenta di effettuare un pagamento che non va a buon fine;
-                        \item viene mostrato un errore che informa l'utente sul motivo del fallimento
-                        dell'operazione;
-                        \item l'operazione viene annullata.
-                    \end{enumerate} \\
-                    \hline
-                \end{tabularx}
-                \caption{UC14}
-            \end{table}
-
-        \subsubsection{UC15 - Richiesta Lista Recensioni}
-        \label{UC15}
+        \subsubsection{UC17 - Richiesta Lista Recensioni}
+        \label{UC17}
 
             \begin{figure}[H]
                 \centering
-                \includesvg[width=1\textwidth]{src/img/UC15.drawio.svg}
-                \caption{UC15}
+                \includegraphics[scale=0.6]{src/img/UC17.png}
+                \caption{UC17}
             \end{figure}
 
             \begin{table}[H]
@@ -915,14 +990,14 @@
                         \item viene restituita una lista di recensioni;
                     \end{enumerate} \\
                 \hline
-                \textbf{Estensioni} & Se la richiesta fallisce, si verifica \hyperref[UC16]{UC16}. \\
+                \textbf{Estensioni} & Se la richiesta fallisce, si verifica \hyperref[UC18]{UC18}. \\
                 \hline
                 \end{tabularx}
-                \caption{UC15}
+                \caption{UC17}
             \end{table}
 
-        \subsubsection{UC16 - Errore Ottenimento Recensioni}
-        \label{UC16}
+        \subsubsection{UC18 - Errore Ottenimento Recensioni}
+        \label{UC18}
 
             \begin{table}[H]
                 \centering
@@ -949,7 +1024,7 @@
                         \end{enumerate} \\
                     \hline
                 \end{tabularx}
-                \caption{UC16}
+                \caption{UC18}
             \end{table}
 
 \pagebreak
