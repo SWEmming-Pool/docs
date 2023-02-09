@@ -15,7 +15,7 @@
 
             \paragraph*{Utente autenticato:} utente che possiede un account \textit{MetaMask} e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni.
 
-            \paragraph*{Utilizzatore API:} utente autenticato che utilizza l'API REST per ottenere le recensioni associate a se stesso in formato \textit{JSON}\glo, senza passare per la \textit{web app}.
+            \paragraph*{Utilizzatore API:} utente, possedente un account \textit{Metamask}, che utilizza l'API REST per ottenere le recensioni associate a se stesso in formato \textit{JSON}\glo, senza passare per la \textit{web app}.
 
         \subsubsection{Attori secondari}
             \paragraph*{\textit{MetaMask}:} \textit{wallet}\glo\: di criptovalute usato per interagire con la \textit{blockchain} \textit{Ethereum}. Permette di accedere al proprio \textit{wallet} attraverso applicazione mobile o, come nel nostro caso, estensione per browser.
@@ -287,7 +287,7 @@
                     \hline
                     \textbf{Scenario principale} &
                         \begin{enumerate}
-                            \item L'utente rilascia una recensione ad una transazione che è già stata recensita o che non rispetta un formato valido, ovvero non rispetta i seguenti vincoli:
+                            \item L'utente rilascia una recensione che non rispetta un formato valido, ovvero non viola i seguenti vincoli:
                             \begin{itemize}
                                 \item titolo, non vuoto e non superiore a 50 caratteri;
                                 \item voto, non vuoto e compreso tra 1 e 5;
@@ -616,7 +616,14 @@
                     \hline
                     \textbf{Postcondizioni} & La ricerca fallisce. \\
                     \hline
-                    \textbf{Scenario principale} & L'utente inserisce un indirizzo inesistente e viene visualizzato un errore. \\
+                    \textbf{Scenario principale} & La ricerca effettuata dall'utente fallisce ,e viene visualizzato un errore, per i seguenti motivi:
+                    \begin{itemize}
+                        \item tutti i campi sono vuoti;
+                        \item inserimento di un indirizzo wallet non valido;
+                        \item non sono presenti recensioni con il voto inserito dall'utente;
+                        \item inserimento di un titolo inesistente;
+                        \item non esistono recensioni rilasciate nella data inserita dall'utente.
+                    \end{itemize} \\
                     \hline
                 \end{tabularx}
                 \caption{UC12}
@@ -627,7 +634,7 @@
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.6]{src/img/UC13.png}
+                \includegraphics[scale=0.4]{src/img/UC13.png}
                 \caption{UC13}
             \end{figure}
 
@@ -642,13 +649,11 @@
                     \hline
                     \textbf{Attore primario} & Utente generico \\
                     \hline
-                    \textbf{Precondizioni} & L'utente ha effettuato una ricerca delle recensioni. \\
+                    \textbf{Precondizioni} & L'utente ha effettuato una ricerca delle recensioni, che è andata a buon fine. \\
                     \hline
                     \textbf{Postcondizioni} & L'utente visualizza le recensioni associate ad una ricerca. \\
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata una lista di recensioni corrispondenti. \\
-                    \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
                     \hline
                 \end{tabularx}
                 \caption{UC13}
@@ -869,7 +874,7 @@
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.6]{src/img/UC14.png}
+                \includegraphics[scale=0.4]{src/img/UC14.png}
                 \caption{UC14}
             \end{figure}
 
@@ -890,8 +895,6 @@
                     \hline
                     \textbf{Scenario principale} & Viene mostrata la lista di recensioni rilasciate dall'utente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
-                    \hline
                 \end{tabularx}
                 \caption{UC14}
             \end{table}
@@ -901,7 +904,7 @@
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.6]{src/img/UC15.png}
+                \includegraphics[scale=0.4]{src/img/UC15.png}
                 \caption{UC15}
             \end{figure}
 
@@ -922,48 +925,17 @@
                     \hline
                     \textbf{Scenario principale} & Viene mostrata la lista di recensioni ricevute dall'utente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
-                    \hline
                 \end{tabularx}
                 \caption{UC15}
             \end{table}
 
-        \subsubsection{UC16 - Errore Visualizzazione}
+        \subsubsection{UC16 - Richiesta Lista Recensioni}
         \label{UC16}
-
-            \begin{table}[H]
-                \centering
-                \rowcolors{1}{pari_alt}{dispari_alt}
-                \renewcommand{\arraystretch}{1.8}
-                \renewcommand\tabularxcolumn[1]{m{#1}}
-                \begin{tabularx}{0.9\textwidth} {
-                    >{\hsize=.8\hsize\linewidth=\hsize}X
-                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
-                    \hline
-                    \textbf{Attori primari} & Utente generico, utente autenticato. \\
-                    \hline
-                    \textbf{Precondizioni} & L'utente ha effettuato una ricerca per indirizzo. \\
-                    \hline
-                    \textbf{Postcondizioni} & L'utente non visualizza nessuna recensione. \\
-                    \hline
-                    \textbf{Scenario principale} &
-                        \begin{enumerate}
-                            \item L'utente richiede la lista delle recensioni di un determinato indirizzo;
-                            \item l'indirizzo cercato non presenta recensioni collegate e l'utente viene
-                            informato di questo.
-                        \end{enumerate} \\
-                    \hline
-                \end{tabularx}
-                \caption{UC16}
-            \end{table}
-
-        \subsubsection{UC17 - Richiesta Lista Recensioni}
-        \label{UC17}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.6]{src/img/UC17.png}
-                \caption{UC17}
+                \includegraphics[scale=0.6]{src/img/UC16.png}
+                \caption{UC16}
             \end{figure}
 
             \begin{table}[H]
@@ -979,26 +951,25 @@
                 \hline
                 \textbf{Attore secondario} & \textit{Infura} \\
                 \hline
-                \textbf{Precondizioni} & L'utente conosce l'indirizzo di cui vuole visualizzare le recensioni. \\
+                \textbf{Precondizioni} & L'utente deve avere un account \textit{Metamask} e delle recensioni ad esso riferite. \\
                 \hline
-                \textbf{Postcondizioni} & L'utente ottiene un file contenente una lista di recensioni. \\
+                \textbf{Postcondizioni} & L'utente ottiene una lista di recensioni. \\
                 \hline
                 \textbf{Scenario principale} &
                     \begin{enumerate}
-                        \item L'utente fa una richiesta al \textit{server API REST}\glo\: specificando l'indirizzo di cui
-                        ottenere le recensioni;
-                        \item il server recupera le recensioni legate all'utente richiesto;
-                        \item viene restituita una lista di recensioni;
+                        \item L'utente fa una richiesta al \textit{server API REST}\glo\: per ottenere le recensioni a lui riferite;
+                        \item il server recupera tali recensioni dalla \textit{blockchain};
+                        \item viene restituita la lista di recensioni;
                     \end{enumerate} \\
                 \hline
-                \textbf{Estensioni} & Se la richiesta fallisce, si verifica \hyperref[UC18]{UC18}. \\
+                \textbf{Estensioni} & Se la richiesta fallisce, si verifica \hyperref[UC17]{UC17}. \\
                 \hline
                 \end{tabularx}
-                \caption{UC17}
+                \caption{UC16}
             \end{table}
 
-        \subsubsection{UC18 - Errore Ottenimento Recensioni}
-        \label{UC18}
+        \subsubsection{UC17 - Errore Ottenimento Recensioni}
+        \label{UC17}
 
             \begin{table}[H]
                 \centering
@@ -1020,12 +991,12 @@
                     \textbf{Scenario principale} &
                         \begin{enumerate}
                             \item L'utente tenta di ottenere la lista di recensioni;
-                            \item viene mostrato un errore che informa l'utente sul motivo del fallimento
-                            dell'operazione.
+                            \item non esistono delle recensioni ad esso riferite;
+                            \item viene mostrato un messaggio di errore.
                         \end{enumerate} \\
                     \hline
                 \end{tabularx}
-                \caption{UC18}
+                \caption{UC17}
             \end{table}
 
 \pagebreak

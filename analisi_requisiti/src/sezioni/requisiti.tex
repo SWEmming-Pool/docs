@@ -85,9 +85,15 @@
             \hyperref[UC01]{UC01} \\
             \hline
 
-            R1F1.2 &
+            R1F1.1 &
             Obbligatorio &
             La \textit{web app} visualizza un errore in caso di autenticazione fallita. &
+            \hyperref[UC02]{UC02} \\
+            \hline
+
+            R1F1.2 &
+            Obbligatorio &
+            L'utente non autenticato visualizza un messaggio di errore in caso di assenza di \textit{MetaMask} installato. &
             \hyperref[UC02]{UC02} \\
             \hline
 
@@ -121,6 +127,12 @@
             \hyperref[UC06]{UC06} \\
             \hline
 
+            R1F4 &
+            Obbligatorio &
+            L'utente autenticato può visualizzare una lista dei pagamenti effettuati, senza una recensione, tra cui scegliere quale recensire. &
+            \hyperref[UC07]{UC07} \\
+            \hline
+
             R1F5 &
             Obbligatorio &
             L'utente autenticato ha la possibilità di rilasciare una recensione nel caso abbia acquisti non ancora recensiti. &
@@ -138,14 +150,8 @@
             L'utente deve scegliere la trasanzione, effettuata, da associare alla recensione.&
             \hyperref[UC07]{UC07} \\
             \hline
-            
-            R1F5.3 &
-            Obbligatorio &
-            La \textit{web app} visualizza un errore se l'utente seleziona un pagamento a cui è collegata già una recensione.&
-            \hyperref[UC08]{UC08} \\
-            \hline
         
-            R1F5.4 &
+            R1F5.3 &
             Obbligatorio &
             La \textit{web app} visualizza un errore se l'utente non rispetta la validità del formato di una recensione.&
             \hyperref[UC08]{UC08} \\
@@ -193,58 +199,202 @@
             \hyperref[UC09.3]{UC09.3} \\
             \hline
 
-            R1F6.2 &
-            Obbligatorio &
+            R3F6.2 &
+            Opzionale &
             L'utente generico può ricercare recensioni per voto. &
             \hyperref[UC09.4]{UC09.4} \\
             \hline
 
-            R1F6.3 &
-            Obbligatorio &
+            R3F6.3 &
+            Opzionale &
             L'utente generico può ricercare recensioni per titolo. &
             \hyperref[UC09.5]{UC09.5} \\
             \hline
 
-            R1F6.4 &
-            Obbligatorio &
+            R3F6.4 &
+            Opzionale &
             L'utente generico può ricercare recensioni per data. &
             \hyperref[UC09.6]{UC09.6} \\
-            \hline
-            
-            R1F6 &
-            Obbligatorio &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.&
-            \hyperref[UC06]{UC06} \\
             \hline
 
             R1F7 &
             Obbligatorio &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.&
-            \hyperref[UC05]{UC05} \\
+            La \textit{web app} fornisce all'utente autenticato la possibilità di ricercare le recensioni rilasciate.&
+            \hyperref[UC10]{UC10} \\
             \hline
 
             R1F8 &
             Obbligatorio &
-            I contenuti delle recensioni sono salvati su una \textit{blockchain} pubblica Ethereum compatibile. &
-            Capitolato \\
+            La \textit{web app} fornisce all'utente autenticato la possibilità di ricercare le recensioni ricevute.&
+            \hyperref[UC11]{UC11} \\
             \hline
 
             R1F9 &
             Obbligatorio &
-            Sviluppo di un servizio di \textit{API REST} per il recupero delle recensioni da parte di utenti esterni. &
-            Capitolato \\
+            La \textit{web app} notifica all'utente un errore nella ricerca.&
+            \hyperref[UC12]{UC12} \\
+            \hline
+
+            R1F9.1 &
+            Obbligatorio &
+            La \textit{web app} notifica all'utente un errore nella ricerca per indirizzo wallet.&
+            \hyperref[UC12]{UC12} \\
+            \hline
+
+            R3F9.2 &
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella ricerca per voto.&
+            \hyperref[UC12]{UC12} \\
+            \hline
+
+            R3F9.3 &
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella ricerca per titolo.&
+            \hyperref[UC12]{UC12} \\
+            \hline
+
+            R3F9.4 &
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella ricerca per data.&
+            \hyperref[UC12]{UC12} \\
             \hline
 
             R1F10 &
             Obbligatorio &
-            L'utente autenticato può visualizzare una lista di tutti i pagamenti effettuati tra cui scegliere quale recensire. &
-            \hyperref[UC07]{UC07} \\
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni.&
+            \hyperref[UC13]{UC13} \\
+            \hline
+
+            R3F10.1 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal meno recente.&
+            \hyperref[UC13.2]{UC13.2} \\
+            \hline
+
+            R3F10.2 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal più recente.&
+            \hyperref[UC13.3]{UC13.3} \\
             \hline
 
             R1F11 &
             Obbligatorio &
-            L'utente non autenticato deve visualizzare un messaggio di errore in caso di assenza di \textit{MetaMask} installato. &
-            \hyperref[UC02]{UC02} \\
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una singola recensione, selezionata dalla lista.&
+            \hyperref[UC13.1]{UC13.1} \\
+            \hline
+
+            R1F11.1 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare l'autore di una singola recensione.&
+            \hyperref[UC13.1.1]{UC13.1.1} \\
+            \hline
+
+            R1F11.2 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il destinatario di una singola recensione.&
+            \hyperref[UC13.1.2]{UC13.1.2} \\
+            \hline
+
+            R1F11.3 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il titolo di una singola recensione.&
+            \hyperref[UC13.1.3]{UC13.1.3} \\
+            \hline      
+            
+            R1F11.4 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare la data di una singola recensione.&
+            \hyperref[UC13.1.4]{UC13.1.4} \\
+            \hline
+
+            R1F11.5 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il voto di una singola recensione.&
+            \hyperref[UC13.1.5]{UC13.1.5} \\
+            \hline
+
+            R1F11.6 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il testo di una singola recensione.&
+            \hyperref[UC13.1.6]{UC13.1.6} \\
+            \hline
+
+            R1F12 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.&
+            \hyperref[UC14]{UC14} \\
+            \hline
+            
+            R1F13 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.&
+            \hyperref[UC15]{UC15} \\
+            \hline
+
+            R1F14 &
+            Obbligatorio &
+            Il servizio di \textit{API REST} fornisce all'utente, utilizzatore dell'API, la possibilità di ottenere le recensioni ad esso riferite.&
+            \hyperref[UC16]{UC16} \\
+            \hline
+
+            R1F15 &
+            Obbligatorio &
+            Il servizio di \textit{API REST} notifica all'utente un errore, nel caso non esistano recensioni a lui collegate.&
+            \hyperref[UC17]{UC17} \\
+            \hline
+
+            R3F16 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati.&
+            \hyperref[UC18]{UC18} \\
+            \hline
+
+            R3F16.1 &   % specializzazione UC18
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal meno recente.&
+            \hyperref[UC18.1]{UC18.1} \\
+            \hline
+
+            R3F16.2 &   % specializzazione UC18
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal più recente.&
+            \hyperref[UC18.2]{UC18.2} \\
+            \hline
+
+            R3F17 &    % sotto-caso UC18
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare una singola transazione, selezionata dalla lista.&
+            \hyperref[UC18.4]{UC18.4} \\
+            \hline
+
+            R3F17.1 &   % specializzazione UC18.4
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'ID di una singola transazione.&
+            \hyperref[UC18.4.1]{UC18.4.1} \\
+            \hline
+
+            R3F17.2 &   % specializzazione UC18.4
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la data di una singola transazione.&
+            \hyperref[UC18.4.2]{UC18.4.2} \\
+            \hline
+
+            R3F17.3 &   % specializzazione UC18.4
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'importo di una singola transazione.&
+            \hyperref[UC18.4.3]{UC18.4.3} \\
+            \hline
+
+            R3F17.4 &   % specializzazione UC18.4
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente pagante di una singola transazione.&
+            \hyperref[UC18.4.4]{UC18.4.4} \\
+            \hline
+
+            R3F17.5 &   % specializzazione UC18.4
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente ricevente di una singola transazione.&
+            \hyperref[UC18.4.5]{UC18.4.5} \\
             \hline
 
             \rowcolor{white}
@@ -423,6 +573,12 @@
             R1V10 &
             Obbligatorio &
             Utilizzo di un fornitore terzo per \textit{RPC} a nodo. &
+            Capitolato \\
+            \hline
+
+            R1V11 &
+            Obbligatorio &
+            I contenuti delle recensioni sono salvati su una \textit{blockchain} pubblica Ethereum compatibile. &
             Capitolato \\
             \hline
 
