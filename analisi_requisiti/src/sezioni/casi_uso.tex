@@ -15,7 +15,7 @@
 
             \paragraph*{Utente autenticato:} utente che possiede un account \textit{MetaMask} e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni.
 
-            \paragraph*{Utilizzatore API:} utente, possedente un account \textit{Metamask}, che utilizza l'API REST per ottenere le recensioni associate a se stesso in formato \textit{JSON}\glo, senza passare per la \textit{web app}.
+            \paragraph*{Utilizzatore API:} utente generico che utilizza l'API REST per ottenere le recensioni, associate ad un indirizzo, in formato \textit{JSON}\glo, senza passare per la \textit{web app}.
 
         \subsubsection{Attori secondari}
             \paragraph*{\textit{MetaMask}:} \textit{wallet}\glo\: di criptovalute usato per interagire con la \textit{blockchain} \textit{Ethereum}. Permette di accedere al proprio \textit{wallet} attraverso applicazione mobile o, come nel nostro caso, estensione per browser.
@@ -629,6 +629,8 @@
                 \caption{UC12}
             \end{table}
 
+        % UC14: Errore Visualizzazione Lista Recensioni (per UC13, 14, 15)
+
         \subsubsection{UC13 - Visualizzazione Lista Recensioni}
         \label{UC13}
 
@@ -951,7 +953,7 @@
                 \hline
                 \textbf{Attore secondario} & \textit{Infura} \\
                 \hline
-                \textbf{Precondizioni} & L'utente deve avere un account \textit{Metamask} e delle recensioni ad esso riferite. \\
+                \textbf{Precondizioni} & L'utente deve conoscere l'indirizzo di cui vuole ottenere le recensioni. \\
                 \hline
                 \textbf{Postcondizioni} & L'utente ottiene una lista di recensioni. \\
                 \hline
