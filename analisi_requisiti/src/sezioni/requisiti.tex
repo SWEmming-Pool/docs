@@ -333,68 +333,92 @@
 
             R1F14 &
             Obbligatorio &
-            Il servizio di \textit{API REST} fornisce all'utente, utilizzatore dell'API, la possibilità di ottenere le recensioni ad esso riferite.&
+            La \textit{web app} notifica all'utente un errore nella visualizzazione delle recensioni.&
             \hyperref[UC16]{UC16} \\
             \hline
 
             R1F15 &
             Obbligatorio &
-            Il servizio di \textit{API REST} notifica all'utente un errore, nel caso non esistano recensioni a lui collegate.&
+            Il servizio di \textit{API REST} fornisce all'utente, utilizzatore dell'API, la possibilità di ottenere le recensioni ad esso riferite.&
             \hyperref[UC17]{UC17} \\
             \hline
 
-            R3F16 &
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati.&
+            R1F16 &
+            Obbligatorio &
+            Il servizio di \textit{API REST} notifica all'utente un errore, nel caso non esistano recensioni a lui collegate.&
             \hyperref[UC18]{UC18} \\
             \hline
 
-            R3F16.1 &   % specializzazione UC18
+            R3F17 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati.&
+            \hyperref[UC19]{UC19} \\
+            \hline
+
+            R3F17.1 &   % specializzazione UC19
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal meno recente.&
-            \hyperref[UC18.1]{UC18.1} \\
+            \hyperref[UC19.1]{UC19.1} \\
             \hline
 
-            R3F16.2 &   % specializzazione UC18
+            R3F17.2 &   % specializzazione UC19
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal più recente.&
-            \hyperref[UC18.2]{UC18.2} \\
+            \hyperref[UC19.2]{UC19.2} \\
             \hline
 
-            R3F17 &    % sotto-caso UC18
+            R3F17.3 &   % specializzazione UC19
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo più economico.&
+            \hyperref[UC19.3]{UC19.3} \\
+            \hline
+
+            R3F17.4 &   % specializzazione UC19
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo meno economico.&
+            \hyperref[UC19.4]{UC19.4} \\
+            \hline
+
+            R3F18 &    % sotto-caso UC19
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare una singola transazione, selezionata dalla lista.&
-            \hyperref[UC18.4]{UC18.4} \\
+            \hyperref[UC19.5]{UC19.5} \\
             \hline
 
-            R3F17.1 &   % specializzazione UC18.4
+            R3F18.1 &   % sotto-caso UC19.5
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'ID di una singola transazione.&
-            \hyperref[UC18.4.1]{UC18.4.1} \\
+            \hyperref[UC19.5.1]{UC19.5.1} \\
             \hline
 
-            R3F17.2 &   % specializzazione UC18.4
+            R3F18.2 &   % sotto-caso UC19.5
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la data di una singola transazione.&
-            \hyperref[UC18.4.2]{UC18.4.2} \\
+            \hyperref[UC19.5.2]{UC19.5.2} \\
             \hline
 
-            R3F17.3 &   % specializzazione UC18.4
+            R3F18.3 &   % sotto-caso UC19.5
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'importo di una singola transazione.&
-            \hyperref[UC18.4.3]{UC18.4.3} \\
+            \hyperref[UC19.5.3]{UC19.5.3} \\
             \hline
 
-            R3F17.4 &   % specializzazione UC18.4
+            R3F18.4 &   % sotto-caso UC19.5
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente pagante di una singola transazione.&
-            \hyperref[UC18.4.4]{UC18.4.4} \\
+            \hyperref[UC19.5.4]{UC19.5.4} \\
             \hline
 
-            R3F17.5 &   % specializzazione UC18.4
+            R3F18.5 &   % sotto-caso UC19.5
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente ricevente di una singola transazione.&
-            \hyperref[UC18.4.5]{UC18.4.5} \\
+            \hyperref[UC19.5.5]{UC19.5.5} \\
+            \hline
+
+            R3F19 &   
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella visualizzazione dei pagamenti.&
+            \hyperref[UC20]{UC20} \\
             \hline
 
             \rowcolor{white}
@@ -623,51 +647,195 @@
             \endlastfoot
 
             Capitolato &
-            R1F1, R1F9, R1F9.1, R1F10, R1F11, R1F12, R1F13, R1Q1, R1Q2, R1Q3, R1Q4, R1Q5, R1Q6, R1Q7, R1Q8, R1V1, R2V2, R2V3, R2V4, R2V5, R2V6, R2V7, R1V8, R1V9 \\
+            R1Q1, R1Q2, R1Q3, R1Q4, R1Q6, R1Q7, R1V1, R2V2, R2V3, R2V4, R2V5, R2V6, R2V7, R1V8, R1V10, R1V11, R1V12, R1V13 \\
+            \hline
+
+            Scelta Interna &
+            R2Q5, R216, R1Q8 \\
+            \hline
+
+            R1V8 &
+            R1V9 \\
             \hline
 
             \hyperref[UC01]{UC01} &
-            R1F2 \\
+            R1F1 \\
             \hline
 
-            \hyperref[UC10]{UC10} &
-            R1F2.1 \\
+            \hyperref[UC02]{UC02} &
+            R1F1.1, R1F1.2 \\
             \hline
 
             \hyperref[UC03]{UC03} &
-            R1F3 \\
+            R1F2 \\
             \hline
 
-            \hyperref[UC11]{UC11} &
-            R1F3.1 \\
-            \hline
-
-            \hyperref[UC12]{UC12} &
-            R1F3.2 \\
-            \hline
-
-            \hyperref[UC09]{UC09} &
-            R1F4 \\
-            \hline
-
-            \hyperref[UC14]{UC14} &
-            R1F4.1 \\
-            \hline
-
-            \hyperref[UC08]{UC08} &
-            R1F5, R1F5.1, R1F6.1 \\
-            \hline
-
-            \hyperref[UC13]{UC13} &
-            R1F6.2, R1F5.1.1, R1F6.3 \\
-            \hline
-
-            \hyperref[UC06]{UC06} &
-            R1F7 \\
+            \hyperref[UC04]{UC04} &
+            R1F2.1 \\
             \hline
 
             \hyperref[UC05]{UC05} &
+            R1F3 \\
+            \hline
+
+            \hyperref[UC06]{UC06} &
+            R1F3.1, R1F3.2 \\
+            \hline
+
+            \hyperref[UC07]{UC07} &
+            R1F4, R1F5, R1F5.1, R1F5.2 \\
+            \hline
+
+            \hyperref[UC08]{UC08} &
+            R1F5.3, R1F5.3.1, R1F5.3.2, R1F5.3.3 \\
+            \hline
+
+            \hyperref[UC09]{UC09} &
+            R1F6    \\
+            \hline
+
+            \hyperref[UC09.1]{UC09.1} &
+            R1F6.1 \\
+            \hline
+
+            \hyperref[UC09.2]{UC09.2} &
+            R1F6.1.1 \\
+            \hline
+
+            \hyperref[UC09.3]{UC09.3} &
+            R1F6.1.2 \\
+            \hline
+
+            \hyperref[UC09.4]{UC09.4} &
+            R1F6.2 \\
+            \hline
+
+            \hyperref[UC09.5]{UC09.5} &
+            R1F6.3 \\
+            \hline
+
+            \hyperref[UC09.6]{UC09.6} &
+            R1F6.4 \\
+            \hline
+
+            \hyperref[UC10]{UC10} &
+            R1F7 \\
+            \hline
+
+            \hyperref[UC11]{UC11} &
             R1F8 \\
+            \hline
+
+            \hyperref[UC12]{UC12} &
+            R1F9, R1F9.1, R1F9.2, R1F9.3, R1F9.4 \\
+            \hline
+
+            \hyperref[UC13]{UC13} &
+            R1F10 \\
+            \hline
+            
+            \hyperref[UC13.2]{UC13.2} &
+            R3F10.1 \\
+            \hline
+
+            \hyperref[UC13.3]{UC13.3} &
+            R3F10.2 \\
+            \hline
+
+            \hyperref[UC13.1]{UC13.1} &
+            R1F11 \\
+            \hline
+
+            \hyperref[UC13.1.1]{UC13.1.1} &
+            R1F11.1 \\
+            \hline
+
+            \hyperref[UC13.1.2]{UC13.1.2} &
+            R1F11.2 \\
+            \hline
+
+            \hyperref[UC13.1.3]{UC13.1.3} &
+            R1F11.3 \\
+            \hline
+
+            \hyperref[UC13.1.4]{UC13.1.4} &
+            R1F11.4 \\
+            \hline
+
+            \hyperref[UC13.1.5]{UC13.1.5} &
+            R1F11.5 \\
+            \hline
+
+            \hyperref[UC13.1.6]{UC13.1.6} &
+            R1F11.6 \\
+            \hline
+
+            \hyperref[UC14]{UC14} &
+            R1F12 \\
+            \hline
+
+            \hyperref[UC15]{UC15} &
+            R1F13 \\
+            \hline
+
+            \hyperref[UC16]{UC16} &
+            R1F14 \\
+            \hline
+
+            \hyperref[UC17]{UC17} &
+            R1F15 \\
+            \hline
+
+            \hyperref[UC18]{UC18} &
+            R1F16 \\
+            \hline
+
+            \hyperref[UC19]{UC19} &
+            R3F17 \\
+            \hline
+
+            \hyperref[UC19.1]{UC19.1} &
+            R3F17.1 \\
+            \hline
+
+            \hyperref[UC19.2]{UC19.2} &
+            R3F17.2 \\
+            \hline
+
+            \hyperref[UC19.3]{UC19.3} &
+            R3F17.3 \\
+            \hline
+
+            \hyperref[UC19.4]{UC19.4} &
+            R3F17.4 \\
+            \hline
+
+            \hyperref[UC19.5]{UC19.5} &
+            R3F18 \\
+            \hline
+
+            \hyperref[UC19.5.1]{UC19.5.1} &
+            R3F18.1 \\
+            \hline
+
+            \hyperref[UC19.5.2]{UC19.5.2} &
+            R3F18.2 \\
+            \hline
+
+            \hyperref[UC19.5.3]{UC19.5.3} &
+            R3F18.3 \\
+            \hline
+
+            \hyperref[UC19.5.4]{UC19.5.4} &
+            R3F18.4 \\
+            \hline
+
+            \hyperref[UC19.5.5]{UC19.5.5} &
+            R3F18.5 \\
+            \hline
+
+            \hyperref[UC20]{UC20} &
+            R3F19 \\
             \hline
 
             \rowcolor{white}
@@ -695,13 +863,13 @@
                 \textbf{\color{white}Totale} \\
                 \hline
 
-                Funzionale & 22 & - & - & 22 \\
+                Funzionale & 39 & - & 21 & 60 \\
                 \hline
 
-                Di qualità & 8 & - & - & 8 \\
+                Di qualità & 7 & 2 & - & 9 \\
                 \hline
 
-                Di vincolo & 3 & 6 & - & 9 \\
+                Di vincolo & 7 & 6 & - & 13 \\
                 \hline
 
                 Prestazionale & - & - & - & - \\
