@@ -33,12 +33,32 @@ Metriche di qualità selezionate:
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                                                                                                     \\
-        MPC-MRC                                                        & MRC Mandatory requirements coverage & Indica in percentuale i requisiti obbligatori soddisfatti fino al presente.  & \begin{equation} CMR=\frac{NMR}{TMR}*100 \end{equation} \\
-        MPC-DRC                                                        & DRC Desirable requirement coverage  & Indica in percentuale i requisiti desiderabili soddisfatti fino al presente. & \begin{equation} CDR=\frac{NDR}{TDR}*100 \end{equation} \\
-        MPC-ORC                                                        & ORC Optional requirement coverage   & Indica in percentuale i requisiti desiderabili soddisfatti fino al presente. & \begin{equation} CDR=\frac{NOR}{TOR}*100 \end{equation} \\
+        MPD-MRC                                                        & MRC Mandatory requirements coverage & Indica in percentuale i requisiti obbligatori soddisfatti fino al presente.  & \begin{equation} CMR=\frac{NMR}{TMR}*100 \end{equation} \\
+        MPD-DRC                                                        & DRC Desirable requirement coverage  & Indica in percentuale i requisiti desiderabili soddisfatti fino al presente. & \begin{equation} DRC=\frac{NDR}{TDR}*100 \end{equation} \\
+        MPD-ORC                                                        & ORC Optional requirement coverage   & Indica in percentuale i requisiti desiderabili soddisfatti fino al presente. & \begin{equation} ORC=\frac{NOR}{TOR}*100 \end{equation} \\
         \hline
     \end{tabular}
 \end{table}
+
+\subsubsection{Metriche per la manutenibilità}
+\paragraph{Parametri}
+\paragraph{Metriche}
+Metriche di qualità selezionate:
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.8}
+    \rowcolors[]{1}{gray!55}{white}
+    \begin{tabular}{| c | p{4.2cm} | p{5cm} | p{2cm} |  }
+        \rowcolor[HTML]{a52a2a}
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                                 \\
+        MPD-ACC                                                        & ACC Average Cyclomatic complexity & Indica in numero di cammini indipendenti presenti nel programma. & - \\
+        \hline
+    \end{tabular}
+\end{table}
+
 \subsubsection{Metriche per l'efficienza }
 
 \paragraph{Parametri}
@@ -54,11 +74,11 @@ Metriche di qualità selezionate:
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                              \\
-        MPC-MRT                                                        & MRT Medium response time & Indica in tempo impiegato dal software per rispondere a una richiesta. & - \\
+        MPD-MRT                                                        & MRT Medium response time & Indica in tempo impiegato dal software per rispondere a una richiesta. & - \\
         \hline
     \end{tabular}
 \end{table}
-\subsubsection{Metriche per l’usabilità }
+\subsubsection{Metriche per l'usabilità }
 
 \paragraph{Parametri}
 \paragraph{Metriche}
@@ -73,7 +93,7 @@ Metriche di qualità selezionate:
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                         \\
-        MPC-EOU                                                        & EOU Ease of use & Numero di click per completere un operazione nel software. & - \\
+        MPD-EOU                                                        & EOU Ease of use & Numero di click per completere un operazione nel software. & - \\
         \hline
     \end{tabular}
 \end{table}
@@ -97,8 +117,8 @@ Metriche di qualità selezionate:
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                                                                   \\
-        MPC-DOF                                                        & DF Density of failures & Percentuale di affidabilità in base ai test falliti. & \begin{equation}DF = \frac{FT}{TP} \cdot 100\end{equation} \\
+        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                                                                     \\
+        MPD-DOF                                                        & DOF Density of failures & Percentuale di affidabilità in base ai test falliti. & \begin{equation}DOF = \frac{FT}{TP} \cdot 100\end{equation} \\
         \hline
     \end{tabular}
 \end{table}
@@ -117,7 +137,7 @@ Metriche di qualità selezionate:
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
         \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                  \\
-        MPC-OE                                                         & OE Ortographic errors & Verifica sulla presenza di errori
+        MPD-OE                                                         & OE Ortographic errors & Verifica sulla presenza di errori
         ortografici.                                                   & -                                                         \\
         \hline
     \end{tabular}
