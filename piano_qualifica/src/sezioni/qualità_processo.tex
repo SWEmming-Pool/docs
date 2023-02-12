@@ -38,12 +38,12 @@ prefissati e che il prodotto finale sia di alta qualità.
     Fornitura &
     Processo che consiste nel scegliere le procedure e le
     risorse atte a perseguire lo sviluppo del progetto. &
-    MPC-SV, MPC-BV, MPC-EAC, MPC-EV, MPC-PV, MPC-AC, MPC-ETC
+    MPC-SV, MPC-EAC, MPC-EV, MPC-PV, MPC-AC, MPC-ETC
     \\ \hline
     Sviluppo &
     Processo che contiene le attività e i compiti per
     realizzare il prodotto software richiesto.  &
-    MPC-RSI
+    MPC-RSI, MPC-MRC, MPC-DRC, MPC-ORC
     \\ \hline
 
     \rowcolor[HTML]{FFFFFF}
@@ -61,3 +61,101 @@ prefissati e che il prodotto finale sia di alta qualità.
 
 \subsection{Obbiettivi metriche}
 \subsubsection{Processi Primari}
+
+\begin{xltabular}{\textwidth} {
+        >{\hsize=0.6\hsize\linewidth=\hsize}X
+        >{\hsize=1.40\hsize\linewidth=\hsize}X
+        >{\hsize=1.00\hsize\linewidth=\hsize}X
+        >{\hsize=1.00\hsize\linewidth=\hsize}X
+    }
+    \rowcolorhead
+    \textbf{\color{white}Codice} &
+    \textbf{\color{white}Nome metrica} &
+    \textbf{\color{white}Valore accettabile} &
+    \textbf{\color{white}Valore ottimo} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \rowcolorhead
+    \textbf{\color{white}Codice} &
+    \textbf{\color{white}Nome metrica} &
+    \textbf{\color{white}Valore accettabile} &
+    \textbf{\color{white}Valore ottimo} \\
+    \hline
+    \endhead
+
+    \endfoot
+
+    \endlastfoot
+
+    \rowcolor[HTML]{FFFFFF}
+    \multicolumn{4}{c}{\textbf{Fornitura}}\\
+
+    MPC-SV &
+    (SV) Schedule Variance  &
+    $\geq -10\%$ &
+    $\leq 0\%$
+    \\ \hline
+
+    MPC-EAC &
+    (EAC) Estimated at Completion   &
+    preventivo - 3\% $\leq$ EAC $\leq$ preventivo + 3\% &
+    EAC = preventivo%$
+    \\ \hline
+
+    MPC-EV &
+    (EV) Earned Value   &
+    $\geq 0$ &
+    $\leq EAC$
+    \\ \hline
+
+    MPC-PV &
+    (PV) Earned Value   &
+    $\geq 0$ &
+    $\leq Budget at
+        Completion$
+    \\ \hline
+
+    MPC-AC &
+    (AC) Actual Cost   &
+    $\geq 0$ &
+    $\leq EAC$
+    \\ \hline
+
+    MPC-ETC &
+    (ETC) Estimate to Complete   &
+    $\geq 0$ &
+    $\leq EAC$
+    \\ \hline
+
+    \rowcolor[HTML]{FFFFFF}
+    \multicolumn{4}{c}{\textbf{Sviluppo}}\\
+
+    MPC-RSI &
+    (RSI) Requirements stability index  &
+    $ 70\%$ &
+    $ 100\%$
+    \\ \hline
+
+    MPC-MRC &
+    (MRC) Mandatory requirements coverage  &
+    $ 100\%$ &
+    $ 100\%$
+    \\ \hline
+
+    MPC-DRC &
+    (DRC) Desirable requirement coverage  &
+    $ 60\%$ &
+    $ 100\%$
+    \\ \hline
+
+    MPC-ORC &
+    (ORC) Optional requirement coverage  &
+    $ 0\%$ &
+    $ 100\%$
+    \\ \hline
+
+    \rowcolor{white}
+    \caption{Obbiettivi di qualità di processo}
+\end{xltabular}
