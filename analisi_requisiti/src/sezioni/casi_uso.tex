@@ -15,7 +15,7 @@
 
             \paragraph*{Utente autenticato:} utente che possiede un account \textit{MetaMask} e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni.
 
-            \paragraph*{Utilizzatore API:} utente generico che utilizza l'API REST per ottenere le recensioni, associate ad un indirizzo, in formato \textit{JSON}\glo, senza passare per la \textit{web app}.
+            \paragraph*{Utilizzatore API:} utente generico che utilizza l'API REST per ottenere le recensioni, associate ad un indirizzo, in formato \textit{JSON}, senza passare per la \textit{web app}.
 
         \subsubsection{Attori secondari}
             \paragraph*{\textit{MetaMask}:} \textit{wallet}\glo\: di criptovalute usato per interagire con la \textit{blockchain} \textit{Ethereum}. Permette di accedere al proprio \textit{wallet} attraverso applicazione mobile o, come nel nostro caso, estensione per browser.
@@ -213,7 +213,7 @@
                             \item Viene mostrato un errore che informa l'utente sul motivo del fallimento dell'operazione:
                             \begin{itemize}
                                 \item l'utente pagante non ha abbastanza fondi;
-                                \item indirizzo dell'utente ricevente non valido;
+                                \item l'indirizzo dell'utente ricevente non è valido;
                             \end{itemize}
                             \item L'operazione viene annullata.
                         \end{enumerate} \\
@@ -289,9 +289,9 @@
                         \begin{enumerate}
                             \item L'utente rilascia una recensione che non rispetta un formato valido, ovvero non viola i seguenti vincoli:
                             \begin{itemize}
-                                \item titolo, non vuoto e non superiore a 50 caratteri;
-                                \item voto, non vuoto e compreso tra 1 e 5;
-                                \item testo, non vuoto e non superiore a 500 caratteri;
+                                \item titolo: non vuoto e non superiore a 50 caratteri;
+                                \item voto: non vuoto e compreso tra 1 e 5;
+                                \item testo: non vuoto e non superiore a 500 caratteri;
                             \end{itemize}
                             \item Viene mostrato un errore che informa l'utente sulla motivazione;
                             \item Vengono mostrati consigli sulla risoluzione del problema e si termina l'attuale operazione.
@@ -323,11 +323,11 @@
                     \hline
                     \textbf{Attore secondario} & Infura \\
                     \hline
-                    \textbf{Precondizioni} & L'utente vuole ricercare delle recensioni. \\
+                    \textbf{Precondizioni} & L'utente vuole ricercare le recensioni di un dato indirizzo. \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha ricercato delle recensioni. \\
+                    \textbf{Postcondizioni} & L'utente ha ottenuto le informazioni disponibili. \\
                     \hline
-                    \textbf{Scenario principale} & L'utente ricerca delle recensioni \\
+                    \textbf{Scenario principale} & L'utente effettua la ricerca secondo alcuni criteri. \\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
                     \hline
@@ -357,11 +357,11 @@
                     \hline
                     \textbf{Attore secondario} & Infura \\
                     \hline
-                    \textbf{Precondizioni} & L'utente vuole ricercare delle recensioni legate ad un indirizzo wallet. \\
+                    \textbf{Precondizioni} & L'utente conosce l'indirizzo di cui cercare le recensioni. \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha ricercato delle recensioni legate ad un indirizzo wallet. \\
+                    \textbf{Postcondizioni} & L'utente ha ottenuto le informazioni. \\
                     \hline
-                    \textbf{Scenario principale} & L'utente ricerca delle recensioni legate ad un indirizzo wallet.\\
+                    \textbf{Scenario principale} & L'utente ricerca le recensioni inserendo l'indirizzo di cui vuole ottenere informazioni.\\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
                     \hline
@@ -385,11 +385,11 @@
                     \hline
                     \textbf{Attore secondario} & Infura \\
                     \hline
-                    \textbf{Precondizioni} & L'utente vuole ricercare delle recensioni legate ad un indirizzo wallet dell'autore. \\
+                    \textbf{Precondizioni} & L'utente è interessato alle recensioni rilasciate da un particolare utente. \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha ricercato delle recensioni legate ad un indirizzo wallet dell'autore. \\
+                    \textbf{Postcondizioni} & L'utente ha ottenuto le informazioni che cercava. \\
                     \hline
-                    \textbf{Scenario principale} & L'utente ricerca delle recensioni legate ad un indirizzo wallet dell'autore.\\
+                    \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando che l'indirizzo inserito fa riferimento all'autore.\\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
                     \hline
@@ -413,11 +413,11 @@
                     \hline
                     \textbf{Attore secondario} & Infura \\
                     \hline
-                    \textbf{Precondizioni} & L'utente vuole ricercare delle recensioni legate ad un indirizzo wallet del destinatario. \\
+                    \textbf{Precondizioni} & L'utente è interessato alle recensioni ricevute da un particolare utente. \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha ricercato delle recensioni legate ad un indirizzo wallet del destinatario. \\
+                    \textbf{Postcondizioni} & L'utente ha ottenuto le informazioni che cercava. \\
                     \hline
-                    \textbf{Scenario principale} & L'utente ricerca delle recensioni legate ad un indirizzo wallet del destinatario.\\
+                    \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando che l'indirizzo inserito fa riferimento al destinatario.\\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
                     \hline
@@ -447,11 +447,11 @@
                     \hline
                     \textbf{Attore secondario} & Infura \\
                     \hline
-                    \textbf{Precondizioni} & L'utente vuole ricercare delle recensioni per votazione. \\
+                    \textbf{Precondizioni} & L'utente è interessato alle recensioni con un particolare voto \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha ricercato delle recensioni votazione. \\
+                    \textbf{Postcondizioni} & L'utente ha ottenuto le informazioni che cercava. \\
                     \hline
-                    \textbf{Scenario principale} & L'utente ricerca delle recensioni per votazione.\\
+                    \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando il voto per cui filtrarle.\\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
                     \hline
@@ -481,11 +481,11 @@
                     \hline
                     \textbf{Attore secondario} & Infura \\
                     \hline
-                    \textbf{Precondizioni} & L'utente vuole ricercare delle recensioni legate ad un titolo, ovvero nome del prodotto o servizio acquistato. \\
+                    \textbf{Precondizioni} & L'utente è interessato alle recensioni con un particolare titolo \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha ricercato delle recensioni legate ad un titolo, ovvero nome del prodotto o servizio acquistato. \\
+                    \textbf{Postcondizioni} & L'utente ha ottenuto le informazioni che cercava. \\
                     \hline
-                    \textbf{Scenario principale} & L'utente ricerca delle recensioni legate ad un titolo, ovvero nome del prodotto o servizio acquistato.\\
+                    \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando il titolo per cui filtrarle.\\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
                     \hline
@@ -515,11 +515,11 @@
                     \hline
                     \textbf{Attore secondario} & Infura \\
                     \hline
-                    \textbf{Precondizioni} & L'utente vuole ricercare delle recensioni per data di pubblicazione. \\
+                    \textbf{Precondizioni} & L'utente è interessato alle recensioni di uno specifico periodo \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha ricercato delle recensioni per data di pubblicazione. \\
+                    \textbf{Postcondizioni} & L'utente ha ottenuto le informazioni che cercava. \\
                     \hline
-                    \textbf{Scenario principale} & L'utente ricerca delle recensioni per data di pubblicazione.\\
+                    \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando la data di riferimento per cui filtrarle.\\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
                     \hline
@@ -551,9 +551,9 @@
                     \hline
                     \textbf{Precondizioni} & L'utente vuole ricercare le recensioni che ha rilasciato. \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha ricercato le recensioni che ha rilasciato. \\
+                    \textbf{Postcondizioni} & L'utente ottiene le informazioni sulle proprie recensioni.\\
                     \hline
-                    \textbf{Scenario principale} & L'utente ricerca delle recensioni che ha rilasciato.\\
+                    \textbf{Scenario principale} & L'utente richiede la la lista delle recensioni che ha rilasciato come autore.\\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
                     \hline
@@ -585,9 +585,9 @@
                     \hline
                     \textbf{Precondizioni} & L'utente vuole ricercare le recensioni che ha ricevuto. \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente ha ricercato le recensioni che ha ricevuto. \\
+                    \textbf{Postcondizioni} & L'utente ottiene le informazioni sulle proprie recensioni.\\
                     \hline
-                    \textbf{Scenario principale} & L'utente ricerca delle recensioni che ha ricevuto.\\
+                    \textbf{Scenario principale} & L'utente richiede la la lista delle recensioni che ha ricevuto come attività.\\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
                     \hline
@@ -607,7 +607,7 @@
                     >{\hsize=.8\hsize\linewidth=\hsize}X
                     >{\hsize=1.2\hsize\linewidth=\hsize}X}
                     \hline
-                    \textbf{Attori primari} & Utente generico, utente autenticato. \\
+                    \textbf{Attori primari} & Utente generico. \\
                     \hline
                     \textbf{Attore secondario} & \textit{Infura} \\
                     \hline
@@ -1057,7 +1057,7 @@
                 \hline
                 \textbf{Scenario principale} &
                     \begin{enumerate}
-                        \item L'utente fa una richiesta al \textit{server API REST}\glo\: per ottenere le recensioni a lui riferite;
+                        \item L'utente fa una richiesta al \textit{server API REST} per ottenere le recensioni legate all'indirizzo specificato;
                         \item il server recupera tali recensioni dalla \textit{blockchain};
                         \item viene restituita la lista di recensioni;
                     \end{enumerate} \\
@@ -1091,7 +1091,7 @@
                     \textbf{Scenario principale} &
                         \begin{enumerate}
                             \item L'utente tenta di ottenere la lista di recensioni;
-                            \item non esistono delle recensioni ad esso riferite;
+                            \item non esistono delle recensioni legate all'indirizzo cercato;
                             \item viene mostrato un messaggio di errore.
                         \end{enumerate} \\
                     \hline
