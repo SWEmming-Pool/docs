@@ -148,11 +148,11 @@ Precisamente è stata definita una cartella \texttt{componenti\_comuni} che cont
 \end{itemize}
 
 \subsubsection{Elementi grafici}
-\paragraph{Tabelle} ~
+\paragraph{Tabelle} in ciascun documento prodotto, qualora fosse presente una tabella, essa viene accompagnata da una didascalia contenete la numerazione della tabella stessa e un breve titolo che ne riassuma il contenuto.\\
 
-\paragraph{Immagini} ~
+\paragraph{Immagini} in ogni immagine inserita all'interno dei documenti prodotti viene fornita una breve didascalia per descriverne chiaramente il contenuto
 
-\paragraph{Diagrammi UML} ~
+\paragraph{Diagrammi UML} i diagrammi UMl inseriti rispettano lo standard UML 2.0. Ancora vengono accompagnati da una breve didascalia.
 
 \subsubsection{Strumenti}
 Per la redazione dei documenti vengono utilizzati i seguenti strumenti:
@@ -160,21 +160,23 @@ Per la redazione dei documenti vengono utilizzati i seguenti strumenti:
     \item \textit{LaTeX}: per la redazione dei documenti;
     \item \textit{VSCode}: per la gestione del codice sorgente e della documentazione;
     \item \textit{StarUML}: per la creazione dei diagrammi \textit{UML};
+    \item \textit{GanttProject}: per la creazione dei diagrammi di Gantt;
 \end{itemize}
 
 \subsection{Gestione della configurazione}
 
 \subsubsection{Utilizzo di Git}
 Per la gestione della configurazione del progetto viene utilizzato il sistema di versionamento \textbf{Git}.\\
-Il gruppo ha adottato il modello di branching \textbf{GitFlow} DA CONTINUARE
+Il gruppo ha adottato il modello di branching \textbf{GitFlow} per la gestione delle versioni del progetto.\\
+
 
 \subsection{Gestione del controllo qualità}
 \subsubsection{Scopo}
 Il processo di Gestione della Qualità ha l'obiettivo di definire indici
 precisi per tutte le attività che riguardano la verifica e la validazione.
-Questo permette di garantire che il livello di qualità desiderato sia
+Questo permette di garantire che il livello di qualità desiderato venga
 rispettato. Per maggiori informazioni sulle metriche utilizzate,
-si può consultare il Piano di Qualifica v1.0.0.
+si fa riferimento al Piano di Qualifica v1.0.0.
 Questo documento fornirà una trattazione dettagliata su come
 vengono misurati i risultati e garantire la qualità nei progetti.
 \subsubsection{Denominazione metriche}
@@ -189,7 +191,29 @@ Nella quale \textbf{[Utilizzo]} indica se la metrica è:
 \end{itemize}
 Mentre \textbf{[Acronimo]} indica il nome della metrica.
 \subsection{Gestione di verifica}
+\subsubsection{Scopo} il processo di verifica ha lo scopo di garantire che il prodotto finale soddisfi i requisiti richiesti, fornendo un risultato corretto, coeso e completo.\\
+Tale processo riceve in input quanto prodotto fino a quelo momento e lo restituisce in uno stato conforme alle aspettative.
+Per ottenere ciò vengono utilizzati i processi di test e analisi.
+\paragraph{Analisi statica} consiste nell'analizzare il codice sorgente e la documetnazione del prodotto per verificarne la correttezza (assenza di difetti e/o errori)\\
+I metodi per effettuare analisi statica sono catalogabili in due categorie: manuali e automatici.
+Quelli manuali sono due:
+\begin{itemize}
+    \item \textbf{Walkthrough:} mira a rivelare la presenza di difetti tramite una lettura critica a largo spettro e senza assunzioni di alcun genere. Il Walkthrough va pianificato e, in seguito, va discusso quanto individuato per correggere i difetti, documentando le attività svolte.
+    \item \textbf{Inspection:} mira a rivelare la presenza di difetti tramite una lettura mirata del prodotto da parte di verificatori distinti dai programmatori secondo una strategia che si focalizza sui punti ritenuti critici. 
+\end{itemize}
+
+\paragraph{Analisi dinamica} consiste nell'analizzare il prodotto in esecuzione per verificare che il comportamento sia conforme a quanto previsto e che non si presentino anomalie o malfunzionamenti.
+I criteri da seguire per definire i test per l'analisi dinamica vanno inseriti nel Piano di Qualifica. Un test ha lo scopo di far fallire il programma e se ci riesce, quel test va aggiunto alla suite dei test del progetto in modo permanente.
+
+Ci sono vari tipi di test:
+\begin{itemize}
+    \item \textbf{Test di unità:} unit test, sono test che vengono eseguiti su singole unità di codice, per verificare che il codice funzioni correttamente.
+    \item \textbf{Test di integrazione:} integration test, sono test che vengono eseguiti su più unità di codice, per verificare una corretta interazione tra le componenti.
+    \item \textbf{Test di sistema:} system test, sono test che verificano la copertura dei requisiti e vengono definiti durante la fase di analisi dei requisiti.
+    \item \textbf{Test di regressione:} regression test, sono test che vengono eseguiti dopo una modifica del codice per verificare che le modifiche non abbiano introdotto errori.
+\end{itemize}
+
 \subsection{Gestione di validazione}
-\subsection{Gestione del controllo dei costi}
-\subsection{Gestione della risoluzione dei problemi}
+\subsubsection{Scopo} la validazione è la conferma finale che il prdootto sia conforme alle attese del committente. Dopo di essa il prodotto può quindi essere rilasciato.\\
+
 
