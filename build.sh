@@ -23,6 +23,15 @@ mv main.pdf ../documenti_compilati/analisi_capitolati.pdf
 clean 
 cd ..
 
+# Piano qualifica
+cd piano_qualifica/
+echo "Piano qualifica"
+echo "----------------------"
+compile  
+mv main.pdf ../documenti_compilati/piano_qualifica.pdf
+clean 
+cd ..
+
 # Dichirazione di impegni
 cd dichiarazione_impegni/
 echo "Dichiarazione impegni"
