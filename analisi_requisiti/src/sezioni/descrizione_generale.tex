@@ -1,0 +1,22 @@
+\section{Descrizione generale}
+
+    \subsection{Obiettivi del prodotto}
+    Lo scopo del prodotto è quello di fornire un servizio di pagamento che includa la possibilità di rilasciare una recensione univoca da parte dell'utente pagante.
+
+    Per natura dello \textit{smart contract} \glo\:, che verrà utilizzato per la gestione del pagamento, non è possibile modificare o censurare la recensione una volta che questa è stata rilasciata.
+
+    \subsection{Backend e Frontend}
+    Il prodotto atteso dovrà essere costituito da una parte di backend e una di frontend, composte a loro volta come spiegato di seguito.
+
+        \subsubsection{Backend}
+        \begin{itemize}
+            \item \textit{\textbf{Smart contract}}: gestisce la logica di pagamenti e recensioni.
+            \item \textit{\textbf{API REST}}\glo: permette di ottenere le recensioni associate ad un utente in formato \textit{JSON}\glo, senza passare per la \textit{web app}.
+        \end{itemize}
+
+        \subsubsection{Frontend}
+        \begin{itemize}
+            \item \textit{\textbf{Web app}}: permette agli utenti di interagire con il servizio attraverso un interfaccia grafica, per effettuare pagamenti e rilasciare o leggere le recensioni.
+        \end{itemize}
+    \subsection{Vincoli generali}
+    Per usufruire del servizio, l'utente deve disporre di una connessione ad Internet e di un browser con installata l'estensione \textit{MetaMask}\glo.
