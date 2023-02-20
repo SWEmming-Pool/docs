@@ -1,192 +1,187 @@
-
-
 \section{Metriche della qualità}
-\subsection{Processi primari}
-\subsubsection{Metriche per la funzionalità}
-\paragraph{Parametri}
+\subsection{Metriche per la qualità di prodotto}
+La presente sezione espone le metriche selezionate dal gruppo \groupName{} per misurare il raggiungimento degli obiettivi di qualità del prodotto.
+
+\subsubsection{MPD01: Indice di Gulpease}\label{sssec:indice_gulpease}
+Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana.
+La formula adottata è la seguente:
+\begin{center}
+    $GULP = 89 + \displaystyle \frac{300*(totale\ frasi)-10*(totale\ lettere)}{(totale\ parole)}$
+\end{center}
+L'indice così calcolato può assumere valori tra 0 e 100:
 \begin{itemize}
-    \item MPC-MRC:
-          \begin{itemize}
-              \item NMR(Number mandatory requirements):  Numero requisiti obbligatori soddisfatti in una certa data.
-              \item TMR(Total mandatory requirements):  Numero requisiti obbligatori totali.
-          \end{itemize}
-    \item MPC-DRC:
-          \begin{itemize}
-              \item NDR(Number desirable requirements): Numero requisiti desiderabili soddisfatti in una certa data.
-              \item TDR(Total desirable requirements): Numero requisiti desiderabili totali.
-          \end{itemize}
-    \item MPC-ORC:
-          \begin{itemize}
-              \item NOR(Number optional requirements): Numero requisiti opzionali soddisfatti in una certa data.
-              \item TOR(Total optional requirements): Numero requisiti opzionali totali.
-          \end{itemize}
-\end{itemize}
-\paragraph{Metriche}
-Metriche di qualità selezionate:
-\begin{table}[H]
-    \centering
-    \renewcommand{\arraystretch}{1.8}
-    \rowcolors{2}{pari_alt}{dispari_alt}
-    \begin{tabular}{| c | p{3cm} | p{4cm} | p{7cm} |  }
-        \rowcolorhead
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                                                                                                     \\
-        MPD-MRC                                                        & MRC Mandatory requirements coverage & Indica in percentuale i requisiti obbligatori soddisfatti fino al presente.  & \begin{equation} CMR=\frac{NMR}{TMR}*100 \end{equation} \\
-        MPD-DRC                                                        & DRC Desirable requirement coverage  & Indica in percentuale i requisiti desiderabili soddisfatti fino al presente. & \begin{equation} DRC=\frac{NDR}{TDR}*100 \end{equation} \\
-        MPD-ORC                                                        & ORC Optional requirement coverage   & Indica in percentuale i requisiti desiderabili soddisfatti fino al presente. & \begin{equation} ORC=\frac{NOR}{TOR}*100 \end{equation} \\
-        \hline
-    \end{tabular}
-\end{table}
-
-\subsubsection{Metriche per la manutenibilità}
-\paragraph{Parametri}
-\paragraph{Metriche}
-Metriche di qualità selezionate:
-\begin{table}[H]
-    \centering
-    \renewcommand{\arraystretch}{1.8}
-    \rowcolors{2}{pari_alt}{dispari_alt}
-    \begin{tabular}{| c | p{3cm} | p{4cm} | p{7cm} |  }
-        \rowcolorhead
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                                 \\
-        MPD-ACC                                                        & ACC Average Cyclomatic complexity & Indica in numero di cammini indipendenti presenti nel programma. & - \\
-        \hline
-    \end{tabular}
-\end{table}
-
-\subsubsection{Metriche per l'efficienza }
-
-\paragraph{Parametri}
-\paragraph{Metriche}
-Metriche di qualità selezionate:
-\begin{table}[H]
-    \centering
-    \renewcommand{\arraystretch}{1.8}
-    \rowcolors{2}{pari_alt}{dispari_alt}
-    \begin{tabular}{| c | p{3cm} | p{4cm} | p{7cm} |  }
-        \rowcolorhead
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                              \\
-        MPD-MRT                                                        & MRT Medium response time & Indica in tempo impiegato dal software per rispondere a una richiesta. & - \\
-        \hline
-    \end{tabular}
-\end{table}
-\subsubsection{Metriche per l'usabilità }
-
-\paragraph{Parametri}
-\paragraph{Metriche}
-Metriche di qualità selezionate:
-\begin{table}[H]
-    \centering
-    \renewcommand{\arraystretch}{1.8}
-    \rowcolors{2}{pari_alt}{dispari_alt}
-    \begin{tabular}{| c | p{3cm} | p{4cm} | p{7cm} | }
-        \rowcolorhead
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                         \\
-        MPD-EOU                                                        & EOU Ease of use & Numero di click per completere un operazione nel software. & - \\
-        \hline
-    \end{tabular}
-\end{table}
-\subsubsection{Metriche per l'affidabilità }
-\paragraph{Parametri}
-\begin{itemize}
-    \item MPC-DOF:
-          \begin{itemize}
-              \item FT(Failed tests):  Numero di test falliti.
-              \item TP(Tests performed):  Numero di test totali eseguiti.
-          \end{itemize}
-\end{itemize}
-\paragraph{Metriche}
-Metriche di qualità selezionate:
-\begin{table}[H]
-    \centering
-    \renewcommand{\arraystretch}{1.8}
-    \rowcolors{2}{pari_alt}{dispari_alt}
-    \begin{tabular}{| c | p{3cm} | p{4cm} | p{7cm} |  }
-        \rowcolorhead
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                                                                     \\
-        MPD-DOF                                                        & DOF Density of failures & Percentuale di affidabilità in base ai test falliti. & \begin{equation}DOF = \frac{FT}{TP} \cdot 100\end{equation} \\
-        \hline
-    \end{tabular}
-\end{table}
-\subsection{Processi di supporto}
-\subsubsection{Documentazione}
-\paragraph{Parametri}
-\paragraph{Metriche}\mbox{}\\
-Metriche di qualità selezionate:
-\begin{table}[H]
-    \centering
-    \renewcommand{\arraystretch}{1.8}
-    \rowcolors{2}{pari_alt}{dispari_alt}
-    \begin{tabular}{| c | p{3cm} | p{4cm} | p{7cm} |  }
-        \rowcolorhead
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                  \\
-        MPD-OE                                                         & OE Ortographic errors & Verifica sulla presenza di errori
-        ortografici.                                                   & -                                                         \\
-        \hline
-    \end{tabular}
-\end{table}
-\subsubsection{Verifica}
-
-\paragraph{Parametri}\mbox{}\\
-Parametri utilizzati nel calcolo delle metriche seguenti:
-\begin{itemize}
-    \item MPC-ETC:
-          \begin{itemize}
-              \item BC(Budget completion): Costo totale del progetto.
-          \end{itemize}
-    \item MPC-RSI:
-          \begin{itemize}
-              \item RC(Requirements changed): Numero requisiti con cambiamenti
-              \item RD(Requirements deleted): Numero requisiti eliminati
-              \item RA(Requirements added): Numero requisiti aggiunti
-              \item RT(Total requirements): Numero requisiti totali
-          \end{itemize}
-
-    \item MPC-CC:
-          \begin{itemize}
-              \item NCL(Number of covered lines): Numero di linee di codice coperte da test
-              \item TL(Total lines): Numero di linee di codice totali
-          \end{itemize}
+    \item \textbf{GULP $<$ 80:} indica una leggibilità difficile per un utente con licenza elementare;
+    \item \textbf{GULP $<$ 60:} indica una leggibilità difficile per un utente con licenza media;
+    \item \textbf{GULP $<$ 40:} indica una leggibilità difficile per un utente con licenza superiore.
 \end{itemize}
 
-\paragraph{Metriche}\mbox{}\\
-Metriche di qualità selezionate:
-\begin{table}[H]
-    \centering
-    \renewcommand{\arraystretch}{1.4}
-    \rowcolors{2}{pari_alt}{dispari_alt}
-    \begin{tabular}{| c | p{3cm} | p{4cm} |p{7cm} | }
-        \rowcolorhead
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Codice}}       &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Sigla estesa}} &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Descrizione}}  &
-        \multicolumn{1}{c}{\color[HTML]{FFFFFF} \textbf{Formula}}                                                                                                                                                                                                                              \\
-        MPC-SV                                                         & SV Schedule variance            & Allineamento con la tabella di marcia prevista. Se il valore è negativo significa ritardo & \begin{equation}SV =(\frac{EV}{PV}-1) * 100\end{equation}                               \\
-        MPC-EAC                                                        & EAC Estimated at completion     & Stima costo totale per il completamento al momento.                                       & \begin{equation}EAC = AC + ETC                 \end{equation}                           \\
-        MPC-EV                                                         & EV Earned value                 & Guadagni ottentui fino ad una data specifica                                              & \begin{equation}EV = \% completamento * EAC    \end{equation}                           \\
-        MPC-PV                                                         & PV Planned value                & Lavoro pianificato fino ad una data specifica                                             & \begin{equation}PV=\% lavoro pianificato *BAC   \end{equation}                          \\
-        MPC-AC                                                         & AC Actual cost                  & Costi sostenuti fino ad una data specifica                                                & Intero                                                                                  \\
-        MPC-ETC                                                        & ETC Estimated to completion     & Valore stimato alla relazizzazione delle attività.                                        & \begin{equation}ETC = BC + EV       \end{equation}                                      \\
-        MPC-RSI                                                        & RSI Requiements stability index & Indica quanto i requisiti variano nel tempo.                                              & \begin{equation}RSI = 1- \left( \frac{(NC + ND + NA)}{NT} \right) \times 100\end{equation} \\
-        MPC-CC                                                         & CC Code coverage                & Indica quanto il codice è coperto da test.                                                & \begin{equation}CC = \frac{NCL}{TL} * 100\end{equation}                                 \\
+Per facilitare il calcolo di questo indice, il gruppo si è appoggiato al sito \href{https://farfalla-project.org/readability_static/}, copiando
+l'intero contenuto dei documenti in formato pdf escludendo la prima pagina e gli indici.
 
-        \hline
-    \end{tabular}
-\end{table}
+\subsubsection{MPD02: Copertura requisiti obbligatori}\label{sssec:requisiti_obbligatori}
+Indice che misura in ogni istante la percentuale di requisiti obbligatori soddisfatti.
+La formula adottata è la seguente:
+\begin{center}
+    $CROB = \displaystyle \frac{ROBC}{ROB}*100$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{ROBC:} indica il numero di requisiti obbligatori coperti dall'implementazione;
+    \item \textbf{ROB:} indica il numero complessivo di requisiti obbligatori.
+\end{itemize}
+
+\subsubsection{MPD03: Copertura requisiti desiderabili}\label{sssec:requisiti_desiderabili}
+Indice che misura in ogni istante la percentuale di requisiti desiderabili soddisfatti.
+La formula adottata è la seguente:
+\begin{center}
+    $CRD = \displaystyle \frac{RDC}{RD}*100$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{RDC:} indica il numero di requisiti desiderabili coperti dall'implementazione;
+    \item \textbf{RD:} indica il numero complessivo di requisiti opzionali.
+\end{itemize}
+
+\subsubsection{MPD04: Copertura requisiti opzionali}\label{sssec:requisiti_opzionali}
+Indice che misura in ogni istante la percentuale di requisiti opzionali soddisfatti.
+La formula adottata è la seguente:
+\begin{center}
+    $CROP = \displaystyle \frac{ROPC}{ROP}*100$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{ROPC:} indica il numero di requisiti opzionali accettati coperti dall'implementazione;
+    \item \textbf{ROP:} indica il numero complessivo di requisiti opzionali accettati.
+\end{itemize}
+
+\subsubsection{MPD05: Facilità di utilizzo}\label{sssec:facilita_utilizzo}
+Numero di click necessari con cui l'utente raggiunge la funzionalità cercata.
+
+\subsubsection{MPD06: Versioni browser supportate}\label{sssec:versioni_browser_supportate}
+Percentuale di versioni di browser supportate dal prodotto.
+Calcolabile con la seguente formula:
+\begin{center}
+    $BS = \displaystyle \frac{Bsup}{Btot}*100$
+\end{center}
+dove:
+\begin{itemize}
+    \item \textbf{Bsup} indica il numero di browser in cui il prodotto può essere eseguito;
+    \item \textbf{Btot} indica il numero complessivo di browser presi in considerazione.
+\end{itemize}
+Dove in \textbf{Btot} i browser presi in considerazione sono i seguenti:
+\begin{itemize}
+    \item Chrome;
+    \item Firefox;
+    \item Brave;
+    \item Opera.
+\end {itemize} 
+
+\subsubsection{MPD07: Solidity Statement Coverage}\label{sssec:solidity_statement_coverage}
+Viene utilizzato per calcolare il numero di istruzioni nel codice sorgente che sono state eseguite.\\
+Lo scopo dello Statement Coverage è quello di coprire tutti i possibili percorsi, righe e istruzioni nel codice sorgente.\\
+Il valore è stato calcolato per mezzo di solidity-coverage.
+
+\subsubsection{MPD08: Solidity Branch Coverage}\label{sssec:solidity_branch_coverage}
+Lo scopo del Branch Coverage è garantire che ogni condizione decisionale venga eseguita almeno una volta.\\
+Il valore è stato calcolato per mezzo di solidity-coverage.
+
+\subsubsection{MPD09: Solidity Function Coverage}\label{sssec:solidity_function_coverage}
+Indica la misura in cui le funzioni presenti nel codice sorgente sono coperte durante il test.\\
+Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzione del test.\\
+Il valore è stato calcolato per mezzo di solidity-coverage.
+
+\subsubsection{MPD10: Solidity Line Coverage}\label{sssec:solidity_line_coverage}
+Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.\\
+Vengono considerate solo le righe che contengono istruzioni eseguibili.
+Il valore è stato calcolato per mezzo di solidity-coverage.
+\subsubsection{MPD11: Frontend Statement Coverage}\label{sssec:frontend_statement_coverage}
+Viene utilizzato per calcolare il numero di istruzioni nel codice sorgente che sono state eseguite.\
+Lo scopo dello Statement Coverage è quello di coprire tutti i possibili percorsi, righe e istruzioni nel codice sorgente.\
+
+
+\subsubsection{MPD12: Frontend Branch Coverage}\label{sssec:frontend_branch_coverage}
+Lo scopo del Branch Coverage è garantire che ogni condizione decisionale venga eseguita almeno una volta.\
+
+
+\subsubsection{MPD13: Frontend Function Coverage}\label{sssec:frontend_function_coverage}
+Indica la misura in cui le funzioni presenti nel codice sorgente sono coperte durante il test.\
+Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzione del test.\
+
+
+\subsubsection{MPD14: Frontend Line Coverage}\label{sssec:frontend_line_coverage}
+Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.\
+Vengono considerate solo le righe che contengono istruzioni eseguibili.
+
+\subsection{La qualità di processo}
+La presente sezione espone le metriche selezionate dal gruppo \groupName{} per misurare il raggiungimento degli obiettivi di qualità del processo.
+\textbf{Parametri per comprendere le metriche scelte:}
+\begin{itemize}
+    \item Budget At Completion (BAC): È il budget stimato in preventivo per il completamento del progetto;
+    \item Actual Calendar Days (ACD): È il numero effettivo di giorni impiegati in un determinato periodo;
+    \item Planned Calendar Days (PCD): È la durata preventivata di un determinato periodo;
+    \item Number of Requirements Added (NRA): Numero di requisiti aggiunti in un determinato periodo;
+    \item Number of Requirements Changed (NRC): Numero di requisiti modificati in un determinato periodo;
+    \item Number of Requirements Removed (NRR): Numero di requisiti rimossi in un determinato periodo;
+    \item Total Number of Initial Requirements (TNIR): Numero totale dei requisiti all'inizio di un determinato periodo.
+\end{itemize}
+
+\subsubsection{MPC01: Earned Value (EV)}\label{sssec:earned_value}
+È il valore del lavoro effettuato fino ad un determinato periodo.
+
+\subsubsection{MPC02: Actual Cost (AC)}\label{sssec:actual_cost}
+È il costo effettivamente sostenuto fino ad un determinato periodo.
+
+\subsubsection{MPC03: Planned Value (PV)}\label{sssec:planned_value}
+È il costo stimato per il completamento di un determinato periodo.
+
+\subsubsection{MPC04: Cost Variance (CV)}\label{sssec:cost_variance}
+Metrica che indica, in percentuale, se il gruppo è regolare rispetto al budget prestabilito.\
+La formula adottata è la seguente:
+\begin{center}
+    $CV = \displaystyle (\frac{EV}{AC}-1)100$
+\end{center}
+Se il valore risulta negativo si è fuori budget.
+\subsubsection{MPC05: Schedule Variance (SV)}\label{sssec:schedule_variance}
+Metrica che indica, in percentuale, se il gruppo è regolare rispetto i limiti temporali imposti.\
+La formula adottata è la seguente:
+\begin{center}
+    $SV = \displaystyle (1-\frac{ACD}{PCD})*100$
+\end{center}
+Se il valore risulta negativo si è indietro rispetto i tempi preventivati.
+
+\subsubsection{MPC06: Estimated At Completion (EAC)}\label{sssec:estimate_at_completition}
+Revisione del valore stimato per la realizzazione del progetto in un determinato periodo, ossia il BAC rivisto allo stato corrente del progetto.\
+La formula adottata è la seguente:
+\begin{center}
+    $EAC = AC + ETC$
+\end{center}
+
+\subsubsection{MPC07: Estimate To Complete (ETC)}\label{sssec:estimate_to_complete}
+Valore stimato del costo del lavoro rimanente in un determinato periodo.\
+La formula adottata è la seguente:
+\begin{center}
+    $ETC = BAC - EV$
+\end{center}
+\subsubsection{MPC08: Requirements Stability Index (RSI)}\label{sssec:requirement_stability_index}
+Indice che misura la variazione dei requisiti nel tempo.\
+La formula adottata è la seguente:
+\begin{center}
+    $RSI = \displaystyle (1-\frac{NRA + NRC + NRR}{TNIR})100$
+\end{center}
+
+\subsubsection{MPC09: Passed Tests}\label{sssec:passed_tests}
+Indica la percentuale dei test che sono stati superati fino ad un determinato periodo.\
+La formula adottata è la seguente:
+\begin{center}
+    $Passed\ Tests = \displaystyle \frac{Number\ of\ Passed\ Tests}{Tot.\ Number\ of\ Tests}100$
+\end{center}
+
+\subsubsection{MPC10: Metrics Satisfied}\label{sssec:metrics_satisfied}
+Indice che rappresenta la percentuale di metriche di qualità soddisfatte in un determinato periodo.
+La formula adottata è la seguente:
+\begin{center}
+    $Metrics\ Satisfied = \displaystyle \frac{Number\ of\ Metrics\ Satisfied}{Tot.\ Number\ of\ Metrics}*100$
+\end{center}
+
+\subsubsection{MPC11: Risks Found}\label{sssec:risks_found}
+Indica il numero di rischi incontrati in un determinato periodo.
