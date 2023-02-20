@@ -3,92 +3,14 @@ Per assicurare la qualità del prodotto, è stato deciso di utilizzare lo
 standard ISO/IEC 9126 come riferimento. Vengono qui presentati i valori
 ottimali e accettabili delle metriche selezionate dal gruppo.
 
-\subsection{Obbiettivi di qualità di prodotto}
-
-
-\begin{xltabular}{\textwidth} {
-        >{\hsize=0.50\hsize\linewidth=\hsize}X
-        >{\hsize=1.90\hsize\linewidth=\hsize}X
-        >{\hsize=0.50\hsize\linewidth=\hsize}X
-    }
-    \rowcolorhead
-    \textbf{\color{white}Processo} &
-    \textbf{\color{white}Descrizione} &
-    \textbf{\color{white}Metriche} \\
-    \hline
-    \endfirsthead
-
-    \hline
-    \rowcolorhead
-    \textbf{\color{white}Processo} &
-    \textbf{\color{white}Descrizione} &
-    \textbf{\color{white}Metriche} \\
-    \hline
-    \endhead
-
-    \endfoot
-
-    \endlastfoot
-
-    \rowcolor[HTML]{FFFFFF}
-    \multicolumn{3}{c}{\textbf{Monitoraggio documentazione}}\\
-
-    Comprensione &
-    Tutti i documenti devono essere leggibili e
-    comprensibili; qualità che derivano dalla correttezza
-    lessicale e grammaticale. &
-    MPD-EOU
-    \\ \hline
-
-    \rowcolor[HTML]{FFFFFF}
-    \multicolumn{3}{c}{\textbf{Monitoraggio software}}\\
-
-    Funzionalità &
-    Capacità del prodotto di offrire tutte le funzioni
-    individuate nell'Analisi dei Requisiti, perseguendo
-    accuratezza e adeguatezza. &
-    MPD-MRC, MPD-DRC, MPD-ORC
-    \\ \hline
-
-    Affidabilità &
-    Capacità del prodotto di riuscire a svolgere tutte le
-    funzionalità anche in caso di errori o problemi, cercando
-    di evitare che si manifestino. &
-    MPD-DOF
-    \\ \hline
-
-    Usabilità &
-    Capacità di essere comprensibile e graficamente
-    armonioso in modo da rendere piacevole l'esperienza
-    dell'utente. &
-    MPD-EOU
-    \\ \hline
-
-    Efficienza &
-    Capacità di raggiungere un fine con il minor utilizzo di
-    tempo e risorse. &
-    MPD-MRT
-    \\ \hline
-
-    Manutenibilità &
-    Capacità di permettere future correzioni e modifiche
-    senza che ciò rischi di compromettere l'intero progetto. &
-    MPD-ACC
-    \\ \hline
-
-    \rowcolor{white}
-    \caption{Obbiettivi qualità di prodotto}
-\end{xltabular}
-
-
-
 \subsection{Obiettivi metriche}
 
+\renewcommand{\arraystretch}{1.8}
 \begin{xltabular}{\textwidth} {
         >{\hsize=0.6\hsize\linewidth=\hsize}X
-        >{\hsize=2.00\hsize\linewidth=\hsize}X
-        >{\hsize=0.70\hsize\linewidth=\hsize}X
-        >{\hsize=0.70\hsize\linewidth=\hsize}X
+        >{\hsize=1.40\hsize\linewidth=\hsize}X
+        >{\hsize=1.00\hsize\linewidth=\hsize}X
+        >{\hsize=1.00\hsize\linewidth=\hsize}X
     }
     \rowcolorhead
     \textbf{\color{white}Codice} &
@@ -111,61 +33,96 @@ ottimali e accettabili delle metriche selezionate dal gruppo.
 
     \endlastfoot
 
-    \rowcolor[HTML]{FFFFFF}
+    \rowcolor{cyan}
     \multicolumn{4}{c}{\textbf{Documenti}}\\
 
-    MPD-OE &
-    (OE) Ortographic errors   &
-    $100\%$ &
-    $100\%$
+    MPD01 &
+    Indice di Gulpease   &
+    $\geq70\%$ &
+    $\geq90\%$
     \\ \hline
 
-    \rowcolor[HTML]{FFFFFF}
+    \rowcolor{cyan}
     \multicolumn{4}{c}{\textbf{Software}}\\
 
-    MPD-MRC &
+    MPD02 &
     (MRC) Mandatory requirements coverage  &
     $ 100\%$ &
     $ 100\%$
     \\ \hline
 
-    MPD-DRC &
+    MPD03 &
     (DRC) Desirable requirement coverage  &
-    $ 60\%$ &
+    $\geq90\%$ &
     $ 100\%$
     \\ \hline
 
-    MPD-ORC &
+    MPD04 &
     (ORC) Optional requirement coverage  &
-    $ 0\%$ &
+    $ \geq70\%$ &
     $ 100\%$
     \\ \hline
 
-    MPD-DOF &
-    (DOF) Density of failures   &
-    $ 30\%$ &
-    $ 20\%$
+    MPD05 &
+    Facilità di utilizzo  &
+    $ 5$ click &
+    $ 4$ click
     \\ \hline
 
-    MPD-ACC &
-    (ACC) Average Cyclomatic complexity  &
-    $ 15 $ &
-    $ 10 $
+    MPD06 &
+    Versioni browser supportate  &
+    $ \geq80\%$&
+    $ 100\%$
     \\ \hline
 
-    MPD-EOU &
-    (EOU) Ease of use   &
-    $ 6 $ &
-    $ 5 $
+    MPD07 &
+    Solidity statement coverage   &
+    $ \geq80\%$&
+    $ 100\%$
     \\ \hline
 
-    MPD-MRT &
-    (MRT) Medium response time   &
-    $ 5 $ secondi &
-    $ 4 $ secondi
+    MPD08 &
+    Solidity branch coverage  &
+    $ \geq80\%$&
+    $ 100\%$
+    \\ \hline
+    
+    MPD09 &
+    Solidity function coverage   &
+    $ \geq80\%$&
+    $ 100\%$
+    \\ \hline
+    
+    MPD10 &
+    Solidity line coverage   &
+    $ \geq80\%$&
+    $ 100\%$
+    \\ \hline
+    
+    MPD11 &
+    Front-end statement coverage   &
+    $ \geq80\%$&
+    $ 100\%$
+    \\ \hline
+
+    MPD12 &
+    Front-end branch coverage   &
+    $ \geq80\%$&
+    $ 100\%$
+    \\ \hline
+
+    MPD13 &
+    Front-end function coverage   &
+    $ \geq80\%$&
+    $ 100\%$
+    \\ \hline
+    MPD14 &
+    Front-end line coverage   &
+    $ \geq80\%$&
+    $ 100\%$
     \\ \hline
 
     \rowcolor{white}
-    \caption{Obbiettivi metriche dei processi primari}
+    \caption{Obbiettivi metriche di qualità del prodotto}
 \end{xltabular}
 

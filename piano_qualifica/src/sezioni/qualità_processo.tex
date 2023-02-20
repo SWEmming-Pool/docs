@@ -7,60 +7,9 @@ sulla base di metriche elencate nelle \textit{Norme di Progetto v1.0.0}. È impo
 metriche per garantire che i processi raggiungano gli obiettivi di qualità
 prefissati e che il prodotto finale sia di alta qualità.
 
-\subsection{Obbiettivi di qualità di processo}
-\begin{xltabular}{\textwidth} {
-        >{\hsize=0.5\hsize\linewidth=\hsize}X
-        >{\hsize=2.00\hsize\linewidth=\hsize}X
-        >{\hsize=0.6\hsize\linewidth=\hsize}X
-    }
-    \rowcolorhead
-    \textbf{\color{white}Processo} &
-    \textbf{\color{white}Descrizione} &
-    \textbf{\color{white}Metriche} \\
-    \hline
-    \endfirsthead
-
-    \hline
-    \rowcolorhead
-    \textbf{\color{white}Processo} &
-    \textbf{\color{white}Descrizione} &
-    \textbf{\color{white}Metriche} \\
-    \hline
-    \endhead
-
-    \endfoot
-
-    \endlastfoot
-
-    \rowcolor[HTML]{FFFFFF}
-    \multicolumn{3}{c}{\textbf{Processi primari}}\\
-    Fornitura &
-    Processo che consiste nel scegliere le procedure e le
-    risorse atte a perseguire lo sviluppo del progetto. &
-    MPC-SV, MPC-EAC, MPC-EV, MPC-PV, MPC-AC, MPC-ETC
-    \\ \hline
-    Sviluppo &
-    Processo che contiene le attività e i compiti per
-    realizzare il prodotto software richiesto.  &
-    MPC-RSI
-    \\ \hline
-
-    \rowcolor[HTML]{FFFFFF}
-    \multicolumn{3}{c}{\textbf{Processi di supporto}}\\
-    Verifica &
-    Processo che si pone come obbiettivo il controllo dello
-    sviluppo software a livello di codifica. &
-    MPC-CC
-    \\ \hline
-
-    \rowcolor{white}
-    \caption{Obbiettivi qualità di processo}
-\end{xltabular}
-
-
 \subsection{Obbiettivi metriche}
 \subsubsection{Processi Primari}
-
+\renewcommand{\arraystretch}{1.8}
 \begin{xltabular}{\textwidth} {
         >{\hsize=0.6\hsize\linewidth=\hsize}X
         >{\hsize=1.40\hsize\linewidth=\hsize}X
@@ -88,50 +37,57 @@ prefissati e che il prodotto finale sia di alta qualità.
 
     \endlastfoot
 
-    \rowcolor[HTML]{FFFFFF}
+    \rowcolor{cyan}
     \multicolumn{4}{c}{\textbf{Fornitura}}\\
+    \hline
 
-    MPC-SV &
-    (SV) Schedule Variance  &
-    $\geq -10\%$ &
-    $\leq 0\%$
-    \\ \hline
-
-    MPC-EAC &
-    (EAC) Estimated at Completion   &
-    preventivo - 3\% $\leq$ EAC $\leq$ preventivo + 3\% &
-    EAC = preventivo%$
-    \\ \hline
-
-    MPC-EV &
+    MPC01 &
     (EV) Earned Value   &
     $\geq 0$ &
     $\leq EAC$
     \\ \hline
 
-    MPC-PV &
-    (PV) Earned Value   &
-    $\geq 0$ &
-    $\leq Budget at
-        Completion$
-    \\ \hline
-
-    MPC-AC &
+    MPC02 &
     (AC) Actual Cost   &
     $\geq 0$ &
     $\leq EAC$
     \\ \hline
 
-    MPC-ETC &
+    MPC03 &
+    (PV) Planned Value   &
+    $\geq 0$ &
+    $\leq Budget at
+        Completion$
+    \\ \hline
+
+    MPC04 &
+    (CV) Cost Variance   &
+    $\geq -10\%$ &
+    $\geq 0\%$
+    \\ \hline
+
+    MPC05&
+    (SV) Schedule Variance  &
+    $\geq -10\%$ &
+    $\leq 0\%$
+    \\ \hline
+
+    MPC06 &
+    (EAC) Estimated at Completion   &
+    preventivo - 3\% $\leq$ EAC $\leq$ preventivo + 3\% &
+    EAC = preventivo%$
+    \\ \hline
+
+    MPC07 &
     (ETC) Estimate to Complete   &
     $\geq 0$ &
     $\leq EAC$
     \\ \hline
 
-    \rowcolor[HTML]{FFFFFF}
+    \rowcolor{cyan}
     \multicolumn{4}{c}{\textbf{Sviluppo}}\\
 
-    MPC-RSI &
+    MPC08 &
     (RSI) Requirements stability index  &
     $ 70\%$ &
     $ 100\%$
@@ -140,7 +96,7 @@ prefissati e che il prodotto finale sia di alta qualità.
     \rowcolor{white}
     \caption{Obbiettivi metriche dei processi primari}
 \end{xltabular}
-
+\pagebreak
 \subsubsection{Processi di supporto}
 
 \begin{xltabular}{\textwidth} {
@@ -170,15 +126,65 @@ prefissati e che il prodotto finale sia di alta qualità.
 
     \endlastfoot
 
-    \rowcolor[HTML]{FFFFFF}
+    \rowcolor{cyan}
     \multicolumn{4}{c}{\textbf{Verifica}}\\
 
-    MPC-CC &
+    MPC09 &
     (CC) Code coverage  &
-    $\geq 70\%$ &
+    $\geq 80\%$ &
+    $100\%$
+    \\ \hline
+    \rowcolor{cyan}
+    \multicolumn{4}{c}{\textbf{Gestione della qualità}}\\
+
+    MPC10 &
+    (CC) Metrics satisfied&
+    $\geq 80\%$ &
     $100\%$
     \\ \hline
 
     \rowcolor{white}
     \caption{Obbiettivi metriche dei processi di supporto}
+\end{xltabular}
+
+\subsection{Processi organizzativi}
+\subsubsection{Processi di supporto}
+
+\begin{xltabular}{\textwidth} {
+        >{\hsize=0.6\hsize\linewidth=\hsize}X
+        >{\hsize=1.40\hsize\linewidth=\hsize}X
+        >{\hsize=1.00\hsize\linewidth=\hsize}X
+        >{\hsize=1.00\hsize\linewidth=\hsize}X
+    }
+    \rowcolorhead
+    \textbf{\color{white}Codice} &
+    \textbf{\color{white}Nome metrica} &
+    \textbf{\color{white}Valore accettabile} &
+    \textbf{\color{white}Valore ottimo} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \rowcolorhead
+    \textbf{\color{white}Codice} &
+    \textbf{\color{white}Nome metrica} &
+    \textbf{\color{white}Valore accettabile} &
+    \textbf{\color{white}Valore ottimo} \\
+    \hline
+    \endhead
+
+    \endfoot
+
+    \endlastfoot
+
+    \rowcolor{cyan}
+    \multicolumn{4}{c}{\textbf{Gestione organizzativa}}\\
+
+    MPC11 &
+    Risk found  &
+    $\leq 5$ &
+    $0$
+    \\ \hline
+    \rowcolor{white}
+    \caption{Obbiettivi metriche dei processi organizzativi}
 \end{xltabular}

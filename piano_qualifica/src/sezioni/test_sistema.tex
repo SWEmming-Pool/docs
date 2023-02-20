@@ -1,0 +1,595 @@
+\section{Test di sistema}
+
+Nella tabella seguente vengono inseriti i test di sistema per ciscun requisito ed avranno la seguente nomenclatura:\\
+\begin{center}
+    \textbf{[TS]+[Codice requisito]}
+\end{center}
+Dove TS indica Test di Sistema.
+
+
+\renewcommand{\arraystretch}{1.8}
+\begin{xltabular}{\textwidth} {
+        >{\hsize=0.6\hsize\linewidth=\hsize}X
+        >{\hsize=1.40\hsize\linewidth=\hsize}X
+        >{\hsize=1.00\hsize\linewidth=\hsize}X
+    }
+    \rowcolorhead
+    \textbf{\color{white}Codice} &
+    \textbf{\color{white}Descrizione} &
+    \textbf{\color{white}Implementazione}\\
+    \hline
+    \endfirsthead
+
+    \hline
+    \rowcolorhead
+    \textbf{\color{white}Codice} &
+    \textbf{\color{white}Descrizione} &
+    \textbf{\color{white}Implementazione}\\
+    \hline
+    \endhead
+
+    \endfoot
+
+    \endlastfoot
+
+    TSR1F1 &
+    Si verifica che l'utente non autenticato ha la possibilità di effetuare il login tramite \textit{Metamask} &
+    Non implementato.
+    \\ \hline
+    
+    TSR1F1.1 &
+    Si verifica che in caso di autenticazione fallita venga visualizzato un errore &
+    Non implementato.
+    \\ \hline
+
+    TSR1F1.2 &
+    Si verifica che in caso di mancata installazione di \textit{Metamask} venga visualizzato un errore &
+    Non implementato.
+    \\ \hline
+
+    TSR1F2 &
+    Si verifica la possibilità di logout da \textit{Metamask} &
+    Non implementato.
+    \\ \hline
+
+    TSR1F2.1&
+    Si verifica che in caso di mancato logout venga visualizzato l'errore logout fallito &
+    Non implementato.
+    \\ \hline
+
+    TSR1F3&
+    Si verifica l'utente autenticato possa eseguire un pagamento tramite \textit{Metamask} &
+    Non implementato.
+    \\ \hline
+    
+    TSR1F3.1&
+    Si verifica che in caso di fondi insufficienti il pagamento non vada a buon fine&
+    Non implementato.
+    \\ \hline
+    
+    TSR1F3.2&
+    Si verifica che in caso di indirizzo dell'utente ricevente non valido, il pagamento non vada a buon fine&
+    Non implementato.
+    \\ \hline
+    
+    TSR1F4&
+    Si verifica che l'utente autenticato possa visualizzare una lista dalla lista di pagamenti effettuati, senza una recensione, dal quale scegliere quale recensire&
+    Non implementato.
+    \\ \hline
+
+    TSR1F5&
+    Si verifica che di acquisti non ancora recnesiti, l'utente autenticato ha la possibilità di rilasciare una recensione&
+    Non implementato.
+    \\ \hline
+
+    TSR1F5.1&
+    Si verifica che per ciascuna transazione esista al massimo una recensione ad essa collegata&
+    Non implementato.
+    \\ \hline
+    
+    TSR1F5.2&
+    Si verifica che l'utente possa scegliere la transazione effettuata da associare alla recensione&
+    Non implementato.
+    \\ \hline
+
+    TSR1F5.3&
+    Si verifica che venga visualizzato un errore in caso di formato recensioen non valido&
+    Non implementato.
+    \\ \hline
+    
+    TSR1F5.3.1&
+    Si verifica che la recensione abbia un titolo non superiore ai 50 caratteri&
+    Non implementato.
+    \\ \hline
+
+    TSR1F5.3.2&
+    Si verifica che la recensione abbia un voto compreso tra 1 e 5&
+    Non implementato.
+    \\ \hline
+
+    TSR1F5.3.3&
+    Si verifica che la recensione abbia un testo non superiore ai 500 caratteri&
+    Non implementato.
+    \\ \hline
+
+    TSR1F6&
+    Si verifica che l'utente generico possa ricercare recensioni&
+    Non implementato.
+    \\ \hline
+
+    TSR1F6.1&
+    Si verifica che l'utente generico possa ricercare recensioni filtrandole per indirizzo wallet&
+    Non implementato.
+    \\ \hline
+    
+    TSR1F6.1.1&
+    Si verifica che l'utente generico possa ricercare recensioni filtrandole per indirizzo wallet e per autore&
+    Non implementato.
+    \\ \hline
+    
+    TSR1F6.1.2&
+    Si verifica che l'utente generico possa ricercare recensioni filtrandole per indirizzo wallet e per destinatario&
+    Non implementato.
+    \\ \hline
+
+    TSR3F6.2&
+    Si verifica che l'utente generico possa ricercare recensioni filtrandole per voto&
+    Non implementato.
+    \\ \hline
+    
+    TSR3F6.3&
+    Si verifica che l'utente generico possa ricercare recensioni filtrandole per titolo&
+    Non implementato.
+    \\ \hline
+
+    TSR3F6.4&
+    Si verifica che l'utente generico possa ricercare recensioni filtrandole per data&
+    Non implementato.
+    \\ \hline
+
+    TSR1F7&
+    Si verifica che l'utente autenticato possa ricercare recensioni rilasciate &
+    Non implementato.
+    \\ \hline
+
+    TSR1F8&
+    Si verifica che l'utente autenticato possa ricercare recensioni ricevute &
+    Non implementato.
+    \\ \hline
+    
+    TSR1F9&
+    Si verifica che venga un visualizzato un errore quando la ricerca non va a buon fine &
+    Non implementato.
+    \\ \hline
+
+    TSR1F9.1&
+    Si verifica che venga un visualizzato un errore quando la ricerca per indirizzo wallet non va a buon fine &
+    Non implementato.
+    \\ \hline
+    
+    TSR3F9.2&
+    Si verifica che venga un visualizzato un errore quando la ricerca per voto non va a buon fine &
+    Non implementato.
+    \\ \hline
+    
+    TSR3F9.3&
+    Si verifica che venga un visualizzato un errore quando la ricerca per titolo non va a buon fine &
+    Non implementato.
+    \\ \hline
+
+    TSR3F9.4&
+    Si verifica che venga un visualizzato un errore quando la ricerca per data non va a buon fine &
+    Non implementato.
+    \\ \hline
+
+    TSR1F10&
+    Si verifica che venga visualizzata una lista di recensioni &
+    Non implementato.
+    \\ \hline
+    
+
+    TSR3F10.1 &
+    Si verifica che l'utente generico abbia la possiblità di visualizzare una lista di recensioni,
+    ordinate dal meno recente.  &
+    Non implementato.
+    \\ \hline
+
+    TSR3F10.2 &
+    Si verifica che l'utente generico abbia la possiblità di visualizzare una lista di recensioni,
+    ordinate dal più recente.  &
+    Non implementato.
+    \\ \hline
+
+    TSR1F11 &
+    Si verifica che l'utente generico abbia la possiblità di visualizzare una singola recensione  &
+    Non implementato.
+    \\ \hline
+    
+    TSR1F11.1 &
+    Si verifica che l'utente generico abbia la possiblità di visualizzare l'autore di una recensione  &
+    Non implementato.
+    \\ \hline
+    
+    TSR1F11.2 &
+    Si verifica che l'utente generico abbia la possiblità di visualizzare il destinatario di una recensione  &
+    Non implementato.
+    \\ \hline
+
+    TSR1F11.3 &
+    Si verifica che l'utente generico abbia la possiblità di visualizzare il titolo di una recensione  &
+    Non implementato.
+    \\ \hline
+
+    TSR1F11.4 &
+    Si verifica che l'utente generico abbia la possiblità di visualizzare la data di una recensione  &
+    Non implementato.
+    \\ \hline
+
+    TSR1F11.5 &
+    Si verifica che l'utente generico abbia la possiblità di visualizzare il voto di una recensione  &
+    Non implementato.
+    \\ \hline
+
+    TSR1F11.6 &
+    Si verifica che l'utente generico abbia la possiblità di visualizzare il testo di una recensione  &
+    Non implementato.
+    \\ \hline
+
+    TSR1F12 &
+    Si verifica che l'utente autenticato abbia la possiblità di visualizzare le recensioni rilasciate  &
+    Non implementato.
+    \\ \hline
+
+    TSR1F13 &
+    Si verifica che l'utente autenticato abbia la possiblità di visualizzare le recensioni ricevute  &
+    Non implementato.
+    \\ \hline
+
+    TSR1F14 &
+    Si verifica che venga notificato un errore nella visualizzazione delle recensioni  &
+    Non implementato.
+    \\ \hline
+
+    TSR1F15 &
+    Si verifica che il server API REST fornisca all'utente la possibilità di visualizzare le recensioni a lui riferite &
+    Non implementato.
+    \\ \hline
+
+    TSR1F16 &
+    Si verifica che il server API REST notifichi un errore all'utente in caso di assenza di recensioni a lui collegate &
+    Non implementato.
+    \\ \hline
+
+
+    TSR3F17 &
+    Si verifica che l'utente abbia la possibilità visualizzare la lista di tutti i pagamenti
+    effettuati &
+    Non implementato.
+    \\ \hline
+
+    TSR3F17.1 &
+    Si verifica che l'utente abbia la possibilità visualizzare la lista di tutti i pagamenti
+    effettuati, ordinandoli dal meno recente. &
+    Non implementato.
+    \\ \hline
+
+    TSR3F17.2 &
+    Si verifica che l'utente abbia la possibilità visualizzare la lista di tutti i pagamenti
+    effettuati, ordinandoli dal più recente. &
+    Non implementato.
+    \\ \hline
+
+    TSR3F17.3 &
+    Si verifica che l'utente abbia la possibilità visualizzare la lista di tutti i pagamenti
+    effettuati, ordinandoli per importo più economico. &
+    Non implementato.
+    \\ \hline
+    
+    TSR3F17.4 &
+    Si verifica che l'utente abbia la possibilità visualizzare la lista di tutti i pagamenti
+    effettuati, ordinandoli per importo meno economico. &
+    Non implementato.
+    \\ \hline
+
+    TSR3F18 &
+    Si verifica che l'utente autenticato possa visualizzare una singola transazione &
+    Non implementato.
+    \\ \hline
+
+    TSR3F18.1 &
+    Si verifica che l'utente autenticato possa visualizzare l'ID di una singola transazione &
+    Non implementato.
+    \\ \hline
+
+
+    TSR3F18.2 &
+    Si verifica che l'utente autenticato possa visualizzare la data di una singola transazione &
+    Non implementato.
+    \\ \hline
+
+    TSR3F18.3 &
+    Si verifica che l'utente autenticato possa visualizzare l'importo di una singola transazione &
+    Non implementato.
+    \\ \hline
+
+    TSR3F18.4 &
+    Si verifica che l'utente autenticato possa visualizzare il l'utente pagante di una transazione &
+    Non implementato.
+    \\ \hline
+
+    TSR3F18.5 &
+    Si verifica che l'utente autenticato possa visualizzare il destinatario di una transazione &
+    Non implementato.
+    \\ \hline
+
+    TSR3F19 &
+    Si verifica che l'utente autenticato sia avvisato in caso di errore di visualizzazione dei pagamenti &
+    Non implementato.
+    \\ \hline
+
+
+    \rowcolor{white}
+    \caption{Test di sistema}
+\end{xltabular}
+
+\subsection{Tracciamento dei requisiti}
+
+\renewcommand{\arraystretch}{1.8}
+\begin{xltabular}{\textwidth} {
+        >{\hsize=1\hsize\linewidth=\hsize}X
+        >{\hsize=1\hsize\linewidth=\hsize}X
+    }
+    \rowcolorhead
+    \textbf{\color{white}Codice test} &
+    \textbf{\color{white}Codice requisito}\\
+    \hline
+    \endfirsthead
+
+    \hline
+    \rowcolorhead
+    \textbf{\color{white}Codice test} &
+    \textbf{\color{white}Codice requisito} \\
+    \hline
+    \endhead
+
+    \endfoot
+
+    \endlastfoot
+
+    TSR1F1 &
+    R1F1
+    \\ \hline
+    
+    TSR1F1.1 &
+    R1F1.1
+    \\ \hline
+
+    TSR1F1.2 &
+    R1F1.2
+    \\ \hline
+
+    TSR1F2 &
+    R1F2
+    \\ \hline
+
+    TSR1F2.1&
+    R1F2.1
+    \\ \hline
+
+    TSR1F3&
+    R1F3
+    \\ \hline
+    
+    TSR1F3.1&
+    R1F3.1
+    \\ \hline
+    
+    TSR1F3.2&
+    R1F3.2
+    \\ \hline
+    
+    TSR1F4&
+    R1F4
+    \\ \hline
+
+    TSR1F5&
+    R1F5
+    \\ \hline
+
+    TSR1F5.1&
+    R1F5.1
+    \\ \hline
+    
+    TSR1F5.2&
+    R1F5.2
+    \\ \hline
+
+    TSR1F5.3&
+    R1F5.3
+    \\ \hline
+    
+    TSR1F5.3.1&
+    R1F5.3.1
+    \\ \hline
+
+    TSR1F5.3.2&
+    R1F5.3.2
+    \\ \hline
+
+    TSR1F5.3.3&
+    R1F5.3.3
+    \\ \hline
+
+    TSR1F6&
+    R1F
+    \\ \hline
+
+    TSR1F6.1&
+    R1F6.1
+    \\ \hline
+    
+    TSR1F6.1.1&
+    R1F6.1.1
+    \\ \hline
+    
+    TSR1F6.1.2&
+    R1F6.1.2
+    \\ \hline
+
+    TSR3F6.2&
+    R3F6.2
+    \\ \hline
+    
+    TSR3F6.3&
+    R3F6.3
+    \\ \hline
+
+    TSR3F6.4&
+    R3F6.4
+    \\ \hline
+
+    TSR1F7&
+    R1F7
+    \\ \hline
+
+    TSR1F8&
+    R1F8
+    \\ \hline
+    
+    TSR1F9&
+    R1F9
+    \\ \hline
+
+    TSR1F9.1&
+    R1F9.1
+    \\ \hline
+    
+    TSR3F9.2&
+    R3F9.2
+    \\ \hline
+    
+    TSR3F9.3&
+    R3F9.3
+    \\ \hline
+
+    TSR3F9.4&
+    R3F9.4
+    \\ \hline
+
+    TSR1F10&
+    R1F10
+    \\ \hline
+    
+
+    TSR3F10.1 &
+    R3F10.1
+    \\ \hline
+
+    TSR3F10.2 &
+    R3F10.2
+    \\ \hline
+
+    TSR1F11 &
+    R1F11
+    \\ \hline
+    
+    TSR1F11.1 &
+    R1F11.1
+    \\ \hline
+    
+    TSR1F11.2 &
+    R1F11.2
+    \\ \hline
+
+    TSR1F11.3 &
+    R1F11.3
+    \\ \hline
+
+    TSR1F11.4 &
+    R1F11.4
+    \\ \hline
+
+    TSR1F11.5 &
+    R1F11.5
+    \\ \hline
+
+    TSR1F11.6 &
+    R1F11.6
+    \\ \hline
+
+    TSR1F12 &
+    R1F12
+    \\ \hline
+
+    TSR1F13 &
+    R1F13
+    \\ \hline
+
+    TSR1F14 &
+    R1F14
+    \\ \hline
+
+    TSR1F15 &
+    R1F15
+    \\ \hline
+
+    TSR1F16 &
+    R1F16
+    \\ \hline
+
+
+    TSR3F17 &
+    R3F17
+    \\ \hline
+
+    TSR3F17.1 &
+    R3F17.1
+    \\ \hline
+
+    TSR3F17.2 &
+    R3F17.2
+    \\ \hline
+
+    TSR3F17.3 &
+    R3F17.3
+    \\ \hline
+    
+    TSR3F17.4 &
+    R3F17.4
+    \\ \hline
+
+    TSR3F18 &
+    R3F18
+    \\ \hline
+
+    TSR3F18.1 &
+    R3F18.1
+    \\ \hline
+
+
+    TSR3F18.2 &
+    R3F18.2
+    \\ \hline
+
+    TSR3F18.3 &
+    R3F18.3
+    \\ \hline
+
+    TSR3F18.4 &
+    R3F18.4
+    \\ \hline
+
+    TSR3F18.5 &
+    R3F18.5
+    \\ \hline
+
+    TSR3F19 &
+    R3F19
+    \\ \hline
+
+    \rowcolor{white}
+    \caption{Test di sistema con tracciamento dei requisiti}
+\end{xltabular}
+
+
+
