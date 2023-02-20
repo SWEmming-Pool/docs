@@ -112,6 +112,41 @@ Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzi
 Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.\
 Vengono considerate solo le righe che contengono istruzioni eseguibili.
 
+\subsubsection{Obbiettivi qualità di prodotto}
+
+\rowcolors{2}{pari_alt}{dispari_alt}
+        \renewcommand{\arraystretch}{1.8}
+
+        \begin{table}[H]
+            \centering
+            \begin{tabularx}{\textwidth} {
+                >{\hsize=1\hsize\linewidth=\hsize}X
+                >{\hsize=1.5\hsize\linewidth=\hsize}X
+                >{\hsize=0.5\hsize\linewidth=\hsize}X
+                }
+                \rowcolorhead
+                \textbf{\color{white}Obbiettivo} &
+                \textbf{\color{white}Descrizione} &
+                \textbf{\color{white}Metriche} \\
+                \hline
+                \hline
+    \rowcolor{cyan}
+    \multicolumn{3}{c}{\textbf{Monitoraggio documentazione}}\\
+    \hline
+    \textbf{Leggibilità documenti} & I documenti devono essere comprensibili agli utenti.& MPD01\\
+    \textbf{Correttezza linguistica} & Tutti gli errori grammaticali devono essere corretti. & MPD02 \\
+    \hline
+    \rowcolor{cyan}
+    \multicolumn{3}{c}{\textbf{Monitoraggio software}}\\
+    \hline
+    \textbf{Funzionalità} & Capacità del prodotto di offrire tutte le funzioni individuate nell'\textit{Analisi dei Requisiti}, perseguendo accuratezza e adeguatezza.& MPD03 MPD04 MPD05\\
+    \textbf{Usabilità} & Capacità di essere comprensibile in modo da rendere piacevole l'esperienza dell'utente. Le funzionalità devono essere compatibili con le aspettative. & MPD06 \\
+    \textbf{Portabilità} & Capacità di poter funzionare in diversi ambienti di esecuzione. Gli obiettivi da perseguire sono adattabilità e sostituibilità.                       & MPD07\\
+    \textbf{Copertura test} & Il codice prodotto dovrà essere verificato nella sua interezza al fine di garantire la corretta implementazione dei requisiti individuati. & MPD08 MPD09 MPD10 MPD11 MPD12 MPD13 MPD14 MPD15 \\
+    \end{tabularx}
+    \caption{Obbiettivi qualità di prodotto}
+    \end{table}
+
 \subsection{La qualità di processo}
 La presente sezione espone le metriche selezionate dal gruppo \groupName{} per misurare il raggiungimento degli obiettivi di qualità del processo.
 \textbf{Parametri per comprendere le metriche scelte:}
@@ -185,3 +220,41 @@ La formula adottata è la seguente:
 
 \subsubsection{MPC11: Risks Found}\label{sssec:risks_found}
 Indica il numero di rischi incontrati in un determinato periodo.
+\subsubsection{Obbiettivi qualità di processo}
+\rowcolors{2}{pari_alt}{dispari_alt}
+        \renewcommand{\arraystretch}{1.8}
+
+        \begin{table}[H]
+            \centering
+            \begin{tabularx}{\textwidth} {
+                >{\hsize=1\hsize\linewidth=\hsize}X
+                >{\hsize=1.5\hsize\linewidth=\hsize}X
+                >{\hsize=0.5\hsize\linewidth=\hsize}X
+                }
+                \rowcolorhead
+                \textbf{\color{white}Obbiettivo} &
+                \textbf{\color{white}Descrizione} &
+                \textbf{\color{white}Metriche} \\
+                \hline
+                \rowcolor{cyan}
+                \multicolumn{3}{c}{\textbf{Processi primari}}\\
+                \hline
+                \textbf{Fornitura} & Processo che consiste nel decidere procedure e risorse adatte a soddisfare le necessità del cliente.  & MPC01 MPC02 MPC03 MPC04 MPC05 MPC06 MPC07\\
+                \hline
+                \textbf{Sviluppo} & Processo che ha lo scopo di sviluppare un prodotto software che indirizzi le esigenze del cliente. & MPC08 \\
+                \hline
+                \rowcolor{cyan}
+                \multicolumn{3}{c}{\textbf{Processi di supporto}}\\
+                \hline
+                \textbf{Verifica} & Processo che ha lo scopo di confermare che ciascun servizio realizzato soddisfi i requisiti specificati. & MPC09\\
+                \hline
+                \textbf{Gestione della qualità} & Processo che ha lo scopo di assicurare che il prodotto e i servizi offerti siano conformi agli standard definiti. & MPC10\\
+                \hline
+                \rowcolor{cyan}
+                \multicolumn{3}{c}{\textbf{Processi organizzativi}}\\
+                \hline
+                \textbf{Gestione organizzativa} & Processo che si occupa di esporre le modalità di coordinamento del gruppo. & MPC11\\
+                \hline
+            \end{tabularx}
+            \caption{Obbiettivi qualità di processo}
+        \end{table}
