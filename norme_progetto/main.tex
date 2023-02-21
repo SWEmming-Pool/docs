@@ -1,5 +1,6 @@
 \input{../componenti_comuni/src/commands}
 \input{../componenti_comuni/src/packages}
+\input{../componenti_comuni/src/style}
 
 \begin{document}
 % Ridefinizione comandi variabili
@@ -17,7 +18,7 @@
 \renewcommand{\documentSummary}{Questo documento descrive gli strumenti, le regole e le convenzioni che il gruppo deve rispettare durante lo svolgimento del progetto.}
 
 \renewcommand{\docWowVersion}{v0.0.1}
-
+\pagestyle{empty}
 % Prima pagina
 % =========================================================================
 \input{src/firstpage}
@@ -37,6 +38,7 @@
 \renewcommand{\contentsname}{Contenuti}
 \tableofcontents
 \pagebreak
+\pagestyle{stylePage}
 % =========================================================================
 
 % Contenuto
@@ -48,5 +50,5 @@
 \input{src/standard}
 \input{src/metriche_qualità}
 % =========================================================================
-
+\label{LastPage}
 \end{document}
