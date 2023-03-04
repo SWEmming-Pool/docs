@@ -1,6 +1,6 @@
 \input{../componenti_comuni/src/packages}
 \input{../componenti_comuni/src/commands}
-
+\input{../componenti_comuni/src/style}
 \usepackage[utf8]{inputenc}
 \usepackage{glossaries}
 
@@ -12,9 +12,9 @@
 \renewcommand{\documentName}{Glossario}
 \renewcommand{\documentDate}{yyyy-mm-dd}
 
-\renewcommand{\documentApprovers}{Nome Cognome \smallskip}
-\renewcommand{\documentEditors}{Nome Cognome \\ & Nome Cognome \smallskip}
-\renewcommand{\documentVerifiers}{Nome Cognome \\ & Nome Cognome \smallskip}
+\renewcommand{\documentApprovers}{Fabio Pantaleo\smallskip}
+\renewcommand{\documentEditors}{\groupName \smallskip}
+\renewcommand{\documentVerifiers}{Nicolò Trinca \smallskip}
 \renewcommand{\documentAddressee}{Gruppo \groupName}
 
 \renewcommand{\documentUsage}{Interno/Esterno}
@@ -23,7 +23,7 @@
 \include{firstpage.tex}
 
 \clearpage
-
+\input{changelog.tex}
 \include{entries.tex}
 
 \glsaddall
