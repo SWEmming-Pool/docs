@@ -111,7 +111,7 @@
 
             R1F3 &
             Obbligatorio &
-            L'utente autenticato deve poter eseguire un pagamento tramite \textit{MetaMask}. &
+            L'utente autenticato deve poter eseguire un pagamento di una certa somma, tramite \textit{MetaMask} verso un altro indirizzo wallet . &
             \hyperref[UC05]{UC05} \\
             \hline
 
@@ -135,7 +135,7 @@
 
             R1F5 &
             Obbligatorio &
-            L'utente autenticato ha la possibilità di rilasciare una recensione nel caso abbia acquisti non ancora recensiti. &
+            L'utente autenticato ha la possibilità di rilasciare una recensione nel caso abbia acquisti non ancora recensiti, specificandone titolo, voto e testo. &
             \hyperref[UC07]{UC07} \\
             \hline
 
@@ -265,18 +265,6 @@
             \hyperref[UC13]{UC13} \\
             \hline
 
-            R3F10.1 &
-            Opzionale &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal meno recente.&
-            \hyperref[UC13.2]{UC13.2} \\
-            \hline
-
-            R3F10.2 &
-            Opzionale &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal più recente.&
-            \hyperref[UC13.3]{UC13.3} \\
-            \hline
-
             R1F11 &
             Obbligatorio &
             La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una singola recensione, selezionata dalla lista.&
@@ -355,70 +343,82 @@
             \hyperref[UC19]{UC19} \\
             \hline
 
-            R3F17.1 &   % specializzazione UC19
+            R3F18 &    
             Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal meno recente.&
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare una singola transazione, selezionata dalla lista.&
             \hyperref[UC19.1]{UC19.1} \\
             \hline
 
-            R3F17.2 &   % specializzazione UC19
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal più recente.&
-            \hyperref[UC19.2]{UC19.2} \\
-            \hline
-
-            R3F17.3 &   % specializzazione UC19
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo più economico.&
-            \hyperref[UC19.3]{UC19.3} \\
-            \hline
-
-            R3F17.4 &   % specializzazione UC19
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo meno economico.&
-            \hyperref[UC19.4]{UC19.4} \\
-            \hline
-
-            R3F18 &    % sotto-caso UC19
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare una singola transazione, selezionata dalla lista.&
-            \hyperref[UC19.5]{UC19.5} \\
-            \hline
-
-            R3F18.1 &   % sotto-caso UC19.5
+            R3F18.1 &   
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'ID di una singola transazione.&
-            \hyperref[UC19.5.1]{UC19.5.1} \\
+            \hyperref[UC19.1.1]{UC19.1.1} \\
             \hline
 
-            R3F18.2 &   % sotto-caso UC19.5
+            R3F18.2 &   
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la data di una singola transazione.&
-            \hyperref[UC19.5.2]{UC19.5.2} \\
+            \hyperref[UC19.1.2]{UC19.1.2} \\
             \hline
 
-            R3F18.3 &   % sotto-caso UC19.5
+            R3F18.3 &   
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'importo di una singola transazione.&
-            \hyperref[UC19.5.3]{UC19.5.3} \\
+            \hyperref[UC19.1.3]{UC19.1.3} \\
             \hline
 
-            R3F18.4 &   % sotto-caso UC19.5
+            R3F18.4 &   
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente pagante di una singola transazione.&
-            \hyperref[UC19.5.4]{UC19.5.4} \\
+            \hyperref[UC19.1.4]{UC19.1.4} \\
             \hline
 
-            R3F18.5 &   % sotto-caso UC19.5
+            R3F18.5 &   
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente ricevente di una singola transazione.&
-            \hyperref[UC19.5.5]{UC19.5.5} \\
+            \hyperref[UC19.1.5]{UC19.1.5} \\
             \hline
 
             R3F19 &   
             Opzionale &
             La \textit{web app} notifica all'utente un errore nella visualizzazione dei pagamenti.&
             \hyperref[UC20]{UC20} \\
+            \hline
+
+            R3F20 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal meno recente.&
+            \hyperref[UC21]{UC21} \\
+            \hline
+
+            R3F21 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal più recente.&
+            \hyperref[UC22]{UC22} \\
+            \hline
+
+            R3F22 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal meno recente.&
+            \hyperref[UC23]{UC23} \\
+            \hline
+
+            R3F23 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal più recente.&
+            \hyperref[UC24]{UC24} \\
+            \hline
+
+            R3F24 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo più economico.&
+            \hyperref[UC25]{UC25} \\
+            \hline
+
+            R3F25 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo meno economico.&
+            \hyperref[UC26]{UC26} \\
             \hline
 
             \rowcolor{white}
@@ -463,7 +463,7 @@
 
             R1Q2 &
             Obbligatorio &
-            Copertura di \textit{test}\glo $\geq$ 80\% correlata di report. &
+            \textit{Copertura di test}\glo $\geq$ 80\% correlata di report. &
             Capitolato \\
             \hline
 
@@ -560,7 +560,7 @@
 
             R2V4 &
             Desiderabile &
-            Utilizzo di \textit{Java} e \textit{Spring Boot}\glo per lo sviluppo di \textit{API REST}. &
+            Utilizzo di \textit{Java Spring}\glo per lo sviluppo di \textit{API REST}. &
             Capitolato \\
             \hline
 
@@ -590,29 +590,36 @@
 
             R1V9 &
             Obbligatorio &
-            Assicurare compatibilità \textit{webapp} con \textit{Chrome} e \textit{Firefox}. &
+            Assicurare compatibilità \textit{webapp} con \textit{Chrome $\ge$v100}. &
             R1V8 \\
             \hline
 
             R1V10 &
             Obbligatorio &
-            Utilizzo di un fornitore terzo per \textit{RPC} a nodo. &
-            Capitolato \\
+            Assicurare compatibilità \textit{webapp} con 
+             \textit{Firefox $\ge$v91}. &
+            R1V8 \\
             \hline
 
             R1V11 &
             Obbligatorio &
-            I contenuti delle recensioni sono salvati su una \textit{blockchain} pubblica Ethereum compatibile. &
+            Utilizzo di un fornitore terzo per \textit{RPC} a nodo. &
             Capitolato \\
             \hline
 
             R1V12 &
             Obbligatorio &
-            Sviluppo di un servizio \textit{API} per il reperimento delle recensioni. &
+            I contenuti delle recensioni sono salvati su una \textit{blockchain} pubblica Ethereum compatibile. &
             Capitolato \\
             \hline
 
             R1V13 &
+            Obbligatorio &
+            Sviluppo di un servizio \textit{API} per il reperimento delle recensioni. &
+            Capitolato \\
+            \hline
+
+            R1V14 &
             Obbligatorio &
             Sviluppo di una \textit{web app} per l'interazione con lo \textit{smart contract}. &
             Capitolato \\
