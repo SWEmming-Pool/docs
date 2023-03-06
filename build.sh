@@ -1,57 +1,94 @@
-#!/bin/sh
+#!/bin/bash
+shopt -s expand_aliases
+
+# Aliases
+alias compile='latexmk -pdf -pdflatex="pdflatex -shell-escape" main.tex'
+alias clean='latexmk -C'
+
+if [ -d "documenti_compilati" ]; then
+	rm -rf documenti_compilati
+fi
+mkdir documenti_compilati
 
 echo "Compilazioni documenti"
-if [ -d "out" ]; then
-	rm -rf out
-fi
-mkdir out
+echo "----------------------"
 
 # Candidatura
 # Analisi capitolati
 cd analisi_capitolati/
 echo "Analisi capitolati"
-latexmk -pdf main.tex 1>/dev/null
-mv main.pdf ../out/analisi_capitolati.pdf
-latexmk -c 1>/dev/null
+echo "----------------------"
+compile  
+mv main.pdf ../documenti_compilati/analisi_capitolati.pdf
+clean 
 cd ..
 
 # Dichirazione di impegni
 cd dichiarazione_impegni/
 echo "Dichiarazione impegni"
-latexmk -pdf main.tex 1>/dev/null
-mv main.pdf ../out/dichiarazione_impegni.pdf
-latexmk -c 1>/dev/null
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/dichiarazione_impegni.pdf
+clean 
 cd ..
 
 # Lettera
 cd lettera_candidatura/
 echo "Lettera di candidatura"
-latexmk -pdf main.tex 1>/dev/null
-mv main.pdf ../out/lettera_candidatura.pdf
-latexmk -c 1>/dev/null
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/lettera_candidatura.pdf
+clean  
+cd ..
+
+# Analisi requisiti
+cd analisi_requisiti/
+echo "Analisi requisiti"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/analisi_requisiti.pdf
+clean  
 cd ..
 
 # Glossario
 cd glossario/
 echo "Glossario"
-latexmk -pdf main.tex 2>/dev/null 1>/dev/null
-mv main.pdf ../out/glossario.pdf
-latexmk -c 1>/dev/null
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/glossario.pdf
+clean  
 rm main.gl* main.ist
+cd ..
+
+# Norme di progetto
+cd norme_progetto/
+echo "Norme progetto"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/norme_progetto.pdf
+clean  
 cd ..
 
 # Verbali
 cd verbali/
 echo "Verbali"
-mkdir -p out/
-for D in `find ./* -type d -not -name "out" -not -name "src" -not -name "template_verbale"`
+echo "----------------------"
+mkdir -p verbali/
+dirs=$( \
+	find ./* -type d \
+	-not -name "verbali" \
+	-not -name "src" \
+	-not -name "svg-inkscape" \
+	-not -name "template_verbale" )
+for D in $dirs
 do
 	ver=$(cut -c2- <<< $D)
 	echo $ver
+	echo "----------------------"
 	cd $D
-	latexmk -pdf main.tex 1>/dev/null
-	mv main.pdf ../out/$ver.pdf
-	latexmk -c 1>/dev/null
+	compile 
+	mv main.pdf ../verbali/$ver.pdf
+	clean  
 	cd ..
 done
-mv out/ ../out/verbali
+mv verbali/ ../documenti_compilati/verbali

@@ -1,25 +1,45 @@
 \documentclass[11pt,a4paper]{article}
+% gestisce i margini ma se attivo fa casino con la prima pagina
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage[table]{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage[italian]{babel}
+
+\usepackage{uml}
+
 \usepackage{longtable}
 \usepackage{eurosym}
 \usepackage{svg}
 \usepackage{graphicx}
 \usepackage{import}
 \usepackage{listings}
-\usepackage{xcolor}
+\usepackage{float}
+\usepackage{color, colortbl}
 \usepackage{markdown}
+\usepackage{tabstackengine}
 \usepackage{tabularx}
-\usepackage{caption}
+\usepackage{xltabular}
 \usepackage{booktabs}
 \usepackage{amssymb}
+\usepackage{longtable}
 \usepackage[T1]{fontenc}
 \usepackage{inconsolata}
-\usepackage{color}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{caption}
 
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
+    linkcolor=black,
     urlcolor=blue
 }
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\definecolor{pari_alt}{HTML}{c9fcfc}
+\definecolor{dispari_alt}{HTML}{e3f7f7}
+\definecolor{pari}{HTML}{f2f2f2}
+\definecolor{dispari}{HTML}{e5e5e5}
