@@ -25,7 +25,7 @@ jobs:
 
       - name: Push files
         run : |
-          git config --local user.email "wwemming.bot@pool.org"
+          git config --local user.email "Swwemming.bot@pool.org"
           git config --local user.name "SwemmingBot"
           git add -f documenti_compilati/
           git commit -m "SwemmingBot - PDF compilati"
