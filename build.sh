@@ -32,12 +32,21 @@ mv main.pdf ../documenti_compilati/dichiarazione_impegni.pdf
 clean 
 cd ..
 
-# Lettera
+# Lettera candidatura
 cd lettera_candidatura/
 echo "Lettera di candidatura"
 echo "----------------------"
 compile 
 mv main.pdf ../documenti_compilati/lettera_candidatura.pdf
+clean  
+cd ..
+
+# Lettera rtb
+cd lettera_rtb/
+echo "Lettera presentazione RTB"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/lettera_rtb.pdf
 clean  
 cd ..
 
