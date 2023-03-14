@@ -4,12 +4,12 @@
             L'obiettivo di tale sezione è quello di definire e gestire i processi di progetto secondo lo standard \textbf{ISO/IEC 12207:1995}. \\
             Nello specifico:
             \begin{itemize}
-                \item stabilire il lavoro da svolgere in modo da raggiungere gli obiettivi del progetto;
-                \item stabilire quale modello di sviluppo adottare;
+                \item Stabilire il lavoro da svolgere in modo da raggiungere gli obiettivi del progetto;
+                \item Stabilire quale modello di sviluppo adottare;
                 \item definire scadenze, assegnare i compiti, quantificare i rischi e le risorse necessarie;
-                \item stabilire i criteri di qualità e di verifica;
-                \item definire le modalità e strumenti di comunicazione;
-                \item definire i ruoli di progetto e i relativi compiti.
+                \item Stabilire i criteri di qualità e di verifica;
+                \item Definire le modalità e strumenti di comunicazione;
+                \item Definire i ruoli di progetto e i relativi compiti.
             \end{itemize}
 
         \subsubsection{Attività di gestione}
@@ -89,8 +89,24 @@
 
 
     \subsection{Gestione delle Infrastrutture}
-        \subsubsection{Ticketing}
-        \subsubsection{Gestione dei Rischi}
+        \subsubsection{Ticketing} 
+        Il ticketing è un sistema di gestione delle attività che permette di tenere traccia delle attività svolte e di quelle da svolgere. In questa maniera il responsabile di progetto ha sempre sotto occhio lo stato di avanzamento del progetto. \\
+        Si è scelto di usare lo strumento fornito da \textit{GitHub} per la gestione dei ticket; tramite l'integrazione tra l'\textit{Issue Tracking} e le sue \textit{Project Board}, questo si presenta sotto forma di tabella in cui ciascuna attività si trova necessariamente in uno stato definito tra quelli elencati di seguito:
+        \begin{itemize}
+            \item \textbf{To Do}: attività da svolgere;
+            \item \textbf{In Progress}: attività in corso di svolgimento;
+            \item \textbf{Review}: attività in attesa di revisione;
+            \item \textbf{Done}: attività completata.
+        \end{itemize}
+
+        \subsubsection{Gestione dei Rischi} 
+        Il responsabile di progetto deve tenere traccia dei possibili rischi e delle relative azioni correttive.
+        Le tipologie di rischio posso essere:
+        \begin{itemize}
+            \item \textbf{RT: Rischi Tecnologici}: sono quelli che possono essere associati a una tecnologia o a un processo di sviluppo;
+            \item \textbf{RO: Rischi Organizzativi}: sono quelli che possono essere associati a una mancanza di organizzazione o di pianificazione;
+            \item \textbf{RI: Rischi Interpersonali}: sono quelli che possono essere associati a una mancanza di comunicazione o di collaborazione tra i membri del gruppo;
+        \end{itemize}
         \subsubsection{Strumenti}
             \begin{itemize}
                 \item \textit{Telegram}: per le comunicazione rapide tra i membri del gruppo;
@@ -106,14 +122,27 @@
         \subsubsection{Configurazione degli Strumenti}
             Il gruppo come prima cosa ha creato un canale \textit{Discord} per le comunicazioni.
             Successivamente ha creato un account \textit{Google} per poter usufruire dei vari servizi offerti da \textit{GSuite}, quali \textit{Gmail}, \textit{Google Drive} e \textit{Google Calendar}.
-            Infine è stato creato una organizzazione del gruppo su \textit{GitHub}, nella quale si è deciso di creare tre \textit{repository}:
+            Infine è stato creato una organizzazione del gruppo su \textit{GitHub}, nella quale si è deciso di creare dei \textit{repository} divisi tra pubblici e privati:
+            \begin{itemize}
+                \item Repository pubbliche
                 \begin{itemize}
                     \item \textbf{Documentazione}: per la condivisione della documentazione definitiva;
-                    \item \textbf{docs}: per gestire la documentazione in fase di redazione;
-                    \item \textbf{DA DEFINIRE}: per la condivisione del codice sorgente.
+                    \item \textbf{PoC}: per la condivisione del codice sorgente del \textit{Proof of Concept} definitivo;
                 \end{itemize}
+                \item Repository private
+                \begin{itemize}
+                    \item \textbf{docs}: per gestire la documentazione in fase di redazione;
+                    \item \textbf{poc-smartcontract}: per gestire la codifica della parte legata allo smart contract del PoC;
+                    \item \textbf{poc-frontend}: per gestire la codifica della parte legata al frontend del PoC;
+                    \item \textbf{poc-api}: per gestire la codifica della parte legata all'API del PoC;
+                \end{itemize}
+            \end{itemize}
+            L'indirizzo della repository è \href{https://github.com/SWEmming-Pool}{https://github.com/SWEmming-Pool}.
 
-    \subsection{Miglioramento del Processo}
+        \paragraph{Tipi di file}
+        Le cartelle pubbliche di documentazione contengono solamente \textit{pdf}. Nelle cartelle utilizzate per la redazione sono contenuti anche i vari file \textit{.tex} e le immagini a supporto dei documenti, oltre ai file relativi agli strumenti di sviluppo come ad esempio i \textit{.gitignore} per nascondere i file superflui o configurazione delle \textit{GitHub Action} e gli script di build o per la gestione dei container per uno sviluppo su ambiente isolato e riproducibile. \\
+        Le cartelle contenenti codice sorgente per i prodotti software seguiranno la stessa metodologia applicata per i documenti, in modo da contenere strumenti supporto come script di build e container, oltre ai classici file di configurazione di \textit{GitHub} come \textit{.gitignore} e \textit{GitHub Action}.
+
 
     \subsection{Formazione del Personale}
         Ciascun membro del gruppo è tenuto a provvedere alla propria formazione, eventualmente con l'aiuto degli altri componenti del team, al fine di garantire una qualità di lavoro adeguata.
