@@ -1,0 +1,37 @@
+\input{../componenti_comuni/src/commands}
+\input{../componenti_comuni/src/packages}
+\input{../componenti_comuni/src/style}
+
+\begin{document}
+	\renewcommand{\documentName}{Piano di Progetto}
+	\renewcommand{\documentSummary}{Il piano di progetto definisce la pianificazione delle attività del gruppo SWEmming Pool per la realizzazione del progetto Trustify}
+	\renewcommand{\documentVersion}{v0.2.4}
+	\renewcommand{\documentApprovers}{Ennio Italiano}
+	\renewcommand{\documentVerifiers}{Elia Pasquali, Nicolò Trinca}
+	\renewcommand{\documentEditors}{Fabio Pantaleo}
+	\renewcommand{\documentAddressee}{\Vardanega \\ & \Cardin}
+	%Prima pagina
+	\pagestyle{empty}
+	\input{src/firstpage}
+	\pagebreak
+
+	%Changelog
+	\input{src/changelog} \pagebreak
+	
+	%Indici
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+
+	\listoffigures
+	\pagebreak
+
+ 	\listoftables
+	\pagebreak
+	
+	%Contenuto
+	\pagestyle{stylePage}
+	\input{src/contenuto}
+	\label{LastPage}
+	\pagebreak
+\end{document}
