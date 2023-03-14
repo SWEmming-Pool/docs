@@ -135,7 +135,7 @@
 
             R1F5 &
             Obbligatorio &
-            L'utente autenticato ha la possibilità di rilasciare una recensione nel caso abbia acquisti non ancora recensiti, specificandone titolo, voto e testo. &
+            L'utente autenticato ha la possibilità di rilasciare una recensione nel caso abbia acquisti non ancora recensiti. &
             \hyperref[UC07]{UC07} \\
             \hline
 
@@ -150,26 +150,44 @@
             L'utente deve scegliere la trasanzione, effettuata, da associare alla recensione.&
             \hyperref[UC07]{UC07} \\
             \hline
-        
+
             R1F5.3 &
+            Obbligatorio &
+            La recensione deve avere un titolo inserito dall'utente.&
+            \hyperref[UC07.1]{UC07.1} \\
+            \hline
+
+            R1F5.4 &
+            Obbligatorio &
+            La recensione deve avere un voto inserito dall'utente.&
+            \hyperref[UC07.2]{UC07.2} \\
+            \hline
+
+            R1F5.5 &
+            Obbligatorio &
+            La recensione deve avere un testo inserito dall'utente.&
+            \hyperref[UC07.3]{UC07.3} \\
+            \hline
+        
+            R1F5.6 &
             Obbligatorio &
             La \textit{web app} visualizza un errore se l'utente non rispetta la validità del formato di una recensione.&
             \hyperref[UC08]{UC08} \\
             \hline
 
-            R1F5.3.1 &
+            R1F5.6.1 &
             Obbligatorio &
             La recensione deve avere un titolo, non superiore ai 50 caratteri.&
             \hyperref[UC08]{UC08} \\
             \hline
 
-            R1F5.3.2 &
+            R1F5.6.2 &
             Obbligatorio &
             La recensione deve esprimere un voto, compreso tra 1(minimo) e 5 (massimo).&
             \hyperref[UC08]{UC08} \\
             \hline
 
-            R1F5.3.3 &
+            R1F5.6.3 &
             Obbligatorio &
             La recensione deve avere un testo, di al massimo 500 caratteri.&
             \hyperref[UC08]{UC08} \\
@@ -387,38 +405,56 @@
 
             R3F20 &
             Opzionale &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal meno recente.&
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate.&
             \hyperref[UC21]{UC21} \\
             \hline
 
-            R3F21 &
+            R3F20.1 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal meno recente.&
+            \hyperref[UC22]{UC22} \\
+            \hline
+
+            R3F20.2 &
             Opzionale &
             La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal più recente.&
-            \hyperref[UC22]{UC22} \\
+            \hyperref[UC23]{UC23} \\
+            \hline
+
+            R3F21 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati in ordine in base alla data del pagamento.&
+            \hyperref[UC24]{UC24} \\
+            \hline
+
+            R3F21.1 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal meno recente.&
+            \hyperref[UC25]{UC25} \\
+            \hline
+
+            R3F21.2 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal più recente.&
+            \hyperref[UC26]{UC26} \\
             \hline
 
             R3F22 &   
             Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal meno recente.&
-            \hyperref[UC23]{UC23} \\
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati in ordine in base all'importo.&
+            \hyperref[UC27]{UC27} \\
             \hline
 
-            R3F23 &   
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal più recente.&
-            \hyperref[UC24]{UC24} \\
-            \hline
-
-            R3F24 &   
+            R3F22.1 &   
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo più economico.&
-            \hyperref[UC25]{UC25} \\
+            \hyperref[UC28]{UC28} \\
             \hline
 
-            R3F25 &   
+            R3F22.2 &   
             Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo meno economico.&
-            \hyperref[UC26]{UC26} \\
+            \hyperref[UC29]{UC29} \\
             \hline
 
             \rowcolor{white}
@@ -697,8 +733,20 @@
             R1F4, R1F5, R1F5.1, R1F5.2 \\
             \hline
 
+            \hyperref[UC07.1]{UC07.1} &
+            R1F5.3 \\
+            \hline
+
+            \hyperref[UC07.2]{UC07.2} &
+            R1F5.4 \\
+            \hline
+
+            \hyperref[UC07.3]{UC07.3} &
+            R1F5.5 \\
+            \hline
+
             \hyperref[UC08]{UC08} &
-            R1F5.3, R1F5.3.1, R1F5.3.2, R1F5.3.3 \\
+            R1F5.6, R1F5.6.1, R1F5.6.2, R1F5.6.3 \\
             \hline
 
             \hyperref[UC09]{UC09} &
@@ -849,6 +897,42 @@
             R3F19 \\
             \hline
 
+            \hyperref[UC21]{UC21} &
+            R3F20\\
+            \hline
+
+            \hyperref[UC22]{UC22} &
+            R3F20.1 \\
+            \hline
+
+            \hyperref[UC23]{UC23} &
+            R3F20.2 \\
+            \hline
+
+            \hyperref[UC24]{UC24} &
+            R3F21 \\
+            \hline
+
+            \hyperref[UC25]{UC25} &
+            R3F21.1 \\
+            \hline
+
+            \hyperref[UC26]{UC26} &
+            R3F21.2 \\
+            \hline
+
+            \hyperref[UC27]{UC27} &
+            R3F22 \\
+            \hline
+
+            \hyperref[UC28]{UC28} &
+            R3F22.1 \\
+            \hline
+
+            \hyperref[UC29]{UC29} &
+            R3F22.2 \\
+            \hline
+
             \rowcolor{white}
             \caption{Tracciamento fonte-requisiti}
         \end{xltabular}
@@ -874,7 +958,7 @@
                 \textbf{\color{white}Totale} \\
                 \hline
 
-                Funzionale & 39 & - & 21 & 60 \\
+                Funzionale & 41 & - & 22 & 63 \\
                 \hline
 
                 Di qualità & 7 & 2 & - & 9 \\

@@ -254,21 +254,133 @@
                     \textbf{Postcondizioni} & L'utente ha effettuato una recensione sull'acquisto. \\
                     \hline
                     \textbf{Scenario principale} &
-                        \begin{enumerate}
-                            \item L'utente seleziona un pagamento da associare alla recensione;
-                            \item l'utente scrive una recensione, inserendo i seguenti elementi:
-                            \begin{itemize}
-                                \item titolo;
-                                \item voto;
-                                \item testo.
-                            \end{itemize}
-                        \end{enumerate} \\
+                    L'utente seleziona un pagamento da associare alla recensione.\\
                     \hline
                     \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC08]{UC08}. \\
                     \hline
                 \end{tabularx}
                 \caption{UC07}
             \end{table}
+
+            \subsubsection{UC07.1 - Inserimento Titolo Recensione}
+            \label{UC07.1}
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{src/img/UC07.1.png}
+                    \caption{UC07.1}
+                \end{figure}
+
+                \begin{table}[H]
+                    \centering
+                    \rowcolors{1}{pari_alt}{dispari_alt}
+                    \renewcommand{\arraystretch}{1.8}
+                    \renewcommand\tabularxcolumn[1]{m{#1}}
+                    \begin{tabularx}{0.9\textwidth}{
+                        >{\hsize=.8\hsize\linewidth=\hsize}X
+                        >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                        \hline
+                        \textbf{Attore primario} & Utente autenticato \\
+                        \hline
+                        \textbf{Attore secondario} & \textit{Infura}, \textit{MetaMask} \\
+                        \hline
+                        \textbf{Precondizioni} &
+                            \begin{itemize}
+                                \item L'utente è autenticato;
+                                \item l'utente ha effettuato almeno un acquisto;
+                                \item l'utente ha acquisti non recensiti.
+                            \end{itemize} \\
+                        \hline
+                        \textbf{Postcondizioni} & La recensione ha un titolo inserito dall'utente. \\
+                        \hline
+                        \textbf{Scenario principale} &
+                        L'utente ha inserito un titolo per la recensione. \\
+                        \hline
+                        \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC08]{UC08}. \\
+                        \hline
+                    \end{tabularx}
+                    \caption{UC07.1}
+                \end{table}
+
+            \subsubsection{UC07.2 - Inserimento Voto Recensione}
+            \label{UC07.2}
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{src/img/UC07.2.png}
+                    \caption{UC07.2}
+                \end{figure}
+
+                \begin{table}[H]
+                    \centering
+                    \rowcolors{1}{pari_alt}{dispari_alt}
+                    \renewcommand{\arraystretch}{1.8}
+                    \renewcommand\tabularxcolumn[1]{m{#1}}
+                    \begin{tabularx}{0.9\textwidth}{
+                        >{\hsize=.8\hsize\linewidth=\hsize}X
+                        >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                        \hline
+                        \textbf{Attore primario} & Utente autenticato \\
+                        \hline
+                        \textbf{Attore secondario} & \textit{Infura}, \textit{MetaMask} \\
+                        \hline
+                        \textbf{Precondizioni} &
+                            \begin{itemize}
+                                \item L'utente è autenticato;
+                                \item l'utente ha effettuato almeno un acquisto;
+                                \item l'utente ha acquisti non recensiti.
+                            \end{itemize} \\
+                        \hline
+                        \textbf{Postcondizioni} & La recensione ha un voto inserito dall'utente. \\
+                        \hline
+                        \textbf{Scenario principale} &
+                        L'utente ha inserito un voto per la recensione. \\
+                        \hline
+                        \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC08]{UC08}. \\
+                        \hline
+                    \end{tabularx}
+                    \caption{UC07.2}
+                \end{table}
+
+            \subsubsection{UC07.3 - Inserimento Testo Recensione}
+            \label{UC07.3}
+
+                \begin{figure}[H]
+                    \centering
+                    \includegraphics[scale=0.4]{src/img/UC07.3.png}
+                    \caption{UC07.3}
+                \end{figure}
+
+                \begin{table}[H]
+                    \centering
+                    \rowcolors{1}{pari_alt}{dispari_alt}
+                    \renewcommand{\arraystretch}{1.8}
+                    \renewcommand\tabularxcolumn[1]{m{#1}}
+                    \begin{tabularx}{0.9\textwidth}{
+                        >{\hsize=.8\hsize\linewidth=\hsize}X
+                        >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                        \hline
+                        \textbf{Attore primario} & Utente autenticato \\
+                        \hline
+                        \textbf{Attore secondario} & \textit{Infura}, \textit{MetaMask} \\
+                        \hline
+                        \textbf{Precondizioni} &
+                            \begin{itemize}
+                                \item L'utente è autenticato;
+                                \item l'utente ha effettuato almeno un acquisto;
+                                \item l'utente ha acquisti non recensiti.
+                            \end{itemize} \\
+                        \hline
+                        \textbf{Postcondizioni} & La recensione ha un testo inserito dall'utente. \\
+                        \hline
+                        \textbf{Scenario principale} &
+                        L'utente ha inserito un testo per la recensione. \\
+                        \hline
+                        \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC08]{UC08}. \\
+                        \hline
+                    \end{tabularx}
+                    \caption{UC07.3}
+                \end{table}
 
         \subsubsection{UC08 - Errore Rilascio Recensione}
         \label{UC08}
@@ -1218,7 +1330,7 @@
                 \caption{UC20}
             \end{table}
 
-            \subsubsection{UC21 - Ordinamento Lista Recensioni dal meno recente}
+            \subsubsection{UC21 - Ordinamento Lista Recensioni}
             \label{UC21}
 
             \begin{figure}[H]
@@ -1240,9 +1352,9 @@
                     \hline
                     \textbf{Precondizioni} & L'utente ha effettuato una ricerca delle recensioni, che è andata a buon fine. \\
                     \hline
-                    \textbf{Postcondizioni} & L'utente visualizza la lista di tutte le recensioni, ordinate dal meno recente. \\
+                    \textbf{Postcondizioni} & L'utente visualizza la lista di tutte le recensioni ordinate. \\
                     \hline
-                    \textbf{Scenario principale} & Viene visualizzata la lista delle recensioni in ordine cronologico. \\
+                    \textbf{Scenario principale} & Viene visualizzata la lista delle recensioni in ordine. \\
                     \hline
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
                     \hline
@@ -1250,14 +1362,8 @@
                 \caption{UC21}
             \end{table}
 
-        \subsubsection{UC22 - Ordinamento Lista Recensioni dal più recente}
+        \subsubsection{UC22 - Ordinamento Lista Recensioni dal meno recente}
         \label{UC22}
-
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=0.4]{src/img/UC22.png}
-                \caption{UC22}
-            \end{figure}
 
             \begin{table}[H]
                 \centering
@@ -1282,46 +1388,94 @@
                 \caption{UC22}
             \end{table}
 
-            \subsubsection{UC23 - Visualizzazione Lista Pagamenti ordinati dal meno recente}
-        \label{UC23}
+            \subsubsection{UC23 - Ordinamento Lista Recensioni dal più recente}
+            \label{UC23}
 
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.4]{src/img/UC23.png}
-            \caption{UC22}
-        \end{figure}
+                \begin{table}[H]
+                    \centering
+                    \rowcolors{1}{pari_alt}{dispari_alt}
+                    \renewcommand{\arraystretch}{1.8}
+                    \renewcommand\tabularxcolumn[1]{m{#1}}
+                    \begin{tabularx}{0.9\textwidth} {
+                        >{\hsize=.8\hsize\linewidth=\hsize}X
+                        >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                        \hline
+                        \textbf{Attore primario} & Utente generico \\
+                        \hline
+                        \textbf{Precondizioni} & L'utente ha effettuato una ricerca delle recensioni, che è andata a buon fine. \\
+                        \hline
+                        \textbf{Postcondizioni} & L'utente visualizza la lista di tutte le recensioni, ordinati dal più recente. \\
+                        \hline
+                        \textbf{Scenario principale} & Viene visualizzata la lista delle recensioni, ordinate dal più recente. \\
+                        \hline
+                        \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                        \hline
+                    \end{tabularx}
+                    \caption{UC23}
+                \end{table}
 
-            \begin{table}[H]
+                \subsubsection{UC24 - Visualizzazione Lista Pagamenti ordinati cronologicamente}
+            \label{UC24}
+
+            \begin{figure}[H]
                 \centering
-                \rowcolors{1}{pari_alt}{dispari_alt}
-                \renewcommand{\arraystretch}{1.8}
-                \renewcommand\tabularxcolumn[1]{m{#1}}
-                \begin{tabularx}{0.9\textwidth} {
-                    >{\hsize=.8\hsize\linewidth=\hsize}X
-                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
-                    \hline
-                    \textbf{Attore primario} & Utente autenticato \\
-                    \hline
-                    \textbf{Precondizioni} & L'utente ha effettuato almeno un pagamento. \\
-                    \hline
-                    \textbf{Postcondizioni} & L'utente visualizza la lista di tutti i suoi pagamenti, ordinati dal meno recente. \\
-                    \hline
-                    \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti in ordine cronologico. \\
-                    \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
-                    \hline
-                \end{tabularx}
-                \caption{UC23}
-            \end{table}
+                \includegraphics[scale=0.4]{src/img/UC24.png}
+                \caption{UC24}
+            \end{figure}
 
-        \subsubsection{UC24 - Visualizzazione Lista Pagamenti ordinati dal più recente}
-        \label{UC24}
+                \begin{table}[H]
+                    \centering
+                    \rowcolors{1}{pari_alt}{dispari_alt}
+                    \renewcommand{\arraystretch}{1.8}
+                    \renewcommand\tabularxcolumn[1]{m{#1}}
+                    \begin{tabularx}{0.9\textwidth} {
+                        >{\hsize=.8\hsize\linewidth=\hsize}X
+                        >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                        \hline
+                        \textbf{Attore primario} & Utente autenticato \\
+                        \hline
+                        \textbf{Precondizioni} & L'utente ha effettuato almeno un pagamento. \\
+                        \hline
+                        \textbf{Postcondizioni} & L'utente visualizza la lista di tutti i suoi pagamenti ordinati. \\
+                        \hline
+                        \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti in ordine. \\
+                        \hline
+                        \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                        \hline
+                    \end{tabularx}
+                    \caption{UC24}
+                \end{table}
 
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.4]{src/img/UC24.png}
-            \caption{UC22}
-        \end{figure}
+
+            \subsubsection{UC25 - Visualizzazione Lista Pagamenti ordinati dal meno recente}
+            \label{UC25}
+
+
+                \begin{table}[H]
+                    \centering
+                    \rowcolors{1}{pari_alt}{dispari_alt}
+                    \renewcommand{\arraystretch}{1.8}
+                    \renewcommand\tabularxcolumn[1]{m{#1}}
+                    \begin{tabularx}{0.9\textwidth} {
+                        >{\hsize=.8\hsize\linewidth=\hsize}X
+                        >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                        \hline
+                        \textbf{Attore primario} & Utente autenticato \\
+                        \hline
+                        \textbf{Precondizioni} & L'utente ha effettuato almeno un pagamento. \\
+                        \hline
+                        \textbf{Postcondizioni} & L'utente visualizza la lista di tutti i suoi pagamenti, ordinati dal meno recente. \\
+                        \hline
+                        \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti in ordine cronologico. \\
+                        \hline
+                        \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                        \hline
+                    \end{tabularx}
+                    \caption{UC25}
+                \end{table}
+
+        \subsubsection{UC26 - Visualizzazione Lista Pagamenti ordinati dal più recente}
+        \label{UC26}
 
             \begin{table}[H]
                 \centering
@@ -1343,17 +1497,44 @@
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC24}
+                \caption{UC26}
             \end{table}
 
-        \subsubsection{UC25 - Visualizzazione Lista Pagamenti ordinati per importo più economico}
-        \label{UC25}
+            \subsubsection{UC27 - Visualizzazione Lista Pagamenti ordinati in base all'importo}
+        \label{UC27}
 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.4]{src/img/UC25.png}
-            \caption{UC22}
+            \includegraphics[scale=0.4]{src/img/UC27.png}
+            \caption{UC27}
         \end{figure}
+
+            \begin{table}[H]
+                \centering
+                \rowcolors{1}{pari_alt}{dispari_alt}
+                \renewcommand{\arraystretch}{1.8}
+                \renewcommand\tabularxcolumn[1]{m{#1}}
+                \begin{tabularx}{0.9\textwidth} {
+                    >{\hsize=.8\hsize\linewidth=\hsize}X
+                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente ha effettuato almeno un pagamento. \\
+                    \hline
+                    \textbf{Postcondizioni} & L'utente visualizza la lista di tutti i suoi pagamenti, ordinati per importo più economico. \\
+                    \hline
+                    \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti in ordine. \\
+                    \hline
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \hline
+                \end{tabularx}
+                \caption{UC25}
+            \end{table}
+
+        \subsubsection{UC28 - Visualizzazione Lista Pagamenti ordinati per importo più economico}
+        \label{UC28}
+
 
             \begin{table}[H]
                 \centering
@@ -1375,17 +1556,11 @@
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC25}
+                \caption{UC28}
             \end{table}
 
-        \subsubsection{UC26 - Visualizzazione Lista Pagamenti ordinati per importo meno economico}
-        \label{UC26}
-
-        \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.4]{src/img/UC26.png}
-            \caption{UC22}
-        \end{figure}
+        \subsubsection{UC29 - Visualizzazione Lista Pagamenti ordinati per importo meno economico}
+        \label{UC29}
 
             \begin{table}[H]
                 \centering
@@ -1407,7 +1582,7 @@
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC26}
+                \caption{UC29}
             \end{table}
 
 \pagebreak
