@@ -21,7 +21,7 @@ svg-inkspace/*
 *.ist
 
 # Cartella file compilati
-out/
+documenti_compilati/*
 *.pdf
 *.dvi
 
