@@ -87,6 +87,25 @@ mv main.pdf ../documenti_compilati/norme_progetto.pdf
 clean  
 cd ..
 
+# Piano di progetto
+cd piano_progetto/
+echo "Piano progetto"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/piano_progetto.pdf
+clean  
+cd ..
+
+
+# Piano di qualifica
+cd piano_qualifica/
+echo "Piano qualifica"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/piano_qualifica.pdf
+clean  
+cd ..
+
 # Verbali
 cd verbali/
 echo "Verbali"
