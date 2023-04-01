@@ -55,7 +55,7 @@ Lo scopo del processo di fornitura è quello analizzare e definire le operazioni
 
 \paragraph{Sviluppo PoC}: fase in cui viene sviluppata una demo eseguibile che permetta di verificare la fattibilità del progetto, stabilendone inoltre, le tecnologie da utilizzare per la realizzazione del prodotto finale. \newline
 Si può collocare tra la fase di analisi dei requisiti e quella di progettazione logica, oppure all'interno di quest'ultima, il gruppo ha deciso di seguire la seconda opzione (DUBBIO). \newline % dubbio: intrecci temporali
-Per lo sviluppo del PoC si deve aver completata l'attività di \textit{analisi dei requisiti}, in quanto necessario per definire l'architettura logica del prodotto finale e per stabilire quali tecnologie utilizzare. \newline
+Per lo sviluppo del PoC si deve aver completata l'attività di \textit{Analisi dei Requisiti}, in quanto necessario per definire l'architettura logica del prodotto finale e per stabilire quali tecnologie utilizzare. \newline
 Si sono dunque pianificate ed seguite le seguenti attività:
 \begin{itemize}
     \item \textit{progettazione logica}: si è proceduto con la definizione dell'architettura logica del sistema e le sue componenti (ELENCARE TALI COMPONENTI?);
@@ -64,7 +64,17 @@ Si sono dunque pianificate ed seguite le seguenti attività:
     \item \textit{codifica}: implementazione delle tecnologie, codificando le funzionalità base e principali per l'interazione tra i componenti precedentemente definiti.
 \end{itemize}
 
-\paragraph{Progettazione}
+\paragraph{Progettazione:} questa fase prevede la realizzazione della specifica architetturale del prodotto finale, la quale dovrà essere documentata in un documento denominato \textit{Specifica Tecnica}, che comprende:
+\begin{itemize}
+    \item \textbf{L'\textit{architettura logica}}\glo: la struttura logica del sistema, ovvero la suddivisione in componenti e la loro interazione; (DA DEFINIRE NEL GLOSSARIO)
+    \item l'\textit{architettura di deployment}\glo: la locazione dei componenti nel sistema di esecuzione; (DA DEFINIRE NEL GLOSSARIO)
+    \item i \textit{design pattern}\glo utilizzati e determinati dalle tecnologie adottate; (DA DEFINIRE NEL GLOSSARIO)
+    \item gli \textit{idiomi}\glo: pattern di più basso livello eventualemente impiegati. (DA DEFINIRE NEL GLOSSARIO)
+\end{itemize}
+Per identificare al meglio le componenti si è pensato di analizzare il flusso di esecuzione del sistema dal punto di vista dell'utente utilizzatore, per attribuire ad ogni interazione dell'utente un corrispetiva azione da parte del sistema. \newline
+Così facendo si sono potute definire le classi principali del sistema: raggrupando le funzionalità (metodi) e attributi (variabili di stato) in base al loro scopo e alla loro utilità, rispettando inoltre i requisiti presenti nel documento \textit{Analisi dei Requisiti}. \newline
+Per raffinare ulteriormente la progettazione e perseguire lo stato dell'arte si è proceduto con la definizione delle classi di supporto, ovvero quelle che non sono direttamente utilizzate dall'utente, ma che sono necessarie per il corretto funzionamento del sistema, individuate dallo studio e applicazione di eventuali \textit{design pattern}. \newline
+Una volta raggiunta l'architettura definitiva del sistema si è proceduto con la definizione della suite di test necessari da implementare per garantire la qualità del prodotto finale e misurare il raggiungimento degli obiettivi definiti dai requisiti. 
 
 \paragraph{Codifica}
 
