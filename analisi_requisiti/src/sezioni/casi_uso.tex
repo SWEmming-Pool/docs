@@ -90,69 +90,6 @@
                     \caption{UC02}
                 \end{table}
 
-        \subsubsection{UC03 - Logout}
-        \label{UC03}
-
-            \begin{figure}[H]
-                \centering
-                \includegraphics[scale=0.6]{src/img/UC03.png}
-                \caption{UC03}
-            \end{figure}
-
-            \begin{table}[H]
-                \centering
-                \rowcolors{1}{pari_alt}{dispari_alt}
-                \renewcommand{\arraystretch}{1.8}
-                \renewcommand\tabularxcolumn[1]{m{#1}}
-                \begin{tabularx}{0.9\textwidth} {
-                    >{\hsize=.8\hsize\linewidth=\hsize}X
-                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
-                    \hline
-                    \textbf{Attore primario} & Utente autenticato \\
-                    \hline
-                    \textbf{Precondizioni} & L'utente è autenticato. \\
-                    \hline
-                    \textbf{Postcondizioni} & L'utente non è più autenticato. \\
-                    \hline
-                    \textbf{Scenario principale} & L'utente effettua il logout. \\
-                    \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC04]{UC04}. \\
-                \end{tabularx}
-                \caption{UC03}
-            \end{table}
-
-            \subsubsection{UC04 - Errore Logout}
-            \label{UC04}
-    
-                \begin{table}[H]
-                    \centering
-                    \rowcolors{1}{pari_alt}{dispari_alt}
-                    \renewcommand{\arraystretch}{1.8}
-                    \renewcommand\tabularxcolumn[1]{m{#1}}
-                    \begin{tabularx}{0.9\textwidth} {
-                        >{\hsize=.8\hsize\linewidth=\hsize}X
-                        >{\hsize=1.2\hsize\linewidth=\hsize}X}
-                        \hline
-                        \textbf{Attore primario} & Utente autenticato \\
-                        \hline
-                        \textbf{Attore secondario} & \textit{MetaMask} \\
-                        \hline
-                        \textbf{Precondizioni} & L'utente sta tentando di effettuare il logout. \\
-                        \hline
-                        \textbf{Postcondizioni} & L'operazione fallisce. \\
-                        \hline
-                        \textbf{Scenario principale} &
-                            \begin{enumerate}
-                                \item Si verificano problemi con il logout da \textit{MetaMask};
-                                \item Viene mostrato un errore che informa l'utente del fallimento dell'operazione;
-                                \item Vengono mostrati dei consigli sulla risoluzione del problema e si invita
-                                l'utente a riprovare.
-                            \end{enumerate} \\
-                        \hline
-                    \end{tabularx}
-                    \caption{UC04}
-                \end{table}
-
             \subsubsection{UC05 - Transazione}
             \label{UC05}
     
