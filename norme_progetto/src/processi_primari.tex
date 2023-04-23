@@ -24,7 +24,7 @@ Lo scopo del processo di fornitura è quello analizzare e definire le operazioni
             \end{itemize}
 \end{itemize}
 \subsection{Sviluppo}
-\subsubsection{Scopo} Questo processo contiene tutte le azioni e attività finalizzate ad analisi dei requisiti, design, codifica, test e installazione dei prodotti software\glo \:.
+\subsubsection{Scopo} Questo processo contiene tutte le azioni e attività finalizzate ad analisi dei requisiti, design, codifica e test.
 \subsubsection{Attività}
 
 \paragraph{Analisi dei requisiti}: viene effettuata la stesura dell'\textit{Analisi dei Requisiti}, che comprende elenco e analisi dei requisiti funzionali, non funzionali e di qualità. Questo documento si prefigge l'obiettivo di descrivere in modo chiaro e preciso tutte le caratteristiche richieste esplicitamente o implicitamente dal committente.
@@ -53,31 +53,48 @@ Lo scopo del processo di fornitura è quello analizzare e definire le operazioni
         \end {itemize}
     \end{itemize}
 
-\paragraph{Sviluppo PoC}: fase in cui viene sviluppata una demo eseguibile che permetta di verificare la fattibilità del progetto, stabilendone inoltre, le tecnologie da utilizzare per la realizzazione del prodotto finale. \newline
-Si può collocare tra la fase di analisi dei requisiti e quella di progettazione logica, oppure all'interno di quest'ultima, il gruppo ha deciso di seguire la seconda opzione (DUBBIO). \newline % dubbio: intrecci temporali
-Per lo sviluppo del PoC si deve aver completata l'attività di \textit{Analisi dei Requisiti}, in quanto necessario per definire l'architettura logica del prodotto finale e per stabilire quali tecnologie utilizzare. \newline
-Si sono dunque pianificate ed seguite le seguenti attività:
+    Alla versione \textit{v1.0.2} del documento \textit{Analisi dei Requisiti} la struttura è la seguente:
+    \begin{itemize}
+        \item \textbf{Introduzione}: contiene una breve descrizione del documento e del prodotto software;
+        \item \textbf{Descrizione generale}: contiene una dezcrizione degli obiettivi del prodotto software;
+        \item \textbf{Casi d'uso}: contiene l'elenco dei vari casi d'uso con i relativi diagrammi e descrizioni;
+        \item \textbf{Requisiti}: contiene l'elenco dei requisiti con le relative descrizioni e tracciamento con i casi d'uso;
+    \end{itemize}
+
+\paragraph{Progettazione:} questa fase prevede la realizzazione della specifica architetturale del prodotto finale, partendo dai requisiti definiti e individuando le diverse parti corrispettive, che dovranno essere poi raggrupate fino ad arrivare ad ottenere un unico sistema. \newline
+Inoltre, in parallelo allo sviluppo dell'architettura, si procede alla definizione dei test di unità, di integrazione e di sistema. \newline
+Tale fase dovrà essere documentata in un documento denominato \textit{Specifica Tecnica}.
+
 \begin{itemize}
-    \item \textit{progettazione logica}: si è proceduto con la definizione dell'architettura logica del sistema e le sue componenti (ELENCARE TALI COMPONENTI?);
-    \item \textit{scelta delle tecnologie}: avvenuta in base ai requisiti, caratteristiche richieste per il prodotto finale e agli incontri con l'azienda proponente \companyName;
-    \item \textit{studio delle tecnologie}: avvenuto tramite la lettura di documentazione e ricerca su internet, autonomamente effettuata dai singoli membri del gruppo;
-    \item \textit{codifica}: implementazione delle tecnologie, codificando le funzionalità base e principali per l'interazione tra i componenti precedentemente definiti.
+    \item \textbf{Requirements and Technology Baseline}: fase in cui viene studiato il problema per individuare i requisiti opportuni per il suo soddisfacimento e le tecnologie da utilizzare per la realizzazione del prodotto finale. \newline
+    Si conclude con lo sviluppo di un Proof of Concept (PoC) che permetta di verificare la fattibilità del progetto;
+    \item \textbf{Product Baseline}: fase in cui viene definita l'architettura del prodotto finale, infine viene effettuata la codifica, seguita dalla fase di testing.
 \end{itemize}
 
-\paragraph{Progettazione:} questa fase prevede la realizzazione della specifica architetturale del prodotto finale, la quale dovrà essere documentata in un documento denominato \textit{Specifica Tecnica}, che comprende:
+\paragraph{Codifica:} fase in cui si procede con la codifica del prodotto finale, concretizzando così i risultati delle fasi precedenti.
 \begin{itemize}
-    \item \textbf{L'\textit{architettura logica}}\glo: la struttura logica del sistema, ovvero la suddivisione in componenti e la loro interazione; (DA DEFINIRE NEL GLOSSARIO)
-    \item l'\textit{architettura di deployment}\glo: la locazione dei componenti nel sistema di esecuzione; (DA DEFINIRE NEL GLOSSARIO)
-    \item i \textit{design pattern}\glo utilizzati e determinati dalle tecnologie adottate; (DA DEFINIRE NEL GLOSSARIO)
-    \item gli \textit{idiomi}\glo: pattern di più basso livello eventualemente impiegati. (DA DEFINIRE NEL GLOSSARIO)
+    \item \textbf{Norme di codifica}: il codice sorgente deve rispettare gli obiettivi di qualità stabiliti nel \textit{Piano di Qualifica v.1.0.0}. \newline
+    Inoltre deve essere scritto in modo chiaro e leggibile, seguendo le seguenti norme:
+    \begin{itemize}
+        \item \textbf{Norme di stile} [DA COMPLETARE]
+        \item \textbf{Convenzioni sulla nomenclatura} [DA COMPLETARE]
+    \end{itemize}
+    \item \textbf{Metriche di codifica}: le metriche di codifica sono utilizzate per valutare la qualità del codice sorgente. [DA ELENCARE ?]
+    \item Gli \textbf{Strumenti} impiegati per la codifica e di supporto sono:
+    \begin{itemize}
+        \item \textbf{Visual Studio Code}: l'IDE utilizzato per la stesura del codice per la web app e dello smart contract;
+        \item \textbf{IntelliJ IDEA}: l'IDE utilizzato per la stesura del codice per l'API REST; [DUBBIO]
+        \item \textbf{Angular}: framework utilizzato per la realizzazione della web app;
+        \item \textbf{Solidity}: linguaggio utilizzato per la realizzazione dello smart contract;
+        \item \textbf{Spring Boot}: framework utilizzato per la realizzazione dell'API REST;
+        \item \textbf{Node.js}: runtime environment utilizzato per l'esecuzione di codice JavaScript;
+        \item \textbf{Metamask}: wallet utilizzato per la gestione delle transazioni;
+        \item \textbf{Truffle}: framework utilizzato per la gestione dello smart contract; [DUBBIO]
+    \end{itemize}
 \end{itemize}
-Per identificare al meglio le componenti si è pensato di analizzare il flusso di esecuzione del sistema dal punto di vista dell'utente utilizzatore, per attribuire ad ogni interazione dell'utente un corrispetiva azione da parte del sistema. \newline
-Così facendo si sono potute definire le classi principali del sistema: raggrupando le funzionalità (metodi) e attributi (variabili di stato) in base al loro scopo e alla loro utilità, rispettando inoltre i requisiti presenti nel documento \textit{Analisi dei Requisiti}. \newline
-Per raffinare ulteriormente la progettazione e perseguire lo stato dell'arte si è proceduto con la definizione delle classi di supporto, ovvero quelle che non sono direttamente utilizzate dall'utente, ma che sono necessarie per il corretto funzionamento del sistema, individuate sia dalle tecnologie utilizzate, imponendo delle scelte architetturali che dallo studio e applicazione di eventuali \textit{design pattern}. \newline
-Una volta raggiunta l'architettura definitiva del sistema si è proceduto con la definizione della suite di test necessari da implementare per garantire la qualità del prodotto finale e misurare il raggiungimento degli obiettivi definiti dai requisiti. 
 
-\paragraph{Codifica}
+\paragraph{Test:} fase in cui si procede con la verifica della qualità del prodotto finale, attraverso l'esecuzione di test di sistema, ideati e implementati nelle fasi precedenti. \newline
+I test di sistema sono stati descritti nel documento \textit{Piano di Qualifica v.1.0.0}, sono tracciati con i relativi requisiti e indicato il loro stato di implementazione. \newline
+Il loro scopo è quello di determinare se il prodotto soddisfa i requisiti richiesti e se rispetta le norme di qualità stabilite.
 
-\paragraph{Test}
-
-
+% DESCRIVERE I TEST DI UNITÀ NELLA FASE DI CODIFICA??
