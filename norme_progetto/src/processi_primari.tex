@@ -53,7 +53,7 @@ Lo scopo del processo di fornitura è quello analizzare e definire le operazioni
         \end {itemize}
     \end{itemize}
 
-    Alla versione \textit{v1.0.3} del documento \textit{Analisi dei Requisiti} la struttura è la seguente:
+    Alla versione \textit{v1.0.2} del documento \textit{Analisi dei Requisiti} la struttura è la seguente:
     \begin{itemize}
         \item \textbf{Introduzione}: contiene una breve descrizione del documento e del prodotto software;
         \item \textbf{Descrizione generale}: contiene una dezcrizione degli obiettivi del prodotto software;
@@ -74,10 +74,9 @@ Si conclude con lo sviluppo di un Proof of Concept (PoC) che permetta di verific
 
 
 \paragraph{Codifica}: fase in cui si procede con la codifica del prodotto finale, concretizzando così i risultati delle fasi precedenti.
-\subparagraph{Norme di codifica}: il codice sorgente deve rispettare gli obiettivi di qualità stabiliti nel \textit{Piano di Qualifica v.1.0.0}. \newline
-Inoltre deve essere scritto in modo chiaro e leggibile, seguendo le seguenti norme:
+\subparagraph{Norme di codifica}: il codice sorgente deve essere scritto in modo chiaro e leggibile, seguendo le seguenti norme:
 \begin{itemize}
-    \item \textbf{Web App}, le cui convenzioni sugli stili di codifica sono imposti dal framework \textit{Angular}:
+    \item \textbf{Web App}, le cui convenzioni di stile sono imposte dal framework \textit{Angular}:
     \begin{itemize}
         \item \textbf{Nomenclatura}
         \begin{itemize}
@@ -94,12 +93,12 @@ Inoltre deve essere scritto in modo chiaro e leggibile, seguendo le seguenti nor
             \item \textbf{Classi}: la nomenclatura delle classi è basata sulle regole di \textit{upper CamelCase} e devono essere coerenti con il nome dell'elemento corrispettivo. \newline
             Ad esempio il componente \textit{component-name} avrà il seguente nome della classe \textit{ComponentName};
             \item \textbf{Metodi}: la nomenclatura dei metodi è basata sulle regole di \textit{upper camelCase};
-            \item \textbf{Variabili}: la nomenclatura delle variabili è basata sulle regole di \textit{lower camelCase};
+            \item \textbf{Variabili e argomenti delle funzione}: la nomenclatura delle variabili e degli argomenti delle funzioni sono basate sulle regole di \textit{lower camelCase};
             \item \textbf{Costanti}: la nomenclatura delle costanti deve essere espressa in maiuscolo e se è composta da piu parole, devono essere separate con \textit{\textunderscore};
             \item \textbf{Commenti}: i commenti dovranno essere inseriti prima dell’inizio di un  costrutto e presentati in
             lingua italiana.
         \end{itemize}
-        \item \textbf{Struttura file}: i file del progetto sono organizzati e suddivisi in cartelle, in base all'elemento a cui appartengono. \newline
+        \item \textbf{Struttura progetto}: i file del progetto sono organizzati e suddivisi in cartelle, in base all'elemento a cui appartengono. \newline
         Tutti i file e cartelle devono essere contenuti all'interno della cartella \textit{src}. \newline
         Ad esempio il componente \textit{component-name} avrà la seguente struttura:
         \begin{itemize}
@@ -109,20 +108,51 @@ Inoltre deve essere scritto in modo chiaro e leggibile, seguendo le seguenti nor
             \item \textit{component-name.component.spec.ts}: file contenente i test del componente;
         \end{itemize}
         È possibile inoltre, all'interno della cartella di un componente, creare altri componenti figli.
+        \item \textbf{Identazione}: l'indentazione deve essere di 4 spazi.
     \end{itemize}
-    \textbf{Smart Contract}, alcune convenzioni sono imposte dal linguaggio \textit{Solidity}:
+    \textbf{Smart Contract}, alcune convenzioni di stile sono imposte dal linguaggio \textit{Solidity}:
     \begin{itemize}
-        \item \textbf{Nomenclatura}
-        \item \textbf{Struttura file}
+        \item \textbf{Nomenclatura}:
+        \begin{itemize}
+            \item \textbf{File}: la nomenclatura dei file è basata sulle regole di \textit{upper CamelCase} e devono essere coerenti con il nome del contratto corrispettivo. \newline
+            Se all'interno di un file si trovano più contratti, il nome di tale file deve corrispondere a quello del contratto principale;
+            \item \textbf{Contratti e Librerie}: la nomenclatura dei contratti e delle librerie è basata sulle regole di \textit{upper CamelCase} e deve essere coerente con il nome del file corrispettivo;
+            \item \textbf{Metodi}: la nomenclatura dei metodi è basata sulle regole di \textit{lower camelCase};
+            \item \textbf{Variabili}; la nomenclatura delle variabili è basata sulle regole di \textit{lower camelCase};
+            \item \textbf{Argomenti delle funzione}: la nomenclatura degli argomenti delle funzioni è basata sulle regole di \textit{lower camelCase} e il carattere iniziale deve essere \textit{\textunderscore};
+            \item \textbf{Costanti}: la nomenclatura delle costanti deve essere espressa in maiuscolo e se è composta da piu parole, devono essere separate con \textit{\textunderscore};
+            \item \textbf{Commenti}: i commenti dovranno essere inseriti prima dell’inizio di un  costrutto e presentati in lingua italiana.
+        \end{itemize}
+        \item \textbf{Struttura progetto}: convenzione imposta dal framework \textit{Truffle}:
+        \begin{itemize}
+            \item \textit{contracts}: cartella contenente i contratti;
+            \item \textit{build}: cartella contenente i file compilati;
+            \item \textit{test}: cartella contenente i test;
+        \end{itemize}
+        \item \textbf{Identazione}: l'indentazione deve essere di 4 spazi.
     \end{itemize}
-    \textbf{API REST}...:
+    \textbf{API REST} alcune delle seguenti convenzioni seguono le medesime regole di \textit{Java}:
     \begin{itemize}
-        \item \textbf{Nomenclatura}
-        \item \textbf{Struttura file}
+        \item \textbf{Nomenclatura}:
+        \item \begin{itemize}
+            \item \textbf{File}: la nomenclatura dei file è basata sulle regole di \textit{upper CamelCase};
+            \item \textbf{Classi}: la nomenclatura delle classi è basata sulle regole di \textit{upper CamelCase};
+            \item \textbf{Metodi}: la nomenclatura dei metodi è basata sulle regole di \textit{upper CamelCase};
+            \item \textbf{Variabili e argomenti delle funzione}: la nomenclatura delle variabili e degli argomenti delle funzioni sono basate sulle regole di \textit{lower camelCase};
+            \item \textbf{Costanti}: la nomenclatura delle costanti deve essere espressa in maiuscolo e se è composta da piu parole, devono essere separate con \textit{\textunderscore};
+            \item \textbf{Commenti}: i commenti dovranno essere inseriti prima dell’inizio di un  costrutto e presentati in lingua italiana.
+        \end{itemize}
+        \item \textbf{Struttura progetto} convenzioni imposta dal framework \textit{Spring Boot}:
+        \begin{itemize}
+            \item \textit{src/main/java}: cartella contenente il codice sorgente;
+            \item \textit{src/main/resources}: cartella contenente i file di configurazione;
+            \item \textit{src/test/java}: cartella contenente i test.
+        \end{itemize}
+        \item \textbf{Identazione}: l'indentazione deve essere di 2 spazi.
     \end{itemize}
 \end{itemize}
 
-\subparagraph{Metriche di codifica}: le metriche di codifica sono utilizzate per valutare la qualità del codice sorgente. [DA ELENCARE ?]
+\subparagraph{Qualità del codice}: la qualità del codice è definita dalle metriche, che fanno riferimento al \textit{Piano di Qualifica v1.0.0} e dai requisiti di qualità, descritti nell'\textit{Analisi dei Requisiti v1.0.2}. 
 
 \subparagraph{Strumenti di codifica} gli strumenti utilizzati per la codifica e di supporto ad essa sono:
 \begin{itemize}
@@ -132,7 +162,7 @@ Inoltre deve essere scritto in modo chiaro e leggibile, seguendo le seguenti nor
     \item \textbf{Solidity}: linguaggio utilizzato per la realizzazione dello smart contract;
     \item \textbf{Spring Boot}: framework utilizzato per la realizzazione dell'API REST;
     \item \textbf{Node.js}: runtime environment utilizzato per l'esecuzione di codice JavaScript;
-    \item \textbf{Metamask}: wallet e provider utilizzato per la gestione delle transazioni;
+    \item \textbf{Metamask}: wallet utilizzato per effettuare delle transazioni;
     \item \textbf{Truffle}: framework utilizzato per la realizzazione e la compilazione dello smart contract;
 \end{itemize}
 
