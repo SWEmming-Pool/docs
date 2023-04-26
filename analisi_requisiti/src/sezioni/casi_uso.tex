@@ -92,7 +92,7 @@
 
             \subsubsection{UC03 - Transazione}
             \label{UC03}
-    
+                [DA RIVEDERE]
                 \begin{figure}[H]
                     \centering
                     \includegraphics[scale=0.6]{src/img/UC03.png}
@@ -118,45 +118,8 @@
                         \hline
                         \textbf{Scenario principale} & L'utente effettua il pagamento verso un altro wallet. \\
                         \hline
-                        \textbf{Estensioni} & Se l'operazione non va a buone fine, si verifica \hyperref[UC04]{UC04}.\\
-                        \hline
                     \end{tabularx}
                     \caption{UC03}
-                \end{table}
-
-            \subsubsection{UC04 - Errore Transazione}
-            \label{UC04}
-    
-                \begin{table}[H]
-                    \centering
-                    \rowcolors{1}{pari_alt}{dispari_alt}
-                    \renewcommand{\arraystretch}{1.8}
-                    \renewcommand\tabularxcolumn[1]{m{#1}}
-                    \begin{tabularx}{0.9\textwidth} {
-                        >{\hsize=.8\hsize\linewidth=\hsize}X
-                        >{\hsize=1.2\hsize\linewidth=\hsize}X}
-                        \hline
-                        \textbf{Attore primario} & Utente autenticato \\
-                        \hline
-                        \textbf{Attore secondario} & \textit{MetaMask} \\
-                        \hline
-                        \textbf{Precondizioni} & L'utente sta tentando di effettuare un pagamento. \\
-                        \hline
-                        \textbf{Postcondizioni} & Il pagamento fallisce. \\
-                        \hline
-                        \textbf{Scenario principale} &
-                        \begin{enumerate}
-                            \item L'utente tenta di effettuare un pagamento che non va a buon fine;
-                            \item Viene mostrato un errore che informa l'utente sul motivo del fallimento dell'operazione:
-                            \begin{itemize}
-                                \item l'utente pagante non ha abbastanza fondi;
-                                \item l'indirizzo dell'utente ricevente non è valido;
-                            \end{itemize}
-                            \item L'operazione viene annullata.
-                        \end{enumerate} \\
-                        \hline
-                    \end{tabularx}
-                    \caption{UC04}
                 \end{table}
 
         \subsubsection{UC05 - Rilascio Recensione}
