@@ -98,20 +98,14 @@
             \hline
 
             R1F2 &
-            [DA RIVEDERE] Obbligatorio &
-            L'utente autenticato deve poter eseguire un pagamento di una certa somma, tramite \textit{MetaMask} verso un altro indirizzo wallet. &
+            Obbligatorio &
+            L'utente autenticato deve poter eseguire un pagamento tramite \textit{MetaMask} verso un altro indirizzo wallet. &
             \hyperref[UC03]{UC03} \\
             \hline
 
             R1F2.1 &
             Obbligatorio &
-            Il pagamento fallisce a causa di fondi insufficienti. &
-            \hyperref[UC04]{UC04} \\
-            \hline
-
-            R1F2.2 &
-            Obbligatorio &
-            Il pagamento fallisce a causa di non validità dell'indirizzo dell'utente ricevente. &
+            Il pagamento fallisce a causa di un errore e il sistema notifica l'utente. &
             \hyperref[UC04]{UC04} \\
             \hline
 
@@ -518,12 +512,6 @@
             Capitolato \\
             \hline
 
-            R1Q7 &
-            Obbligatorio &
-            Produzione di un manuale tecnico per manutenzione ed estensione. &
-            Capitolato \\
-            \hline
-
             R1Q8 &
             Obbligatorio &
             Il prodotto deve essere sviluppato seguendo quanto stabilito nelle \textit{Norme di Progetto v1.0.0}. &
@@ -703,6 +691,10 @@
 
             \hyperref[UC03]{UC03} &
             R1F2 \\
+            \hline
+
+            \hyperref[UC04]{UC04} &
+            R1F2.1 \\
             \hline
 
             \hyperref[UC05]{UC05} &
@@ -934,10 +926,10 @@
                 \textbf{\color{white}Totale} \\
                 \hline
 
-                Funzionale & 39 & - & 22 & 61 \\
+                Funzionale & 40 & - & 22 & 62 \\
                 \hline
 
-                Di qualità & 7 & 2 & - & 9 \\
+                Di qualità & 6 & 2 & - & 8 \\
                 \hline
 
                 Di vincolo & 7 & 6 & - & 13 \\
