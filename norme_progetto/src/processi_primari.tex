@@ -24,7 +24,7 @@ Lo scopo del processo di fornitura è quello analizzare e definire le operazioni
             \end{itemize}
 \end{itemize}
 \subsection{Sviluppo}
-\subsubsection{Scopo} Questo processo contiene tutte le azioni e attività finalizzate ad analisi dei requisiti, design, codifica, test e installazione dei prodotti software\glo \:.
+\subsubsection{Scopo} Questo processo contiene tutte le azioni e attività finalizzate ad analisi dei requisiti, design, codifica e test.
 \subsubsection{Attività}
 
 \paragraph{Analisi dei requisiti}: viene effettuata la stesura dell'\textit{Analisi dei Requisiti}, che comprende elenco e analisi dei requisiti funzionali, non funzionali e di qualità. Questo documento si prefigge l'obiettivo di descrivere in modo chiaro e preciso tutte le caratteristiche richieste esplicitamente o implicitamente dal committente.
@@ -53,31 +53,121 @@ Lo scopo del processo di fornitura è quello analizzare e definire le operazioni
         \end {itemize}
     \end{itemize}
 
-\paragraph{Sviluppo PoC}: fase in cui viene sviluppata una demo eseguibile che permetta di verificare la fattibilità del progetto, stabilendone inoltre, le tecnologie da utilizzare per la realizzazione del prodotto finale. \newline
-Si può collocare tra la fase di analisi dei requisiti e quella di progettazione logica, oppure all'interno di quest'ultima, il gruppo ha deciso di seguire la seconda opzione (DUBBIO). \newline % dubbio: intrecci temporali
-Per lo sviluppo del PoC si deve aver completata l'attività di \textit{Analisi dei Requisiti}, in quanto necessario per definire l'architettura logica del prodotto finale e per stabilire quali tecnologie utilizzare. \newline
-Si sono dunque pianificate ed seguite le seguenti attività:
+    Alla versione \textit{v1.0.2} del documento \textit{Analisi dei Requisiti} la struttura è la seguente:
+    \begin{itemize}
+        \item \textbf{Introduzione}: contiene una breve descrizione del documento e del prodotto software;
+        \item \textbf{Descrizione generale}: contiene una dezcrizione degli obiettivi del prodotto software;
+        \item \textbf{Casi d'uso}: contiene l'elenco dei vari casi d'uso con i relativi diagrammi e descrizioni;
+        \item \textbf{Requisiti}: contiene l'elenco dei requisiti con le relative descrizioni e tracciamento con i casi d'uso;
+    \end{itemize}
+
+\paragraph{Progettazione}: questa fase prevede la realizzazione della specifica architetturale del prodotto finale, partendo dai requisiti definiti e individuando le diverse parti corrispettive, che dovranno essere poi raggrupate fino ad arrivare ad ottenere un unico sistema. \newline
+Inoltre, in parallelo allo sviluppo dell'architettura, si procede alla definizione dei test di unità, di integrazione e di sistema. \newline
+Tale fase dovrà essere documentata in un documento denominato \textit{Specifica Tecnica}.
+
+[MANCA LA STRUTTURA DEL DOCUMENTO SPECIFICA TECNICA]
+
+\subparagraph{Requirements and Technology Baseline}: fase in cui viene studiato il problema per individuare i requisiti opportuni per il suo soddisfacimento e le tecnologie da utilizzare per la realizzazione del prodotto finale. \newline
+Si conclude con lo sviluppo di un Proof of Concept (PoC) che permetta di verificare la fattibilità del progetto;
+
+\subparagraph{Product Baseline}: fase in cui viene definita l'architettura del prodotto finale, infine viene effettuata la codifica, seguita dalla fase di testing.
+
+
+\paragraph{Codifica}: fase in cui si procede con la codifica del prodotto finale, concretizzando così i risultati delle fasi precedenti.
+\subparagraph{Norme di codifica}: il codice sorgente deve essere scritto in modo chiaro e leggibile, seguendo le seguenti norme:
 \begin{itemize}
-    \item \textit{progettazione logica}: si è proceduto con la definizione dell'architettura logica del sistema e le sue componenti (ELENCARE TALI COMPONENTI?);
-    \item \textit{scelta delle tecnologie}: avvenuta in base ai requisiti, caratteristiche richieste per il prodotto finale e agli incontri con l'azienda proponente \companyName;
-    \item \textit{studio delle tecnologie}: avvenuto tramite la lettura di documentazione e ricerca su internet, autonomamente effettuata dai singoli membri del gruppo;
-    \item \textit{codifica}: implementazione delle tecnologie, codificando le funzionalità base e principali per l'interazione tra i componenti precedentemente definiti.
+    \item \textbf{Web App}, le cui convenzioni di stile sono imposte dal framework \textit{Angular}:
+    \begin{itemize}
+        \item \textbf{Nomenclatura}
+        \begin{itemize}
+            \item \textbf{Cartelle}:le cartelle devono avere il nome dell'elemento, che deve essere in minuscolo e se è composto da piu parole, devono essere separate con \textit{-}. \newline
+            Ad esempio il componente \textit{component-name} avrà la cartella con lo stesso nome;
+            \item \textbf{File}: il nome dei file deve essere in minuscolo e se è composto da piu parole, devono essere separate con \textit{-}. \newline
+            Inoltre, in base alla tipologia di elemento, il file deve avere un'estensione specifica:
+            \begin{itemize}
+                \item \textit{.component}: per i componenti;
+                \item \textit{.service}: per i servizi;
+                \item \textit{.pipe}: per i filtri;
+                \item \textit{.directive}: per le direttive.
+            \end{itemize}
+            \item \textbf{Classi}: la nomenclatura delle classi è basata sulle regole di \textit{upper CamelCase} e devono essere coerenti con il nome dell'elemento corrispettivo. \newline
+            Ad esempio il componente \textit{component-name} avrà il seguente nome della classe \textit{ComponentName};
+            \item \textbf{Metodi}: la nomenclatura dei metodi è basata sulle regole di \textit{upper camelCase};
+            \item \textbf{Variabili e argomenti delle funzione}: la nomenclatura delle variabili e degli argomenti delle funzioni sono basate sulle regole di \textit{lower camelCase};
+            \item \textbf{Costanti}: la nomenclatura delle costanti deve essere espressa in maiuscolo e se è composta da piu parole, devono essere separate con \textit{\textunderscore};
+            \item \textbf{Commenti}: i commenti dovranno essere inseriti prima dell’inizio di un  costrutto e presentati in
+            lingua italiana.
+        \end{itemize}
+        \item \textbf{Struttura progetto}: i file del progetto sono organizzati e suddivisi in cartelle, in base all'elemento a cui appartengono. \newline
+        Tutti i file e cartelle devono essere contenuti all'interno della cartella \textit{src}. \newline
+        Ad esempio il componente \textit{component-name} avrà la seguente struttura:
+        \begin{itemize}
+            \item \textit{component-name.component.ts}: file contenente la logica del componente;
+            \item \textit{component-name.component.html}: file contenente il template HTML del componente;
+            \item \textit{component-name.component.css}: file contenente gli stili CSS del componente;
+            \item \textit{component-name.component.spec.ts}: file contenente i test del componente;
+        \end{itemize}
+        È possibile inoltre, all'interno della cartella di un componente, creare altri componenti figli.
+        \item \textbf{Identazione}: l'indentazione deve essere di 4 spazi.
+    \end{itemize}
+    \textbf{Smart Contract}, alcune convenzioni di stile sono imposte dal linguaggio \textit{Solidity}:
+    \begin{itemize}
+        \item \textbf{Nomenclatura}:
+        \begin{itemize}
+            \item \textbf{File}: la nomenclatura dei file è basata sulle regole di \textit{upper CamelCase} e devono essere coerenti con il nome del contratto corrispettivo. \newline
+            Se all'interno di un file si trovano più contratti, il nome di tale file deve corrispondere a quello del contratto principale;
+            \item \textbf{Contratti e Librerie}: la nomenclatura dei contratti e delle librerie è basata sulle regole di \textit{upper CamelCase} e deve essere coerente con il nome del file corrispettivo;
+            \item \textbf{Metodi}: la nomenclatura dei metodi è basata sulle regole di \textit{lower camelCase};
+            \item \textbf{Variabili}; la nomenclatura delle variabili è basata sulle regole di \textit{lower camelCase};
+            \item \textbf{Argomenti delle funzione}: la nomenclatura degli argomenti delle funzioni è basata sulle regole di \textit{lower camelCase} e il carattere iniziale deve essere \textit{\textunderscore};
+            \item \textbf{Costanti}: la nomenclatura delle costanti deve essere espressa in maiuscolo e se è composta da piu parole, devono essere separate con \textit{\textunderscore};
+            \item \textbf{Commenti}: i commenti dovranno essere inseriti prima dell’inizio di un  costrutto e presentati in lingua italiana.
+        \end{itemize}
+        \item \textbf{Struttura progetto}: convenzione imposta dal framework \textit{Truffle}:
+        \begin{itemize}
+            \item \textit{contracts}: cartella contenente i contratti;
+            \item \textit{build}: cartella contenente i file compilati;
+            \item \textit{test}: cartella contenente i test;
+        \end{itemize}
+        \item \textbf{Identazione}: l'indentazione deve essere di 4 spazi.
+    \end{itemize}
+    \textbf{API REST} alcune delle seguenti convenzioni seguono le medesime regole di \textit{Java}:
+    \begin{itemize}
+        \item \textbf{Nomenclatura}:
+        \item \begin{itemize}
+            \item \textbf{File}: la nomenclatura dei file è basata sulle regole di \textit{upper CamelCase};
+            \item \textbf{Classi}: la nomenclatura delle classi è basata sulle regole di \textit{upper CamelCase};
+            \item \textbf{Metodi}: la nomenclatura dei metodi è basata sulle regole di \textit{upper CamelCase};
+            \item \textbf{Variabili e argomenti delle funzione}: la nomenclatura delle variabili e degli argomenti delle funzioni sono basate sulle regole di \textit{lower camelCase};
+            \item \textbf{Costanti}: la nomenclatura delle costanti deve essere espressa in maiuscolo e se è composta da piu parole, devono essere separate con \textit{\textunderscore};
+            \item \textbf{Commenti}: i commenti dovranno essere inseriti prima dell’inizio di un  costrutto e presentati in lingua italiana.
+        \end{itemize}
+        \item \textbf{Struttura progetto} convenzioni imposta dal framework \textit{Spring Boot}:
+        \begin{itemize}
+            \item \textit{src/main/java}: cartella contenente il codice sorgente;
+            \item \textit{src/main/resources}: cartella contenente i file di configurazione;
+            \item \textit{src/test/java}: cartella contenente i test.
+        \end{itemize}
+        \item \textbf{Identazione}: l'indentazione deve essere di 2 spazi.
+    \end{itemize}
 \end{itemize}
 
-\paragraph{Progettazione:} questa fase prevede la realizzazione della specifica architetturale del prodotto finale, la quale dovrà essere documentata in un documento denominato \textit{Specifica Tecnica}, che comprende:
+\subparagraph{Qualità del codice}: la qualità del codice è definita dalle metriche, che fanno riferimento al \textit{Piano di Qualifica v1.0.0} e dai requisiti di qualità, descritti nell'\textit{Analisi dei Requisiti v1.0.2}. 
+
+\subparagraph{Strumenti di codifica} gli strumenti utilizzati per la codifica e di supporto ad essa sono:
 \begin{itemize}
-    \item \textbf{L'\textit{architettura logica}}\glo: la struttura logica del sistema, ovvero la suddivisione in componenti e la loro interazione; (DA DEFINIRE NEL GLOSSARIO)
-    \item l'\textit{architettura di deployment}\glo: la locazione dei componenti nel sistema di esecuzione; (DA DEFINIRE NEL GLOSSARIO)
-    \item i \textit{design pattern}\glo utilizzati e determinati dalle tecnologie adottate; (DA DEFINIRE NEL GLOSSARIO)
-    \item gli \textit{idiomi}\glo: pattern di più basso livello eventualemente impiegati. (DA DEFINIRE NEL GLOSSARIO)
+    \item \textbf{Visual Studio Code}: l'IDE utilizzato per la stesura del codice per la web app e dello smart contract;
+    \item \textbf{IntelliJ IDEA}: l'IDE utilizzato per la stesura del codice per l'API REST;
+    \item \textbf{Angular}: framework utilizzato per la realizzazione della web app;
+    \item \textbf{Solidity}: linguaggio utilizzato per la realizzazione dello smart contract;
+    \item \textbf{Spring Boot}: framework utilizzato per la realizzazione dell'API REST;
+    \item \textbf{Node.js}: runtime environment utilizzato per l'esecuzione di codice JavaScript;
+    \item \textbf{Metamask}: wallet utilizzato per effettuare delle transazioni;
+    \item \textbf{Truffle}: framework utilizzato per la realizzazione e la compilazione dello smart contract;
 \end{itemize}
-Per identificare al meglio le componenti si è pensato di analizzare il flusso di esecuzione del sistema dal punto di vista dell'utente utilizzatore, per attribuire ad ogni interazione dell'utente un corrispetiva azione da parte del sistema. \newline
-Così facendo si sono potute definire le classi principali del sistema: raggrupando le funzionalità (metodi) e attributi (variabili di stato) in base al loro scopo e alla loro utilità, rispettando inoltre i requisiti presenti nel documento \textit{Analisi dei Requisiti}. \newline
-Per raffinare ulteriormente la progettazione e perseguire lo stato dell'arte si è proceduto con la definizione delle classi di supporto, ovvero quelle che non sono direttamente utilizzate dall'utente, ma che sono necessarie per il corretto funzionamento del sistema, individuate sia dalle tecnologie utilizzate, imponendo delle scelte architetturali che dallo studio e applicazione di eventuali \textit{design pattern}. \newline
-Una volta raggiunta l'architettura definitiva del sistema si è proceduto con la definizione della suite di test necessari da implementare per garantire la qualità del prodotto finale e misurare il raggiungimento degli obiettivi definiti dai requisiti. 
 
-\paragraph{Codifica}
+\paragraph{Test}: fase in cui si procede con la verifica della qualità del prodotto finale, attraverso l'esecuzione di test di sistema, ideati e implementati nelle fasi precedenti. \newline
+I test di sistema sono stati descritti nel documento \textit{Piano di Qualifica v.1.0.0}, sono tracciati con i relativi requisiti e indicato il loro stato di implementazione. \newline
+Il loro scopo è quello di determinare se il prodotto soddisfa i requisiti richiesti e se rispetta le norme di qualità stabilite.
 
-\paragraph{Test}
-
-
+% DESCRIVERE I TEST DI UNITÀ NELLA FASE DI CODIFICA??

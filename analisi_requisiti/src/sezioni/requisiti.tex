@@ -97,352 +97,346 @@
             \hyperref[UC02]{UC02} \\
             \hline
 
+            R1F2 &
+            Obbligatorio &
+            L'utente autenticato deve poter eseguire un pagamento tramite \textit{MetaMask} verso un altro indirizzo wallet. &
+            \hyperref[UC03]{UC03} \\
+            \hline
+
+            R1F2.1 &
+            Obbligatorio &
+            Il pagamento fallisce a causa di un errore e il sistema notifica l'utente. &
+            \hyperref[UC04]{UC04} \\
+            \hline
+
             R1F3 &
             Obbligatorio &
-            L'utente autenticato deve poter eseguire un pagamento di una certa somma, tramite \textit{MetaMask} verso un altro indirizzo wallet. &
+            L'utente autenticato può visualizzare una lista dei pagamenti effettuati, senza una recensione, tra cui scegliere quale recensire. &
             \hyperref[UC05]{UC05} \\
-            \hline
-
-            R1F3.1 &
-            Obbligatorio &
-            Il pagamento fallisce a causa di fondi insufficienti. &
-            \hyperref[UC06]{UC06} \\
-            \hline
-
-            R1F3.2 &
-            Obbligatorio &
-            Il pagamento fallisce a causa di non validità dell'indirizzo dell'utente ricevente. &
-            \hyperref[UC06]{UC06} \\
             \hline
 
             R1F4 &
             Obbligatorio &
-            L'utente autenticato può visualizzare una lista dei pagamenti effettuati, senza una recensione, tra cui scegliere quale recensire. &
-            \hyperref[UC07]{UC07} \\
+            L'utente autenticato ha la possibilità di rilasciare una recensione nel caso abbia acquisti non ancora recensiti. &
+            \hyperref[UC05]{UC05} \\
+            \hline
+
+            R1F4.1 &
+            Obbligatorio &
+            Per ogni transazione effettuata può esistere al massimo una recensione ad esso collegata. &
+            \hyperref[UC05]{UC05} \\
+            \hline
+
+            R1F4.2 &
+            Obbligatorio &
+            L'utente deve scegliere la transazione, effettuata, da associare alla recensione.&
+            \hyperref[UC05]{UC05} \\
+            \hline
+
+            R1F4.3 &
+            Obbligatorio &
+            La recensione deve avere un titolo inserito dall'utente.&
+            \hyperref[UC05.1]{UC05.1} \\
+            \hline
+
+            R1F4.4 &
+            Obbligatorio &
+            La recensione deve avere un voto inserito dall'utente.&
+            \hyperref[UC05.2]{UC05.2} \\
+            \hline
+
+            R1F4.5 &
+            Obbligatorio &
+            La recensione deve avere un testo inserito dall'utente.&
+            \hyperref[UC05.3]{UC05.3} \\
+            \hline
+        
+            R1F4.6 &
+            Obbligatorio &
+            La \textit{web app} visualizza un errore se l'utente non rispetta la validità del formato di una recensione.&
+            \hyperref[UC06]{UC06} \\
+            \hline
+
+            R1F4.6.1 &
+            Obbligatorio &
+            La recensione deve avere un titolo, non superiore ai 50 caratteri.&
+            \hyperref[UC06]{UC06} \\
+            \hline
+
+            R1F4.6.2 &
+            Obbligatorio &
+            La recensione deve esprimere un voto, compreso tra 1(minimo) e 5 (massimo).&
+            \hyperref[UC06]{UC06} \\
+            \hline
+
+            R1F4.6.3 &
+            Obbligatorio &
+            La recensione deve avere un testo, di al massimo 500 caratteri.&
+            \hyperref[UC06]{UC06} \\
             \hline
 
             R1F5 &
             Obbligatorio &
-            L'utente autenticato ha la possibilità di rilasciare una recensione nel caso abbia acquisti non ancora recensiti. &
+            L'utente generico può ricercare recensioni.  &
             \hyperref[UC07]{UC07} \\
             \hline
 
             R1F5.1 &
             Obbligatorio &
-            Per ogni transazione effettuata può esistere al massimo una recensione ad esso collegata. &
-            \hyperref[UC07]{UC07} \\
-            \hline
-
-            R1F5.2 &
-            Obbligatorio &
-            L'utente deve scegliere la transazione, effettuata, da associare alla recensione.&
-            \hyperref[UC07]{UC07} \\
-            \hline
-
-            R1F5.3 &
-            Obbligatorio &
-            La recensione deve avere un titolo inserito dall'utente.&
+            L'utente generico può ricercare recensioni per indirizzo wallet. &
             \hyperref[UC07.1]{UC07.1} \\
             \hline
 
-            R1F5.4 &
+            R1F5.1.1 &
             Obbligatorio &
-            La recensione deve avere un voto inserito dall'utente.&
+            L'utente generico può ricercare recensioni per indirizzo wallet appartenente all'autore. &
             \hyperref[UC07.2]{UC07.2} \\
             \hline
 
-            R1F5.5 &
+            R1F5.1.2 &
             Obbligatorio &
-            La recensione deve avere un testo inserito dall'utente.&
+            L'utente generico può ricercare recensioni per indirizzo wallet appartenente al destinatario. &
             \hyperref[UC07.3]{UC07.3} \\
             \hline
-        
-            R1F5.6 &
-            Obbligatorio &
-            La \textit{web app} visualizza un errore se l'utente non rispetta la validità del formato di una recensione.&
-            \hyperref[UC08]{UC08} \\
+
+            R3F5.2 &
+            Opzionale &
+            L'utente generico può ricercare recensioni per voto. &
+            \hyperref[UC07.4]{UC07.4} \\
             \hline
 
-            R1F5.6.1 &
-            Obbligatorio &
-            La recensione deve avere un titolo, non superiore ai 50 caratteri.&
-            \hyperref[UC08]{UC08} \\
+            R3F5.3 &
+            Opzionale &
+            L'utente generico può ricercare recensioni per titolo. &
+            \hyperref[UC07.5]{UC07.5} \\
             \hline
 
-            R1F5.6.2 &
-            Obbligatorio &
-            La recensione deve esprimere un voto, compreso tra 1(minimo) e 5 (massimo).&
-            \hyperref[UC08]{UC08} \\
-            \hline
-
-            R1F5.6.3 &
-            Obbligatorio &
-            La recensione deve avere un testo, di al massimo 500 caratteri.&
-            \hyperref[UC08]{UC08} \\
+            R3F5.4 &
+            Opzionale &
+            L'utente generico può ricercare recensioni per data. &
+            \hyperref[UC07.6]{UC07.6} \\
             \hline
 
             R1F6 &
             Obbligatorio &
-            L'utente generico può ricercare recensioni.  &
-            \hyperref[UC09]{UC09} \\
-            \hline
-
-            R1F6.1 &
-            Obbligatorio &
-            L'utente generico può ricercare recensioni per indirizzo wallet. &
-            \hyperref[UC09.1]{UC09.1} \\
-            \hline
-
-            R1F6.1.1 &
-            Obbligatorio &
-            L'utente generico può ricercare recensioni per indirizzo wallet appartenente all'autore. &
-            \hyperref[UC09.2]{UC09.2} \\
-            \hline
-
-            R1F6.1.2 &
-            Obbligatorio &
-            L'utente generico può ricercare recensioni per indirizzo wallet appartenente al destinatario. &
-            \hyperref[UC09.3]{UC09.3} \\
-            \hline
-
-            R3F6.2 &
-            Opzionale &
-            L'utente generico può ricercare recensioni per voto. &
-            \hyperref[UC09.4]{UC09.4} \\
-            \hline
-
-            R3F6.3 &
-            Opzionale &
-            L'utente generico può ricercare recensioni per titolo. &
-            \hyperref[UC09.5]{UC09.5} \\
-            \hline
-
-            R3F6.4 &
-            Opzionale &
-            L'utente generico può ricercare recensioni per data. &
-            \hyperref[UC09.6]{UC09.6} \\
+            La \textit{web app} fornisce all'utente autenticato la possibilità di ricercare le recensioni rilasciate.&
+            \hyperref[UC08]{UC08} \\
             \hline
 
             R1F7 &
             Obbligatorio &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di ricercare le recensioni rilasciate.&
-            \hyperref[UC10]{UC10} \\
+            La \textit{web app} fornisce all'utente autenticato la possibilità di ricercare le recensioni ricevute.&
+            \hyperref[UC09]{UC09} \\
             \hline
 
             R1F8 &
             Obbligatorio &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di ricercare le recensioni ricevute.&
-            \hyperref[UC11]{UC11} \\
+            La \textit{web app} notifica all'utente un errore nella ricerca.&
+            \hyperref[UC10]{UC10} \\
+            \hline
+
+            R1F8.1 &
+            Obbligatorio &
+            La \textit{web app} notifica all'utente un errore nella ricerca per indirizzo wallet.&
+            \hyperref[UC10]{UC10} \\
+            \hline
+
+            R3F8.2 &
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella ricerca per voto.&
+            \hyperref[UC10]{UC10} \\
+            \hline
+
+            R3F8.3 &
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella ricerca per titolo.&
+            \hyperref[UC10]{UC10} \\
+            \hline
+
+            R3F8.4 &
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella ricerca per data.&
+            \hyperref[UC10]{UC10} \\
             \hline
 
             R1F9 &
             Obbligatorio &
-            La \textit{web app} notifica all'utente un errore nella ricerca.&
-            \hyperref[UC12]{UC12} \\
-            \hline
-
-            R1F9.1 &
-            Obbligatorio &
-            La \textit{web app} notifica all'utente un errore nella ricerca per indirizzo wallet.&
-            \hyperref[UC12]{UC12} \\
-            \hline
-
-            R3F9.2 &
-            Opzionale &
-            La \textit{web app} notifica all'utente un errore nella ricerca per voto.&
-            \hyperref[UC12]{UC12} \\
-            \hline
-
-            R3F9.3 &
-            Opzionale &
-            La \textit{web app} notifica all'utente un errore nella ricerca per titolo.&
-            \hyperref[UC12]{UC12} \\
-            \hline
-
-            R3F9.4 &
-            Opzionale &
-            La \textit{web app} notifica all'utente un errore nella ricerca per data.&
-            \hyperref[UC12]{UC12} \\
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni.&
+            \hyperref[UC11]{UC11} \\
             \hline
 
             R1F10 &
             Obbligatorio &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni.&
-            \hyperref[UC13]{UC13} \\
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una singola recensione.&
+            \hyperref[UC11.1]{UC11.1} \\
+            \hline
+
+            R1F10.1 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare l'autore di una singola recensione.&
+            \hyperref[UC11.1.1]{UC11.1.1} \\
+            \hline
+
+            R1F10.2 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il destinatario di una singola recensione.&
+            \hyperref[UC11.1.2]{UC11.1.2} \\
+            \hline
+
+            R1F10.3 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il titolo di una singola recensione.&
+            \hyperref[UC11.1.3]{UC11.1.3} \\
+            \hline      
+            
+            R1F10.4 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare la data di una singola recensione.&
+            \hyperref[UC11.1.4]{UC11.1.4} \\
+            \hline
+
+            R1F10.5 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il voto di una singola recensione.&
+            \hyperref[UC11.1.5]{UC11.1.5} \\
+            \hline
+
+            R1F10.6 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il testo di una singola recensione.&
+            \hyperref[UC11.1.6]{UC11.1.6} \\
             \hline
 
             R1F11 &
             Obbligatorio &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una singola recensione.&
-            \hyperref[UC13.1]{UC13.1} \\
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.&
+            \hyperref[UC12]{UC12} \\
             \hline
-
-            R1F11.1 &
-            Obbligatorio &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare l'autore di una singola recensione.&
-            \hyperref[UC13.1.1]{UC13.1.1} \\
-            \hline
-
-            R1F11.2 &
-            Obbligatorio &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il destinatario di una singola recensione.&
-            \hyperref[UC13.1.2]{UC13.1.2} \\
-            \hline
-
-            R1F11.3 &
-            Obbligatorio &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il titolo di una singola recensione.&
-            \hyperref[UC13.1.3]{UC13.1.3} \\
-            \hline      
             
-            R1F11.4 &
-            Obbligatorio &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare la data di una singola recensione.&
-            \hyperref[UC13.1.4]{UC13.1.4} \\
-            \hline
-
-            R1F11.5 &
-            Obbligatorio &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il voto di una singola recensione.&
-            \hyperref[UC13.1.5]{UC13.1.5} \\
-            \hline
-
-            R1F11.6 &
-            Obbligatorio &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il testo di una singola recensione.&
-            \hyperref[UC13.1.6]{UC13.1.6} \\
-            \hline
-
             R1F12 &
             Obbligatorio &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.&
-            \hyperref[UC14]{UC14} \\
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.&
+            \hyperref[UC13]{UC13} \\
             \hline
-            
+
             R1F13 &
             Obbligatorio &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.&
-            \hyperref[UC15]{UC15} \\
+            La \textit{web app} notifica all'utente un errore nella visualizzazione delle recensioni.&
+            \hyperref[UC14]{UC14} \\
             \hline
 
             R1F14 &
             Obbligatorio &
-            La \textit{web app} notifica all'utente un errore nella visualizzazione delle recensioni.&
-            \hyperref[UC16]{UC16} \\
+            Il servizio di \textit{API REST} fornisce all'utente, utilizzatore dell'API, la possibilità di ottenere le recensioni ad esso riferite.&
+            \hyperref[UC15]{UC15} \\
             \hline
 
             R1F15 &
             Obbligatorio &
-            Il servizio di \textit{API REST} fornisce all'utente, utilizzatore dell'API, la possibilità di ottenere le recensioni ad esso riferite.&
+            Il servizio di \textit{API REST} notifica all'utente un errore, nel caso non esistano recensioni a lui collegate.&
+            \hyperref[UC16]{UC16} \\
+            \hline
+
+            R3F16 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati.&
             \hyperref[UC17]{UC17} \\
             \hline
 
-            R1F16 &
-            Obbligatorio &
-            Il servizio di \textit{API REST} notifica all'utente un errore, nel caso non esistano recensioni a lui collegate.&
+            R3F17 &    
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare una singola transazione, selezionata dalla lista.&
+            \hyperref[UC17.1]{UC17.1} \\
+            \hline
+
+            R3F17.1 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'ID di una singola transazione.&
+            \hyperref[UC17.1.1]{UC17.1.1} \\
+            \hline
+
+            R3F17.2 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la data di una singola transazione.&
+            \hyperref[UC17.1.2]{UC17.1.2} \\
+            \hline
+
+            R3F17.3 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'importo di una singola transazione.&
+            \hyperref[UC17.1.3]{UC17.1.3} \\
+            \hline
+
+            R3F17.4 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente pagante di una singola transazione.&
+            \hyperref[UC17.1.4]{UC17.1.4} \\
+            \hline
+
+            R3F17.5 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente ricevente di una singola transazione.&
+            \hyperref[UC17.1.5]{UC17.1.5} \\
+            \hline
+
+            R3F18 &   
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella visualizzazione dei pagamenti.&
             \hyperref[UC18]{UC18} \\
             \hline
 
-            R3F17 &
+            R3F19 &
             Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati.&
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate.&
             \hyperref[UC19]{UC19} \\
             \hline
 
-            R3F18 &    
+            R3F19.1 &
             Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare una singola transazione, selezionata dalla lista.&
-            \hyperref[UC19.1]{UC19.1} \\
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal meno recente.&
+            \hyperref[UC20]{UC2-} \\
             \hline
 
-            R3F18.1 &   
+            R3F19.2 &
             Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'ID di una singola transazione.&
-            \hyperref[UC19.1.1]{UC19.1.1} \\
-            \hline
-
-            R3F18.2 &   
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la data di una singola transazione.&
-            \hyperref[UC19.1.2]{UC19.1.2} \\
-            \hline
-
-            R3F18.3 &   
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'importo di una singola transazione.&
-            \hyperref[UC19.1.3]{UC19.1.3} \\
-            \hline
-
-            R3F18.4 &   
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente pagante di una singola transazione.&
-            \hyperref[UC19.1.4]{UC19.1.4} \\
-            \hline
-
-            R3F18.5 &   
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente ricevente di una singola transazione.&
-            \hyperref[UC19.1.5]{UC19.1.5} \\
-            \hline
-
-            R3F19 &   
-            Opzionale &
-            La \textit{web app} notifica all'utente un errore nella visualizzazione dei pagamenti.&
-            \hyperref[UC20]{UC20} \\
-            \hline
-
-            R3F20 &
-            Opzionale &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate.&
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal più recente.&
             \hyperref[UC21]{UC21} \\
             \hline
 
-            R3F20.1 &
+            R3F20 &   
             Opzionale &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal meno recente.&
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati in ordine in base alla data del pagamento.&
             \hyperref[UC22]{UC22} \\
             \hline
 
-            R3F20.2 &
+            R3F20.1 &   
             Opzionale &
-            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal più recente.&
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal meno recente.&
             \hyperref[UC23]{UC23} \\
+            \hline
+
+            R3F20.2 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal più recente.&
+            \hyperref[UC24]{UC24} \\
             \hline
 
             R3F21 &   
             Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati in ordine in base alla data del pagamento.&
-            \hyperref[UC24]{UC24} \\
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati in ordine in base all'importo.&
+            \hyperref[UC25]{UC25} \\
             \hline
 
             R3F21.1 &   
             Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal meno recente.&
-            \hyperref[UC25]{UC25} \\
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo più economico.&
+            \hyperref[UC26]{UC26} \\
             \hline
 
             R3F21.2 &   
             Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal più recente.&
-            \hyperref[UC26]{UC26} \\
-            \hline
-
-            R3F22 &   
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati in ordine in base all'importo.&
-            \hyperref[UC27]{UC27} \\
-            \hline
-
-            R3F22.1 &   
-            Opzionale &
-            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo più economico.&
-            \hyperref[UC28]{UC28} \\
-            \hline
-
-            R3F22.2 &   
-            Opzionale &
             La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo meno economico.&
-            \hyperref[UC29]{UC29} \\
+            \hyperref[UC27]{UC27} \\
             \hline
 
             \rowcolor{white}
@@ -515,12 +509,6 @@
             R1Q6 &
             Obbligatorio &
             Produzione di un manuale utente. &
-            Capitolato \\
-            \hline
-
-            R1Q7 &
-            Obbligatorio &
-            Produzione di un manuale tecnico per manutenzione ed estensione. &
             Capitolato \\
             \hline
 
@@ -701,216 +689,216 @@
             R1F1.1, R1F1.2 \\
             \hline
 
+            \hyperref[UC03]{UC03} &
+            R1F2 \\
+            \hline
+
+            \hyperref[UC04]{UC04} &
+            R1F2.1 \\
+            \hline
+
             \hyperref[UC05]{UC05} &
-            R1F3 \\
+            R1F3, R1F4, R1F4.1, R1F4.2 \\
+            \hline
+
+            \hyperref[UC05.1]{UC05.1} &
+            R1F4.3 \\
+            \hline
+
+            \hyperref[UC05.2]{UC05.2} &
+            R1F4.4 \\
+            \hline
+
+            \hyperref[UC05.3]{UC05.3} &
+            R1F4.5 \\
             \hline
 
             \hyperref[UC06]{UC06} &
-            R1F3.1, R1F3.2 \\
+            R1F4.6, R1F4.6.1, R1F4.6.2, R1F4.6.3 \\
             \hline
 
             \hyperref[UC07]{UC07} &
-            R1F4, R1F5, R1F5.1, R1F5.2 \\
+            R1F5    \\
             \hline
 
             \hyperref[UC07.1]{UC07.1} &
-            R1F5.3 \\
+            R1F5.1 \\
             \hline
 
             \hyperref[UC07.2]{UC07.2} &
-            R1F5.4 \\
+            R1F5.1.1 \\
             \hline
 
             \hyperref[UC07.3]{UC07.3} &
-            R1F5.5 \\
+            R1F5.1.2 \\
+            \hline
+
+            \hyperref[UC07.4]{UC07.4} &
+            R1F5.2 \\
+            \hline
+
+            \hyperref[UC07.5]{UC07.5} &
+            R1F5.3 \\
+            \hline
+
+            \hyperref[UC07.6]{UC07.6} &
+            R1F5.4 \\
             \hline
 
             \hyperref[UC08]{UC08} &
-            R1F5.6, R1F5.6.1, R1F5.6.2, R1F5.6.3 \\
+            R1F6 \\
             \hline
 
             \hyperref[UC09]{UC09} &
-            R1F6    \\
-            \hline
-
-            \hyperref[UC09.1]{UC09.1} &
-            R1F6.1 \\
-            \hline
-
-            \hyperref[UC09.2]{UC09.2} &
-            R1F6.1.1 \\
-            \hline
-
-            \hyperref[UC09.3]{UC09.3} &
-            R1F6.1.2 \\
-            \hline
-
-            \hyperref[UC09.4]{UC09.4} &
-            R1F6.2 \\
-            \hline
-
-            \hyperref[UC09.5]{UC09.5} &
-            R1F6.3 \\
-            \hline
-
-            \hyperref[UC09.6]{UC09.6} &
-            R1F6.4 \\
-            \hline
-
-            \hyperref[UC10]{UC10} &
             R1F7 \\
             \hline
 
+            \hyperref[UC10]{UC10} &
+            R1F8, R1F8.1, R1F8.2, R1F8.3, R1F8.4 \\
+            \hline
+
             \hyperref[UC11]{UC11} &
-            R1F8 \\
+            R1F9 \\
+            \hline
+            
+            \hyperref[UC11.2]{UC11.2} &
+            R3F9.1 \\
+            \hline
+
+            \hyperref[UC11.3]{UC11.3} &
+            R3F9.2 \\
+            \hline
+
+            \hyperref[UC11.1]{UC11.1} &
+            R1F10 \\
+            \hline
+
+            \hyperref[UC11.1.1]{UC11.1.1} &
+            R1F10.1 \\
+            \hline
+
+            \hyperref[UC11.1.2]{UC11.1.2} &
+            R1F10.2 \\
+            \hline
+
+            \hyperref[UC11.1.3]{UC11.1.3} &
+            R1F10.3 \\
+            \hline
+
+            \hyperref[UC11.1.4]{UC11.1.4} &
+            R1F10.4 \\
+            \hline
+
+            \hyperref[UC11.1.5]{UC11.1.5} &
+            R1F10.5 \\
+            \hline
+
+            \hyperref[UC11.1.6]{UC11.1.6} &
+            R1F10.6 \\
             \hline
 
             \hyperref[UC12]{UC12} &
-            R1F9, R1F9.1, R1F9.2, R1F9.3, R1F9.4 \\
-            \hline
-
-            \hyperref[UC13]{UC13} &
-            R1F10 \\
-            \hline
-            
-            \hyperref[UC13.2]{UC13.2} &
-            R3F10.1 \\
-            \hline
-
-            \hyperref[UC13.3]{UC13.3} &
-            R3F10.2 \\
-            \hline
-
-            \hyperref[UC13.1]{UC13.1} &
             R1F11 \\
             \hline
 
-            \hyperref[UC13.1.1]{UC13.1.1} &
-            R1F11.1 \\
-            \hline
-
-            \hyperref[UC13.1.2]{UC13.1.2} &
-            R1F11.2 \\
-            \hline
-
-            \hyperref[UC13.1.3]{UC13.1.3} &
-            R1F11.3 \\
-            \hline
-
-            \hyperref[UC13.1.4]{UC13.1.4} &
-            R1F11.4 \\
-            \hline
-
-            \hyperref[UC13.1.5]{UC13.1.5} &
-            R1F11.5 \\
-            \hline
-
-            \hyperref[UC13.1.6]{UC13.1.6} &
-            R1F11.6 \\
-            \hline
-
-            \hyperref[UC14]{UC14} &
+            \hyperref[UC13]{UC13} &
             R1F12 \\
             \hline
 
-            \hyperref[UC15]{UC15} &
+            \hyperref[UC14]{UC14} &
             R1F13 \\
             \hline
 
-            \hyperref[UC16]{UC16} &
+            \hyperref[UC15]{UC15} &
             R1F14 \\
             \hline
 
-            \hyperref[UC17]{UC17} &
+            \hyperref[UC16]{UC16} &
             R1F15 \\
             \hline
 
-            \hyperref[UC18]{UC18} &
-            R1F16 \\
+            \hyperref[UC17]{UC17} &
+            R3F16 \\
             \hline
 
-            \hyperref[UC19]{UC19} &
+            \hyperref[UC17.1]{UC17.1} &
+            R3F16.1 \\
+            \hline
+
+            \hyperref[UC17.2]{UC17.2} &
+            R3F16.2 \\
+            \hline
+
+            \hyperref[UC17.3]{UC17.3} &
+            R3F16.3 \\
+            \hline
+
+            \hyperref[UC17.4]{UC17.4} &
+            R3F16.4 \\
+            \hline
+
+            \hyperref[UC17.5]{UC17.5} &
             R3F17 \\
             \hline
 
-            \hyperref[UC19.1]{UC19.1} &
+            \hyperref[UC17.5.1]{UC17.5.1} &
             R3F17.1 \\
             \hline
 
-            \hyperref[UC19.2]{UC19.2} &
+            \hyperref[UC17.5.2]{UC17.5.2} &
             R3F17.2 \\
             \hline
 
-            \hyperref[UC19.3]{UC19.3} &
+            \hyperref[UC17.5.3]{UC17.5.3} &
             R3F17.3 \\
             \hline
 
-            \hyperref[UC19.4]{UC19.4} &
+            \hyperref[UC17.5.4]{UC17.5.4} &
             R3F17.4 \\
             \hline
 
-            \hyperref[UC19.5]{UC19.5} &
+            \hyperref[UC17.5.5]{UC17.5.5} &
+            R3F17.5 \\
+            \hline
+
+            \hyperref[UC18]{UC18} &
             R3F18 \\
             \hline
 
-            \hyperref[UC19.5.1]{UC19.5.1} &
-            R3F18.1 \\
-            \hline
-
-            \hyperref[UC19.5.2]{UC19.5.2} &
-            R3F18.2 \\
-            \hline
-
-            \hyperref[UC19.5.3]{UC19.5.3} &
-            R3F18.3 \\
-            \hline
-
-            \hyperref[UC19.5.4]{UC19.5.4} &
-            R3F18.4 \\
-            \hline
-
-            \hyperref[UC19.5.5]{UC19.5.5} &
-            R3F18.5 \\
+            \hyperref[UC19]{UC19} &
+            R3F19\\
             \hline
 
             \hyperref[UC20]{UC20} &
-            R3F19 \\
+            R3F19.1 \\
             \hline
 
             \hyperref[UC21]{UC21} &
-            R3F20\\
+            R3F19.2 \\
             \hline
 
             \hyperref[UC22]{UC22} &
-            R3F20.1 \\
+            R3F20 \\
             \hline
 
             \hyperref[UC23]{UC23} &
-            R3F20.2 \\
+            R3F20.1 \\
             \hline
 
             \hyperref[UC24]{UC24} &
-            R3F21 \\
+            R3F20.2 \\
             \hline
 
             \hyperref[UC25]{UC25} &
-            R3F21.1 \\
+            R3F21 \\
             \hline
 
             \hyperref[UC26]{UC26} &
-            R3F21.2 \\
+            R3F21.1 \\
             \hline
 
             \hyperref[UC27]{UC27} &
-            R3F22 \\
-            \hline
-
-            \hyperref[UC28]{UC28} &
-            R3F22.1 \\
-            \hline
-
-            \hyperref[UC29]{UC29} &
-            R3F22.2 \\
+            R3F21.2 \\
             \hline
 
             \rowcolor{white}
@@ -938,10 +926,10 @@
                 \textbf{\color{white}Totale} \\
                 \hline
 
-                Funzionale & 41 & - & 22 & 63 \\
+                Funzionale & 40 & - & 22 & 62 \\
                 \hline
 
-                Di qualità & 7 & 2 & - & 9 \\
+                Di qualità & 6 & 2 & - & 8 \\
                 \hline
 
                 Di vincolo & 7 & 6 & - & 13 \\

@@ -30,7 +30,7 @@
             \begin{figure}[H]
                 \centering
                 \includegraphics[scale=0.6]{src/img/UC01.png}
-                \caption{UC01}
+                \caption{UC01, UC02}
             \end{figure}
 
             \begin{table}[H]
@@ -90,13 +90,12 @@
                     \caption{UC02}
                 \end{table}
 
-            \subsubsection{UC05 - Transazione}
-            \label{UC05}
-    
+            \subsubsection{UC03 - Transazione}
+            \label{UC03}
                 \begin{figure}[H]
                     \centering
-                    \includegraphics[scale=0.6]{src/img/UC05.png}
-                    \caption{UC05}
+                    \includegraphics[scale=0.4]{src/img/UC03.png}
+                    \caption{UC03}
                 \end{figure}
     
                 \begin{table}[H]
@@ -110,7 +109,7 @@
                         \hline
                         \textbf{Attore primario} & Utente autenticato \\
                         \hline
-                        \textbf{Attore secondario} & \textit{MetaMask} \\
+                        \textbf{Attore secondario} & \textit{MetaMask} e \textit{Infura} \\
                         \hline
                         \textbf{Precondizioni} & L'utente non ha ancora pagato. \\
                         \hline
@@ -118,60 +117,60 @@
                         \hline
                         \textbf{Scenario principale} & L'utente effettua il pagamento verso un altro wallet. \\
                         \hline
-                        \textbf{Estensioni} & Se l'operazione non va a buone fine, si verifica \hyperref[UC06]{UC06}.\\
-                        \hline
                     \end{tabularx}
-                    \caption{UC05}
+                    \caption{UC03}
                 \end{table}
 
-            \subsubsection{UC06 - Errore Transazione}
-            \label{UC06}
-    
-                \begin{table}[H]
-                    \centering
-                    \rowcolors{1}{pari_alt}{dispari_alt}
-                    \renewcommand{\arraystretch}{1.8}
-                    \renewcommand\tabularxcolumn[1]{m{#1}}
-                    \begin{tabularx}{0.9\textwidth} {
-                        >{\hsize=.8\hsize\linewidth=\hsize}X
-                        >{\hsize=1.2\hsize\linewidth=\hsize}X}
-                        \hline
-                        \textbf{Attore primario} & Utente autenticato \\
-                        \hline
-                        \textbf{Attore secondario} & \textit{MetaMask} \\
-                        \hline
-                        \textbf{Precondizioni} & L'utente sta tentando di effettuare un pagamento. \\
-                        \hline
-                        \textbf{Postcondizioni} & Il pagamento fallisce. \\
-                        \hline
-                        \textbf{Scenario principale} &
-                        \begin{enumerate}
-                            \item L'utente tenta di effettuare un pagamento che non va a buon fine;
-                            \item Viene mostrato un errore che informa l'utente sul motivo del fallimento dell'operazione:
-                            \begin{itemize}
-                                \item l'utente pagante non ha abbastanza fondi;
-                                \item l'indirizzo dell'utente ricevente non è valido;
-                            \end{itemize}
-                            \item L'operazione viene annullata.
-                        \end{enumerate} \\
-                        \hline
-                    \end{tabularx}
-                    \caption{UC06}
-                \end{table}
-
-        \subsubsection{UC07 - Rilascio Recensione}
-        \label{UC07}
+            \subsubsection{UC04 - Errore Transazione}
+            \label{UC04}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.4]{src/img/UC07.png}
-                \caption{UC07}
+                \includegraphics[scale=0.4]{src/img/UC04.png}
+                \caption{UC04}
+            \end{figure}
+    
+            \begin{table}[H]
+                \centering
+                \rowcolors{1}{pari_alt}{dispari_alt}
+                \renewcommand{\arraystretch}{1.8}
+                \renewcommand\tabularxcolumn[1]{m{#1}}
+                \begin{tabularx}{0.9\textwidth} {
+                    >{\hsize=.8\hsize\linewidth=\hsize}X
+                    >{\hsize=1.2\hsize\linewidth=\hsize}X}
+                    \hline
+                    \textbf{Attore primario} & Utente autenticato \\
+                    \hline
+                    \textbf{Attore secondario} & \textit{MetaMask} \\
+                    \hline
+                    \textbf{Precondizioni} & L'utente sta tentando di effettuare un pagamento. \\
+                    \hline
+                    \textbf{Postcondizioni} & Il pagamento fallisce. \\
+                    \hline
+                    \textbf{Scenario principale} &
+                    \begin{enumerate}
+                        \item L'utente tenta di effettuare un pagamento che non va a buon fine;
+                        \item Viene mostrato un errore che informa l'utente sul motivo del fallimento dell'operazione.
+                        \item L'operazione viene annullata.
+                    \end{enumerate} \\
+                    \hline
+                \end{tabularx}
+                \caption{UC04}
+            \end{table}
+
+        \subsubsection{UC05 - Rilascio Recensione}
+        \label{UC05}
+
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.4]{src/img/UC05.png}
+                \caption{UC05, UC06}
             \end{figure}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.4]{src/img/UC07.X.png}
-                \caption{UC07.1, UC07.2, UC07.3}
+                \includegraphics[scale=0.4]{src/img/UC05.X.png}
+                \caption{UC05.1, UC05.2, UC05.3}
             \end{figure}
 
             \begin{table}[H]
@@ -199,14 +198,14 @@
                     \textbf{Scenario principale} &
                     L'utente seleziona un pagamento da associare alla recensione.\\
                     \hline
-                    \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC08]{UC08}. \\
+                    \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC05]{UC05}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC07}
+                \caption{UC05}
             \end{table}
 
-            \subsubsection{UC07.1 - Inserimento Titolo Recensione}
-            \label{UC07.1}
+            \subsubsection{UC05.1 - Inserimento Titolo Recensione}
+            \label{UC05.1}
 
                 \begin{table}[H]
                     \centering
@@ -233,14 +232,14 @@
                         \textbf{Scenario principale} &
                         L'utente ha inserito un titolo per la recensione. \\
                         \hline
-                        \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC08]{UC08}. \\
+                        \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC06]{UC06}. \\
                         \hline
                     \end{tabularx}
-                    \caption{UC07.1}
+                    \caption{UC05.1}
                 \end{table}
 
-            \subsubsection{UC07.2 - Inserimento Voto Recensione}
-            \label{UC07.2}
+            \subsubsection{UC05.2 - Inserimento Voto Recensione}
+            \label{UC05.2}
 
                 \begin{table}[H]
                     \centering
@@ -267,14 +266,14 @@
                         \textbf{Scenario principale} &
                         L'utente ha inserito un voto per la recensione. \\
                         \hline
-                        \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC08]{UC08}. \\
+                        \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC06]{UC06}. \\
                         \hline
                     \end{tabularx}
-                    \caption{UC07.2}
+                    \caption{UC05.2}
                 \end{table}
 
-            \subsubsection{UC07.3 - Inserimento Testo Recensione}
-            \label{UC07.3}
+            \subsubsection{UC05.3 - Inserimento Testo Recensione}
+            \label{UC05.3}
 
                 \begin{table}[H]
                     \centering
@@ -301,14 +300,14 @@
                         \textbf{Scenario principale} &
                         L'utente ha inserito un testo per la recensione. \\
                         \hline
-                        \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC08]{UC08}. \\
+                        \textbf{Estensioni} & Se il rilascio di una recensione non va a buon fine, si verifica \hyperref[UC06]{UC06}. \\
                         \hline
                     \end{tabularx}
-                    \caption{UC07.3}
+                    \caption{UC05.3}
                 \end{table}
 
-        \subsubsection{UC08 - Errore Rilascio Recensione}
-        \label{UC08}
+        \subsubsection{UC06 - Errore Rilascio Recensione}
+        \label{UC06}
 
             \begin{table}[H]
                 \centering
@@ -340,17 +339,18 @@
                         \end{enumerate} \\
                     \hline
                 \end{tabularx}
-                \caption{UC08}
+                \caption{UC06}
             \end{table}
 
-        \subsubsection{UC09 - Ricerca Recensioni}
-        \label{UC09}
+        \subsubsection{UC07 - Ricerca Recensioni}
+        \label{UC07}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.6]{src/img/UC09.png}
-                \includegraphics[scale=0.4]{src/img/UC09.x.png}
-                \caption{UC09}
+                \includegraphics[scale=0.6]{src/img/UC07.png}
+                \caption{UC07, UC10}
+                \includegraphics[scale=0.4]{src/img/UC07.x.png}
+                \caption{UC07.1 - UC07.6}
             \end{figure}
 
             \begin{table}[H]
@@ -372,14 +372,14 @@
                     \hline
                     \textbf{Scenario principale} & L'utente effettua la ricerca secondo alcuni criteri. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC09}
+                \caption{UC07}
             \end{table}
 
-        \subsubsection{UC09.1 - Ricerca Recensioni per indirizzo}
-        \label{UC09.1}
+        \subsubsection{UC07.1 - Ricerca Recensioni per indirizzo}
+        \label{UC07.1}
 
             \begin{table}[H]
                 \centering
@@ -400,14 +400,14 @@
                     \hline
                     \textbf{Scenario principale} & L'utente ricerca le recensioni inserendo l'indirizzo di cui vuole ottenere informazioni.\\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC09.1}
+                \caption{UC07.1}
             \end{table}
 
-        \subsubsection{UC09.2 - Ricerca Recensioni per autore}
-        \label{UC09.2}
+        \subsubsection{UC07.2 - Ricerca Recensioni per autore}
+        \label{UC07.2}
 
             \begin{table}[H]
                 \centering
@@ -428,14 +428,14 @@
                     \hline
                     \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando che l'indirizzo inserito fa riferimento all'autore.\\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC09.2}
+                \caption{UC07.2}
             \end{table}
 
-        \subsubsection{UC09.3 - Ricerca Recensioni per destinatario}
-        \label{UC09.3}
+        \subsubsection{UC07.3 - Ricerca Recensioni per destinatario}
+        \label{UC07.3}
 
             \begin{table}[H]
                 \centering
@@ -456,14 +456,14 @@
                     \hline
                     \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando che l'indirizzo inserito fa riferimento al destinatario.\\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC09.3}
+                \caption{UC07.3}
             \end{table}
 
-        \subsubsection{UC09.4 - Ricerca Recensioni per voto}
-        \label{UC09.4}
+        \subsubsection{UC07.4 - Ricerca Recensioni per voto}
+        \label{UC07.4}
 
             \begin{table}[H]
                 \centering
@@ -484,14 +484,14 @@
                     \hline
                     \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando il voto per cui filtrarle.\\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC09.4}
+                \caption{UC07.4}
             \end{table}
 
-        \subsubsection{UC09.5 - Ricerca Recensioni per titolo}
-        \label{UC09.5}
+        \subsubsection{UC07.5 - Ricerca Recensioni per titolo}
+        \label{UC07.5}
 
             \begin{table}[H]
                 \centering
@@ -512,14 +512,14 @@
                     \hline
                     \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando il titolo per cui filtrarle.\\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC09.5}
+                \caption{UC07.5}
             \end{table}
 
-        \subsubsection{UC09.6 - Ricerca Recensioni per data}
-        \label{UC09.6}
+        \subsubsection{UC07.6 - Ricerca Recensioni per data}
+        \label{UC07.6}
 
             \begin{table}[H]
                 \centering
@@ -540,19 +540,19 @@
                     \hline
                     \textbf{Scenario principale} & L'utente ricerca delle recensioni specificando la data di riferimento per cui filtrarle.\\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC09.6}
+                \caption{UC07.6}
             \end{table}
 
-        \subsubsection{UC10 - Ricerca Recensioni Rilasciate}
-        \label{UC10}
+        \subsubsection{UC08 - Ricerca Recensioni Rilasciate}
+        \label{UC08}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.6]{src/img/UC10.png}
-                \caption{UC10}
+                \includegraphics[scale=0.6]{src/img/UC08.png}
+                \caption{UC08, UC10}
             \end{figure}
 
             \begin{table}[H]
@@ -574,19 +574,19 @@
                     \hline
                     \textbf{Scenario principale} & L'utente richiede la la lista delle recensioni che ha rilasciato come autore.\\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC10}
+                \caption{UC08}
             \end{table}
 
-        \subsubsection{UC11 - Ricerca Recensioni Ricevute}
-        \label{UC11}
+        \subsubsection{UC09 - Ricerca Recensioni Ricevute}
+        \label{UC09}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.6]{src/img/UC11.png}
-                \caption{UC11}
+                \includegraphics[scale=0.6]{src/img/UC09.png}
+                \caption{UC09, UC11}
             \end{figure}
 
             \begin{table}[H]
@@ -608,14 +608,14 @@
                     \hline
                     \textbf{Scenario principale} & L'utente richiede la la lista delle recensioni che ha ricevuto come attività.\\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC12]{UC12}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC10]{UC10}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC10}
+                \caption{UC09}
             \end{table}
 
-        \subsubsection{UC12 - Errore Ricerca Recensioni}
-        \label{UC12}
+        \subsubsection{UC10 - Errore Ricerca Recensioni}
+        \label{UC10}
 
             \begin{table}[H]
                 \centering
@@ -644,16 +644,16 @@
                     \end{itemize} \\
                     \hline
                 \end{tabularx}
-                \caption{UC12}
+                \caption{UC10}
             \end{table}
 
-        \subsubsection{UC13 - Visualizzazione Lista Recensioni}
-        \label{UC13}
+        \subsubsection{UC11 - Visualizzazione Lista Recensioni}
+        \label{UC11}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.6]{src/img/UC13.png}
-                \caption{UC13}
+                \includegraphics[scale=0.6]{src/img/UC11.png}
+                \caption{UC11, 14}
             \end{figure}
 
             \begin{table}[H]
@@ -676,17 +676,18 @@
                     \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC13}
+                \caption{UC11}
             \end{table}
 
-        \subsubsection{UC13.1 - Visualizzazione Singola Recensione}
-        \label{UC13.1}
+        \subsubsection{UC11.1 - Visualizzazione Singola Recensione}
+        \label{UC11.1}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.6]{src/img/UC13.1.png}
-                \includegraphics[scale=0.4]{src/img/UC13.1.x.png}
-                \caption{UC13.1}
+                \includegraphics[scale=0.6]{src/img/UC11.1.png}
+                \caption{UC11.1}
+                \includegraphics[scale=0.4]{src/img/UC11.1.x.png}
+                \caption{UC11.1.1 - UC11.1.6}
             \end{figure}
 
             \begin{table}[H]
@@ -706,14 +707,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata una recensione appartenente alla lista richiesta dall'utente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC13.1}
+                \caption{UC11.1}
             \end{table}
 
-        \subsubsection{UC13.1.1 - Visualizzazione Autore Recensione}
-        \label{UC13.1.1}
+        \subsubsection{UC11.1.1 - Visualizzazione Autore Recensione}
+        \label{UC11.1.1}
 
             \begin{table}[H]
                 \centering
@@ -732,14 +733,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzato l'autore all'interno della recensione corrispondente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC13.1.1}
+                \caption{UC11.1.1}
             \end{table}
 
-        \subsubsection{UC13.1.2 - Visualizzazione Destinatario Recensione}
-        \label{UC13.1.2}
+        \subsubsection{UC11.1.2 - Visualizzazione Destinatario Recensione}
+        \label{UC11.1.2}
 
             \begin{table}[H]
                 \centering
@@ -758,14 +759,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzato il destinatario all'interno della recensione corrispondente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC13.1.2}
+                \caption{UC11.1.2}
             \end{table}
 
-        \subsubsection{UC13.1.3 - Visualizzazione Titolo Recensione}
-        \label{UC13.1.3}
+        \subsubsection{UC11.1.3 - Visualizzazione Titolo Recensione}
+        \label{UC11.1.3}
 
             \begin{table}[H]
                 \centering
@@ -784,14 +785,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzato il titolo all'interno della recensione corrispondente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC13.1.3}
+                \caption{UC11.1.3}
             \end{table}
 
-        \subsubsection{UC13.1.4 - Visualizzazione Data Recensione}
-        \label{UC13.1.4}
+        \subsubsection{UC11.1.4 - Visualizzazione Data Recensione}
+        \label{UC11.1.4}
 
             \begin{table}[H]
                 \centering
@@ -810,14 +811,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzato la data all'interno della recensione corrispondente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC13.1.4}
+                \caption{UC11.1.4}
             \end{table}
 
-        \subsubsection{UC13.1.5 - Visualizzazione Voto Recensione}
-        \label{UC13.1.5}
+        \subsubsection{UC11.1.5 - Visualizzazione Voto Recensione}
+        \label{UC11.1.5}
 
             \begin{table}[H]
                 \centering
@@ -836,14 +837,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzato il voto all'interno della recensione corrispondente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC13.1.5}
+                \caption{UC11.1.5}
             \end{table}
 
-        \subsubsection{UC13.1.6 - Visualizzazione Testo Recensione}
-        \label{UC13.1.6}
+        \subsubsection{UC11.1.6 - Visualizzazione Testo Recensione}
+        \label{UC11.1.6}
 
             \begin{table}[H]
                 \centering
@@ -862,19 +863,19 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzato il testo all'interno della recensione corrispondente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC13.1.6}
+                \caption{UC11.1.6}
             \end{table}
 
-        \subsubsection{UC14 - Visualizzazione Recensioni Rilasciate}
-        \label{UC14}
+        \subsubsection{UC12 - Visualizzazione Recensioni Rilasciate}
+        \label{UC12}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.4]{src/img/UC14.png}
-                \caption{UC14}
+                \includegraphics[scale=0.4]{src/img/UC12.png}
+                \caption{UC12, UC14}
             \end{figure}
 
             \begin{table}[H]
@@ -894,19 +895,19 @@
                     \hline
                     \textbf{Scenario principale} & Viene mostrata la lista di recensioni rilasciate dall'utente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC14}
+                \caption{UC12}
             \end{table}
 
-        \subsubsection{UC15 - Visualizzazione Recensioni Ricevute}
-        \label{UC15}
+        \subsubsection{UC13 - Visualizzazione Recensioni Ricevute}
+        \label{UC13}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.4]{src/img/UC15.png}
-                \caption{UC15}
+                \includegraphics[scale=0.4]{src/img/UC13.png}
+                \caption{UC13, UC14}
             \end{figure}
 
             \begin{table}[H]
@@ -926,14 +927,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene mostrata la lista di recensioni ricevute dall'utente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC15}
+                \caption{UC13}
             \end{table}
 
-        \subsubsection{UC16 - Errore Visualizzazione Recensioni}
-        \label{UC16}
+        \subsubsection{UC14 - Errore Visualizzazione Recensioni}
+        \label{UC14}
 
             \begin{table}[H]
                 \centering
@@ -958,16 +959,16 @@
                     \end{enumerate} \\
                     \hline
                 \end{tabularx}
-                \caption{UC16}
+                \caption{UC14}
             \end{table}
 
-        \subsubsection{UC17 - Richiesta Lista Recensioni}
-        \label{UC17}
+        \subsubsection{UC15 - Richiesta Lista Recensioni}
+        \label{UC15}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.5]{src/img/UC17.png}
-                \caption{UC17}
+                \includegraphics[scale=0.5]{src/img/UC15.png}
+                \caption{UC15, UC16}
             \end{figure}
 
             \begin{table}[H]
@@ -994,14 +995,14 @@
                         \item viene restituita la lista di recensioni;
                     \end{enumerate} \\
                 \hline
-                \textbf{Estensioni} & Se la richiesta fallisce, si verifica \hyperref[UC18]{UC18}. \\
+                \textbf{Estensioni} & Se la richiesta fallisce, si verifica \hyperref[UC16]{UC16}. \\
                 \hline
                 \end{tabularx}
-                \caption{UC17}
+                \caption{UC15}
             \end{table}
 
-        \subsubsection{UC18 - Errore Ottenimento Recensioni}
-        \label{UC18}
+        \subsubsection{UC16 - Errore Ottenimento Recensioni}
+        \label{UC16}
 
             \begin{table}[H]
                 \centering
@@ -1028,16 +1029,16 @@
                         \end{enumerate} \\
                     \hline
                 \end{tabularx}
-                \caption{UC18}
+                \caption{UC16}
             \end{table}
 
-        \subsubsection{UC19 - Visualizzazione Lista Pagamenti}
-        \label{UC19}
+        \subsubsection{UC17 - Visualizzazione Lista Pagamenti}
+        \label{UC17}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.4]{src/img/UC19.png}
-                \caption{UC19}
+                \includegraphics[scale=0.4]{src/img/UC17.png}
+                \caption{UC17, UC19}
             \end{figure}
 
             \begin{table}[H]
@@ -1057,20 +1058,21 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC19}
+                \caption{UC17}
             \end{table}
 
-        \subsubsection{UC19.1 - Visualizzazione Singolo Pagamento}
-        \label{UC19.1}
+        \subsubsection{UC17.1 - Visualizzazione Singolo Pagamento}
+        \label{UC17.1}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.4]{src/img/UC19.1.png}
-                \includegraphics[scale=0.4]{src/img/UC19.1.x.png}
-                \caption{UC19.1}
+                \includegraphics[scale=0.4]{src/img/UC17.1.png}
+                \caption{UC17.1}
+                \includegraphics[scale=0.4]{src/img/UC17.1.x.png}
+                \caption{UC17.1.1 - UC17.1.5}
             \end{figure}
 
             \begin{table}[H]
@@ -1090,14 +1092,14 @@
                     \hline
                     \textbf{Scenario principale} & Visualizzazione del singolo pagamento. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC19.1}
+                \caption{UC17.1}
             \end{table}
 
-        \subsubsection{UC19.1.1 - Visualizzazione ID Pagamento}
-        \label{UC19.1.1}
+        \subsubsection{UC17.1.1 - Visualizzazione ID Pagamento}
+        \label{UC17.1.1}
 
             \begin{table}[H]
                 \centering
@@ -1116,14 +1118,14 @@
                     \hline
                     \textbf{Scenario principale} & Visualizzazione ID del singolo pagamento. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC19.1.1}
+                \caption{UC17.1.1}
             \end{table}
 
-        \subsubsection{UC19.1.2 - Visualizzazione Data Pagamento}
-        \label{UC19.1.2}
+        \subsubsection{UC17.1.2 - Visualizzazione Data Pagamento}
+        \label{UC17.1.2}
 
             \begin{table}[H]
                 \centering
@@ -1142,14 +1144,14 @@
                     \hline
                     \textbf{Scenario principale} & Visualizzazione della data del singolo pagamento. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC19.1.2}
+                \caption{UC17.1.2}
             \end{table}
 
-        \subsubsection{UC19.1.3 - Visualizzazione Importo Pagamento}
-        \label{UC19.1.3}
+        \subsubsection{UC17.1.3 - Visualizzazione Importo Pagamento}
+        \label{UC17.1.3}
 
             \begin{table}[H]
                 \centering
@@ -1168,14 +1170,14 @@
                     \hline
                     \textbf{Scenario principale} & Visualizzazione importo del singolo pagamento. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC19.1.3}
+                \caption{UC17.1.3}
             \end{table}
         
-        \subsubsection{UC19.1.4 - Visualizzazione Utente Pagante Pagamento}
-        \label{UC19.1.4}
+        \subsubsection{UC17.1.4 - Visualizzazione Utente Pagante Pagamento}
+        \label{UC17.1.4}
 
             \begin{table}[H]
                 \centering
@@ -1194,14 +1196,14 @@
                     \hline
                     \textbf{Scenario principale} & Visualizzazione utente pagante del singolo pagamento. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC19.1.4}
+                \caption{UC17.1.4}
             \end{table}
 
-        \subsubsection{UC19.1.5 - Visualizzazione Utente Ricevente Pagamento}
-        \label{UC19.1.5}
+        \subsubsection{UC17.1.5 - Visualizzazione Utente Ricevente Pagamento}
+        \label{UC17.1.5}
 
             \begin{table}[H]
                 \centering
@@ -1220,14 +1222,14 @@
                     \hline
                     \textbf{Scenario principale} & Visualizzazione utente ricevente del singolo pagamento. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC19.1.5}
+                \caption{UC17.1.5}
             \end{table}
 
-        \subsubsection{UC20 - Errore Visualizzazione Pagamenti}
-        \label{UC20}
+        \subsubsection{UC18 - Errore Visualizzazione Pagamenti}
+        \label{UC18}
 
             \begin{table}[H]
                 \centering
@@ -1252,16 +1254,16 @@
                     \end{enumerate} \\
                     \hline
                 \end{tabularx}
-                \caption{UC20}
+                \caption{UC18}
             \end{table}
 
-            \subsubsection{UC21 - Ordinamento Lista Recensioni}
-            \label{UC21}
+            \subsubsection{UC19 - Ordinamento Lista Recensioni}
+            \label{UC19}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.4]{src/img/UC21.png}
-                \caption{UC21}
+                \includegraphics[scale=0.4]{src/img/UC19.png}
+                \caption{UC19, UC20, UC21}
             \end{figure}
 
             \begin{table}[H]
@@ -1281,14 +1283,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata la lista delle recensioni in ordine. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC21}
+                \caption{UC19}
             \end{table}
 
-        \subsubsection{UC22 - Ordinamento Lista Recensioni dal meno recente}
-        \label{UC22}
+        \subsubsection{UC20 - Ordinamento Lista Recensioni dal meno recente}
+        \label{UC20}
 
             \begin{table}[H]
                 \centering
@@ -1307,14 +1309,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata la lista delle recensioni, ordinate dal più recente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC22}
+                \caption{UC20}
             \end{table}
 
-            \subsubsection{UC23 - Ordinamento Lista Recensioni dal più recente}
-            \label{UC23}
+            \subsubsection{UC21 - Ordinamento Lista Recensioni dal più recente}
+            \label{UC21}
 
                 \begin{table}[H]
                     \centering
@@ -1333,19 +1335,19 @@
                         \hline
                         \textbf{Scenario principale} & Viene visualizzata la lista delle recensioni, ordinate dal più recente. \\
                         \hline
-                        \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC16]{UC16}. \\
+                        \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC14]{UC14}. \\
                         \hline
                     \end{tabularx}
-                    \caption{UC23}
+                    \caption{UC21}
                 \end{table}
 
-                \subsubsection{UC24 - Visualizzazione Lista Pagamenti ordinati cronologicamente}
-            \label{UC24}
+                \subsubsection{UC22 - Visualizzazione Lista Pagamenti ordinati cronologicamente}
+            \label{UC22}
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[scale=0.4]{src/img/UC24.png}
-                \caption{UC24}
+                \includegraphics[scale=0.4]{src/img/UC22.png}
+                \caption{UC22, UC23, UC24}
             \end{figure}
 
                 \begin{table}[H]
@@ -1365,15 +1367,15 @@
                         \hline
                         \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti in ordine. \\
                         \hline
-                        \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                        \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                         \hline
                     \end{tabularx}
-                    \caption{UC24}
+                    \caption{UC22}
                 \end{table}
 
 
-            \subsubsection{UC25 - Visualizzazione Lista Pagamenti ordinati dal meno recente}
-            \label{UC25}
+            \subsubsection{UC23 - Visualizzazione Lista Pagamenti ordinati dal meno recente}
+            \label{UC23}
 
 
                 \begin{table}[H]
@@ -1393,14 +1395,14 @@
                         \hline
                         \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti in ordine cronologico. \\
                         \hline
-                        \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                        \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                         \hline
                     \end{tabularx}
-                    \caption{UC25}
+                    \caption{UC23}
                 \end{table}
 
-        \subsubsection{UC26 - Visualizzazione Lista Pagamenti ordinati dal più recente}
-        \label{UC26}
+        \subsubsection{UC24 - Visualizzazione Lista Pagamenti ordinati dal più recente}
+        \label{UC24}
 
             \begin{table}[H]
                 \centering
@@ -1419,19 +1421,19 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti ordinati dal più recente. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC26}
+                \caption{UC24}
             \end{table}
 
-            \subsubsection{UC27 - Visualizzazione Lista Pagamenti ordinati in base all'importo}
-        \label{UC27}
+            \subsubsection{UC25 - Visualizzazione Lista Pagamenti ordinati in base all'importo}
+        \label{UC25}
 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.4]{src/img/UC27.png}
-            \caption{UC27}
+            \includegraphics[scale=0.4]{src/img/UC25.png}
+            \caption{UC25, UC16, UC27}
         \end{figure}
 
             \begin{table}[H]
@@ -1451,14 +1453,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti in ordine. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
                 \caption{UC25}
             \end{table}
 
-        \subsubsection{UC28 - Visualizzazione Lista Pagamenti ordinati per importo più economico}
-        \label{UC28}
+        \subsubsection{UC26 - Visualizzazione Lista Pagamenti ordinati per importo più economico}
+        \label{UC26}
 
 
             \begin{table}[H]
@@ -1478,14 +1480,14 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti in ordine dal più economico. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC28}
+                \caption{UC26}
             \end{table}
 
-        \subsubsection{UC29 - Visualizzazione Lista Pagamenti ordinati per importo meno economico}
-        \label{UC29}
+        \subsubsection{UC27 - Visualizzazione Lista Pagamenti ordinati per importo meno economico}
+        \label{UC27}
 
             \begin{table}[H]
                 \centering
@@ -1504,10 +1506,10 @@
                     \hline
                     \textbf{Scenario principale} & Viene visualizzata la lista dei pagamenti in ordine dal meno economico. \\
                     \hline
-                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC20]{UC20}. \\
+                    \textbf{Estensioni} & Se l'operazione non va a buon fine, si verifica \hyperref[UC18]{UC18}. \\
                     \hline
                 \end{tabularx}
-                \caption{UC29}
+                \caption{UC27}
             \end{table}
 
 \pagebreak
