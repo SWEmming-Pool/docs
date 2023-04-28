@@ -1,4 +1,61 @@
-\section{Modello di sviluppo}
+\section{Modello di sviluppo iniziale}
+Nel periodo iniziale fino alla fase di RTB, il team ha deciso di adottare un modello di sviluppo \textbf{incrementale}. In questo
+modello le funzionalità principali sono introdotte all'inizio e verranno verificate 
+ad ogni incremento che si svolgerà. Un incremento prevede sempre l'introduzione di nuove
+funzionalità che vengono integrate nel sistema e quest'ultimo viene verificato in modo da
+controllare eventuali bug dovuti all'incremento. I principali vantaggi di questo modello sono:
+\begin{itemize}
+    \item utilizzo di un approccio adattivo nel caso in cui i requisiti cambino nel tempo;
+    \item in caso di errore si può sempre tornare allo stato precedente all'incremento;
+    \item favorisce il versionamento del prodotto;
+    \item riduce il rischio di fallimento.
+\end{itemize} 
+Di seguito, sono riportati in forma tabellare gli incrementi individuati e i relativi obiettivi raggiunti. Ogni requisito
+e caso d'uso è riportato tramite il proprio identificativo. I requisiti riportati includono anche i sotto requisiti ad essi collegati.
+Per maggiori dettagli consultare \textit{Analisi dei requisiti}.
+
+\rowcolors{2}{pari_alt}{dispari_alt}
+\renewcommand{\arraystretch}{1.8}
+
+\begin{xltabular}{\textwidth} {
+    >{\hsize=0.3\hsize\linewidth=\hsize}X
+    >{\hsize=1\hsize\linewidth=\hsize}X
+    >{\hsize=0.6\hsize\linewidth=\hsize \centering}X
+    >{\hsize=0.6\hsize\linewidth=\hsize}X
+    }
+    \rowcolorhead
+    \textbf{\color{white}Increm.} &
+    \textbf{\color{white}Obiettivo} &
+    \textbf{\color{white}Requisiti} &
+    \textbf{\color{white}Caso d'uso} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \rowcolorhead
+    \textbf{\color{white}Increm.} &
+    \textbf{\color{white}Obiettivo} &
+    \textbf{\color{white}Requisiti} &
+    \textbf{\color{white}Casi d'uso} \\
+    \hline
+    \endhead
+
+    \endfoot
+
+    \endlastfoot
+
+    \rom{1} & Studio della blockchain Ethereum\glo, confrontandola anche con altre tecnologie simili.
+    Studio di Solidity\glo come linguaggio per lo smart contract. & R1V12, R1V1, R2V3, R2V6, R2V7, R1V8, R1V14 & - \\
+    \rom{2} & Studio di Angular\glo per l'interfaccia utente e studio delle API & R2V5, R1Q3, R2V4, R2V7, R1V13 & - \\
+    \rom{3} & Studio del capitolato nel dettaglio e inizio individuazione requisiti principali. & R1F1, R1F2, R1F3, R1F4, R1F5, R1F7, R1F8, R1F10, R1F11, R1F12, R1F13, R1F14, R1F15, R1F16 & UC01, UC03, UC05, UC07, UC07, UC10, UC11, UC13, UC13.1, UC14, UC15, UC16, UC17, UC18. \\
+    % & & & & & & &
+    \rowcolor{white}
+    \caption{Incrementi individuati}
+\end{xltabular}
+
+
+
+\section{Modello di sviluppo attuale}
 Il modello di sviluppo adottato è quello Agile. Questo modello è caratterizzato da una filosofia che valorizza la flessibilità e la rapidità
 di risposta ai cambiamenti dei requisiti. In questo modello, il cliente è coinvolto attivamente
 nel processo di sviluppo, e le funzionalità vengono sviluppate in modo costante, con cicli di sviluppo
