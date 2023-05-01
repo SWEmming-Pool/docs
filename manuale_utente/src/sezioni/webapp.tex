@@ -1,13 +1,13 @@
-\section{Web App}
+\section{Web app}
 
 \subsection{Requisiti}
-Per poter utilizzare correttamente la web app è necessario disporre di una connessione ad internet e di un browser web che supporti l'estensione Metamask. L'applicazione è stata testata sui seguenti browser:
+Per poter utilizzare correttamente la web app è necessario disporre di una connessione ad internet e di un browser web che supporti l'estensione MetaMask. L'applicazione è stata testata sui seguenti browser:
 \begin{itemize}
     \item Google Chrome v112;
     \item Mozilla Firefox v112;
     \item Microsoft Edge v112.
 \end{itemize}
-L'unico tra i principali browser che non supporta Metamask è Safari, pertanto non è possibile utilizzare la web app su tale browser.
+L'unico tra i principali browser che non supporta MetaMask è Safari, pertanto non è possibile utilizzare la web app su tale browser.
 
 \subsubsection{MetaMask}
 Per poter utilizzare la web app è necessaria un'installazione funzionante dell'estensione MetaMask per il browser web.
@@ -15,19 +15,17 @@ Per poter utilizzare la web app è necessaria un'installazione funzionante dell'
 MetaMask è un portafoglio digitale che permette di interagire con la blockchain Ethereum e con gli smart contract eseguiti su di essa, offrendo la possibilità di effettuare transazioni con diverse criptovalute.
 
 Per le istruzioni di installazione e configurazione di MetaMask si rimanda alla \href{https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask}{documentazione ufficiale}.
+\pagebreak
 
-\subsection{Funzionalità}
-All'apertura della web app, verrà visualizzata la pagina principale. Come mostrato in \hyperref[fig:home]{Figura 1}, maggior parte delle funzionalità sarà disponibile solo dopo aver effettuato l'accesso con MetaMask; i bottoni corrispondenti a tali features saranno disabilitati fino ad allora.
-
-% VERSIONE SODDISFACENTE
-\begin{figure}[t]
+\begin{figure}[H]
     \centering
-    \begin{subfigure}{0.4\textwidth}
+    \begin{subfigure}[t]{0.49\textwidth}
     \centering
     \includegraphics[width=0.9\linewidth]{src/img/home.png}
     \caption{Login non effettuato}\label{fig:home_nologin}
     \end{subfigure}
-    \begin{subfigure}{0.4\textwidth}
+    \centering
+    \begin{subfigure}[t]{0.49\textwidth}
     \centering
     \includegraphics[width=0.9\linewidth]{src/img/home_login.png}
     \caption{Login effettuato}\label{fig:home_login}
@@ -35,26 +33,32 @@ All'apertura della web app, verrà visualizzata la pagina principale. Come mostr
 
     \caption{Pagina Home}\label{fig:home}
 \end{figure}
+\subsection{Funzionalità}
+All'apertura della web app, verrà visualizzata la pagina principale. Come mostrato in \hyperref[fig:home]{Figura 1}, maggior parte delle funzionalità sarà disponibile solo dopo aver effettuato l'accesso con MetaMask; i bottoni corrispondenti a tali features saranno disabilitati fino ad allora.
 
 Non è presente un bottone per effettuare pagamenti, in quanto il checkout, nella versione finale, sarà integrato direttamente nel sito web del commerciante, e dati quali indirizzo e prezzo da pagare non saranno modificabili dall'utente. È comunque possibile testare la funzionalità di pagamento come spiegato di seguito.
-
 \subsubsection{Checkout}
 Per motivi di test, è stato implementato un checkout di prova, accessibile inserendo nell'URL indirizzo del destinatario e quantità di ETH da inviare. Se, per esempio, la web app fosse hostata su \path{https://trustify.com}, l'URL avrebbe la seguente forma: \path{https://trustify.com/checkout/indirizzo-wallet/quantita-eth}.
 
-Cliccando sul bottone "Paga con Trustify", verrà aperta una finestra di Metamask per confermare la transazione, e si sarà reindirizzati all'interno della web app. Una volta confermata, verrà visualizzata una pagina di conferma del pagamento.
+Cliccando sul bottone "Paga con Trustify", verrà aperta una finestra di MetaMask per confermare la transazione, e si sarà reindirizzati all'interno della web app. Una volta confermata, verrà visualizzata una pagina di conferma del pagamento.
 
-\begin{figure}[t]
-    \begin{subfigure}{0.33\textwidth}
+L'operazione di checkout è illustrata in \hyperref[fig:checkout]{Figura 2}.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
     \centering
     \includegraphics[width=0.9\linewidth]{src/img/checkout.png}
     \caption{Pagina di checkout fittizia}\label{fig:checkout_page}
     \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
     \centering
     \includegraphics[width=0.9\linewidth]{src/img/checkout_metamask.png}
     \caption{Popup di pagamento su MetaMask}\label{fig:checkout_metamask}
     \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
     \centering
     \includegraphics[width=0.9\linewidth]{src/img/checkout_conferma.png}
     \caption{Pagina di attesa e conferma pagamento}\label{fig:checkout_conferma}
@@ -62,77 +66,91 @@ Cliccando sul bottone "Paga con Trustify", verrà aperta una finestra di Metamas
 
     \caption{Checkout}\label{fig:checkout}
 \end{figure}
+\pagebreak
 
-\subsubsection{Login/Account}
-Per effettuare il login, è necessario cliccare sul bottone "Login" e confermare l'accesso su MetaMask. Una volta effettuato il login, il bottone cambierà nome in "Account" e permetterà di visualizzare l'indirizzo del wallet utilizzato per l'accesso.
-
-\begin{figure}[t]
-    \begin{subfigure}{0.33\textwidth}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
     \centering
     \includegraphics[width=0.9\linewidth]{src/img/login.png}
     \caption{Pagina di login}\label{fig:login_page}
     \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{src/img/login_metamask.png}
+    \begin{subfigure}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{src/img/login_metamask.png}
     \caption{Popup di login su MetaMask}\label{fig:login_metamask}
     \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{src/img/account.png}
+    \begin{subfigure}[t]{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{src/img/account.png}
       \caption{Pagina con l'indirizzo del proprio wallet}\label{fig:account}
     \end{subfigure}
 
     \caption{Login}\label{fig:login}
 \end{figure}
+\subsubsection{Login/Account}
+Per effettuare il login, è necessario cliccare sul bottone "Login" e confermare l'accesso su MetaMask. Una volta effettuato il login, il bottone cambierà nome in "Account" e permetterà di visualizzare l'indirizzo del wallet utilizzato per l'accesso.
 
-
+La procedura è illustrata in \hyperref[fig:login]{Figura 3}.
 \subsubsection{Pagamenti da recensire}
-In questa sezione verranno visualizzati i pagamenti effettuati dall'utente che non sono ancora stati recensiti. Per ogni transazione, sarà possibile visualizzarne ID, indirizzo del destinatario, data e quantità di ether inviata, oltre ad un bottone per rilasciare una recensione. La seguente figura fa uso dei colori per evidenziare i differenti campi riportati per ogni transazione.
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.18]{src/img/pagamenti.jpg}
+In questa sezione verranno visualizzati i pagamenti effettuati dall'utente che non sono ancora stati recensiti. Per ogni transazione, sarà possibile visualizzarne ID, indirizzo del destinatario, data e quantità di ether inviata, oltre ad un bottone per rilasciare una recensione. La \hyperref[fig:pagamenti]{Figura 4} fa uso dei colori per evidenziare i differenti campi riportati per ogni transazione.
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{src/img/pagamenti.jpeg}
     \caption[Pagamenti da recensire]{Pagamenti da recensire\protect\footnotemark}\label{fig:pagamenti}
 \end{figure}
 
 \footnotetext{Per questioni di spazio, soprattutto nel layout mobile, non si sono inserite delle etichette per i campi, che potrebbero perciò risultare di difficile lettura; ipotizziamo però che, nella versione finale della web app, i vari indirizzi non saranno visualizzati in questo modo, ma saranno disponibili altre informazioni per identificare transazioni ed e-commerce.}
+\pagebreak
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.49\textwidth}
+    \centering
+    \includegraphics[width=0.7\linewidth]{src/img/rilascio_recensione.jpeg}
+    \caption{Campi vuoti}\label{fig:rilascio_recensione_vuoto}
+    \end{subfigure}
+    \centering
+    \begin{subfigure}[t]{0.49\textwidth}
+    \centering
+    \includegraphics[width=0.7\linewidth]{src/img/rilascio_recensione_valid.jpeg}
+    \caption{Campi validi}\label{fig:rilascio_recensione_valid}
+    \end{subfigure}
+
+    \caption{Pagina rilascio recensione}\label{fig:rilascio_recensione}
+\end{figure}
 
 \subsubsection{Rilascio recensione}
-In questa sezione sarà possibile rilasciare una recensione per un pagamento effettuato. In cima alla pagina sono visibili i dettagli della transazione, esattamente come avviene in \hyperref[fig:pagamenti]{Figura 9}; successivamente, bisognerà inserire un titolo, un punteggio da 1 a 5 e un commento. Una volta inseriti i dati, sarà possibile cliccare sul bottone "Invia" per confermare l'operazione.
+In questa sezione, mostrata in \hyperref[fig:rilascio_recensione]{Figura 5}, sarà possibile rilasciare una recensione per un pagamento effettuato. In cima alla pagina sono visibili i dettagli della transazione, esattamente come avviene in \hyperref[fig:pagamenti]{Figura 4}; successivamente, bisognerà inserire un titolo, un punteggio da 1 a 5 e un commento. Una volta inseriti i dati, sarà possibile cliccare sul bottone "Invia" per confermare l'operazione.
 
-Successivamente all'invio, sarà visualizzato un popup di MetaMask simile a quello in \hyperref[fig:checkout_metamask]{Figura 4} e una pagina di attesa e conferma simile a quella in \hyperref[fig:checkout_conferma]{Figura 5}.
+Successivamente all'invio, sarà visualizzato un popup di MetaMask simile a quello in \hyperref[fig:checkout_metamask]{Figura 2b} e una pagina di attesa e conferma simile a quella in \hyperref[fig:checkout_conferma]{Figura 2c}.
 
-\begin{figure}
-    \minipage{0.45\textwidth}
-      \includegraphics[width=\linewidth]{src/img/rilascio_recensione.png}
-      \caption{Pagina rilascio recensione con campi vuoti}\label{fig:rilascio_recensione}
-    \endminipage\hfill
-    \minipage{0.45\textwidth}
-      \includegraphics[width=\linewidth]{src/img/rilascio_recensione_valid.png}
-      \caption{Pagina rilascio recensione con campi validi}\label{fig:rilascio_recensione_valid}
-    \endminipage\hfill
-\end{figure}
-
-
-\subsubsection{Recensioni rilasciate e ricevute}
-In queste sezioni è possibile visualizzare le recensioni rilasciate e ricevute dall'utente. Per ogni recensione, sarà possibile visualizzare il titolo, il voto e il commento, oltre ad alcuni dettagli della transazione. La seguente figura fa uso dei colori per evidenziare i differenti campi riportati per ogni recensione.
-
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.18]{src/img/recensioni_rilasciate.jpg}
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{src/img/recensioni_rilasciate.jpeg}
     \caption{Recensioni rilasciate; la visualizzazione è la medesima per quelle ricevute}\label{fig:recensioni_rilasciate}
 \end{figure}
+\pagebreak
+\subsubsection{Recensioni rilasciate e ricevute}
+In queste sezioni è possibile visualizzare le recensioni rilasciate e ricevute dall'utente. Per ogni recensione, sarà possibile visualizzare il titolo, il voto e il commento, oltre ad alcuni dettagli della transazione. La \hyperref[fig:recensioni_rilasciate]{Figura 6} fa uso dei colori per evidenziare i differenti campi riportati per ogni recensione.
 
 \subsubsection{Ricerca recensioni}
-Questa pagina, l'unica accessibile senza aver effettuato il login, permette di ricercare recensioni in base all'indirizzo del destinatario o dell'autore. La visualizzazione di ogni recensione è la stessa già mostrata in \hyperref[fig:recensioni_rilasciate]{Figura 12}.
+Questa pagina, mostrata in \hyperref[fig:ricerca_recensioni]{Figura 7}, è l'unica accessibile senza aver effettuato il login, e permette di ricercare recensioni in base all'indirizzo del destinatario o dell'autore. La visualizzazione di ogni recensione è la stessa già mostrata in \hyperref[fig:recensioni_rilasciate]{Figura 6}.
 
-\begin{figure}
-    \minipage{0.45\textwidth}
-      \includegraphics[scale=0.15]{src/img/ricerca_recensioni.png}
-      \caption{Pagina ricerca recensioni con campo vuoto}\label{fig:ricerca_recensioni}
-    \endminipage\hfill
-    \minipage{0.45\textwidth}
-      \includegraphics[scale=0.15]{src/img/ricerca_recensioni_valid.png}
-      \caption{Pagina ricerca recensioni}\label{fig:ricerca_recensioni_valid}
-    \endminipage\hfill
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.49\textwidth}
+    \centering
+    \includegraphics[width=0.7\linewidth]{src/img/ricerca_recensioni.png}
+    \caption{Campo vuoto}\label{fig:ricerca_recensioni_vuoto}
+    \end{subfigure}
+    \centering
+    \begin{subfigure}[t]{0.49\textwidth}
+    \centering
+    \includegraphics[width=0.7\linewidth]{src/img/ricerca_recensioni_valid.png}
+    \caption{Campo valido}\label{fig:ricerca_recensioni_valid}
+    \end{subfigure}
+
+    \caption{Pagina ricerca recensione}\label{fig:ricerca_recensioni}
 \end{figure}
+\pagebreak
