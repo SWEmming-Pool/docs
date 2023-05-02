@@ -38,7 +38,7 @@ All'apertura della \textit{web app}, verrà visualizzata la pagina principale. C
 
 Non è presente un bottone per effettuare pagamenti, in quanto il checkout, nella versione finale, sarà integrato direttamente nel sito web del commerciante, e dati quali indirizzo e prezzo da pagare non saranno modificabili dall'utente. È comunque possibile testare la funzionalità di pagamento come spiegato di seguito.
 \subsubsection{Checkout}
-Per motivi di test, è stato implementato un checkout di prova, accessibile inserendo nell'URL indirizzo del destinatario e quantità di ETH da inviare. Se, per esempio, la \textit{web app} fosse hostata su \path{https://trustify.com}, l'URL avrebbe la seguente forma: \path{https://trustify.com/checkout/indirizzo-wallet/quantita-eth}.
+Per motivi di test, è stato implementato un checkout di prova, accessibile inserendo nell'URL indirizzo del destinatario e quantità di ETH da inviare. Se, per esempio, la \textit{web app} fosse hostata su \path{https://trustify.com}, l'URL avrebbe la seguente forma: \path{https://trustify.com/checkout/{indirizzo-wallet}/{quantita-eth}}.
 
 Cliccando sul bottone "Paga con Trustify", verrà aperta una finestra di \textit{MetaMask} per confermare la transazione, e si sarà reindirizzati all'interno della \textit{web app}. Una volta confermata, verrà visualizzata una pagina di conferma del pagamento.
 
