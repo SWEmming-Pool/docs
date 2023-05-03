@@ -1,4 +1,4 @@
-\section{Requisiti funzionali soddisfatti}
+\section{Requisiti soddisfatti}
 \rowcolors{2}{pari_alt}{dispari_alt}
         \renewcommand{\arraystretch}{1.8}
 
@@ -390,5 +390,22 @@
             \hline
 
             \rowcolor{white}
-            \caption{Requisiti funzionali}
+            \caption{Requisiti funzionali e relativo stato}
         \end{xltabular}
+
+        \begin{tikzpicture}
+            \pie[text = legend]
+                {
+                    62/Requisiti funzionali soddisfatti (37),
+                    38/Requisiti funzionali non soddisfatti (23)
+                }
+        \end{tikzpicture}
+
+        \begin{tikzpicture}
+            \pie[text = legend]
+                {
+                    100/Requisiti obbligatori soddisfatti (37)
+                }
+        \end{tikzpicture}
+
+        \captionof{figure}{Grafici sullo stato dei requisiti funzionali}
