@@ -1,7 +1,39 @@
 \section{Architettura del prodotto}
 
-\subsection{Descrizione generale}
+\subsection{Architettura logica}
+Il sistema \capName\ consiste di uno smart contract per gestire i pagamenti e le recensioni, e di una web app che permette l'interazione con esso tramite il wallet MetaMask. È anche presente un servizio API REST che permette agli e-commerce interessati di accedere alle recensioni per facilitarne l'integrazione nel loro sito web.
 
-\subsection{Diagramma delle classi}
+La web app interagisce direttamente con la blockchain tramite Remote Procedure Call utilizzando un nodo per dialogare con lo smart contract. D'altra parte, il servizio API è separato dalla logica dell'applicazione e ha come unico scopo quello di fornire un'interfaccia standard e facile da usare per gli e-commerce, che permette loro di visualizzare le recensioni sul proprio sito.
+
+\subsection{Architettura di deployment}
+L'architettura di deployment del prodotto prevede la suddivisione dei componenti in tre nodi distinti:
+\begin{itemize}
+    \item Server web app: ospita la webapp e comunica con il contratto smart attraverso l'utilizzo della libreria web3js;
+    \item Server API: ospita l'API REST e comunica con il contratto smart attraverso l'utilizzo della libreria web3j;
+    \item Nodo RPC: nodo per dialogare direttamente com la blockchain Ethereum tramite Remote Procedure Call.
+\end{itemize}
+
+\subsection{Diagrammi delle classi}
+\begin{figure}[H]
+    \includesvg[width=\linewidth]{src/img/webapp.svg}
+    \caption{Diagramma delle classi della web app}\label{fig:webapp}
+\end{figure}
+
+\begin{figure}[H]
+    \includesvg[width=\linewidth]{src/img/contract.svg}
+    \caption{Diagramma delle classi dello smart contract}\label{fig:contract}
+\end{figure}
+
+\begin{figure}[H]
+    \includesvg[width=\linewidth]{src/img/apirest.svg}
+    \caption{Diagramma delle classi delle API REST}\label{fig:apirest}
+\end{figure}
 
 \subsection{Design patterns}
+
+\subsubsection{Architetturali}
+- MVC
+- Dependency Injection
+
+\subsubsection{Altri patterns}
+- Repository
