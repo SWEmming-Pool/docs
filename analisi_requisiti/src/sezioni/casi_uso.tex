@@ -15,7 +15,7 @@
 
             \paragraph*{Utente autenticato:} utente che possiede un account \textit{MetaMask} e che è autenticato, dunque può effettuare pagamenti e rilasciare recensioni.
 
-            \paragraph*{Utilizzatore API:} utente generico che utilizza l'API REST per ottenere le recensioni, associate ad un indirizzo, in formato \textit{JSON}, senza passare per la \textit{web app}.
+            \paragraph*{Utilizzatore API:} utente generico che utilizza l'\textit{API REST} per ottenere le recensioni, associate ad un indirizzo, in formato \textit{JSON}, senza passare per la \textit{web app}.
 
         \subsubsection{Attori secondari}
             \paragraph*{\textit{MetaMask}:} \textit{wallet}\glo \: di criptovalute usato per interagire con la \textit{blockchain} \textit{Ethereum}. Permette di accedere al proprio \textit{wallet} attraverso applicazione mobile o, come nel nostro caso, estensione per browser.
@@ -81,9 +81,7 @@
                         \textbf{Scenario principale} &
                             \begin{enumerate}
                                 \item Si verificano problemi con l'accesso a \textit{MetaMask};
-                                \item Viene mostrato un errore che informa l'utente del fallimento dell'operazione;
-                                \item Vengono mostrati dei consigli sulla risoluzione del problema e si invita
-                                l'utente a riprovare.
+                                \item Viene mostrato un errore che informa l'utente del fallimento dell'operazione.
                             \end{enumerate} \\
                         \hline
                     \end{tabularx}
@@ -115,7 +113,7 @@
                         \hline
                         \textbf{Postcondizioni} & L'utente ha completato il pagamento. \\
                         \hline
-                        \textbf{Scenario principale} & L'utente effettua il pagamento verso un altro wallet. \\
+                        \textbf{Scenario principale} & L'utente effettua il pagamento verso un altro \textit{wallet}. \\
                         \hline
                     \end{tabularx}
                     \caption{UC03}
@@ -328,14 +326,13 @@
                     \hline
                     \textbf{Scenario principale} &
                         \begin{enumerate}
-                            \item L'utente rilascia una recensione che non rispetta un formato valido, ovvero non viola i seguenti vincoli:
+                            \item L'utente rilascia una recensione che rispetta un formato valido, ovvero non viola i seguenti vincoli:
                             \begin{itemize}
                                 \item titolo: non vuoto e non superiore a 50 caratteri;
                                 \item voto: non vuoto e compreso tra 1 e 5;
                                 \item testo: non vuoto e non superiore a 500 caratteri;
                             \end{itemize}
-                            \item Viene mostrato un errore che informa l'utente sulla motivazione;
-                            \item Vengono mostrati consigli sulla risoluzione del problema e si termina l'attuale operazione.
+                            \item Viene mostrato un errore che informa l'utente sulla motivazione e si termina l'attuale operazione.
                         \end{enumerate} \\
                     \hline
                 \end{tabularx}
@@ -954,8 +951,7 @@
                     \textbf{Scenario principale} & 
                     \begin{enumerate}
                         \item La visualizzazione delle recensioni fallisce.
-                        \item Il sistema mostra un messaggio di errore all'utente su circa il motivo.
-                        \item Vengono mostrati consigli sulla risoluzione del problema e si termina l'attuale operazione.
+                        \item Il sistema mostra un messaggio di errore esplicativo all'utente e si termina l'attuale operazione.
                     \end{enumerate} \\
                     \hline
                 \end{tabularx}
@@ -991,8 +987,8 @@
                 \textbf{Scenario principale} &
                     \begin{enumerate}
                         \item L'utente fa una richiesta al \textit{server API REST} per ottenere le recensioni legate all'indirizzo specificato;
-                        \item il server recupera tali recensioni dalla \textit{blockchain};
-                        \item viene restituita la lista di recensioni;
+                        \item Il server recupera tali recensioni dalla \textit{blockchain};
+                        \item Viene restituita la lista di recensioni.
                     \end{enumerate} \\
                 \hline
                 \textbf{Estensioni} & Se la richiesta fallisce, si verifica \hyperref[UC16]{UC16}. \\
@@ -1024,8 +1020,8 @@
                     \textbf{Scenario principale} &
                         \begin{enumerate}
                             \item L'utente tenta di ottenere la lista di recensioni;
-                            \item non esistono delle recensioni legate all'indirizzo cercato;
-                            \item viene mostrato un messaggio di errore.
+                            \item Non esistono delle recensioni legate all'indirizzo cercato;
+                            \item Viene mostrato un messaggio di errore.
                         \end{enumerate} \\
                     \hline
                 \end{tabularx}
