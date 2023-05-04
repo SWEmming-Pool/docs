@@ -1,0 +1,35 @@
+\input{../componenti_comuni/src/commands}
+\input{../componenti_comuni/src/packages}
+\input{../componenti_comuni/src/style}
+
+\begin{document}
+	\renewcommand{\documentName}{Specifica Tecnica}
+	\renewcommand{\documentVersion}{v1.0.0}
+	\renewcommand{\documentSummary}{Questo documento contiene le scelte architetturali e di progettazione del gruppo \groupName\ per il progetto \capName.}
+	\renewcommand{\documentEditors}{Ennio Italiano \\ & Elia Pasquali \smallskip}
+	\renewcommand{\documentVerifiers}{Fabio Pantaleo \smallskip}
+	\renewcommand{\documentApprovers}{Nicolò Trinca \smallskip}
+	\renewcommand{\documentAddressee}{\Vardanega \\ & \Cardin}
+
+	%Prima pagina
+	\pagestyle{empty}
+	\input{src/firstpage}
+	\pagebreak
+
+	%Changelog
+	\input{src/changelog} \pagebreak
+
+	%Indici
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	\listoffigures
+	\listoftables
+	\pagebreak
+
+	%Contenuto
+	\pagestyle{stylePage}
+	\input{src/contenuto}
+	\label{LastPage}
+	\pagebreak
+\end{document}

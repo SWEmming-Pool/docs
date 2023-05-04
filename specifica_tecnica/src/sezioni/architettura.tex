@@ -1,0 +1,42 @@
+\section{Architettura del prodotto}
+
+\subsection{Architettura logica}
+Il sistema \capName\ consiste di uno smart contract per gestire i pagamenti e le recensioni, e di una web app che permette l'interazione con esso tramite il wallet MetaMask. È anche presente un servizio API REST che permette agli e-commerce interessati di accedere alle recensioni per facilitarne l'integrazione nel loro sito web.
+
+La web app interagisce direttamente con la blockchain tramite Remote Procedure Call utilizzando un nodo per dialogare con lo smart contract. D'altra parte, il servizio API è separato dalla logica dell'applicazione e ha come unico scopo quello di fornire un'interfaccia standard e facile da usare per gli e-commerce, che permette loro di visualizzare le recensioni sul proprio sito.
+
+\subsection{Architettura di deployment}
+L'architettura di deployment del prodotto prevede la suddivisione dei componenti in tre nodi distinti:
+\begin{itemize}
+    \item Server web app: ospita la web app e comunica con il contratto smart attraverso l'utilizzo della libreria web3js;
+    \item Server API: ospita l'API REST e comunica con il contratto smart attraverso l'utilizzo della libreria web3j;
+    \item Nodo RPC: nodo per dialogare direttamente com la blockchain Ethereum tramite Remote Procedure Call.
+\end{itemize}
+
+\subsection{Diagrammi delle classi}
+\begin{figure}[H]
+    \includesvg[width=\linewidth]{src/img/webapp.svg}
+    \caption{Diagramma delle classi della web app}\label{fig:webapp}
+\end{figure}
+
+\begin{figure}[H]
+    \includesvg[width=\linewidth]{src/img/contract.svg}
+    \caption{Diagramma delle classi dello smart contract}\label{fig:contract}
+\end{figure}
+
+\begin{figure}[H]
+    \includesvg[width=\linewidth]{src/img/apirest.svg}
+    \caption{Diagramma delle classi delle API REST}\label{fig:apirest}
+\end{figure}
+
+\subsection{Design patterns}
+
+\subsubsection{Architetturali}
+L'architettura proposta per il sistema utilizza i pattern MVC (Model-View-Controller) e Dependency Injection per garantire un alto livello di separazione delle responsabilità e una maggiore modularità. Tali pattern costituiscono inoltre caratteristiche intrinseche di Angular, il framework utilizzato per lo sviluppo della web app.
+
+Il pattern MVC divide il sistema in tre parti principali: il Model, la View e il Controller. Nel nostro specifico caso, il Model corrisponde allo smart contract, la View alla web app e il Controller alla parte di codice che gestisce la logica dell'applicazione e la comunicazione tra il Model e la View.
+
+In Angular, il pattern Dependency Injection viene applicato per fornire un meccanismo di interazione tra i consumatori e i fornitori di dipendenze mediante un'astrazione chiamata Injector. In pratica, un injector viene utilizzato per cercare se esiste già un'istanza disponibile di una determinata dipendenza richiesta; se l'istanza non è già presente, viene creata e salvata. Un esempio di utilizzo di Dependency Injection si ha nel nostro caso con il servizio di Angular Router, che viene iniettato nei componenti che lo necessitano per gestire la navigazione tra le varie pagine della web app.
+
+\subsubsection{Altri patterns}
+- Repository

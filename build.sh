@@ -115,6 +115,15 @@ mv main.pdf ../documenti_compilati/manuale_utente.pdf
 clean
 cd ..
 
+# Manuale utente
+cd specifica_tecnica/
+echo "Specifca tecnica"
+echo "----------------------"
+compile
+mv main.pdf ../documenti_compilati/specifica_tecnica.pdf
+clean
+cd ..
+
 # Verbali
 cd verbali/
 echo "Verbali"
