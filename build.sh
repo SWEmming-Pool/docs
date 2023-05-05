@@ -115,7 +115,7 @@ mv main.pdf ../documenti_compilati/manuale_utente.pdf
 clean
 cd ..
 
-# Manuale utente
+# Specifica tecnica
 cd specifica_tecnica/
 echo "Specifca tecnica"
 echo "----------------------"
