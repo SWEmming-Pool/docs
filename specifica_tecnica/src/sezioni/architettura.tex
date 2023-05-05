@@ -1,42 +1,91 @@
 \section{Architettura del prodotto}
 
 \subsection{Architettura logica}
-Il sistema \capName\ consiste di uno smart contract per gestire i pagamenti e le recensioni, e di una web app che permette l'interazione con esso tramite il wallet MetaMask. È anche presente un servizio API REST che permette agli e-commerce interessati di accedere alle recensioni per facilitarne l'integrazione nel loro sito web.
+Il sistema \capName\ consiste di uno \textit{smart contract} per gestire i pagamenti e le recensioni, e di una \textit{web app} che permette l'interazione con esso tramite il \textit{wallet} \textit{MetaMask}. È anche presente un servizio \textit{API REST} che permette agli \textit{e-commerce} interessati di accedere alle recensioni per facilitarne l'integrazione nel loro sito web.
 
-La web app interagisce direttamente con la blockchain tramite Remote Procedure Call utilizzando un nodo per dialogare con lo smart contract. D'altra parte, il servizio API è separato dalla logica dell'applicazione e ha come unico scopo quello di fornire un'interfaccia standard e facile da usare per gli e-commerce, che permette loro di visualizzare le recensioni sul proprio sito.
+La web app interagisce direttamente con la \textit{blockchain} tramite \textit{Remote Procedure Call} utilizzando un nodo per dialogare con lo smart contract. D'altra parte, il servizio \textit{API REST} è separato dalla logica dell'applicazione e ha come unico scopo quello di fornire un'interfaccia standard e facile da usare per gli \textit{e-commerce}, che permette loro di visualizzare le recensioni sul proprio sito.
 
 \subsection{Architettura di deployment}
-L'architettura di deployment del prodotto prevede la suddivisione dei componenti in tre nodi distinti:
+L'architettura di \textit{deployment} del prodotto prevede la suddivisione dei componenti in tre nodi distinti:
 \begin{itemize}
-    \item Server web app: ospita la web app e comunica con il contratto smart attraverso l'utilizzo della libreria web3js;
-    \item Server API: ospita l'API REST e comunica con il contratto smart attraverso l'utilizzo della libreria web3j;
-    \item Nodo RPC: nodo per dialogare direttamente com la blockchain Ethereum tramite Remote Procedure Call.
+    \item \textit{Server web app}: ospita la \textit{web app} e comunica con lo \textit{smart contract} attraverso l'utilizzo della libreria \texttt{web3js};
+    \item \textit{Server API}: ospita l'\textit{API REST} e comunica con il \textit{smart contract} attraverso l'utilizzo della libreria \texttt{web3j};
+    \item \textit{Nodo Ethereum}: nodo per dialogare direttamente com la blockchain \textit{Ethereum} tramite \textit{Remote Procedure Call}. È utilizzato sia dal \textit{server web app} che dal \textit{server API}. Fornito da \textit{Infura}.
 \end{itemize}
+\pagebreak
 
-\subsection{Diagrammi delle classi}
-\begin{figure}[H]
-    \includesvg[width=\linewidth]{src/img/webapp.svg}
-    \caption{Diagramma delle classi della web app}\label{fig:webapp}
-\end{figure}
+\subsection{Dettaglio architettura}
+\subsubsection{Smart contract}
 
+Lo \textit{smart contract} è stato sviluppato in \textit{Solidity} e pubblicato su \textit{Sepolia}, una \textit{testnet} di \textit{Ethereum}, per permettere la verifica del suo funzionamento.
+
+\paragraph{Diagramma delle classi}~
 \begin{figure}[H]
     \includesvg[width=\linewidth]{src/img/contract.svg}
-    \caption{Diagramma delle classi dello smart contract}\label{fig:contract}
+    \caption{Diagramma delle classi dello \textit{smart contract}}\label{fig:contract}
+\end{figure}
+\subparagraph*{Commento sui \texttt{modifier}}~
+
+\noindent In \textit{Solidity} le funzioni possono essere modificate da particolari \texttt{modifier}, che permettono di aggiungere delle condizioni che devono essere verificate prima dell'esecuzione della funzione. Questi sono stati inseriti nel diagramma come delle funzioni private con tipo di ritorno nullo.
+
+\paragraph{Design patterns}~
+\subparagraph*{Access Restriction}~
+
+\noindent Limita la chiamata di alcune funzioni ad una ristretta tipologia di utenti.
+
+Viene utilizzato per limitare la possibilità di rilasciare una recensione per una determinata transazione solo all'effettivo cliente che l'ha effettuata. Avviene tramite \texttt{modifier} del linguaggio, particolari funzioni che permettono di bloccare l'esecuzione della funzione a cui vengono legati e annullare l'operazione se non viene rispettata la condizione.
+
+\subparagraph*{Guard check}~
+
+\noindent Valida i parametri passati ad una funzione, annullandola se non rispettano determinate condizioni.
+
+Tramite \texttt{require}, un meccanismo di validazione offerto dal linguaggio, viene verificato che i parametri passati ad una funzione siano validi e che i vari attributi rispettino i vincoli di dominio imposti (ad esempio, che il voto sia compreso tra 1 e 5). Inoltre viene utilizzato per verificare che la transazione che si sta cercando di recensire sia effettivamente presente nel sistema e che non sia già stata recensita.
+
+
+\subsubsection{Web app}
+\paragraph{Diagramma delle classi}~
+\begin{figure}[H]
+    \includesvg[width=\linewidth]{src/img/webapp.svg}
+    \caption{Diagramma delle classi della \textit{web app}}\label{fig:webapp}
 \end{figure}
 
+\paragraph{Design patterns}~
+
+\noindent Per la \textit{web app} si utilizzano i pattern \textit{MVVM} (\textit{Model-View-ViewModel}) e \textit{Dependency Injection}, per garantire un alto livello di separazione delle responsabilità e una maggiore modularità. Tali pattern costituiscono caratteristiche intrinseche di \textit{Angular}, il \textit{framework} utilizzato per lo sviluppo della \textit{web app}.
+
+\subparagraph*{MVVM (Model-View-ViewModel)}~
+
+\noindent Il pattern \textit{MVVM} divide il sistema in tre parti principali: il \textit{Model}, la \textit{View} e il \textit{ViewModel}. All'interno della \textit{web app}, il \textit{Model} è costituito dalle rappresentazioni di recensioni e transazioni, il \textit{ViewModel} è costituito dai servizi che gestiscono le interazioni con lo smart contract e l'autenticazione, mentre la \textit{View} è costituita dai componenti che compongono l'interfaccia grafica.
+
+\subparagraph*{Dependency Injection}~
+
+\noindent In \textit{Angular}, il pattern \textit{Dependency Injection} viene applicato per fornire un meccanismo di interazione tra i consumatori e i fornitori di dipendenze mediante un'astrazione chiamata \textit{Injector}. In pratica, un \textit{injector} viene utilizzato per cercare se esiste già un'istanza disponibile di una determinata dipendenza richiesta; se l'istanza non è già presente, viene creata e salvata. Un esempio di utilizzo di \textit{Dependency Injection} si ha nel nostro caso con il servizio di \textit{Angular} \textit{Router}, che viene iniettato nei componenti che lo necessitano per gestire la navigazione tra le varie pagine della \textit{web app}.
+
+\subsubsection{API REST}
+\paragraph{Diagramma delle classi}~
 \begin{figure}[H]
     \includesvg[width=\linewidth]{src/img/apirest.svg}
-    \caption{Diagramma delle classi delle API REST}\label{fig:apirest}
+    \caption{Diagramma delle classi delle \textit{API REST}}\label{fig:apirest}
 \end{figure}
 
-\subsection{Design patterns}
+\paragraph{Design patterns}~
 
-\subsubsection{Architetturali}
-L'architettura proposta per il sistema utilizza i pattern MVC (Model-View-Controller) e Dependency Injection per garantire un alto livello di separazione delle responsabilità e una maggiore modularità. Tali pattern costituiscono inoltre caratteristiche intrinseche di Angular, il framework utilizzato per lo sviluppo della web app.
+\noindent Il pattern architetturale \textit{MVC (Model-View-Controller)} e la \textit{Dependency Injection (DI)} sono due concetti chiave utilizzati nello sviluppo della \textit{API REST} in Java con \textit{Spring Boot}.
 
-Il pattern MVC divide il sistema in tre parti principali: il Model, la View e il Controller. Nel nostro specifico caso, il Model corrisponde allo smart contract, la View alla web app e il Controller alla parte di codice che gestisce la logica dell'applicazione e la comunicazione tra il Model e la View.
+\subparagraph*{MVC (Model-View-Controller)}~
 
-In Angular, il pattern Dependency Injection viene applicato per fornire un meccanismo di interazione tra i consumatori e i fornitori di dipendenze mediante un'astrazione chiamata Injector. In pratica, un injector viene utilizzato per cercare se esiste già un'istanza disponibile di una determinata dipendenza richiesta; se l'istanza non è già presente, viene creata e salvata. Un esempio di utilizzo di Dependency Injection si ha nel nostro caso con il servizio di Angular Router, che viene iniettato nei componenti che lo necessitano per gestire la navigazione tra le varie pagine della web app.
+\noindent Il pattern \textit{MVC} divide l'applicazione in tre componenti distinti: il \textit{Model}, la \textit{View} e il \textit{Controller}. Il \textit{Model} rappresenta la logica di business dell'applicazione e contiene la logica per accedere ai dati, il \textit{Controller} gestisce le richieste \textit{HTTP} e il flusso di controllo dell'applicazione, mentre la \textit{View} si occupa di presentare i dati all'utente.
 
-\subsubsection{Altri patterns}
-- Repository
+\subparagraph*{Dependency Injection}~
+
+\noindent In \textit{Spring Boot}, la \textit{Dependency Injection} è implementata attraverso l'uso di un container di inversione di controllo (IoC), che si occupa di gestire la creazione e l'inizializzazione dei componenti dell'applicazione e di fornire le dipendenze tra essi. In particolare, \textit{Spring Boot} utilizza l'annotazione \texttt{@Autowired} per iniettare automaticamente le dipendenze dei componenti, come ad esempio i servizi che gestiscono l'accesso ai dati, all'interno dei \textit{Controller}.
+
+In pratica, questo significa che è possibile definire un \textit{Controller} che dipende da un servizio di accesso ai dati, e automaticamente \textit{Spring Boot} si occuperà di creare e iniettare l'istanza del servizio all'interno di esso, senza che sia necessario gestire manualmente la creazione e l'inizializzazione delle dipendenze.
+
+\subparagraph*{DTO (Data Transfer Object)}~
+
+Il \textit{DTO pattern (Data Transfer Object)} viene utilizzato per semplificare la comunicazione tra i diversi strati dell'applicazione. La sua funzione principale è quella di incapsulare i dati in modo da trasferirli in maniera più efficiente. Il \textit{DTO} è un oggetto che contiene solo i dati necessari per il trasferimento e non ha alcuna logica o comportamento associato ad esso.
+
+Nella nostra \textit{API} viene utilizzato per ottenere un oggetto \textit{ReviewDTO} a partire da un oggetto \textit{Review}, in modo da nascondere i dettagli implementativi della classe \textit{Review} e fornire solo i dati necessari per la visualizzazione delle recensioni.
+
+\pagebreak
