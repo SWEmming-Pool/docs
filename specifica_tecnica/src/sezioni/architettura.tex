@@ -32,11 +32,46 @@ L'architettura di deployment del prodotto prevede la suddivisione dei componenti
 \subsection{Design patterns}
 
 \subsubsection{Architetturali}
+
+% L'architettura software delle API REST in Java con Spring Boot segue il pattern architetturale Model-View-Controller (MVC), che permette di separare le responsabilità del software in tre componenti distinti: il modello, la vista e il controller.
+
+% Il modello rappresenta i dati dell'applicazione, mentre la vista si occupa di presentare questi dati all'utente. Il controller, invece, gestisce le richieste dell'utente e si occupa di invocare le operazioni appropriate per elaborarle.
+
+% In Spring Boot, il controller è rappresentato da un insieme di classi annotate con l'annotazione @RestController, che indicano che la classe è responsabile di gestire le richieste REST. Ogni metodo all'interno di questa classe è annotato con una delle annotazioni HTTP standard (ad esempio, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping) per indicare quale operazione HTTP viene gestita dal metodo.
+
+% Il modello è rappresentato da una serie di classi Java che definiscono la struttura dei dati dell'applicazione. Queste classi possono essere annotate con diverse annotazioni per definire la relazione tra di esse, ad esempio @Entity per definire una classe che rappresenta una tabella di un database relazionale.
+
+% Infine, la vista è rappresentata dalle risposte REST prodotte dall'API. Queste risposte possono essere rappresentate in diversi formati, come JSON o XML, a seconda delle preferenze dell'utente. Spring Boot utilizza un meccanismo di serializzazione automatica per convertire gli oggetti Java nel formato desiderato.
+
+% Inoltre, Spring Boot offre molti altri strumenti e librerie per semplificare lo sviluppo di API REST, tra cui Spring Data per la gestione del database, Spring Security per la gestione dell'autenticazione e dell'autorizzazione, e Swagger per la documentazione automatica dell'API.
+
+
+\subsubsection{Angular}
+
 L'architettura proposta per il sistema utilizza i pattern MVC (Model-View-Controller) e Dependency Injection per garantire un alto livello di separazione delle responsabilità e una maggiore modularità. Tali pattern costituiscono inoltre caratteristiche intrinseche di Angular, il framework utilizzato per lo sviluppo della web app.
 
 Il pattern MVC divide il sistema in tre parti principali: il Model, la View e il Controller. Nel nostro specifico caso, il Model corrisponde allo smart contract, la View alla web app e il Controller alla parte di codice che gestisce la logica dell'applicazione e la comunicazione tra il Model e la View.
 
 In Angular, il pattern Dependency Injection viene applicato per fornire un meccanismo di interazione tra i consumatori e i fornitori di dipendenze mediante un'astrazione chiamata Injector. In pratica, un injector viene utilizzato per cercare se esiste già un'istanza disponibile di una determinata dipendenza richiesta; se l'istanza non è già presente, viene creata e salvata. Un esempio di utilizzo di Dependency Injection si ha nel nostro caso con il servizio di Angular Router, che viene iniettato nei componenti che lo necessitano per gestire la navigazione tra le varie pagine della web app.
 
+\subsubsection{API REST}
+Il pattern architetturale \textit{MVC (Model-View-Controller)} e la \textit{Dependency Injection (DI)} sono due concetti chiave utilizzati nello sviluppo di una \textit{API REST} in Java con \textit{Spring Boot}.
+
+Il pattern MVC divide l'applicazione in tre componenti distinti: il \textit{Model}, la \textit{View} e il \textit{Controller}. Il Model rappresenta la logica di business dell'applicazione e contiene la logica per accedere ai dati, il Controller gestisce le richieste HTTP e il flusso di controllo dell'applicazione, mentre la View si occupa di presentare i dati all'utente.
+
+La Dependency Injection è un concetto di progettazione software che permette di ridurre l'accoppiamento tra i componenti dell'applicazione e rendere il codice più modulare e riutilizzabile. In pratica, invece di creare e gestire esplicitamente le dipendenze tra i componenti, la DI consente di specificare le dipendenze in una configurazione centralizzata e delegare a un framework (in questo caso Spring) il compito di creare e gestire i componenti e le relative dipendenze.
+
+In Spring Boot, la Dependency Injection è implementata attraverso l'uso di un container di inversione di controllo (IoC), che si occupa di gestire la creazione e l'inizializzazione dei componenti dell'applicazione e di fornire le dipendenze tra essi. In particolare, Spring Boot utilizza l'annotazione \texttt{@Autowired} per iniettare automaticamente le dipendenze dei componenti, come ad esempio i servizi che gestiscono l'accesso ai dati, all'interno dei Controller.
+
+In pratica, questo significa che è possibile definire un Controller che dipende da un servizio di accesso ai dati, e automaticamente Spring si occuperà di creare e iniettare l'istanza del servizio all'interno di esso, senza che sia necessario gestire manualmente la creazione e l'inizializzazione delle dipendenze.
+
+In sintesi, l'uso combinato del pattern MVC e della Dependency Injection consente di creare applicazioni modulari, scalabili e facilmente manutenibili, grazie alla separazione dei componenti e alla gestione automatica delle dipendenze.
+
 \subsubsection{Altri patterns}
 - Repository
+
+% TO DO: aggiungere altri patterns
+% DTO
+% Guard Check
+% Guard-are il doc di winning
+% Viva la blockchain
