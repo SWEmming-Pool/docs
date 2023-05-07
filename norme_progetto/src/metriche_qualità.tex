@@ -15,8 +15,7 @@ L'indice così calcolato può assumere valori tra 0 e 100:
     \item \textbf{GULP $<$ 40:} indica una leggibilità difficile per un utente con licenza superiore.
 \end{itemize}
 
-Per facilitare il calcolo di questo indice, il gruppo si è appoggiato al sito \href{https://farfalla-project.org/readability_static/}, copiando
-l'intero contenuto dei documenti in formato pdf escludendo la prima pagina e gli indici.
+Per facilitare il calcolo di questo indice, il gruppo si è appoggiato al sito \url{https://farfalla-project.org/readability_static/}.
 
 \subsubsection{MPD02: Copertura requisiti obbligatori}\label{sssec:requisiti_obbligatori}
 Indice che misura in ogni istante la percentuale di requisiti obbligatori soddisfatti.
@@ -77,42 +76,48 @@ Dove in \textbf{Btot} i browser presi in considerazione sono i seguenti:
 \end {itemize} 
 
 \subsubsection{MPD07: Solidity Statement Coverage}\label{sssec:solidity_statement_coverage}
-Viene utilizzato per calcolare il numero di istruzioni nel codice sorgente che sono state eseguite.\\
-Lo scopo dello Statement Coverage è quello di coprire tutti i possibili percorsi, righe e istruzioni nel codice sorgente.\\
+Viene utilizzato per calcolare il numero di istruzioni nel codice sorgente che sono state eseguite.
+
+Lo scopo dello Statement Coverage è quello di coprire tutti i possibili percorsi, righe e istruzioni nel codice sorgente.
+
 Il valore è stato calcolato per mezzo di solidity-coverage.
 
 \subsubsection{MPD08: Solidity Branch Coverage}\label{sssec:solidity_branch_coverage}
-Lo scopo del Branch Coverage è garantire che ogni condizione decisionale venga eseguita almeno una volta.\\
+Lo scopo del Branch Coverage è garantire che ogni condizione decisionale venga eseguita almeno una volta.
+
 Il valore è stato calcolato per mezzo di solidity-coverage.
 
 \subsubsection{MPD09: Solidity Function Coverage}\label{sssec:solidity_function_coverage}
-Indica la misura in cui le funzioni presenti nel codice sorgente sono coperte durante il test.\\
-Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzione del test.\\
+Indica la misura in cui le funzioni presenti nel codice sorgente sono coperte durante il test.
+
+Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzione del test.
+
 Il valore è stato calcolato per mezzo di solidity-coverage.
 
 \subsubsection{MPD10: Solidity Line Coverage}\label{sssec:solidity_line_coverage}
-Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.\\
+Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.
+
 Vengono considerate solo le righe che contengono istruzioni eseguibili.
 Il valore è stato calcolato per mezzo di solidity-coverage.
 \subsubsection{MPD11: Frontend Statement Coverage}\label{sssec:frontend_statement_coverage}
-Viene utilizzato per calcolare il numero di istruzioni nel codice sorgente che sono state eseguite.\
-Lo scopo dello Statement Coverage è quello di coprire tutti i possibili percorsi, righe e istruzioni nel codice sorgente.\
+Viene utilizzato per calcolare il numero di istruzioni nel codice sorgente che sono state eseguite.
 
+Lo scopo dello Statement Coverage è quello di coprire tutti i possibili percorsi, righe e istruzioni nel codice sorgente.
 
 \subsubsection{MPD12: Frontend Branch Coverage}\label{sssec:frontend_branch_coverage}
-Lo scopo del Branch Coverage è garantire che ogni condizione decisionale venga eseguita almeno una volta.\
-
+Lo scopo del Branch Coverage è garantire che ogni condizione decisionale venga eseguita almeno una volta.
 
 \subsubsection{MPD13: Frontend Function Coverage}\label{sssec:frontend_function_coverage}
-Indica la misura in cui le funzioni presenti nel codice sorgente sono coperte durante il test.\
-Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzione del test.\
+Indica la misura in cui le funzioni presenti nel codice sorgente sono coperte durante il test.
 
+Tutte le funzioni presenti nel codice sorgente vengono testate durante l'esecuzione del test.
 
 \subsubsection{MPD14: Frontend Line Coverage}\label{sssec:frontend_line_coverage}
-Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.\
+Il Line Coverage di un programma è il numero di righe eseguite diviso per il numero totale di righe.
+
 Vengono considerate solo le righe che contengono istruzioni eseguibili.
 
-\subsubsection{Obbiettivi qualità di prodotto}
+\subsubsection{Obiettivi qualità di prodotto}
 
 \rowcolors{2}{pari_alt}{dispari_alt}
         \renewcommand{\arraystretch}{1.8}
@@ -125,7 +130,7 @@ Vengono considerate solo le righe che contengono istruzioni eseguibili.
                 >{\hsize=0.5\hsize\linewidth=\hsize}X
                 }
                 \rowcolorhead
-                \textbf{\color{white}Obbiettivo} &
+                \textbf{\color{white}Obiettivo} &
                 \textbf{\color{white}Descrizione} &
                 \textbf{\color{white}Metriche} \\
                 \hline
@@ -144,20 +149,21 @@ Vengono considerate solo le righe che contengono istruzioni eseguibili.
     \textbf{Portabilità} & Capacità di poter funzionare in diversi ambienti di esecuzione. Gli obiettivi da perseguire sono adattabilità e sostituibilità.                       & MPD07\\
     \textbf{Copertura test} & Il codice prodotto dovrà essere verificato nella sua interezza al fine di garantire la corretta implementazione dei requisiti individuati. & MPD08 MPD09 MPD10 MPD11 MPD12 MPD13 MPD14 MPD15 \\
     \end{tabularx}
-    \caption{Obbiettivi qualità di prodotto}
+    \caption{Obiettivi qualità di prodotto}
     \end{table}
 
 \subsection{La qualità di processo}
 La presente sezione espone le metriche selezionate dal gruppo \groupName{} per misurare il raggiungimento degli obiettivi di qualità del processo.
+
 \textbf{Parametri per comprendere le metriche scelte:}
 \begin{itemize}
-    \item Budget At Completion (BAC): È il budget stimato in preventivo per il completamento del progetto;
-    \item Actual Calendar Days (ACD): È il numero effettivo di giorni impiegati in un determinato periodo;
-    \item Planned Calendar Days (PCD): È la durata preventivata di un determinato periodo;
-    \item Number of Requirements Added (NRA): Numero di requisiti aggiunti in un determinato periodo;
-    \item Number of Requirements Changed (NRC): Numero di requisiti modificati in un determinato periodo;
-    \item Number of Requirements Removed (NRR): Numero di requisiti rimossi in un determinato periodo;
-    \item Total Number of Initial Requirements (TNIR): Numero totale dei requisiti all'inizio di un determinato periodo.
+    \item \textbf{Budget At Completion (BAC)}: È il budget stimato in preventivo per il completamento del progetto;
+    \item \textbf{Actual Calendar Days (ACD)}: È il numero effettivo di giorni impiegati in un determinato periodo;
+    \item \textbf{Planned Calendar Days (PCD)}: È la durata preventivata di un determinato periodo;
+    \item \textbf{Number of Requirements Added (NRA)}: Numero di requisiti aggiunti in un determinato periodo;
+    \item \textbf{Number of Requirements Changed (NRC)}: Numero di requisiti modificati in un determinato periodo;
+    \item \textbf{Number of Requirements Removed (NRR)}: Numero di requisiti rimossi in un determinato periodo;
+    \item \textbf{Total Number of Initial Requirements (TNIR)}: Numero totale dei requisiti all'inizio di un determinato periodo.
 \end{itemize}
 
 \subsubsection{MPC01: Earned Value (EV)}\label{sssec:earned_value}
@@ -220,7 +226,7 @@ La formula adottata è la seguente:
 
 \subsubsection{MPC11: Risks Found}\label{sssec:risks_found}
 Indica il numero di rischi incontrati in un determinato periodo.
-\subsubsection{Obbiettivi qualità di processo}
+\subsubsection{Obiettivi qualità di processo}
 \rowcolors{2}{pari_alt}{dispari_alt}
         \renewcommand{\arraystretch}{1.8}
 
@@ -232,7 +238,7 @@ Indica il numero di rischi incontrati in un determinato periodo.
                 >{\hsize=0.5\hsize\linewidth=\hsize}X
                 }
                 \rowcolorhead
-                \textbf{\color{white}Obbiettivo} &
+                \textbf{\color{white}Obiettivo} &
                 \textbf{\color{white}Descrizione} &
                 \textbf{\color{white}Metriche} \\
                 \hline
@@ -256,5 +262,5 @@ Indica il numero di rischi incontrati in un determinato periodo.
                 \textbf{Gestione organizzativa} & Processo che si occupa di esporre le modalità di coordinamento del gruppo. & MPC11\\
                 \hline
             \end{tabularx}
-            \caption{Obbiettivi qualità di processo}
+            \caption{Obiettivi qualità di processo}
         \end{table}
