@@ -1,4 +1,4 @@
-\section{Architettura del prodotto}
+x\section{Architettura del prodotto}
 
 \subsection{Architettura logica}
 Il sistema \capName\ consiste di uno \textit{smart contract} per gestire i pagamenti e le recensioni, e di una \textit{web app} che permette l'interazione con esso tramite il \textit{wallet} \textit{MetaMask}. È anche presente un servizio \textit{API REST} che permette agli \textit{e-commerce} interessati di accedere alle recensioni per facilitarne l'integrazione nel loro sito web.
@@ -55,11 +55,16 @@ Tramite \texttt{require}, un meccanismo di validazione offerto dal linguaggio, v
 
 \subparagraph*{MVVM (Model-View-ViewModel)}~
 
-\noindent Il pattern \textit{MVVM} divide il sistema in tre parti principali: il \textit{Model}, la \textit{View} e il \textit{ViewModel}. All'interno della \textit{web app}, il \textit{Model} è costituito dalle rappresentazioni di recensioni e transazioni, il \textit{ViewModel} è costituito dai servizi che gestiscono le interazioni con lo smart contract e l'autenticazione, mentre la \textit{View} è costituita dai componenti che compongono l'interfaccia grafica.
+\noindent Il pattern \textit{MVVM} divide il sistema in tre parti principali: il \textit{Model}, la \textit{View} e il \textit{ViewModel}. All'interno della nostra \textit{web app}:
+\begin{itemize}
+    \item il \textit{Model} è costituito dalle rappresentazioni di recensioni e transazioni (\texttt{Review} e \texttt{Transaction}), e dai servizi che gestiscono l'autenticazione e le interazioni con lo \textit{smart contract} (\texttt{Contract\\Handler} e \texttt{AuthenticationHandler});
+    \item la \textit{View} viene definita utilizzando i \textit{template HTML}, che possono essere usati per definire la struttura della pagina e visualizzare i dati dal modello;
+    \item il \textit{ViewModel} viene rappresentato dalle classi \textit{TypeScript} utilizzate per gestire gli eventi della vista e aggiornare il modello di conseguenza. Un'esempio di \textit{ViewModel} nella \textit{web app} è costituito dalla classe \texttt{LeaveReview}, che gestisce l'invio di una recensione al sistema in seguito all'inserimento dei dati da parte dell'utente.
+\end{itemize}
 
 \subparagraph*{Dependency Injection}~
 
-\noindent In \textit{Angular}, il pattern \textit{Dependency Injection} viene applicato per fornire un meccanismo di interazione tra i consumatori e i fornitori di dipendenze mediante un'astrazione chiamata \textit{Injector}. In pratica, un \textit{injector} viene utilizzato per cercare se esiste già un'istanza disponibile di una determinata dipendenza richiesta; se l'istanza non è già presente, viene creata e salvata. Un esempio di utilizzo di \textit{Dependency Injection} si ha nel nostro caso con il servizio di \textit{Angular} \textit{Router}, che viene iniettato nei componenti che lo necessitano per gestire la navigazione tra le varie pagine della \textit{web app}.
+\noindent In \textit{Angular}, il pattern \textit{Dependency Injection} viene applicato per fornire un meccanismo di interazione tra i consumatori e i fornitori di dipendenze mediante un'astrazione chiamata \textit{Injector}. In pratica, un \textit{injector} viene utilizzato per cercare se esiste già un'istanza disponibile di una determinata dipendenza richiesta; se l'istanza non è già presente, viene creata e salvata. Un esempio di utilizzo di \textit{Dependency Injection} si ha nel nostro caso con i servizi \texttt{ContractHandler} e \texttt{AuthenticationHandler}, che vengono iniettati nei componenti che li necessitano per gestire l'autenticazione e le interazioni con lo \textit{smart contract}.
 
 \subsubsection{API REST}
 \paragraph{Diagramma delle classi}~
