@@ -75,21 +75,15 @@ Tramite \texttt{require}, un meccanismo di validazione offerto dal linguaggio, v
 
 \paragraph{Design patterns}~
 
-\noindent Il pattern architetturale \textit{MVC (Model-View-Controller)} e la \textit{Dependency Injection (DI)} sono due concetti chiave utilizzati nello sviluppo della \textit{API REST} in Java con \textit{Spring Boot}.
-
-\subparagraph*{MVC (Model-View-Controller)}~
-
-\noindent Il pattern \textit{MVC} divide l'applicazione in tre componenti distinti: il \textit{Model}, la \textit{View} e il \textit{Controller}. Il \textit{Model} rappresenta la logica di business dell'applicazione e contiene la logica per accedere ai dati, il \textit{Controller} gestisce le richieste \textit{HTTP} e il flusso di controllo dell'applicazione, mentre la \textit{View} si occupa di presentare i dati all'utente.
-
 \subparagraph*{Dependency Injection}~
 
-\noindent In \textit{Spring Boot}, la \textit{Dependency Injection} è implementata attraverso l'uso di un container di inversione di controllo (IoC), che si occupa di gestire la creazione e l'inizializzazione dei componenti dell'applicazione e di fornire le dipendenze tra essi. In particolare, \textit{Spring Boot} utilizza l'annotazione \texttt{@Autowired} per iniettare automaticamente le dipendenze dei componenti, come ad esempio i servizi che gestiscono l'accesso ai dati, all'interno dei \textit{Controller}.
+\noindent In \textit{Spring}, la \textit{Dependency Injection} è implementata attraverso l'uso di un container di inversione di controllo (IoC), che si occupa di gestire la creazione e l'inizializzazione dei componenti dell'applicazione e di fornire le dipendenze tra essi. In particolare, \textit{Spring} utilizza l'annotazione \texttt{@Autowired} per iniettare automaticamente le dipendenze dei componenti, come ad esempio i servizi che gestiscono l'accesso ai dati, all'interno dei \textit{Controller}.
 
-In pratica, questo significa che è possibile definire un \textit{Controller} che dipende da un servizio di accesso ai dati, e automaticamente \textit{Spring Boot} si occuperà di creare e iniettare l'istanza del servizio all'interno di esso, senza che sia necessario gestire manualmente la creazione e l'inizializzazione delle dipendenze.
+In pratica, questo significa che è possibile definire un \textit{Controller} che dipende da un servizio di accesso ai dati, e automaticamente \textit{Spring} si occuperà di creare e iniettare l'istanza del servizio all'interno di esso, senza che sia necessario gestire manualmente la creazione e l'inizializzazione delle dipendenze.
 
 \subparagraph*{DTO (Data Transfer Object)}~
 
-Il \textit{DTO pattern (Data Transfer Object)} viene utilizzato per semplificare la comunicazione tra i diversi strati dell'applicazione. La sua funzione principale è quella di incapsulare i dati in modo da trasferirli in maniera più efficiente. Il \textit{DTO} è un oggetto che contiene solo i dati necessari per il trasferimento e non ha alcuna logica o comportamento associato ad esso.
+\noindent Il \textit{DTO pattern (Data Transfer Object)} viene utilizzato per semplificare la comunicazione con l'applicazione. La sua funzione principale è quella di incapsulare i dati in modo da trasferirli in maniera più efficiente. Il \textit{DTO} è un oggetto che contiene solo i dati necessari per il trasferimento e non ha alcuna logica o comportamento associato ad esso.
 
 Nella nostra \textit{API} viene utilizzato per ottenere un oggetto \textit{ReviewDTO} a partire da un oggetto \textit{Review}, in modo da nascondere i dettagli implementativi della classe \textit{Review} e fornire solo i dati necessari per la visualizzazione delle recensioni.
 
