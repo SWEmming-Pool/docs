@@ -1,52 +1,6 @@
 \section{Resoconto attività di verifica}
-\subsection{Periodo di analisi}
-In questo paragrafo vengono analizzate le metriche \textit{MPC01, MPC02, MPC03, MPC04, MPC05, MPD01}, i restanti verranno analizzati nella successiva fase di progettazione e codifica.
-\subsubsection{MPC01}
-Rappresenta il valore delle attività realizzate alla data corrente.
-Sull'asse delle ascisse troviamo l'unità di tempo in settimane, mentre in quello delle ordinate il valore in euro.
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{src/img/grafico_EV.png}
-\caption{Grafico EV}
-\end{figure}
-
-\subsubsection{MPC02}
-Rappresenta il costo effettivamente sostenuto alla data corrente.
-Sull'asse delle ascisse troviamo l'unità di tempo in settimane, mentre in quello delle ordinate il valore in euro.
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{src/img/grafico_AC.png}
-\caption{Grafico AC}
-\end{figure}
-
-\subsubsection{MPC03}
-Rappresenta il costo pianificato per realizzare le attività di progetto alla data corrente.
-Sull'asse delle ascisse troviamo l'unità di tempo in settimane, mentre in quello delle ordinate il valore in euro.
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{src/img/grafico_PV.png}
-\caption{Grafico PV}
-\end{figure}
-
-\subsubsection{MPC04}
-Indica se il valore del costo realmente maturato è maggiore, uguale o minore rispetto al costo effettivo.
-Sull'asse delle ascisse troviamo l'unità di tempo in settimane, mentre in quello delle ordinate la variazione in percentuale.
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{src/img/grafico_CV.png}
-\caption{Grafico CV}
-\end{figure}
-
-\subsubsection{MPC05}
-Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline.
-Sull'asse delle ascisse troviamo l'unità di tempo in settimane, mentre in quello delle ordinate la variazione in percentuale.
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\textwidth]{src/img/grafico_SV.png}
-\caption{Grafico SV}
-\end{figure}
-
-\subsubsection{MPD01}
+\subsection{Verifica dei documenti}
+\subsubsection{Indice di Gulpease}
 L'Indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.
 I risultati sono compresi tra 0 e 100, dove il valore "100" indica la leggibilità più alta e "0" la leggibilità più bassa. In generale risulta che testi con un indice
 \begin{itemize}
@@ -205,6 +159,184 @@ Di seguito vengono mostrati i risultati dell’indice di Gulpease per ogni docum
     \rowcolor{white}
     \caption{Risultati indice di Gulpease}
 \end{xltabular}
+
+\subsection{Verifica dei processi}
+
+\subsubsection{Estimated at Completion}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/EAC.png}
+\caption{Grafico EAC}
+\end{figure}
+
+\subsubsection{Earned Value e Planned Value}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/EVPV.png}
+\caption{Grafico EV, PV}
+\end{figure}
+
+\subsubsection{Actual Cost e Estimate To Complete}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/ACETC.png}
+\caption{Grafico AC, ETC}
+\end{figure}
+
+\subsubsection{Schedule Variance e Cost Variance}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/SVCV.png}
+\caption{Grafico SV, CV}
+\end{figure}
+
+\subsubsection{Requirements Stability Index}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/RSI.png}
+\caption{Grafico RSI}
+\end{figure}
+
+\subsubsection{Risk Found}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/riskFound.png}
+\caption{Grafico Risk Found}
+\end{figure}
+
+\subsubsection{Metrics Satisfied}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/MetricsSat.png}
+\caption{Grafico Metrics Satisfied}
+\end{figure}
+
+\subsubsection{Code Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/CodeCoverage.png}
+\caption{Grafico Code Coverage}
+\end{figure}
+
+\subsection{Verifica dei software}
+
+\subsubsection{Facilità di utilizzo}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/facUtilizzo.png}
+\caption{Grafico facilità di utilizzo}
+\end{figure}
+
+\subsubsection{Versioni browser supportate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/verBrowser.png}
+\caption{Grafico versioni browser supportate}
+\end{figure}
+
+\subsubsection{Mandatory Requirments Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/MRC.png}
+\caption{Grafico MRC}
+\end{figure}
+
+\subsubsection{Desirable Requirments Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/DRC.png}
+\caption{Grafico DRC}
+\end{figure}
+
+\subsubsection{Optional Requirments Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/ORC.png}
+\caption{Grafico ORC}
+\end{figure}
+
+\subsubsection{Solidity Statement Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/Solidity Statement Coverage.png}
+\caption{Grafico SSC}
+\end{figure}
+
+\subsubsection{Solidity Branch Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/Solidity Branch Coverage.png}
+\caption{Grafico SBC}
+\end{figure}
+
+\subsubsection{Solidity Function Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/Solidity Function Coverage.png}
+\caption{Grafico SFC}
+\end{figure}
+
+\subsubsection{Solidity Line Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/Solidity Line Coverage.png}
+\caption{Grafico SLC}
+\end{figure}
+
+\subsubsection{Frontend Statement Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/Frontend Statement Coverage.png}
+\caption{Grafico FSC}
+\end{figure}
+
+\subsubsection{Frontend Branch Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/Frontend Branch Coverage.png}
+\caption{Grafico FBC}
+\end{figure}
+
+\subsubsection{Frontend Function Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/Frontend Function Coverage.png}
+\caption{Grafico FFC}
+\end{figure}
+
+\subsubsection{Frontend Line Coverage}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{src/img/Frontend Line Coverage.png}
+\caption{Grafico FLC}
+\end{figure}
+
+
+
+
+
+
+
+
+
 
 
 
