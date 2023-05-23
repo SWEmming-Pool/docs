@@ -2,8 +2,8 @@
 shopt -s expand_aliases
 
 # Aliases
-alias compile='latexmk -pdf -pdflatex="pdflatex -shell-escape" main.tex >>/dev/null'
-alias clean='latexmk -C &>>/dev/null'
+alias compile='latexmk -pdf -pdflatex="pdflatex -shell-escape" main.tex'
+alias clean='latexmk -C'
 
 if [ -d "documenti_compilati" ]; then
 	rm -rf documenti_compilati
