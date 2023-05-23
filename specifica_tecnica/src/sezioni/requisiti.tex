@@ -1,0 +1,411 @@
+\section{Requisiti soddisfatti}
+\rowcolors{2}{pari_alt}{dispari_alt}
+        \renewcommand{\arraystretch}{1.8}
+
+        \begin{xltabular}{\textwidth} {
+            >{\hsize=0.5\hsize\linewidth=\hsize}X
+            >{\hsize=0.7\hsize\linewidth=\hsize}X
+            >{\hsize=2\hsize\linewidth=\hsize}X
+            >{\hsize=0.8\hsize\linewidth=\hsize}X
+            }
+            \rowcolorhead
+            \textbf{\color{white}Codice} &
+            \textbf{\color{white}Tipo} &
+            \textbf{\color{white}Descrizione} &
+            \textbf{\color{white}Stato} \\
+            \hline
+            \endfirsthead
+
+            \hline
+            \rowcolorhead
+            \textbf{\color{white}Codice} &
+            \textbf{\color{white}Tipo} &
+            \textbf{\color{white}Descrizione} &
+            \textbf{\color{white}Stato} \\
+            \hline
+            \endhead
+
+            \endfoot
+
+            \endlastfoot
+
+            R1F1 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente non autenticato la possibilità effettuare il login tramite \textit{MetaMask}. &
+            Soddisfatto \\
+            \hline
+
+            R1F1.1 &
+            Obbligatorio &
+            La \textit{web app} visualizza un errore in caso di autenticazione fallita. &
+            Soddisfatto \\
+            \hline
+
+            R1F1.2 &
+            Obbligatorio &
+            L'utente non autenticato visualizza un messaggio di errore in caso di assenza di \textit{MetaMask} installato. &
+            Soddisfatto \\
+            \hline
+
+            R1F2 &
+            Obbligatorio &
+            L'utente autenticato deve poter eseguire un pagamento tramite \textit{MetaMask} verso un altro indirizzo wallet. &
+            Soddisfatto \\
+            \hline
+
+            R1F2.1 &
+            Obbligatorio &
+            Il pagamento fallisce a causa di un errore e il sistema notifica l'utente. &
+            Soddisfatto \\
+            \hline
+
+            R1F3 &
+            Obbligatorio &
+            L'utente autenticato può visualizzare una lista dei pagamenti effettuati, senza una recensione, tra cui scegliere quale recensire. &
+            Soddisfatto \\
+            \hline
+
+            R1F4 &
+            Obbligatorio &
+            L'utente autenticato ha la possibilità di rilasciare una recensione nel caso abbia acquisti non ancora recensiti. &
+            Soddisfatto \\
+            \hline
+
+            R1F4.1 &
+            Obbligatorio &
+            Per ogni transazione effettuata può esistere al massimo una recensione ad esso collegata. &
+            Soddisfatto \\
+            \hline
+
+            R1F4.2 &
+            Obbligatorio &
+            L'utente deve scegliere la transazione, effettuata, da associare alla recensione.&
+            Soddisfatto \\
+            \hline
+
+            R1F4.3 &
+            Obbligatorio &
+            La recensione deve avere un titolo inserito dall'utente.&
+            Soddisfatto \\
+            \hline
+
+            R1F4.4 &
+            Obbligatorio &
+            La recensione deve avere un voto inserito dall'utente.&
+            Soddisfatto \\
+            \hline
+
+            R1F4.5 &
+            Obbligatorio &
+            La recensione deve avere un testo inserito dall'utente.&
+            Soddisfatto \\
+            \hline
+
+            R1F4.6 &
+            Obbligatorio &
+            La \textit{web app} visualizza un errore se l'utente non rispetta la validità del formato di una recensione.&
+            Soddisfatto \\
+            \hline
+
+            R1F4.6.1 &
+            Obbligatorio &
+            La recensione deve avere un titolo, non superiore ai 50 caratteri.&
+            Soddisfatto \\
+            \hline
+
+            R1F4.6.2 &
+            Obbligatorio &
+            La recensione deve esprimere un voto, compreso tra 1(minimo) e 5 (massimo).&
+            Soddisfatto \\
+            \hline
+
+            R1F4.6.3 &
+            Obbligatorio &
+            La recensione deve avere un testo, di al massimo 500 caratteri.&
+            Soddisfatto \\
+            \hline
+
+            R1F5 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni.  &
+            Soddisfatto \\
+            \hline
+
+            R1F5.1 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni per indirizzo wallet. &
+            Soddisfatto \\
+            \hline
+
+            R1F5.1.1 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni per indirizzo wallet appartenente all'autore. &
+            Soddisfatto \\
+            \hline
+
+            R1F5.1.2 &
+            Obbligatorio &
+            L'utente generico può ricercare recensioni per indirizzo wallet appartenente al destinatario. &
+            Soddisfatto \\
+            \hline
+
+            R3F5.2 &
+            Opzionale &
+            L'utente generico può ricercare recensioni per voto. &
+            Non soddisfatto \\
+            \hline
+
+            R3F5.3 &
+            Opzionale &
+            L'utente generico può ricercare recensioni per titolo. &
+            Non soddisfatto \\
+            \hline
+
+            R3F5.4 &
+            Opzionale &
+            L'utente generico può ricercare recensioni per data. &
+            Non soddisfatto \\
+            \hline
+
+            R1F6 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di ricercare le recensioni rilasciate.&
+            Soddisfatto \\
+            \hline
+
+            R1F7 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di ricercare le recensioni ricevute.&
+            Soddisfatto \\
+            \hline
+
+            R1F8 &
+            Obbligatorio &
+            La \textit{web app} notifica all'utente un errore nella ricerca.&
+            Soddisfatto \\
+            \hline
+
+            R1F8.1 &
+            Obbligatorio &
+            La \textit{web app} notifica all'utente un errore nella ricerca per indirizzo wallet.&
+            Soddisfatto \\
+            \hline
+
+            R3F8.2 &
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella ricerca per voto.&
+            Non soddisfatto \\
+            \hline
+
+            R3F8.3 &
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella ricerca per titolo.&
+            Non soddisfatto \\
+            \hline
+
+            R3F8.4 &
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella ricerca per data.&
+            Non soddisfatto \\
+            \hline
+
+            R1F9 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni.&
+            Soddisfatto \\
+            \hline
+
+            R1F10 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una singola recensione.&
+            Soddisfatto \\
+            \hline
+
+            R1F10.1 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare l'autore di una singola recensione.&
+            Soddisfatto \\
+            \hline
+
+            R1F10.2 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il destinatario di una singola recensione.&
+            Soddisfatto \\
+            \hline
+
+            R1F10.3 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il titolo di una singola recensione.&
+            Soddisfatto \\
+            \hline
+
+            R1F10.4 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare la data di una singola recensione.&
+            Soddisfatto \\
+            \hline
+
+            R1F10.5 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il voto di una singola recensione.&
+            Soddisfatto \\
+            \hline
+
+            R1F10.6 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare il testo di una singola recensione.&
+            Soddisfatto \\
+            \hline
+
+            R1F11 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni rilasciate.&
+            Soddisfatto \\
+            \hline
+            
+            R1F12 &
+            Obbligatorio &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare le recensioni ricevute.&
+            Soddisfatto \\
+            \hline
+
+            R1F13 &
+            Obbligatorio &
+            La \textit{web app} notifica all'utente un errore nella visualizzazione delle recensioni.&
+            Soddisfatto \\
+            \hline
+
+            R1F14 &
+            Obbligatorio &
+            Il servizio di \textit{API REST} fornisce all'utente, utilizzatore dell'API, la possibilità di ottenere le recensioni ad esso riferite.&
+            Soddisfatto \\
+            \hline
+
+            R1F15 &
+            Obbligatorio &
+            Il servizio di \textit{API REST} notifica all'utente un errore, nel caso non esistano recensioni a lui collegate.&
+            Soddisfatto \\
+            \hline
+
+            R3F16 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati.&
+            Non soddisfatto \\
+            \hline
+
+            R3F17 &    
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare una singola transazione, selezionata dalla lista.&
+            Non soddisfatto \\
+            \hline
+
+            R3F17.1 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'ID di una singola transazione.&
+            Non soddisfatto \\
+            \hline
+
+            R3F17.2 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la data di una singola transazione.&
+            Non soddisfatto \\
+            \hline
+
+            R3F17.3 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'importo di una singola transazione.&
+            Non soddisfatto \\
+            \hline
+
+            R3F17.4 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente pagante di una singola transazione.&
+            Non soddisfatto \\
+            \hline
+
+            R3F17.5 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare l'utente ricevente di una singola transazione.&
+            Non soddisfatto \\
+            \hline
+
+            R3F18 &   
+            Opzionale &
+            La \textit{web app} notifica all'utente un errore nella visualizzazione dei pagamenti.&
+            Non soddisfatto \\
+            \hline
+
+            R3F19 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate.&
+            Non soddisfatto \\
+            \hline
+
+            R3F19.1 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal meno recente.&
+            Non soddisfatto \\
+            \hline
+
+            R3F19.2 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente generico la possibilità di visualizzare una lista di recensioni, ordinate dal più recente.&
+            Non soddisfatto \\
+            \hline
+
+            R3F20 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati in ordine in base alla data del pagamento.&
+            Non soddisfatto \\
+            \hline
+
+            R3F20.1 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal meno recente.&
+            Non soddisfatto \\
+            \hline
+
+            R3F20.2 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli dal più recente.&
+            Non soddisfatto \\
+            \hline
+
+            R3F21 &   
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati in ordine in base all'importo.&
+            Non soddisfatto \\
+            \hline
+
+            R3F21.1 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo più economico.&
+            Non soddisfatto \\
+            \hline
+
+            R3F21.2 &
+            Opzionale &
+            La \textit{web app} fornisce all'utente autenticato la possibilità di visualizzare la lista di tutti i pagamenti effettuati, ordinandoli per importo meno economico.&
+            Non soddisfatto \\
+            \hline
+
+            \rowcolor{white}
+            \caption{Requisiti funzionali e relativo stato}
+        \end{xltabular}
+
+        \begin{tikzpicture}
+            \pie[text = legend]
+                {
+                    62/Requisiti funzionali soddisfatti (37),
+                    38/Requisiti funzionali non soddisfatti (23)
+                }
+        \end{tikzpicture}
+
+        \begin{tikzpicture}
+            \pie[text = legend]
+                {
+                    100/Requisiti obbligatori soddisfatti (37)
+                }
+        \end{tikzpicture}
+
+        \captionof{figure}{Grafici sullo stato dei requisiti funzionali}
