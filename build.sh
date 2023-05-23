@@ -64,7 +64,7 @@ cd lettera_pb/
 echo "Lettera presentazione PB"
 echo "----------------------"
 compile
-mv main.pdf ../documenti_compilati/lettera_pb.pbf
+mv main.pdf ../documenti_compilati/lettera_pb.pdf
 clean
 cd ..
 
