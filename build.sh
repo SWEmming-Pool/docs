@@ -101,9 +101,27 @@ cd ..
 cd piano_qualifica/
 echo "Piano qualifica"
 echo "----------------------"
-compile 
+compile
 mv main.pdf ../documenti_compilati/piano_qualifica.pdf
-clean  
+clean
+cd ..
+
+# Manuale utente
+cd manuale_utente/
+echo "Manuale utente"
+echo "----------------------"
+compile
+mv main.pdf ../documenti_compilati/manuale_utente.pdf
+clean
+cd ..
+
+# Specifica tecnica
+cd specifica_tecnica/
+echo "Specifca tecnica"
+echo "----------------------"
+compile
+mv main.pdf ../documenti_compilati/specifica_tecnica.pdf
+clean
 cd ..
 
 # Verbali

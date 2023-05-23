@@ -1,0 +1,34 @@
+\input{../componenti_comuni/src/commands}
+\input{../componenti_comuni/src/packages}
+\input{../componenti_comuni/src/style}
+
+\begin{document}
+	\renewcommand{\documentName}{Manuale utente}
+	\renewcommand{\documentVersion}{v0.0.0}
+	\renewcommand{\documentSummary}{Questo documento contiene le informazioni necessarie per l'utilizzo del software \capName.}
+	\renewcommand{\documentEditors}{Ennio Italiano \\ & Elia Pasquali}
+	\renewcommand{\documentVerifiers}{Enrico Bacci Bonivento}
+	\renewcommand{\documentApprovers}{Sebastiano Sanson}
+	\renewcommand{\documentAddressee}{\Vardanega \\ & \Cardin}
+
+	%Prima pagina
+	\pagestyle{empty}
+	\input{src/firstpage}
+	\pagebreak
+
+	%Changelog
+	\input{src/changelog} \pagebreak
+
+	%Indici
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	\listoffigures
+	\pagebreak
+
+	%Contenuto
+	\pagestyle{stylePage}
+	\input{src/contenuto}
+	\label{LastPage}
+	\pagebreak
+\end{document}
