@@ -2,8 +2,8 @@
 shopt -s expand_aliases
 
 # Aliases
-alias compile='latexmk -pdf -pdflatex="pdflatex -shell-escape" main.tex'
-alias clean='latexmk -C'
+alias compile='latexmk -pdf -pdflatex="pdflatex -shell-escape" main.tex >>/dev/null'
+alias clean='latexmk -C &>>/dev/null'
 
 if [ -d "documenti_compilati" ]; then
 	rm -rf documenti_compilati
@@ -57,6 +57,15 @@ echo "----------------------"
 compile 
 mv main.pdf ../documenti_compilati/lettera_rtb.pdf
 clean  
+cd ..
+
+# Lettera PB
+cd lettera_pb/
+echo "Lettera presentazione PB"
+echo "----------------------"
+compile
+mv main.pdf ../documenti_compilati/lettera_pb.pbf
+clean
 cd ..
 
 # Analisi requisiti
