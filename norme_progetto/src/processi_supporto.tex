@@ -1,0 +1,230 @@
+\section{Processi di Supporto}
+\subsection{Scopo} In questa sezione vengono descritte le procedure per le seguenti fasi del progetto:
+\begin{itemize}
+    \item {documentazione;}
+    \item {configurazione;}
+    \item {qualità;}
+    \item {verifica;}
+    \item {validazione;}
+    \item {controllo costi;}
+    \item {risoluzione dei problemi.}
+\end{itemize}
+\subsection{Gestione della documentazione}
+Vengono documentate tutte le informazioni riguardanti il ciclo di vita di ciascun processo o attività.
+Queste attività si dividono nelle sezioni riportate di seguito.
+\subsubsection{Implementazione}
+Per tutti i documenti redatti vengono stabiliti titolo, scopo, destinatario,  procedure di tutti i ruoli e le scadenze per le revisioni intermedie e finali.
+\subsubsection{Design e sviluppo}
+\paragraph{Documentazione}~
+
+\noindent È stato creato un \textit{template} per uniformare lo stile di tutti i documenti prodotti e agevolarne la produzione.\\
+Nello specifico sono presenti:
+\begin{itemize}
+    \item \textbf{Prima pagina} contenente:
+          \begin {itemize}
+    \item logo;
+    \item indirizzo email del gruppo;
+    \item titolo del documento;
+    \item responsabile, redattori e verificatori;
+    \item uso (interno o esterno);
+    \item destinatari;
+    \item sommario.
+\end{itemize}
+\item \textbf{Registro delle modifiche}: in ogni documento viene inserita una tabella contenente il registro delle modifiche che riporta:
+\begin{itemize}
+    \item versione;
+    \item data;
+    \item autore;
+    \item breve descrizione della modifica.
+\end{itemize}
+\item \textbf{Indice}: ha lo scopo di fornire una visione gerarchica dei contenuti del documento e di facilitare la ricerca di informazioni specifiche;
+\item \textbf{Contenuto principale}: qui è presente l'effettivo contenuto del documento.
+\end{itemize}
+
+\paragraph{Verbali}~
+
+\noindent È stato creato un template per uniformare lo stile di tutti i verbali prodotti e agevolarne la produzione.
+Nello specifico sono presenti:
+\begin{itemize}
+    \item \textbf{Prima pagina} contenente:
+          \begin {itemize}
+    \item logo;
+    \item indirizzo email del gruppo;
+    \item titolo del documento;
+    \item responsabile, redattori e verificatori;
+    \item uso (interno o esterno);
+    \item destinatari;
+    \item sommario.
+\end{itemize}
+\item \textbf{Indice};
+\item \textbf{Ordine} contenente:
+\begin {itemize}
+\item ora di inizio/termine;
+\item luogo;
+\item partecipanti interni e esterni;
+\item ordine del giorno.
+\end{itemize}
+\item \textbf{Resoconto}: contiene una descrizione dettagliata degli argomenti trattati e delle decisioni prese.
+\end{itemize}
+
+\paragraph{Norme tipografiche}
+
+\paragraph{Convenzioni nomenclatura file}~
+
+\noindent Escludendo l'estensione, le regole di nomenclatura dei file sono le seguenti:
+\begin{itemize}
+    \item i nomi dei file devono essere completamente in minuscolo;
+    \item viene utilizzato il carattere underscore \texttt{\_} per separare le parole;
+    \item omissione delle preposizioni.
+\end{itemize}
+
+\paragraph{Formato data} ~
+
+\noindent Viene utilizzato il formato \textbf{YYYY-MM-DD} per le date.
+\begin{itemize}
+    \item \textbf{YYYY} rappresenta l'anno (4 cifre);
+    \item \textbf{MM} rappresenta il mese (2 cifre);
+    \item \textbf{DD} rappresenta il giorno (2 cifre).
+\end{itemize}
+
+\paragraph{Elenchi} ~
+
+\begin{itemize}
+    \item \textbf{Elenco puntato}: viene utilizzato per elencare elementi in cui non ha importanza l'ordine;
+    \item \textbf{Elenco ordinato}: viene utilizzato per elencare elementi in cui ha importanza l'ordine o la priorità.
+\end{itemize}
+
+\paragraph{Glossario} ~
+
+\noindent Le convenzioni adottate per fare riferimento a termini specifici presenti nel glossario sono le seguenti:
+\begin{itemize}
+    \item un termine presente nel glossario viene marcato con \glo ;
+    \item in ogni documento un termine viene marcato solo alla sua prima occorrenza.
+\end{itemize}
+
+\paragraph{Stile del testo} ~
+
+\begin{itemize}
+    \item \texttt{Monospaced}: viene utilizzato per i comandi e snippet;
+    \item \textit{Italic}: viene utilizzato per i termini di dominio e per citare altri documenti;
+    \item \textbf{Bold}: viene utilizzato per i termini da enfatizzare, da definire e per citare eventuali standard.
+\end{itemize}
+
+\paragraph{Sigle} ~
+
+\noindent Nella stesura della documentazione vengono utilizzate alcune sigle per termini ricorrenti. Vengono scritte in maiuscolo le iniziali dei sostantivi e in minuscolo le iniziali delle eventuali preposizioni.
+
+Le sigle adottate sono le seguenti:
+\begin{itemize}
+    \item \textbf{AdR}: \textit{Analisi dei Requisiti};
+    \item \textbf{MU}: \textit{Manuale Utente};
+    \item \textbf{MS}: \textit{Manuale Sviluppatore};
+    \item \textbf{PdP}: \textit{Piano di Progetto};
+    \item \textbf{PdQ}: \textit{Piano di Qualifica};
+    \item \textbf{NdP}: \textit{Norme di Progetto};
+    \item \textbf{ST}: \textit{Specifica Tecnica};
+    \item \textbf{SdF}: \textit{Studio di Fattibilità};
+    \item \textbf{RTB}: \textit{Requirements and Technology Baseline};
+    \item \textbf{PB}: \textit{Product Baseline};
+    \item \textbf{CA}: \textit{Customer Acceptance};
+    \item \textbf{PoC}: \textit{Proof of Concept}.
+\end{itemize}
+
+Per definire le sigle dei ruoli si è deciso di aggiungere la seconda lettere in minuscolo per evitare omonimia:
+\begin{itemize}
+    \item \textbf{Am}: Amministratore;
+    \item \textbf{An}: Analista;
+    \item \textbf{Pr}: Programmatore;
+    \item \textbf{Pt}: Progettista;
+    \item \textbf{Re}: Responsabile di progetto;
+    \item \textbf{Ve}: Verificatore.
+\end{itemize}
+
+\subsubsection{Produzione documenti}
+Per agevolare la produzione dei documenti è stato creato un template che contiene tutte le informazioni necessarie per la redazione di un documento; a tale scopo è stata definita una cartella \texttt{componenti\_comuni} che contiene:
+\begin{itemize}
+    \item \texttt{src}: contiene i file \texttt{command.tex} e \texttt{packages.tex} che contengono comandi e pacchetti necessari per la produzione e compilazione del documento;
+    \item \texttt{img}: contiene tutte le immagini utilizzate nel template.
+\end{itemize}
+
+\subsubsection{Elementi grafici}
+\paragraph{Tabelle} ~
+
+\noindent In ciascun documento prodotto, qualora fosse presente una tabella, essa viene accompagnata da una didascalia contenete la numerazione della tabella stessa e un breve titolo che ne riassuma il contenuto.
+
+\paragraph{Immagini} ~
+
+\noindent In ogni immagine inserita all'interno dei documenti prodotti viene fornita una breve didascalia per descriverne chiaramente il contenuto
+
+\paragraph{Diagrammi UML} ~
+
+\noindent I diagrammi \textit{UML} inseriti rispettano lo standard UML 2.0. Anch'essi vengono accompagnati da una breve didascalia.
+
+\subsubsection{Strumenti}
+Per la redazione dei documenti vengono utilizzati i seguenti strumenti:
+\begin{itemize}
+    \item \LaTeX: per la redazione dei documenti;
+    \item \textit{VSCode}: per la gestione del codice sorgente e della documentazione;
+    \item \textit{StarUML}: per la creazione dei diagrammi \textit{UML};
+    \item \textit{GanttProject}: per la creazione dei diagrammi di Gantt;
+\end{itemize}
+
+\subsection{Gestione della configurazione}
+
+\subsubsection{Utilizzo di Git}
+Per la gestione della configurazione del progetto viene utilizzato il sistema di versionamento \textbf{Git}. Il gruppo ha adottato il modello di branching \textbf{GitFlow} per la gestione delle versioni del progetto.
+
+\subsection{Gestione del controllo qualità}
+\subsubsection{Scopo}
+Il processo di Gestione della Qualità ha l'obiettivo di definire indici
+precisi per tutte le attività che riguardano la verifica e la validazione.
+Questo permette di garantire che il livello di qualità desiderato venga
+rispettato. Per maggiori informazioni sulle metriche utilizzate,
+si fa riferimento al \textit{Piano di Qualifica v2.0.0}.
+Questo documento fornirà una trattazione dettagliata su come
+vengono misurati i risultati e garantire la qualità nei progetti.
+\subsubsection{Denominazione metriche}
+Le metriche utilizzate sono identificate tramite un codice univoco:
+\begin{center}
+    \textbf{M[Utilizzo]-[Acronimo]}
+\end{center}
+Nella quale \textbf{[Utilizzo]} indica se la metrica è:
+\begin{itemize}
+    \item \textbf{PC}: per la qualità di processo;
+    \item \textbf{PD}:  per la qualità di prodotto.
+\end{itemize}
+Mentre \textbf{[Acronimo]} indica il nome della metrica.
+\subsection{Gestione di verifica}
+\subsubsection{Scopo} 
+Il processo di verifica ha lo scopo di garantire che il prodotto finale soddisfi i requisiti richiesti, fornendo un risultato corretto, coeso e completo. Tale processo riceve in input quanto prodotto fino a quello momento e lo restituisce in uno stato conforme alle aspettative.
+Per ottenere ciò vengono utilizzati i processi di test e analisi.
+
+\paragraph{Analisi statica} ~
+
+\noindent Consiste nell'analizzare il codice sorgente e la documentazione del prodotto per verificarne la correttezza (assenza di difetti e/o errori).
+
+I metodi per effettuare analisi statica sono catalogabili in due categorie: manuali e automatici.
+Quelli manuali sono due:
+\begin{itemize}
+    \item \textbf{Walkthrough:} mira a rivelare la presenza di difetti tramite una lettura critica a largo spettro e senza assunzioni di alcun genere. Il Walkthrough va pianificato e, in seguito, va discusso quanto individuato per correggere i difetti, documentando le attività svolte;
+    \item \textbf{Inspection:} mira a rivelare la presenza di difetti tramite una lettura mirata del prodotto da parte di verificatori distinti dai programmatori secondo una strategia che si focalizza sui punti ritenuti critici. 
+\end{itemize}
+
+\paragraph{Analisi dinamica} ~
+
+\noindent Consiste nell'analizzare il prodotto in esecuzione per verificare che il comportamento sia conforme a quanto previsto e che non si presentino anomalie o malfunzionamenti.
+I criteri da seguire per definire i test per l'analisi dinamica vanno inseriti nel \textit{Piano di Qualifica}. Un test ha lo scopo di far fallire il programma e se ci riesce, quel test va aggiunto alla suite dei test del progetto in modo permanente.
+
+Ci sono vari tipi di test:
+\begin{itemize}
+    \item \textbf{Test di unità:} \textit{unit test}, sono test che vengono eseguiti su singole unità di codice, per verificare che il codice funzioni correttamente;
+    \item \textbf{Test di integrazione:} \textit{integration test}, sono test che vengono eseguiti su più unità di codice, per verificare una corretta interazione tra le componenti;
+    \item \textbf{Test di sistema:} \textit{system test}, sono test che verificano la copertura dei requisiti e vengono definiti durante la fase di analisi dei requisiti;
+    \item \textbf{Test di regressione:} \textit{regression test}, sono test che vengono eseguiti dopo una modifica del codice per verificare che le modifiche non abbiano introdotto errori.
+\end{itemize}
+
+\subsection{Gestione di validazione}
+\subsubsection{Scopo} 
+La validazione è la conferma finale che il prodotto sia conforme alle attese del committente. Dopo di essa il prodotto può essere rilasciato.
+
+

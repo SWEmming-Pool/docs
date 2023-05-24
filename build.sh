@@ -1,46 +1,158 @@
-#!/bin/sh
-echo "Compilazioni documenti"
-if [ -d "out" ]; then
-	rm -rf out
+#!/bin/bash
+shopt -s expand_aliases
+
+# Aliases
+alias compile='latexmk -pdf -pdflatex="pdflatex -shell-escape" main.tex'
+alias clean='latexmk -C'
+
+if [ -d "documenti_compilati" ]; then
+	rm -rf documenti_compilati
 fi
-mkdir out
+mkdir documenti_compilati
+
+echo "Compilazioni documenti"
+echo "----------------------"
 
 # Candidatura
 # Analisi capitolati
 cd analisi_capitolati/
 echo "Analisi capitolati"
-latexmk -pdf analisi.capitolati.tex 1>/dev/null
-mv analisi_capitolati.pdf ../out
-latexmk -c
+echo "----------------------"
+compile  
+mv main.pdf ../documenti_compilati/analisi_capitolati.pdf
+clean 
+cd ..
+
+# Piano qualifica
+cd piano_qualifica/
+echo "Piano qualifica"
+echo "----------------------"
+compile  
+mv main.pdf ../documenti_compilati/piano_qualifica.pdf
+clean 
 cd ..
 
 # Dichirazione di impegni
 cd dichiarazione_impegni/
 echo "Dichiarazione impegni"
-latexmk -pdf dichiarazione_impegni.tex 1>/dev/null
-mv dichiarazione_impegni.pdf ../out
-latexmk -c
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/dichiarazione_impegni.pdf
+clean 
 cd ..
 
-# Lettera
+# Lettera candidatura
 cd lettera_candidatura/
 echo "Lettera di candidatura"
-latexmk -pdf lettera_candidatura.tex 1>/dev/null
-mv lettera_candidatura.pdf ../out
-latexmk -c
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/lettera_candidatura.pdf
+clean  
+cd ..
+
+# Lettera rtb
+cd lettera_rtb/
+echo "Lettera presentazione RTB"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/lettera_rtb.pdf
+clean  
+cd ..
+
+# Lettera PB
+cd lettera_pb/
+echo "Lettera presentazione PB"
+echo "----------------------"
+compile
+mv main.pdf ../documenti_compilati/lettera_pb.pdf
+clean
+cd ..
+
+# Analisi requisiti
+cd analisi_requisiti/
+echo "Analisi requisiti"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/analisi_requisiti.pdf
+clean  
+cd ..
+
+# Glossario
+cd glossario/
+echo "Glossario"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/glossario.pdf
+clean  
+rm main.gl* main.ist
+cd ..
+
+# Norme di progetto
+cd norme_progetto/
+echo "Norme progetto"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/norme_progetto.pdf
+clean  
+cd ..
+
+# Piano di progetto
+cd piano_progetto/
+echo "Piano progetto"
+echo "----------------------"
+compile 
+mv main.pdf ../documenti_compilati/piano_progetto.pdf
+clean  
+cd ..
+
+
+# Piano di qualifica
+cd piano_qualifica/
+echo "Piano qualifica"
+echo "----------------------"
+compile
+mv main.pdf ../documenti_compilati/piano_qualifica.pdf
+clean
+cd ..
+
+# Manuale utente
+cd manuale_utente/
+echo "Manuale utente"
+echo "----------------------"
+compile
+mv main.pdf ../documenti_compilati/manuale_utente.pdf
+clean
+cd ..
+
+# Specifica tecnica
+cd specifica_tecnica/
+echo "Specifca tecnica"
+echo "----------------------"
+compile
+mv main.pdf ../documenti_compilati/specifica_tecnica.pdf
+clean
 cd ..
 
 # Verbali
 cd verbali/
 echo "Verbali"
-mkdir -p out/
-for D in `find ./* -type d -not -name "out" -not -name "src" -not -name "template_verbale"`
+echo "----------------------"
+mkdir -p verbali/
+dirs=$( \
+	find ./* -type d \
+	-not -name "verbali" \
+	-not -name "src" \
+	-not -name "svg-inkscape" \
+	-not -name "template_verbale" )
+for D in $dirs
 do
-	echo $D
+	ver=$(cut -c2- <<< $D)
+	echo $ver
+	echo "----------------------"
 	cd $D
-	latexmk -pdf verbale*.tex 1>/dev/null
-	mv verbale*.pdf ../out
-	latexmk -c
+	compile 
+	mv main.pdf ../verbali/$ver.pdf
+	clean  
 	cd ..
 done
-mv out/ ../out/verbali
+mv verbali/ ../documenti_compilati/verbali

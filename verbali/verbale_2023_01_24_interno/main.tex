@@ -1,0 +1,37 @@
+\input{../../componenti_comuni/src/packages}
+\input{../../componenti_comuni/src/commands}
+
+\begin{document}
+	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Verbale Interno del \documentDate}
+	\renewcommand{\documentDate}{2023-01-24}
+
+	\renewcommand{\documentApprovers}{Nicolò Trinca \smallskip}
+	\renewcommand{\documentEditors}{Sebastiano Sanson \smallskip}
+	\renewcommand{\documentVerifiers}{Elia Pasquali \smallskip}
+	\renewcommand{\documentAddressee}{Gruppo \groupName}
+
+	\renewcommand{\documentUsage}{Interno}
+	\renewcommand{\documentSummary}{Si riportano i risultati del colloquio preliminare con il Prof. Cardin Riccardo.}
+	
+	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+	
+	% Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Sezioni del verbale
+	% =========================================================================
+	\input{src/ordine}
+    \pagebreak
+    \input{src/resoconto}
+	% =========================================================================
+\end{document}

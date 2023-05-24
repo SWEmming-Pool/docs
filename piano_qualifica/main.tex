@@ -1,0 +1,34 @@
+\input{../componenti_comuni/src/commands}
+\input{../componenti_comuni/src/packages}
+\input{../componenti_comuni/src/style}
+\begin{document}
+\renewcommand{\documentName}{Piano di Qualifica}
+\renewcommand{\documentVersion}{v1.0.0}
+\renewcommand{\documentSummary}{Questo documento descrive le operazioni di verifica e validazione seguite durante lo svolgimento del progetto \capName.}
+\renewcommand{\documentEditors}{SWEmming Pool}
+\renewcommand{\documentVerifiers}{Elia Pasquali, Fabio Pantaleo, Sebastiano Sanson}
+\renewcommand{\documentApprovers}{Enrico Bacci Bonivento}
+\renewcommand{\documentAddressee}{\Vardanega \\ & \Cardin}
+
+%Prima pagina
+\pagestyle{empty}
+\input{src/firstpage}
+\pagebreak
+
+%Changelog
+\input{src/changelog} \pagebreak
+
+%Indici
+\renewcommand{\contentsname}{Contenuti}
+\tableofcontents
+\pagebreak
+\listoffigures
+\listoftables
+\pagebreak
+
+%Contenuto
+\pagestyle{stylePage}
+\input{src/contenuto}
+\label{LastPage}
+\pagebreak
+\end{document}

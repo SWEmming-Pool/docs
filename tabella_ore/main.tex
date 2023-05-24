@@ -1,0 +1,65 @@
+\input{../componenti_comuni/src/commands.tex}
+\documentclass[12pt, boldsubject, italicsignature, noindent]{letteracdp}
+\usepackage{eurosym}
+\usepackage{svg}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\address{
+    \begin{minipage}{0.49\textwidth}
+        \begin{flushleft}
+            \begin{minipage}{0.8\linewidth}
+                \includesvg[width=1\linewidth]{../componenti_comuni/img/logo_swemming.svg}
+            \end{minipage}
+        \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.49\textwidth}
+        \begin{flushright}
+            \begin{minipage}{0.8\linewidth}
+                \includesvg[width=0.65\linewidth]{../componenti_comuni/img/logo_unipd.svg}  
+            \end{minipage}
+        \end{flushright}
+    \end{minipage}
+    
+    Gruppo 9, SWEmming Pool, \\
+    Corso Ingegneria del Software \\
+    A.A. 2022/2023 \\
+    E-mail: \groupMail
+    }    
+\signature{SWEmming Pool}
+\date{}
+
+\begin{document}
+
+\begin{letter}{
+        \Vardanega \\
+        Dipartimento di Matematica \\
+        Università degli Studi di Padova \\
+        Via Trieste, 63 \\ 35121 Padova
+    }
+
+    \opening{Egregio \vardanega}
+
+    Di seguito si riporta la tabella contenente le ore suddivise tra i vari componenti del gruppo:
+
+    \begin{tabular}{l|cccccc|c}
+        \textbf{Componente} & \textbf{Re} & \textbf{Pt} & \textbf{An} & \textbf{Am} & \textbf{Pr} & \textbf{Ve} & \textbf{Totale}\\
+        \hline
+        Elia Pasquali &	9 &	19 & 16 & 17 & 23 &	16 & 100 \\
+        Ennio Italiano & 8 & 19 & 16 & 14 & 25 &	17  & 99\\
+        Enrico Bacci Bonivento & 9 & 20 & 15 & 16 &	25 & 15 & 100 \\
+        Fabio Pantaleo & 9 & 20 & 14 & 14 &	26 & 16 & 99\\
+        Nicolò Trinca &	8 &	20 & 13 & 15 & 29 &	12 & 97\\
+        Sebastiano Sanson &	9 &	20 & 16 & 13 & 24 &	16  & 98
+    \end{tabular}
+
+    \closing{Cordiali saluti,}
+
+\end{letter}
+
+\end{document}

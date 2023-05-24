@@ -1,0 +1,33 @@
+\input{../componenti_comuni/src/packages}
+\input{../componenti_comuni/src/commands}
+\input{../componenti_comuni/src/style}
+\usepackage[utf8]{inputenc}
+\usepackage{glossaries}
+
+\makeglossaries
+
+\begin{document}
+% Ridefinizione comandi variabili
+% =========================================================================
+\renewcommand{\documentName}{Glossario}
+\renewcommand{\documentDate}{yyyy-mm-dd}
+
+\renewcommand{\documentApprovers}{Fabio Pantaleo\smallskip}
+\renewcommand{\documentEditors}{\groupName \smallskip}
+\renewcommand{\documentVerifiers}{Nicolò Trinca \smallskip}
+\renewcommand{\documentAddressee}{\Vardanega \\ & \Cardin}
+
+\renewcommand{\documentUsage}{Esterno}
+\renewcommand{\documentSummary}{Documento che riporta il glossario delle parole e dei termini di dominio utilizzati nel progetto.}
+
+\include{firstpage.tex}
+
+\clearpage
+\input{changelog.tex}
+\include{entries.tex}
+
+\glsaddall
+\setglossarystyle{altlisthypergroup}
+\printglossary[nonumberlist]
+
+\end{document}

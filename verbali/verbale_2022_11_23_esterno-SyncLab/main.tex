@@ -1,0 +1,37 @@
+\input{../../componenti_comuni/src/packages}
+\input{../../componenti_comuni/src/commands}
+
+\begin{document}
+	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Verbale Esterno del \documentDate}
+	\renewcommand{\documentDate}{2022-11-23}
+
+	\renewcommand{\documentApprovers}{Enrico Bacci Bonivento \smallskip}
+	\renewcommand{\documentEditors}{Ennio Italiano \\ & Elia Pasquali\smallskip}
+	\renewcommand{\documentVerifiers}{Niccolo Trinca \\ & Sebastiano Sanson \smallskip}
+	\renewcommand{\documentAddressee}{Gruppo \groupName}
+
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentSummary}{Incontro con l'azienda SyncLab per la risoluzione di alcuni dubbi del gruppo.}
+	
+	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+	
+	% Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Sezioni del verbale
+	% =========================================================================
+	\input{src/ordine}
+    \pagebreak
+    \input{src/resoconto}
+	% =========================================================================
+\end{document}

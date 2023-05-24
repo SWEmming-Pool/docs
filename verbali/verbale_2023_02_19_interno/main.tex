@@ -1,0 +1,37 @@
+\input{../../componenti_comuni/src/packages}
+\input{../../componenti_comuni/src/commands}
+
+\begin{document}
+	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Verbale Interno del \documentDate}
+	\renewcommand{\documentDate}{2023-02-19}
+
+	\renewcommand{\documentApprovers}{Fabio Pantaleo \smallskip}
+	\renewcommand{\documentEditors}{Sebastiano Sanson \\ & Elia Pasquali \smallskip}
+	\renewcommand{\documentVerifiers}{Ennio Italiano \\ & Enrico Bacci Bonivento \smallskip}
+	\renewcommand{\documentAddressee}{Gruppo \groupName}
+
+	\renewcommand{\documentUsage}{Interno}
+	\renewcommand{\documentSummary}{Incontro per discutere la prenotazione della \textit{RTB} con il \Cardin}
+	
+	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+	
+	% Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Sezioni del verbale
+	% =========================================================================
+	\input{src/ordine}
+    \pagebreak
+    \input{src/resoconto}
+	% =========================================================================
+\end{document}

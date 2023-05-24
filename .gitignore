@@ -7,7 +7,26 @@
 *.synctex.gz
 *.toc
 
+## Inkscape svg
+svg-inkspace/*
+*.pdf_tex
+*.lof
+*.lot
+
+## Latex glossary
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+
 # Cartella file compilati
-out/
+documenti_compilati/*
 *.pdf
 *.dvi
+
+# MacOS file
+.DS_Store
+
+# VSCode
+.vscode

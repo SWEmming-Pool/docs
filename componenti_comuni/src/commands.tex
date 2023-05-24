@@ -4,7 +4,7 @@
 % dello sviluppo (es: versioni dei documenti)
 % =============================================================================
 
-% Informazini sul documento
+% Informazioni sul documento
 % Nome, versione e data del documento
 \newcommand{\documentName}{Mancata ridefinizione}
 \newcommand{\documentVersion}{Mancata ridefinizione}
@@ -16,7 +16,7 @@
 \newcommand{\documentApprovers}{Mancata ridefinizione} % Approvatori
 
 % Uso del documento
-\newcommand{\documentUsage}{Mancata ridefinizione}
+\newcommand{\documentUsage}{Esterno}
 
 % Destinatari del documento
 \newcommand{\documentAddressee}{Mancata ridefinizione}
@@ -25,10 +25,10 @@
 \newcommand{\documentSummary}{Mancata ridefinizione}
 
 % Dettagli capitolato
-\newcommand{\capName}{Mancata ridefinizione} %Nome capitolato
-\newcommand{\capCode}{Mancata ridefinizione} %Numero CX
-\newcommand{\capLink}{Mancata ridefinizione} %Link pagina prof
-\newcommand{\capProposer}{Mancata ridefinizione} % Nome azienda
+\newcommand{\capName}{\textit{Trustify}} %Nome capitolato
+\newcommand{\capCode}{C7} %Numero CX
+\newcommand{\capLink}{https://www.math.unipd.it/~tullio/IS-1/2022/Progetto/C7.pdf} %Link pagina prof
+\newcommand{\capProposer}{SyncLab S.R.L} % Nome azienda
 \newcommand{\capClient}{\Vardanega, \Cardin } % Prof
 
 
@@ -48,13 +48,13 @@
 % Informazioni sul gruppo
 \newcommand{\groupMail}{\textit{\href{mailto:swemming.pool@gmail.com}{swemming.pool@gmail.com}}}
 \newcommand{\groupName}{\textit{SWEmming Pool}}
-
 \newcommand{\groupTeam}{Enrico Bacci Bonivento, Ennio Italiano, Fabio Pantaleo, Elia Pasquali, Sebastiano Sanson, Nicolò Trinca}
 
-\newcommand{\Vardanega}{Prof. Vardanega Tullio}
-\newcommand{\vardanega}{Prof. Vardanega}
-\newcommand{\Cardin}{Prof. Cardin Riccardo}
-\newcommand{\cardin}{Prof. Cardin}
+\newcommand{\companyName}{\textit{SyncLab}}
+\newcommand{\Vardanega}{Prof. Vardanega Tullio }
+\newcommand{\vardanega}{Prof. Vardanega }
+\newcommand{\Cardin}{Prof. Cardin Riccardo }
+\newcommand{\cardin}{Prof. Cardin }
 
 % Ruoli del progetto
 \newcommand{\roleProjectManager}{\textit{Responsabile}}
@@ -84,3 +84,14 @@
 % Verbali
 \newcommand{\Verbale}{\textit{Verbale}}
 
+
+%COMANDI TABELLE
+\newcommand{\rowcolorhead}{\rowcolor[HTML]{0C0A3E}} %intestazione
+\newcommand{\rowcolorlight}{\rowcolor[HTML]{f2f2f2}} %righe chiare/dispari_alt
+\newcommand{\rowcolordark}{\rowcolor[HTML]{e5e5e5}} %righe scure/pari_alt
+\newcommand{\colorhead}{\color[HTML]{FFFFFF}} %testo intestazione
+\newcommand{\colorbody}{\color[HTML]{000000}} %testo righe
+\newcommand{\tabitem}{~~\rlap{\textbullet}~~}
+
+%Numeri romani in maiuscolo
+\newcommand*{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}

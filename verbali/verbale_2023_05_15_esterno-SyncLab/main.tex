@@ -1,0 +1,37 @@
+\input{../../componenti_comuni/src/packages}
+\input{../../componenti_comuni/src/commands}
+
+\begin{document}
+	% Ridefinizione comandi variabili
+    % =========================================================================
+	\renewcommand{\documentName}{Verbale Esterno del \documentDate}
+	\renewcommand{\documentDate}{2023-05-15}
+	
+	\renewcommand{\documentApprovers}{Sebastiano Sanson \smallskip}
+	\renewcommand{\documentEditors}{Ennio Italiano \\ & Fabio Pantaleo \smallskip}
+	\renewcommand{\documentVerifiers}{Nicolò Trinca \\ & Enrico Bacci Bonivento \smallskip}
+	\renewcommand{\documentAddressee}{Gruppo \groupName}
+	
+	\renewcommand{\documentUsage}{Esterno}
+	\renewcommand{\documentSummary}{Incontro per verificare lo stato del prodotto con il proponente.}
+	
+	% Prima pagina
+	% =========================================================================
+	\input{src/firstpage}
+	\pagebreak
+	% =========================================================================
+	
+	% Indice
+	% =========================================================================
+	\renewcommand{\contentsname}{Contenuti}
+	\tableofcontents
+	\pagebreak
+	% =========================================================================
+	
+	% Sezioni del verbale
+	% =========================================================================
+	\input{src/ordine}
+    \pagebreak
+    \input{src/resoconto}
+	% =========================================================================
+\end{document}
